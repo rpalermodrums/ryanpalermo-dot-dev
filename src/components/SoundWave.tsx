@@ -6,9 +6,10 @@ interface SoundWaveProps {
   height: number;
   className: string;
   colorProgress: number;
+  onFileUpload: (file: File) => void;
 }
 
-const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height }) => {
+const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileUpload }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [particles, setParticles] = useState<Particle[]>([]);
   const [tempo, setTempo] = useState(1);
@@ -117,11 +118,12 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height }) => {
     particles.forEach(particle => particle.updateColorProgress(0.1));
   }, [particles]);
 
-  // Add this effect:
-  useEffect(() => {
-    console.log('Color progress:', colorProgress);
-    // Or perform any other action with colorProgress
-  }, [colorProgress]);
+  const handleFileUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) {
+      onFileUpload(file);
+    }
+  }, [onFileUpload]);
 
   return (
     <div>
@@ -150,6 +152,19 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height }) => {
           aria-valuenow={tempo}
         />
         <span>Tempo: {tempo.toFixed(1)}x</span>
+        <input
+          type="file"
+          accept="audio/*"
+          onChange={handleFileUpload}
+          className="hidden"
+          id={`fileUpload-${width}-${height}`}
+        />
+        <label
+          htmlFor={`fileUpload-${width}-${height}`}
+          className="cursor-pointer bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-200"
+        >
+          Upload Audio
+        </label>
       </div>
     </div>
   );
