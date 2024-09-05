@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
 
 const Contact: React.FC = () => {
   const [name, setName] = useState('');
@@ -17,10 +18,15 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Contact Me</h1>
-      <div className="max-w-md mx-auto">
-        <form onSubmit={handleSubmit} className="space-y-4">
+    <div className="min-h-screen bg-gradient-to-br from-purple-400 to-indigo-600 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+      <motion.div
+        initial={{ opacity: 0, scale: 0.9 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        className="max-w-md w-full space-y-8 bg-white dark:bg-gray-800 p-10 rounded-xl shadow-lg"
+      >
+        <h1 className="text-3xl font-bold text-center text-gray-800 dark:text-white">Contact Me</h1>
+        <form onSubmit={handleSubmit} className="mt-8 space-y-6">
           <div>
             <label htmlFor="name" className="block mb-1">Name</label>
             <input
@@ -54,11 +60,16 @@ const Contact: React.FC = () => {
               rows={4}
             ></textarea>
           </div>
-          <button type="submit" className="bg-primary text-white font-bold py-2 px-4 rounded hover:bg-opacity-80 transition-colors duration-200">
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            type="submit"
+            className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+          >
             Send Message
-          </button>
+          </motion.button>
         </form>
-      </div>
+      </motion.div>
     </div>
   );
 };

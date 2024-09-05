@@ -1,9 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Navigation: React.FC = () => {
+interface NavigationProps {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+const Navigation: React.FC<NavigationProps> = ({ darkMode, toggleDarkMode }) => {
   return (
-    <nav className="flex items-center justify-between flex-wrap bg-primary p-6">
+    <nav className="flex items-center justify-between flex-wrap p-6 bg-white dark:bg-gray-900 text-gray-800 dark:text-white transition-colors duration-300">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <span className="font-semibold text-xl tracking-tight">Ryan Palermo</span>
       </div>
@@ -22,6 +27,14 @@ const Navigation: React.FC = () => {
             Contact
           </Link>
         </div>
+      </div>
+      <div className="flex items-center">
+        <button
+          onClick={toggleDarkMode}
+          className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-colors duration-300"
+        >
+          {darkMode ? '🌞' : '🌙'}
+        </button>
       </div>
     </nav>
   );
