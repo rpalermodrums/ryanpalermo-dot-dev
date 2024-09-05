@@ -50,6 +50,14 @@ const PuzzleGame: React.FC = () => {
     return { row, col };
   };
 
+  const resetPuzzle = useCallback(() => {
+    const initialPuzzle = Array.from({ length: TOTAL_TILES - 1 }, (_, i) => i + 1);
+    initialPuzzle.push(0);
+    shuffleArray(initialPuzzle);
+    setPuzzleState(initialPuzzle);
+    setIsPuzzleSolved(false);
+  }, []);
+
   return (
     <>
       {!isPuzzleSolved ? (
@@ -80,6 +88,12 @@ const PuzzleGame: React.FC = () => {
               })}
             </AnimatePresence>
           </div>
+          <button
+            onClick={resetPuzzle}
+            className="mt-4 w-full py-2 px-4 bg-dreamscape-blue text-white rounded-lg hover:bg-surreal-coral transition-colors duration-300"
+          >
+            Reset Puzzle
+          </button>
         </div>
       ) : (
         <DJDeck />
