@@ -1,9 +1,9 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
-import Home from './components/pages/Home'
-import Projects from './components/pages/Projects'
-import Thoughts from './components/pages/Thoughts'
-import Contact from './components/pages/Contact'
+import Home from './pages/Home'
+import Projects from './pages/Projects'
+import Thoughts from './pages/Thoughts'
+import Contact from './pages/Contact'
 
 function App() {
   return (
