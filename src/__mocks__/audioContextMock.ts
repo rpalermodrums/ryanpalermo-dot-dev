@@ -1,16 +1,18 @@
+import { vi } from "vitest";
+
 class AudioContextMock {
   createAnalyser() {
     return {
-      connect: jest.fn(),
-      disconnect: jest.fn(),
+      connect: vi.fn(),
+      disconnect: vi.fn(),
       fftSize: 0,
-      getByteFrequencyData: jest.fn(),
+      getByteFrequencyData: vi.fn(),
     };
   }
 
   createMediaElementSource() {
     return {
-      connect: jest.fn(),
+      connect: vi.fn(),
     };
   }
 }
