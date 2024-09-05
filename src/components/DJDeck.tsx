@@ -8,12 +8,12 @@ interface DJDeckProps {
 
 const DJDeck: React.FC<DJDeckProps> = ({ width, height }) => {
   return (
-    <div className="flex flex-col space-y-8">
-      <div className="w-full">
-        <SoundWave width={width} height={height} color="hsl(var(--primary))" />
+    <div className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8">
+      <div className="w-full md:w-1/2">
+        <SoundWave width={width / 2} height={height} />
       </div>
-      <div className="w-full">
-        <SoundWave width={width} height={height} color="hsl(var(--secondary))" />
+      <div className="w-full md:w-1/2">
+        <SoundWave width={width / 2} height={height} />
       </div>
     </div>
   );

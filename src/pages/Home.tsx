@@ -4,24 +4,26 @@ import DJDeck from '../components/DJDeck';
 const Home: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-4">Welcome to My Music-Themed Portfolio</h1>
-      <p className="text-xl mb-8">
-        I'm a staff software engineer with a passion for music. Explore my projects, thoughts, and more!
-      </p>
-      <div className="mb-8">
+      <h1 className="text-4xl font-bold mb-8">Ryan Palermo</h1>
+      <div className="mb-12">
         <DJDeck width={800} height={150} />
-        <p className="text-center mt-4 text-sm text-gray-600">
-          Click on the waves to create ripples! Use the play/pause button to start/stop the animation, and adjust the tempo with the slider.
-        </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
-          <h2 className="text-2xl font-bold mb-2">Latest Project</h2>
-          <p>Brief description of your latest project goes here.</p>
+          <h2 className="text-2xl font-bold mb-2">Architectural Expertise</h2>
+          <p>AI/ML integration. Cloud-native architecture. Distributed systems.</p>
         </div>
         <div>
-          <h2 className="text-2xl font-bold mb-2">Recent Thought</h2>
-          <p>Excerpt from your most recent blog post goes here.</p>
+          <h2 className="text-2xl font-bold mb-2">Stack</h2>
+          <p>React.js, Node.js, Python, Tensorflow, Pytorch, Docker, Kubernetes, AWS, Azure, GCP</p>
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold mb-2">Leadership</h2>
+          <p>Technical architecture. Team leadership. Product design and development.</p>
+        </div>
+        <div>
+          <h2 className="text-2xl font-bold mb-2">Hobbies</h2>
+          <p>Music composition, performance, production. Programming. Tinkering. Traveling.</p>
         </div>
       </div>
     </div>

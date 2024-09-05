@@ -4,13 +4,11 @@ import Particle from '../utils/Particle';
 interface SoundWaveProps {
   width: number;
   height: number;
-  color: string;
 }
 
-const SoundWave: React.FC<SoundWaveProps> = ({ width, height, color }) => {
+const SoundWave: React.FC<SoundWaveProps> = ({ width, height }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [particles, setParticles] = useState<Particle[]>([]);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [tempo, setTempo] = useState(1);
   const animationRef = useRef<number>();
   const timeRef = useRef(0);
@@ -51,7 +49,12 @@ const SoundWave: React.FC<SoundWaveProps> = ({ width, height, color }) => {
     });
     ctx.lineTo(width, height / 2);
     ctx.closePath();
-    ctx.fillStyle = `${color}33`; // Add transparency
+    
+    const gradient = ctx.createLinearGradient(0, 0, width, 0);
+    particles.forEach((particle, index) => {
+      gradient.addColorStop(index / particles.length, particle.color);
+    });
+    ctx.fillStyle = gradient;
     ctx.fill();
 
     // Draw wave line
@@ -63,14 +66,12 @@ const SoundWave: React.FC<SoundWaveProps> = ({ width, height, color }) => {
         ctx.lineTo(particle.x, particle.y);
       }
     });
-    ctx.strokeStyle = color;
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
     ctx.lineWidth = 2;
     ctx.stroke();
-  }, [particles, width, height, color]);
+  }, [particles, width, height]);
 
   const animate = useCallback(() => {
-    if (!isPlaying) return;
-
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext('2d');
     if (!ctx) return;
@@ -80,21 +81,16 @@ const SoundWave: React.FC<SoundWaveProps> = ({ width, height, color }) => {
     drawWave(ctx);
 
     animationRef.current = requestAnimationFrame(animate);
-  }, [isPlaying, updateParticles, drawWave]);
+  }, [updateParticles, drawWave]);
 
   useEffect(() => {
-    if (isPlaying) {
-      animate();
-    } else if (animationRef.current) {
-      cancelAnimationFrame(animationRef.current);
-    }
-
+    animate();
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [isPlaying, animate]);
+  }, [animate]);
 
   const handleClick = useCallback((event: React.MouseEvent<HTMLCanvasElement>) => {
     const canvas = canvasRef.current;
@@ -108,10 +104,6 @@ const SoundWave: React.FC<SoundWaveProps> = ({ width, height, color }) => {
     });
   }, [particles]);
 
-  const togglePlay = () => {
-    setIsPlaying(!isPlaying);
-  };
-
   return (
     <div>
       <canvas 
@@ -122,12 +114,6 @@ const SoundWave: React.FC<SoundWaveProps> = ({ width, height, color }) => {
         onClick={handleClick}
       />
       <div className="mt-4 flex justify-center space-x-4 items-center">
-        <button 
-          onClick={togglePlay} 
-          className="px-4 py-2 bg-primary text-white rounded"
-        >
-          {isPlaying ? 'Pause' : 'Play'}
-        </button>
         <input 
           type="range" 
           min="0.5" 
