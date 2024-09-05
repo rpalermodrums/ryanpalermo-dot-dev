@@ -8,8 +8,11 @@ const Home: React.FC = () => {
       <p className="text-xl mb-8">
         I'm a staff software engineer with a passion for music. Explore my projects, thoughts, and more!
       </p>
-      <div className="mb-8">
+      <div className="mb-8 h-64 relative">
         <SoundWave width={800} height={200} />
+        <p className="text-center mt-2 text-sm text-gray-600">
+          Move your mouse over the wave to interact with it!
+        </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         <div>
