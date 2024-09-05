@@ -64,7 +64,7 @@ const useParticleBackground = (canvasRef: RefObject<HTMLCanvasElement>) => {
     return () => {
       window.removeEventListener('resize', handleResize);
     };
-  }, []);
+  }, [canvasRef]);
 };
 
 export default useParticleBackground;

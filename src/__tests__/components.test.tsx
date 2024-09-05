@@ -100,7 +100,7 @@ describe('Components', () => {
     it('renders puzzle tiles', () => {
       render(<PuzzleGame />);
       const tiles = screen.getAllByRole('button');
-      expect(tiles).toHaveLength(9); // 3x3 grid plus the empty tile
+      expect(tiles).toHaveLength(10); // 3x3 grid plus the empty tile and reset button
     });
   });
 
