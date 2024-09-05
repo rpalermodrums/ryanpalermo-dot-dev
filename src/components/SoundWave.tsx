@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 import Particle from '../utils/Particle';
+import TempoDetector from '../utils/TempoDetector';
 
 interface SoundWaveProps {
   width: number;
@@ -7,15 +8,17 @@ interface SoundWaveProps {
   className: string;
   colorProgress: number;
   onFileUpload: (file: File) => void;
+  bpm: number;
 }
 
-const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileUpload }) => {
+const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileUpload, bpm }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [particles, setParticles] = useState<Particle[]>([]);
-  const [tempo, setTempo] = useState(1);
-  const [colorProgress, setColorProgress] = useState(0);
   const animationRef = useRef<number>();
   const timeRef = useRef(0);
+  const tempoDetectorRef = useRef<TempoDetector>(new TempoDetector());
+  const [colorProgress, setColorProgress] = useState(0);
+  const [detectedTempo, setDetectedTempo] = useState<number | null>(null);
 
   const initializeParticles = useCallback(() => {
     const newParticles: Particle[] = [];
@@ -38,9 +41,9 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileU
 
   const updateParticles = useCallback((time: number) => {
     particles.forEach(particle => {
-      particle.update(time * tempo, 0.03, 0.02);
+      particle.update(time * (bpm / 120), 0.03, 0.02);
     });
-  }, [particles, tempo]);
+  }, [particles, bpm]);
 
   const drawWave = useCallback((ctx: CanvasRenderingContext2D) => {
     ctx.clearRect(0, 0, width, height);
@@ -118,10 +121,15 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileU
     particles.forEach(particle => particle.updateColorProgress(0.1));
   }, [particles]);
 
-  const handleFileUpload = useCallback((event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = useCallback(async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       onFileUpload(file);
+      
+      // Detect tempo
+      await tempoDetectorRef.current.loadAudio(file);
+      const tempo = await tempoDetectorRef.current.detectTempo();
+      setDetectedTempo(tempo);
     }
   }, [onFileUpload]);
 
@@ -137,21 +145,6 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileU
         role="img"
       />
       <div className="mt-4 flex justify-center space-x-4 items-center">
-        <label htmlFor="tempoSlider" className="sr-only">Adjust tempo</label>
-        <input 
-          id="tempoSlider"
-          type="range" 
-          min="0.5" 
-          max="2" 
-          step="0.1" 
-          value={tempo} 
-          onChange={(e) => setTempo(parseFloat(e.target.value))}
-          className="w-32"
-          aria-valuemin={0.5}
-          aria-valuemax={2}
-          aria-valuenow={tempo}
-        />
-        <span>Tempo: {tempo.toFixed(1)}x</span>
         <input
           type="file"
           accept="audio/*"
