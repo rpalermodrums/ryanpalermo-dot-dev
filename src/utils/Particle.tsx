@@ -1,25 +1,30 @@
 class Particle {
-    x: number;
-    y: number;
-    baseY: number;
-    velocity: number;
-    amplitude: number;
-    
-    constructor(x: number, y: number) {
-      this.x = x;
-      this.y = y;
-      this.baseY = y;
-      this.velocity = 0;
-      this.amplitude = Math.random() * 20 + 10;
-    }
+  x: number;
+  y: number;
+  baseY: number;
+  velocity: number;
+  amplitude: number;
+  frequency: number;
+  phase: number;
   
-    update(dampening: number, tension: number) {
-      const distance = this.baseY - this.y;
-      const acceleration = distance * tension - this.velocity * dampening;
-      
-      this.velocity += acceleration;
-      this.y += this.velocity;
-    }
+  constructor(x: number, y: number, amplitude: number, frequency: number, phase: number) {
+    this.x = x;
+    this.baseY = y;
+    this.y = y;
+    this.velocity = 0;
+    this.amplitude = amplitude;
+    this.frequency = frequency;
+    this.phase = phase;
   }
-  
-  export default Particle;
+
+  update(time: number, dampening: number, tension: number) {
+    const targetY = this.baseY + Math.sin(time * this.frequency + this.phase) * this.amplitude;
+    const distance = targetY - this.y;
+    const acceleration = distance * tension - this.velocity * dampening;
+    
+    this.velocity += acceleration;
+    this.y += this.velocity;
+  }
+}
+
+export default Particle;
