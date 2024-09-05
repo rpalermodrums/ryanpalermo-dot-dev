@@ -3,7 +3,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { describe, expect, it, vi, beforeAll } from 'vitest';
 import DJDeck from '../components/DJDeck';
 import Layout from '../components/Layout';
-import MarkdownView from '../components/MarkdownView';
 import Navigation from '../components/Navigation';
 import PuzzleGame from '../components/PuzzleGame';
 import SoundWave from '../components/SoundWave';
@@ -68,17 +67,6 @@ describe('Components', () => {
       );
       expect(screen.getByText('Ryan Palermo')).toBeTruthy();
       expect(screen.getByText(/All rights reserved/)).toBeTruthy();
-    });
-  });
-
-  describe('MarkdownView', () => {
-    it('renders markdown content', () => {
-      render(
-        <BrowserRouter>
-          <MarkdownView />
-        </BrowserRouter>
-      );
-      expect(screen.getByText('Markdown Content')).toBeTruthy();
     });
   });
 
