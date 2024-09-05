@@ -1,40 +1,9 @@
-import React, { useState, useCallback, useRef } from 'react';
+import React from 'react';
 import SoundWave from './SoundWave';
-import TempoDetector from '../utils/TempoDetector';
+import useAudioDeck from '../hooks/useAudioDeck';
 
 const DJDeck: React.FC = () => {
-  const [audioSources, setAudioSources] = useState<[string | null, string | null]>([null, null]);
-  const [bpms, setBpms] = useState<[number, number]>([120, 120]);
-  const tempoDetectorRef = useRef<TempoDetector>(new TempoDetector());
-
-  const handleFileUpload = useCallback((index: number) => (file: File) => {
-    const url = URL.createObjectURL(file);
-    setAudioSources(prev => {
-      const newSources = [...prev] as [string | null, string | null];
-      newSources[index] = url;
-      return newSources;
-    });
-
-    // Detect tempo asynchronously
-    tempoDetectorRef.current.loadAudio(file).then(() => {
-      tempoDetectorRef.current.detectTempo().then(detectedTempo => {
-        setBpms(prev => {
-          const newBpms = [...prev] as [number, number];
-          newBpms[index] = Math.round(detectedTempo);
-          return newBpms;
-        });
-      });
-    });
-  }, []);
-
-  const handleBpmChange = useCallback((index: number) => (event: React.ChangeEvent<HTMLInputElement>) => {
-    const newBpm = parseInt(event.target.value, 10);
-    setBpms(prev => {
-      const newBpms = [...prev] as [number, number];
-      newBpms[index] = newBpm;
-      return newBpms;
-    });
-  }, []);
+  const { audioSources, bpms, handleFileUpload, handleBpmChange } = useAudioDeck();
 
   return (
     <div className="flex flex-col md:flex-row w-full h-full bg-gradient-to-br from-dreamscape-blue to-persistence-purple dark:from-dreamscape-blue dark:to-persistence-purple p-6 rounded-lg shadow-2xl">
