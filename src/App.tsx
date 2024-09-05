@@ -1,4 +1,4 @@
-import { HashRouter as Router, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 import Projects from './pages/Projects'
@@ -16,7 +16,7 @@ function App() {
           <Route path="/thoughts" element={<Thoughts />} />
           <Route path="/thoughts/:slug" element={<MarkdownView />} />
           <Route path="/contact" element={<Contact />} />
-          <Route index  path="*" element={<Home />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </Layout>
     </Router>
