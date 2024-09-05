@@ -147,8 +147,15 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileU
     const minTempo = 60;
     const maxTempo = 180;
     const normalizedTempo = Math.max(minTempo, Math.min(maxTempo, tempo));
-    const hue = 240 - ((normalizedTempo - minTempo) / (maxTempo - minTempo)) * 240;
-    return `hsl(${hue}, 100%, 50%)`;
+    const progress = (normalizedTempo - minTempo) / (maxTempo - minTempo);
+    
+    if (progress < 0.33) {
+      return 'surreal-sky';
+    } else if (progress < 0.66) {
+      return 'melting-clock-gold';
+    } else {
+      return 'dream-red';
+    }
   }, []);
 
   useEffect(() => {
@@ -160,12 +167,12 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileU
   }, [detectedTempo, getTempoColor, particles]);
 
   return (
-    <div>
+    <div className="relative">
       <canvas 
         ref={canvasRef} 
         width={width} 
         height={height} 
-        className="w-full cursor-pointer" 
+        className="w-full cursor-pointer rounded-lg overflow-hidden" 
         onClick={handleClick}
         aria-label="Interactive sound wave visualization"
         role="img"
@@ -181,13 +188,12 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileU
         />
         <label
           htmlFor={`fileUpload-${width}-${height}`}
-          className="cursor-pointer bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-200"
-          style={{ backgroundColor: tempoColor }}
+          className={`cursor-pointer bg-gradient-to-t from-${tempoColor} to-${tempoColor} bg-opacity-80 text-canvas-white px-4 py-2 rounded-full hover:bg-opacity-80 transition-colors duration-200 transform hover:scale-105`}
         >
           Upload Audio
         </label>
         {detectedTempo && (
-          <span>Detected Tempo: {Math.round(detectedTempo)} BPM</span>
+          <span className="text-soft-shadow dark:text-canvas-white font-semibold">Detected Tempo: {Math.round(detectedTempo)} BPM</span>
         )}
       </div>
     </div>

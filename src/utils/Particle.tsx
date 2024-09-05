@@ -14,7 +14,7 @@ export default class Particle {
     frequency: number,
     phase: number
   ) {
-    this._baseColor = '#0000FF';
+    this._baseColor = '#72A0C1'; // surreal-sky color
     this.colorProgress = 0;
     this.x = x;
     this.y = y;

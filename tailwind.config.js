@@ -50,6 +50,18 @@ module.exports = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        'desert-sand': '#E3C9A8',
+        'surreal-sky': '#72A0C1',
+        'melting-clock-gold': '#FFD700',
+        'dream-red': '#C41E3A',
+        'soft-shadow': '#555555',
+        'canvas-white': '#F5F5F5',
+        'dreamscape-blue': '#1A3A3A',
+        'melting-gold': '#FFC300',
+        'surreal-coral': '#FF6B6B',
+        'persistence-purple': '#6B4E71',
+        'ethereal-teal': '#4ECDC4',
+        'canvas-cream': '#F7EDE2',
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -70,7 +82,16 @@ module.exports = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      boxShadow: {
+        'neon': '0 0 5px theme("colors.blue.400"), 0 0 20px theme("colors.blue.700")',
+      },
+      textShadow: {
+        'default': '2px 2px 4px rgba(0,0,0,0.5)',
+      },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require('tailwindcss-textshadow'),
+  ],
 }
