@@ -1,5 +1,4 @@
 import React, { useRef } from 'react';
-import DJDeck from '../components/DJDeck';
 import PuzzleGame from '../components/PuzzleGame';
 import useParticleBackground from '../hooks/useParticleBackground';
 
