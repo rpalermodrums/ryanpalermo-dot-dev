@@ -14,28 +14,12 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: 1,
-    title: "The Intersection of Music and Technology",
+    title: "On Music and Software Engineering",
     slug: "music-tech-relationship",
     excerpt: "Exploring how technology is shaping the future of music production and distribution.",
     date: "2024-09-01",
     readTime: "5 min read"
   },
-  {
-    id: 2,
-    title: "Building Scalable Web Applications: Lessons Learned",
-    slug: "building-scalable-web-applications",
-    excerpt: "Insights and best practices from my experience in developing large-scale web applications.",
-    date: "2024-08-15",
-    readTime: "8 min read"
-  },
-  {
-    id: 3,
-    title: "The Rise of AI in Software Development",
-    slug: "ai-in-software-development",
-    excerpt: "Examining the impact of artificial intelligence on coding practices and software engineering.",
-    date: "2024-07-30",
-    readTime: "6 min read"
-  }
 ];
 
 const BlogPostCard: React.FC<BlogPost> = ({ title, excerpt, date, readTime, slug }) => (

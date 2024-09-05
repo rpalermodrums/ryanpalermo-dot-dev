@@ -1,4 +1,4 @@
-# Music and Software Engineering
+# On Music and Software Engineering
 
 
 The intersection of music and software engineering offers intriguing insights into shared cognitive processes and creative methodologies. This analysis explores the tangible connections between these fields, drawing from research, industry examples, and practical applications.
