@@ -4,12 +4,15 @@ import Particle from '../utils/Particle';
 interface SoundWaveProps {
   width: number;
   height: number;
+  className: string;
+  colorProgress: number;
 }
 
-const SoundWave: React.FC<SoundWaveProps> = ({ width, height }) => {
+const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [particles, setParticles] = useState<Particle[]>([]);
   const [tempo, setTempo] = useState(1);
+  const [colorProgress, setColorProgress] = useState(0);
   const animationRef = useRef<number>();
   const timeRef = useRef(0);
 
@@ -52,7 +55,7 @@ const SoundWave: React.FC<SoundWaveProps> = ({ width, height }) => {
     
     const gradient = ctx.createLinearGradient(0, 0, width, 0);
     particles.forEach((particle, index) => {
-      gradient.addColorStop(index / particles.length, particle.color);
+      gradient.addColorStop(index / particles.length, particle.color as string);
     });
     ctx.fillStyle = gradient;
     ctx.fill();
@@ -69,6 +72,14 @@ const SoundWave: React.FC<SoundWaveProps> = ({ width, height }) => {
     ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
     ctx.lineWidth = 2;
     ctx.stroke();
+
+    // Draw particles with color progression
+    particles.forEach((particle) => {
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
+      ctx.fillStyle = particle.getColor();
+      ctx.fill();
+    });
   }, [particles, width, height]);
 
   const animate = useCallback(() => {
@@ -102,7 +113,15 @@ const SoundWave: React.FC<SoundWaveProps> = ({ width, height }) => {
     particles.forEach((particle) => {
       particle.applyRipple(x, 20);
     });
+    setColorProgress(prev => Math.min(prev + 0.1, 1));
+    particles.forEach(particle => particle.updateColorProgress(0.1));
   }, [particles]);
+
+  // Add this effect:
+  useEffect(() => {
+    console.log('Color progress:', colorProgress);
+    // Or perform any other action with colorProgress
+  }, [colorProgress]);
 
   return (
     <div>
@@ -112,9 +131,13 @@ const SoundWave: React.FC<SoundWaveProps> = ({ width, height }) => {
         height={height} 
         className="w-full cursor-pointer" 
         onClick={handleClick}
+        aria-label="Interactive sound wave visualization"
+        role="img"
       />
       <div className="mt-4 flex justify-center space-x-4 items-center">
+        <label htmlFor="tempoSlider" className="sr-only">Adjust tempo</label>
         <input 
+          id="tempoSlider"
           type="range" 
           min="0.5" 
           max="2" 
@@ -122,11 +145,14 @@ const SoundWave: React.FC<SoundWaveProps> = ({ width, height }) => {
           value={tempo} 
           onChange={(e) => setTempo(parseFloat(e.target.value))}
           className="w-32"
+          aria-valuemin={0.5}
+          aria-valuemax={2}
+          aria-valuenow={tempo}
         />
         <span>Tempo: {tempo.toFixed(1)}x</span>
       </div>
     </div>
   );
-};
+});
 
 export default React.memo(SoundWave);

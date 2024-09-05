@@ -1,4 +1,11 @@
 class Particle {
+  getColor(): string | CanvasGradient | CanvasPattern {
+    throw new Error('Method not implemented.');
+  }
+  updateColorProgress(increment: number) {
+    this.colorProgress = Math.min(this.colorProgress + increment, 1);
+    this.color = this.getColor();
+  }
   x: number;
   y: number;
   baseY: number;
@@ -6,9 +13,10 @@ class Particle {
   amplitude: number;
   frequency: number;
   phase: number;
-  color: string;
+  color: string | CanvasGradient | CanvasPattern;
   targetColor: string;
   colorTransition: number;
+  colorProgress: number;
   
   constructor(x: number, y: number, amplitude: number, frequency: number, phase: number) {
     this.x = x;
@@ -18,9 +26,10 @@ class Particle {
     this.amplitude = amplitude;
     this.frequency = frequency;
     this.phase = phase;
-    this.color = 'black';
+    this.color = 'black' as string | CanvasGradient | CanvasPattern;
     this.targetColor = 'black';
     this.colorTransition = 0;
+    this.colorProgress = 0;
   }
 
   update(time: number, dampening: number, tension: number) {
