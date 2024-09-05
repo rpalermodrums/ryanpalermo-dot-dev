@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import DJDeck from '../components/DJDeck';
 
 interface Project {
   id: number;
@@ -60,13 +61,52 @@ const ProjectCard: React.FC<Project> = ({ title, description, technologies, imag
 );
 
 const Projects: React.FC = () => {
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  const [password, setPassword] = useState('');
+
+  const handlePasswordSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (password === 'letmein') {
+      setIsAuthenticated(true);
+    } else {
+      alert('Incorrect password');
+    }
+  };
+
+  if (!isAuthenticated) {
+    return (
+      <div className="container mx-auto px-4 py-8 flex justify-center items-center h-screen">
+        <form onSubmit={handlePasswordSubmit} className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg">
+          <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">Enter Password</h2>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            className="w-full p-2 mb-4 border rounded text-gray-800"
+            placeholder="Password"
+          />
+          <button
+            type="submit"
+            className="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-200"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    );
+  }
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-8 text-gray-800 dark:text-white">My Projects</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
         {projects.map((project) => (
           <ProjectCard key={project.id} {...project} />
         ))}
+      </div>
+      <div className="mt-12">
+        <h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">DJ Deck</h2>
+        <DJDeck />
       </div>
     </div>
   );

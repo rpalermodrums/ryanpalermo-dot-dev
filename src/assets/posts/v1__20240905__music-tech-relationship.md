@@ -1,14 +1,14 @@
-# The Intersection of Music and Software Engineering
+# Music and Software Engineering
 
-## Introduction
 
 The intersection of music and software engineering offers intriguing insights into shared cognitive processes and creative methodologies. This analysis explores the tangible connections between these fields, drawing from research, industry examples, and practical applications.
+
 
 ## Shared Cognitive Processes
 
 Cognitive science reveals surprising similarities in how our brains process musical and programming activities. A study by Slevc et al. (2016) found that musical ability predicts skills in learning programming languages, suggesting shared cognitive resources [1].
 
-Key similarities include:
+I have found the following crossover qualities between music and software to be true in my own experience:
 
 1. Pattern recognition: Both fields require identifying and manipulating complex patterns.
 2. Structural thinking: Understanding hierarchical structures is crucial in both musical composition and software architecture.
@@ -16,20 +16,23 @@ Key similarities include:
 
 Research by Schaffer et al. (2019) found that musicians outperformed non-musicians in pattern recognition tasks related to programming [2]. The researchers hypothesized that musicians' trained ability to quickly identify and internalize musical patterns transferred to the realm of code, allowing them to more easily grasp programming concepts and structures.
 
+
 ## Continuous Learning and Knowledge Sharing
 
 Both disciplines demand constant adaptation due to rapid technological advancements. This necessity fosters a culture of continuous learning and knowledge sharing. Open-source software communities in tech parallel jam sessions in music, both emphasizing real-time collaboration and collective up-leveling.
+
 
 ## Creative Problem-Solving
 
 While debugging and musical analysis involve different specific skills, both require creative problem-solving approaches. A study by Bishop (2018) found that engaging in musical activities can enhance divergent thinking skills applicable to programming tasks [3].
 
-Common cognitive processes include:
+In my own experience, the strongest musicians and software engineers share a number of qualities:
 
 1. Divergent thinking: Generating multiple possible solutions
 2. Convergent thinking: Evaluating and selecting the best solution
 3. Analogical reasoning: Applying solutions from one domain to another
 4. Constraint satisfaction: Working within defined limitations
+
 
 ## Empathy and User Experience
 
@@ -40,13 +43,15 @@ Success in both fields requires keen empathy, albeit applied differently:
 
 Research in Human-Computer Interaction (HCI) has begun exploring how musical training can inform UX design. For instance, Teixeira et al. (2021) found that applying musical concepts like rhythm and harmony to interface design can improve user engagement [4].
 
-## Agile Methodologies and Improvisation
 
-The agile approach in software development shares surprising similarities with musical improvisation:
+## Structured Improvisation
+
+The agile/lean/xp/etc approaches in software development shares surprising similarities with musical improvisation:
 
 1. Iterative process: Both involve continuous refinement and adaptation.
 2. Collaboration: Team dynamics are crucial in both contexts.
 3. Responding to change: Both require quick thinking and flexibility.
+
 
 ## Practical Applications and Cross-Pollination
 
@@ -64,6 +69,7 @@ Understanding these connections opens up exciting possibilities for cross-discip
    - Incorporating musical exercises in coding bootcamps to boost creative thinking
    - Using musical improvisation techniques to improve brainstorming in software design
 
+
 ## Conclusion
 
 The connections between music and software engineering encompass shared cognitive processes, problem-solving approaches, and collaborative methodologies. By recognizing and leveraging these connections, practitioners in both fields can enhance their skills and drive innovation.
@@ -74,6 +80,9 @@ Future research could explore:
 3. Long-term studies on how musical training impacts programming skills (and vice versa)
 
 By bridging these worlds, we open up new avenues for creativity, innovation, and cognitive development in both music and software engineering.
+
+________________
+
 
 ## References
 
