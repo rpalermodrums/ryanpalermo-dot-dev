@@ -3,3 +3,6 @@ node_modules
 *.log
 dist
 .env
+
+# Docker
+docker-compose.override.yml
