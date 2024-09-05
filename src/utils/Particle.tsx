@@ -7,14 +7,20 @@ export default class Particle {
   colorProgress: number;
   private _baseColor: string;
 
-  constructor(x: number, y: number) {
-    this.x = x;
-    this.y = y;
-    this.amplitude = Math.random() * 2 + 1; // Random amplitude between 1 and 3
-    this.frequency = Math.random() * 0.02 + 0.01; // Random frequency between 0.01 and 0.03
-    this.phase = Math.random() * Math.PI * 2; // Random phase between 0 and 2π
+  constructor(
+    x: number,
+    y: number,
+    amplitude: number,
+    frequency: number,
+    phase: number
+  ) {
     this._baseColor = '#0000FF';
     this.colorProgress = 0;
+    this.x = x;
+    this.y = y;
+    this.amplitude = amplitude;
+    this.frequency = frequency;
+    this.phase = phase;
   }
 
   update(time: number) {

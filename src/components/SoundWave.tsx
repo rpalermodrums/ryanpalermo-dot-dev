@@ -6,7 +6,6 @@ interface SoundWaveProps {
   width: number;
   height: number;
   className: string;
-  colorProgress: number;
   onFileUpload: (file: File) => void;
   bpm: number;
 }
@@ -17,9 +16,20 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileU
   const animationRef = useRef<number>();
   const timeRef = useRef(0);
   const tempoDetectorRef = useRef<TempoDetector>(new TempoDetector());
-  const [colorProgress, setColorProgress] = useState(0);
   const [detectedTempo, setDetectedTempo] = useState<number | null>(null);
   const [tempoColor, setTempoColor] = useState('#0000FF'); // Default blue color
+
+  const getColorProgress = useCallback((tempo: number) => {
+    const minTempo = 60;
+    const maxTempo = 180;
+    return Math.min(Math.max((tempo - minTempo) / (maxTempo - minTempo), 0), 1);
+  }, []);
+
+  const [colorProgress, setColorProgress] = useState(getColorProgress(bpm));
+
+  useEffect(() => {
+    setColorProgress(getColorProgress(bpm));
+  }, [bpm, getColorProgress]);
 
   const initializeParticles = useCallback(() => {
     const newParticles: Particle[] = [];
@@ -42,7 +52,7 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileU
 
   const updateParticles = useCallback((time: number) => {
     particles.forEach(particle => {
-      particle.update(time * (bpm / 120), 0.03, 0.02);
+      particle.update(time * (bpm / 120));
     });
   }, [particles, bpm]);
 
@@ -118,9 +128,8 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileU
     particles.forEach((particle) => {
       particle.applyRipple(x, 20);
     });
-    setColorProgress(prev => Math.min(prev + 0.1, 1));
-    particles.forEach(particle => particle.updateColorProgress(0.1));
-  }, [particles]);
+    particles.forEach(particle => particle.updateColorProgress(colorProgress));
+  }, [particles, colorProgress]);
 
   const handleFileUpload = useCallback(async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];

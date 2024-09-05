@@ -60,20 +60,89 @@ class TempoDetector {
     const sampleRate = this.audioBuffer.sampleRate;
     const hopSize = 512;
 
+    // New: Implement comb filter to enhance periodicity
+    const combFilteredAutocorrelation = this.applyCombFilter(autocorrelation);
+
     let maxCorrelation = -Infinity;
     let bestLag = 0;
 
     for (let lag = Math.floor(60 * sampleRate / (hopSize * maxBPM)); 
          lag < Math.floor(60 * sampleRate / (hopSize * minBPM)); 
          lag++) {
-      if (autocorrelation[lag] > maxCorrelation) {
-        maxCorrelation = autocorrelation[lag];
+      if (combFilteredAutocorrelation[lag] > maxCorrelation) {
+        maxCorrelation = combFilteredAutocorrelation[lag];
         bestLag = lag;
       }
     }
 
-    const estimatedTempo = 60 / (bestLag * hopSize / sampleRate);
+    // New: Implement tempo doubling/halving check
+    const estimatedTempo = this.refineTempo(60 / (bestLag * hopSize / sampleRate), onsetEnvelope);
     return estimatedTempo;
+  }
+
+  // New method: Apply comb filter to enhance periodicity
+  private applyCombFilter(autocorrelation: Float32Array): Float32Array {
+    const filtered = new Float32Array(autocorrelation.length);
+    for (let i = 0; i < autocorrelation.length; i++) {
+      filtered[i] = autocorrelation[i];
+      if (i >= 2) filtered[i] += 0.5 * autocorrelation[i/2];
+      if (i >= 3) filtered[i] += 0.5 * autocorrelation[i/3];
+      if (i >= 4) filtered[i] += 0.5 * autocorrelation[i/4];
+    }
+    return filtered;
+  }
+
+  // New method: Refine tempo estimation
+  private refineTempo(initialTempo: number, onsetEnvelope: Float32Array): number {
+    // Consider more tempo candidates, including the 3/4 rhythm adjustment
+    const tempos = [
+      initialTempo * 0.5,
+      initialTempo * 0.75, // New: 3/4 adjustment
+      initialTempo,
+      initialTempo * 1.5,  // New: 3/2 adjustment
+      initialTempo * 2
+    ];
+    let bestScore = -Infinity;
+    let bestTempo = initialTempo;
+
+    for (const tempo of tempos) {
+      const score = this.evaluateTempo(tempo, onsetEnvelope);
+      if (score > bestScore) {
+        bestScore = score;
+        bestTempo = tempo;
+      }
+    }
+
+    return bestTempo;
+  }
+
+  // New method: Evaluate tempo candidates
+  private evaluateTempo(tempo: number, onsetEnvelope: Float32Array): number {
+    const beatPeriod = 60 / tempo;
+    const hopSize = 512;
+    const sampleRate = this.audioBuffer!.sampleRate;
+    const beatSamples = Math.round(beatPeriod * sampleRate / hopSize);
+
+    let score = 0;
+    for (let i = 0; i < onsetEnvelope.length; i += beatSamples) {
+      score += this.getLocalPeak(onsetEnvelope, i, Math.floor(beatSamples * 0.1));
+    }
+
+    // New: Add score for offbeat detection (for 3/4 patterns)
+    for (let i = Math.floor(beatSamples * 0.75); i < onsetEnvelope.length; i += beatSamples) {
+      score += 0.5 * this.getLocalPeak(onsetEnvelope, i, Math.floor(beatSamples * 0.1));
+    }
+
+    return score;
+  }
+
+  // New method: Get local peak in onset envelope
+  private getLocalPeak(onsetEnvelope: Float32Array, center: number, range: number): number {
+    let peak = 0;
+    for (let i = Math.max(0, center - range); i < Math.min(onsetEnvelope.length, center + range); i++) {
+      peak = Math.max(peak, onsetEnvelope[i]);
+    }
+    return peak;
   }
 }
 

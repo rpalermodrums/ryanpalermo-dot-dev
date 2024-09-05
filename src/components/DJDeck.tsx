@@ -3,14 +3,9 @@ import SoundWave from './SoundWave';
 import TempoDetector from '../utils/TempoDetector';
 
 const DJDeck: React.FC = () => {
-  const [colorProgress, setColorProgress] = useState(0);
   const [audioSources, setAudioSources] = useState<[string | null, string | null]>([null, null]);
   const [bpms, setBpms] = useState<[number, number]>([120, 120]);
   const tempoDetectorRef = useRef<TempoDetector>(new TempoDetector());
-
-  const handleInteraction = () => {
-    setColorProgress(prev => Math.min(prev + 0.05, 1));
-  };
 
   const handleFileUpload = useCallback((index: number) => (file: File) => {
     const url = URL.createObjectURL(file);
@@ -42,13 +37,12 @@ const DJDeck: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row w-full h-full" onClick={handleInteraction}>
+    <div className="flex flex-col md:flex-row w-full h-full">
       <div className="w-full md:w-1/2 h-1/2 md:h-full">
         <SoundWave
           width={400}
           height={200}
           className="w-full h-full"
-          colorProgress={colorProgress}
           onFileUpload={handleFileUpload(0)}
           bpm={bpms[0]}
         />
@@ -70,7 +64,6 @@ const DJDeck: React.FC = () => {
           width={400}
           height={200}
           className="w-full h-full"
-          colorProgress={colorProgress}
           onFileUpload={handleFileUpload(1)}
           bpm={bpms[1]}
         />
