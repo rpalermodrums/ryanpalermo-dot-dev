@@ -19,6 +19,7 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileU
   const tempoDetectorRef = useRef<TempoDetector>(new TempoDetector());
   const [colorProgress, setColorProgress] = useState(0);
   const [detectedTempo, setDetectedTempo] = useState<number | null>(null);
+  const [tempoColor, setTempoColor] = useState('#0000FF'); // Default blue color
 
   const initializeParticles = useCallback(() => {
     const newParticles: Particle[] = [];
@@ -133,6 +134,22 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileU
     }
   }, [onFileUpload]);
 
+  const getTempoColor = useCallback((tempo: number) => {
+    const minTempo = 60;
+    const maxTempo = 180;
+    const normalizedTempo = Math.max(minTempo, Math.min(maxTempo, tempo));
+    const hue = 240 - ((normalizedTempo - minTempo) / (maxTempo - minTempo)) * 240;
+    return `hsl(${hue}, 100%, 50%)`;
+  }, []);
+
+  useEffect(() => {
+    if (detectedTempo) {
+      const color = getTempoColor(detectedTempo);
+      setTempoColor(color);
+      particles.forEach(particle => particle.setBaseColor(color));
+    }
+  }, [detectedTempo, getTempoColor, particles]);
+
   return (
     <div>
       <canvas 
@@ -143,6 +160,7 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileU
         onClick={handleClick}
         aria-label="Interactive sound wave visualization"
         role="img"
+        style={{ background: `linear-gradient(to right, ${tempoColor}22, ${tempoColor}66)` }}
       />
       <div className="mt-4 flex justify-center space-x-4 items-center">
         <input
@@ -155,9 +173,13 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileU
         <label
           htmlFor={`fileUpload-${width}-${height}`}
           className="cursor-pointer bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors duration-200"
+          style={{ backgroundColor: tempoColor }}
         >
           Upload Audio
         </label>
+        {detectedTempo && (
+          <span>Detected Tempo: {Math.round(detectedTempo)} BPM</span>
+        )}
       </div>
     </div>
   );
