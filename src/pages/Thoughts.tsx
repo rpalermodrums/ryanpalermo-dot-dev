@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 interface BlogPost {
   id: number;
@@ -33,20 +34,22 @@ const blogPosts: BlogPost[] = [
   }
 ];
 
-const BlogPostCard: React.FC<BlogPost> = ({ title, excerpt, date, readTime }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 50 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-    className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6"
-  >
-    <h2 className="text-2xl font-bold mb-2 text-gray-800 dark:text-white">{title}</h2>
-    <p className="text-gray-600 dark:text-gray-300 mb-4">{excerpt}</p>
-    <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400">
-      <span>{new Date(date).toLocaleDateString()}</span>
-      <span>{readTime}</span>
-    </div>
-  </motion.div>
+const BlogPostCard: React.FC<BlogPost> = ({ id, title, excerpt, date, readTime }) => (
+  <Link to={`/thoughts/${id}`} className="block">
+    <motion.div
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 mb-6 hover:shadow-lg transition-shadow"
+    >
+      <h2 className="text-2xl font-bold mb-2 text-gray-800 dark:text-white">{title}</h2>
+      <p className="text-gray-600 dark:text-gray-300 mb-4">{excerpt}</p>
+      <div className="flex justify-between text-sm text-gray-500 dark:text-gray-400">
+        <span>{new Date(date).toLocaleDateString()}</span>
+        <span>{readTime}</span>
+      </div>
+    </motion.div>
+  </Link>
 );
 
 const Thoughts: React.FC = () => {

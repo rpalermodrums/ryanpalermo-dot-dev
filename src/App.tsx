@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Projects from './pages/Projects'
 import Thoughts from './pages/Thoughts'
 import Contact from './pages/Contact'
+import MarkdownView from './components/MarkdownView'
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
           <Route path="/thoughts" element={<Thoughts />} />
+          <Route path="/thoughts/:id" element={<MarkdownView />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </Layout>
