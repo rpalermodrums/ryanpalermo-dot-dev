@@ -55,7 +55,7 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height }) => {
     
     const gradient = ctx.createLinearGradient(0, 0, width, 0);
     particles.forEach((particle, index) => {
-      gradient.addColorStop(index / particles.length, particle.color as string);
+      gradient.addColorStop(index / particles.length, particle.getColor());
     });
     ctx.fillStyle = gradient;
     ctx.fill();
@@ -73,7 +73,7 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height }) => {
     ctx.lineWidth = 2;
     ctx.stroke();
 
-    // Draw particles with color progression
+    // Draw particles
     particles.forEach((particle) => {
       ctx.beginPath();
       ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
