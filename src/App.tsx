@@ -16,6 +16,7 @@ function App() {
           <Route path="/thoughts" element={<Thoughts />} />
           <Route path="/thoughts/:slug" element={<MarkdownView />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<Home />} />
         </Routes>
       </Layout>
     </Router>
