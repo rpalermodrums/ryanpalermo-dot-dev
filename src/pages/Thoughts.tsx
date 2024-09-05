@@ -34,8 +34,8 @@ const blogPosts: BlogPost[] = [
   }
 ];
 
-const BlogPostCard: React.FC<BlogPost> = ({ id, title, excerpt, date, readTime }) => (
-  <Link to={`/thoughts/${id}`} className="block">
+const BlogPostCard: React.FC<BlogPost> = ({ title, excerpt, date, readTime }) => (
+  <Link to={`/thoughts/v1__${date.replace(/-/g, '')}__${title.toLowerCase().replace(/\s+/g, '-')}`} className="block">
     <motion.div
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
