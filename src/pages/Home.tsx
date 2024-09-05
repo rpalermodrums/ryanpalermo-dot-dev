@@ -9,9 +9,9 @@ const Home: React.FC = () => {
         I'm a staff software engineer with a passion for music. Explore my projects, thoughts, and more!
       </p>
       <div className="mb-8">
-        <DJDeck width={800} height={200} />
-        <p className="text-center mt-2 text-sm text-gray-600">
-          Move your mouse over the waves to interact with them! Use the controls to change the tempo.
+        <DJDeck width={800} height={150} />
+        <p className="text-center mt-4 text-sm text-gray-600">
+          Click on the waves to create ripples! Use the play/pause button to start/stop the animation, and adjust the tempo with the slider.
         </p>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

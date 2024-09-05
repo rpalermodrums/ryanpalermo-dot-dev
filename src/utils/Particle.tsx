@@ -25,6 +25,12 @@ class Particle {
     this.velocity += acceleration;
     this.y += this.velocity;
   }
+
+  applyRipple(clickX: number, clickStrength: number) {
+    const distance = Math.abs(this.x - clickX);
+    const impact = Math.max(0, 1 - distance / 100) * clickStrength;
+    this.velocity += impact;
+  }
 }
 
 export default Particle;

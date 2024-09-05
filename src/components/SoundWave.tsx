@@ -10,6 +10,7 @@ interface SoundWaveProps {
 const SoundWave: React.FC<SoundWaveProps> = ({ width, height, color }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const [particles, setParticles] = useState<Particle[]>([]);
+  const [isPlaying, setIsPlaying] = useState(false);
   const [tempo, setTempo] = useState(1);
   const animationRef = useRef<number>();
   const timeRef = useRef(0);
@@ -68,6 +69,8 @@ const SoundWave: React.FC<SoundWaveProps> = ({ width, height, color }) => {
   }, [particles, width, height, color]);
 
   const animate = useCallback(() => {
+    if (!isPlaying) return;
+
     const canvas = canvasRef.current;
     const ctx = canvas?.getContext('2d');
     if (!ctx) return;
@@ -77,36 +80,36 @@ const SoundWave: React.FC<SoundWaveProps> = ({ width, height, color }) => {
     drawWave(ctx);
 
     animationRef.current = requestAnimationFrame(animate);
-  }, [updateParticles, drawWave]);
+  }, [isPlaying, updateParticles, drawWave]);
 
   useEffect(() => {
-    animate();
+    if (isPlaying) {
+      animate();
+    } else if (animationRef.current) {
+      cancelAnimationFrame(animationRef.current);
+    }
+
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current);
       }
     };
-  }, [animate]);
+  }, [isPlaying, animate]);
 
-  const handleMouseMove = useCallback((event: React.MouseEvent<HTMLCanvasElement>) => {
+  const handleClick = useCallback((event: React.MouseEvent<HTMLCanvasElement>) => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
     const rect = canvas.getBoundingClientRect();
     const x = event.clientX - rect.left;
-    const y = event.clientY - rect.top;
 
-    particles.forEach((particle, index) => {
-      const distance = Math.abs(particle.x - x);
-      if (distance < 50) {
-        const impact = (1 - distance / 50) * 300;
-        particle.velocity += (y - particle.y) * impact * 0.02;
-      }
+    particles.forEach((particle) => {
+      particle.applyRipple(x, 20);
     });
   }, [particles]);
 
-  const changeTempo = (newTempo: number) => {
-    setTempo(newTempo);
+  const togglePlay = () => {
+    setIsPlaying(!isPlaying);
   };
 
   return (
@@ -116,20 +119,25 @@ const SoundWave: React.FC<SoundWaveProps> = ({ width, height, color }) => {
         width={width} 
         height={height} 
         className="w-full cursor-pointer" 
-        onMouseMove={handleMouseMove}
+        onClick={handleClick}
       />
-      <div className="mt-4 flex justify-center space-x-4">
-        <button onClick={() => changeTempo(tempo / 2)} className="px-4 py-2 bg-primary text-white rounded">1/2x</button>
+      <div className="mt-4 flex justify-center space-x-4 items-center">
+        <button 
+          onClick={togglePlay} 
+          className="px-4 py-2 bg-primary text-white rounded"
+        >
+          {isPlaying ? 'Pause' : 'Play'}
+        </button>
         <input 
           type="range" 
           min="0.5" 
           max="2" 
           step="0.1" 
           value={tempo} 
-          onChange={(e) => changeTempo(parseFloat(e.target.value))}
+          onChange={(e) => setTempo(parseFloat(e.target.value))}
           className="w-32"
         />
-        <button onClick={() => changeTempo(tempo * 2)} className="px-4 py-2 bg-primary text-white rounded">2x</button>
+        <span>Tempo: {tempo.toFixed(1)}x</span>
       </div>
     </div>
   );
