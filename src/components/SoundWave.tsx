@@ -1,203 +1,222 @@
-import React, { useEffect, useRef, useState, useCallback } from 'react';
-import Particle from '../utils/Particle';
-import TempoDetector from '../utils/TempoDetector';
+import React, { useEffect, useRef, useState, useCallback } from "react";
+import Particle from "../utils/Particle";
+import TempoDetector from "../utils/TempoDetector";
 
 interface SoundWaveProps {
-  width: number;
-  height: number;
-  className: string;
-  onFileUpload: (file: File) => void;
-  bpm: number;
+	width: number;
+	height: number;
+	className: string;
+	onFileUpload: (file: File) => void;
+	bpm: number;
 }
 
-const SoundWave: React.FC<SoundWaveProps> = React.memo(({ width, height, onFileUpload, bpm }) => {
-  const canvasRef = useRef<HTMLCanvasElement>(null);
-  const [particles, setParticles] = useState<Particle[]>([]);
-  const animationRef = useRef<number>();
-  const timeRef = useRef(0);
-  const tempoDetectorRef = useRef<TempoDetector>(new TempoDetector());
-  const [detectedTempo, setDetectedTempo] = useState<number | null>(null);
-  const [tempoColor, setTempoColor] = useState('#0000FF'); // Default blue color
+const SoundWave: React.FC<SoundWaveProps> = React.memo(
+	({ width, height, onFileUpload, bpm }) => {
+		const canvasRef = useRef<HTMLCanvasElement>(null);
+		const [particles, setParticles] = useState<Particle[]>([]);
+		const animationRef = useRef<number>();
+		const timeRef = useRef(0);
+		const tempoDetectorRef = useRef<TempoDetector>(new TempoDetector());
+		const [detectedTempo, setDetectedTempo] = useState<number | null>(null);
+		const [tempoColor, setTempoColor] = useState("#0000FF"); // Default blue color
 
-  const getColorProgress = useCallback((tempo: number) => {
-    const minTempo = 60;
-    const maxTempo = 180;
-    return Math.min(Math.max((tempo - minTempo) / (maxTempo - minTempo), 0), 1);
-  }, []);
+		const getColorProgress = useCallback((tempo: number) => {
+			const minTempo = 60;
+			const maxTempo = 180;
+			return Math.min(
+				Math.max((tempo - minTempo) / (maxTempo - minTempo), 0),
+				1,
+			);
+		}, []);
 
-  const [colorProgress, setColorProgress] = useState(getColorProgress(bpm));
+		const [colorProgress, setColorProgress] = useState(getColorProgress(bpm));
 
-  useEffect(() => {
-    setColorProgress(getColorProgress(bpm));
-  }, [bpm, getColorProgress]);
+		useEffect(() => {
+			setColorProgress(getColorProgress(bpm));
+		}, [bpm, getColorProgress]);
 
-  const initializeParticles = useCallback(() => {
-    const newParticles: Particle[] = [];
-    const numParticles = width;
-    for (let i = 0; i < numParticles; i++) {
-      newParticles.push(new Particle(
-        i, 
-        height / 2, 
-        height / 4, 
-        0.02, 
-        i * 0.1
-      ));
-    }
-    setParticles(newParticles);
-  }, [width, height]);
+		const initializeParticles = useCallback(() => {
+			const newParticles: Particle[] = [];
+			const numParticles = width;
+			for (let i = 0; i < numParticles; i++) {
+				newParticles.push(
+					new Particle(i, height / 2, height / 4, 0.02, i * 0.1),
+				);
+			}
+			setParticles(newParticles);
+		}, [width, height]);
 
-  useEffect(() => {
-    initializeParticles();
-  }, [initializeParticles]);
+		useEffect(() => {
+			initializeParticles();
+		}, [initializeParticles]);
 
-  const updateParticles = useCallback((time: number) => {
-    particles.forEach(particle => {
-      particle.update(time * (bpm / 120));
-    });
-  }, [particles, bpm]);
+		const updateParticles = useCallback(
+			(time: number) => {
+				particles.forEach((particle) => {
+					particle.update(time * (bpm / 120));
+				});
+			},
+			[particles, bpm],
+		);
 
-  const drawWave = useCallback((ctx: CanvasRenderingContext2D) => {
-    ctx.clearRect(0, 0, width, height);
-    
-    // Draw filled area
-    ctx.beginPath();
-    ctx.moveTo(0, height / 2);
-    particles.forEach((particle) => {
-      ctx.lineTo(particle.x, particle.y);
-    });
-    ctx.lineTo(width, height / 2);
-    ctx.closePath();
-    
-    const gradient = ctx.createLinearGradient(0, 0, width, 0);
-    particles.forEach((particle, index) => {
-      gradient.addColorStop(index / particles.length, particle.getColor());
-    });
-    ctx.fillStyle = gradient;
-    ctx.fill();
+		const drawWave = useCallback(
+			(ctx: CanvasRenderingContext2D) => {
+				ctx.clearRect(0, 0, width, height);
 
-    // Draw wave line
-    ctx.beginPath();
-    particles.forEach((particle, index) => {
-      if (index === 0) {
-        ctx.moveTo(particle.x, particle.y);
-      } else {
-        ctx.lineTo(particle.x, particle.y);
-      }
-    });
-    ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
-    ctx.lineWidth = 2;
-    ctx.stroke();
+				// Draw filled area
+				ctx.beginPath();
+				ctx.moveTo(0, height / 2);
+				particles.forEach((particle) => {
+					ctx.lineTo(particle.x, particle.y);
+				});
+				ctx.lineTo(width, height / 2);
+				ctx.closePath();
 
-    // Draw particles
-    particles.forEach((particle) => {
-      ctx.beginPath();
-      ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
-      ctx.fillStyle = particle.getColor();
-      ctx.fill();
-    });
-  }, [particles, width, height]);
+				const gradient = ctx.createLinearGradient(0, 0, width, 0);
+				particles.forEach((particle, index) => {
+					gradient.addColorStop(index / particles.length, particle.getColor());
+				});
+				ctx.fillStyle = gradient;
+				ctx.fill();
 
-  const animate = useCallback(() => {
-    const canvas = canvasRef.current;
-    const ctx = canvas?.getContext('2d');
-    if (!ctx) return;
+				// Draw wave line
+				ctx.beginPath();
+				particles.forEach((particle, index) => {
+					if (index === 0) {
+						ctx.moveTo(particle.x, particle.y);
+					} else {
+						ctx.lineTo(particle.x, particle.y);
+					}
+				});
+				ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+				ctx.lineWidth = 2;
+				ctx.stroke();
 
-    timeRef.current += 0.016; // Assuming 60fps
-    updateParticles(timeRef.current);
-    drawWave(ctx);
+				// Draw particles
+				particles.forEach((particle) => {
+					ctx.beginPath();
+					ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
+					ctx.fillStyle = particle.getColor();
+					ctx.fill();
+				});
+			},
+			[particles, width, height],
+		);
 
-    animationRef.current = requestAnimationFrame(animate);
-  }, [updateParticles, drawWave]);
+		const animate = useCallback(() => {
+			const canvas = canvasRef.current;
+			const ctx = canvas?.getContext("2d");
+			if (!ctx) return;
 
-  useEffect(() => {
-    animate();
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }, [animate]);
+			timeRef.current += 0.016; // Assuming 60fps
+			updateParticles(timeRef.current);
+			drawWave(ctx);
 
-  const handleClick = useCallback((event: React.MouseEvent<HTMLCanvasElement>) => {
-    const canvas = canvasRef.current;
-    if (!canvas) return;
+			animationRef.current = requestAnimationFrame(animate);
+		}, [updateParticles, drawWave]);
 
-    const rect = canvas.getBoundingClientRect();
-    const x = event.clientX - rect.left;
+		useEffect(() => {
+			animate();
+			return () => {
+				if (animationRef.current) {
+					cancelAnimationFrame(animationRef.current);
+				}
+			};
+		}, [animate]);
 
-    particles.forEach((particle) => {
-      particle.applyRipple(x, 20);
-    });
-    particles.forEach(particle => particle.updateColorProgress(colorProgress));
-  }, [particles, colorProgress]);
+		const handleClick = useCallback(
+			(event: React.MouseEvent<HTMLCanvasElement>) => {
+				const canvas = canvasRef.current;
+				if (!canvas) return;
 
-  const handleFileUpload = useCallback(async (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      onFileUpload(file);
-      
-      // Detect tempo
-      await tempoDetectorRef.current.loadAudio(file);
-      const tempo = await tempoDetectorRef.current.detectTempo();
-      setDetectedTempo(tempo);
-    }
-  }, [onFileUpload]);
+				const rect = canvas.getBoundingClientRect();
+				const x = event.clientX - rect.left;
 
-  const getTempoColor = useCallback((tempo: number) => {
-    const minTempo = 60;
-    const maxTempo = 180;
-    const normalizedTempo = Math.max(minTempo, Math.min(maxTempo, tempo));
-    const progress = (normalizedTempo - minTempo) / (maxTempo - minTempo);
-    
-    if (progress < 0.33) {
-      return 'surreal-sky';
-    } else if (progress < 0.66) {
-      return 'melting-clock-gold';
-    } else {
-      return 'dream-red';
-    }
-  }, []);
+				particles.forEach((particle) => {
+					particle.applyRipple(x, 20);
+				});
+				particles.forEach((particle) =>
+					particle.updateColorProgress(colorProgress),
+				);
+			},
+			[particles, colorProgress],
+		);
 
-  useEffect(() => {
-    if (detectedTempo) {
-      const color = getTempoColor(detectedTempo);
-      setTempoColor(color);
-      particles.forEach(particle => particle.setBaseColor(color));
-    }
-  }, [detectedTempo, getTempoColor, particles]);
+		const handleFileUpload = useCallback(
+			async (event: React.ChangeEvent<HTMLInputElement>) => {
+				const file = event.target.files?.[0];
+				if (file) {
+					onFileUpload(file);
 
-  return (
-    <div className="relative">
-      <canvas 
-        ref={canvasRef} 
-        width={width} 
-        height={height} 
-        className="w-full cursor-pointer rounded-lg overflow-hidden" 
-        onClick={handleClick}
-        aria-label="Interactive sound wave visualization"
-        role="img"
-        style={{ background: `linear-gradient(to right, ${tempoColor}22, ${tempoColor}66)` }}
-      />
-      <div className="mt-4 flex justify-center space-x-4 items-center">
-        <input
-          type="file"
-          accept="audio/*"
-          onChange={handleFileUpload}
-          className="hidden"
-          id={`fileUpload-${width}-${height}`}
-        />
-        <label
-          htmlFor={`fileUpload-${width}-${height}`}
-          className={`cursor-pointer bg-gradient-to-t from-${tempoColor} to-${tempoColor} bg-opacity-80 text-canvas-white px-4 py-2 rounded-full hover:bg-opacity-80 transition-colors duration-200 transform hover:scale-105`}
-        >
-          Upload Audio
-        </label>
-        {detectedTempo && (
-          <span className="text-soft-shadow dark:text-canvas-white font-semibold">Detected Tempo: {Math.round(detectedTempo)} BPM</span>
-        )}
-      </div>
-    </div>
-  );
-});
+					// Detect tempo
+					await tempoDetectorRef.current.loadAudio(file);
+					const tempo = await tempoDetectorRef.current.detectTempo();
+					setDetectedTempo(tempo);
+				}
+			},
+			[onFileUpload],
+		);
+
+		const getTempoColor = useCallback((tempo: number) => {
+			const minTempo = 60;
+			const maxTempo = 180;
+			const normalizedTempo = Math.max(minTempo, Math.min(maxTempo, tempo));
+			const progress = (normalizedTempo - minTempo) / (maxTempo - minTempo);
+
+			if (progress < 0.33) {
+				return "surreal-sky";
+			} else if (progress < 0.66) {
+				return "melting-clock-gold";
+			} else {
+				return "dream-red";
+			}
+		}, []);
+
+		useEffect(() => {
+			if (detectedTempo) {
+				const color = getTempoColor(detectedTempo);
+				setTempoColor(color);
+				particles.forEach((particle) => particle.setBaseColor(color));
+			}
+		}, [detectedTempo, getTempoColor, particles]);
+
+		return (
+			<div className="relative">
+				<canvas
+					ref={canvasRef}
+					width={width}
+					height={height}
+					className="w-full cursor-pointer rounded-lg overflow-hidden"
+					onClick={handleClick}
+					aria-label="Interactive sound wave visualization"
+					role="img"
+					style={{
+						background: `linear-gradient(to right, ${tempoColor}22, ${tempoColor}66)`,
+					}}
+				/>
+				<div className="mt-4 flex justify-center space-x-4 items-center">
+					<input
+						type="file"
+						accept="audio/*"
+						onChange={handleFileUpload}
+						className="hidden"
+						id={`fileUpload-${width}-${height}`}
+					/>
+					<label
+						htmlFor={`fileUpload-${width}-${height}`}
+						className={`cursor-pointer bg-gradient-to-t from-${tempoColor} to-${tempoColor} bg-opacity-80 text-canvas-white px-4 py-2 rounded-full hover:bg-opacity-80 transition-colors duration-200 transform hover:scale-105`}
+					>
+						Upload Audio
+					</label>
+					{detectedTempo && (
+						<span className="text-soft-shadow dark:text-canvas-white font-semibold">
+							Detected Tempo: {Math.round(detectedTempo)} BPM
+						</span>
+					)}
+				</div>
+			</div>
+		);
+	},
+);
 
 export default React.memo(SoundWave);
