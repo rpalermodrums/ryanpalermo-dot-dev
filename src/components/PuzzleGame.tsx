@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from "react";
+import React, { useState, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import DJDeck from "./DJDeck";
 
@@ -23,6 +23,7 @@ const PuzzleGame: React.FC = () => {
 		return initialPuzzle;
 	});
 	const [isPuzzleSolved, setIsPuzzleSolved] = useState(false);
+	const [showSuccess, setShowSuccess] = useState(false);
 
 	const handleTileClick = useCallback(
 		(index: number) => {
@@ -72,15 +73,25 @@ const PuzzleGame: React.FC = () => {
 		setIsPuzzleSolved(false);
 	}, []);
 
+	useEffect(() => {
+		if (isPuzzleSolved) {
+			setShowSuccess(true);
+			const timer = setTimeout(() => {
+				setShowSuccess(false);
+			}, 3000);
+			return () => clearTimeout(timer);
+		}
+	}, [isPuzzleSolved]);
+
 	return (
 		<>
-			{!isPuzzleSolved ? (
+			{!isPuzzleSolved || showSuccess ? (
 				<div className="max-w-xs mx-auto">
-					<h3 className="text-xl font-semibold mb-4 text-center text-gray-800 dark:text-white">
+					<h3 className="mb-4 text-xl font-semibold text-center text-gray-800 dark:text-white">
 						Oooh what's behind this puzzle?!?
 					</h3>
 					<div
-						className="grid grid-cols-3 gap-4 relative m-auto"
+						className="relative grid grid-cols-3 gap-4 m-auto"
 						style={{ width: "260px", height: "260px" }}
 					>
 						<AnimatePresence>
@@ -95,12 +106,17 @@ const PuzzleGame: React.FC = () => {
 												: "bg-melting-gold text-dreamscape-blue"
 										} rounded-lg focus:outline-none transition-colors duration-300 hover:bg-surreal-coral`}
 										onClick={() => handleTileClick(index)}
-										disabled={tile === 0}
+										disabled={tile === 0 || isPuzzleSolved}
 										initial={false}
-										animate={{
-											x: col * 88,
-											y: row * 88,
-										}}
+										animate={
+											isPuzzleSolved
+												? { scale: 0, x: 130, y: 130 }
+												: {
+														scale: 1,
+														x: col * 88,
+														y: row * 88,
+													}
+										}
 										transition={{ type: "spring", stiffness: 300, damping: 30 }}
 									>
 										{tile !== 0 && tile}
@@ -108,10 +124,31 @@ const PuzzleGame: React.FC = () => {
 								);
 							})}
 						</AnimatePresence>
+						<AnimatePresence>
+							{showSuccess && (
+								<motion.div
+									initial={{ opacity: 0, scale: 0 }}
+									animate={{ opacity: 1, scale: 1 }}
+									exit={{ opacity: 0, scale: 0 }}
+									className="absolute inset-0 flex flex-col items-center justify-center bg-white rounded-lg bg-opacity-90"
+								>
+									<motion.div
+										className="mb-2 text-6xl"
+										animate={{ rotate: [0, 10, -10, 0] }}
+										transition={{ repeat: Infinity, duration: 0.5 }}
+									>
+										✅
+									</motion.div>
+									<p className="text-2xl font-bold text-green-600">
+										Nice work! 🎉
+									</p>
+								</motion.div>
+							)}
+						</AnimatePresence>
 					</div>
 					<button
 						onClick={resetPuzzle}
-						className="mt-4 w-full py-2 px-4 bg-dreamscape-blue text-white rounded-lg hover:bg-surreal-coral transition-colors duration-300"
+						className="w-full px-4 py-2 mt-4 text-white transition-colors duration-300 rounded-lg bg-dreamscape-blue hover:bg-surreal-coral"
 					>
 						Reset Puzzle
 					</button>
