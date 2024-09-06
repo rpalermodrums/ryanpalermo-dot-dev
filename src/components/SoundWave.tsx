@@ -187,6 +187,7 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(
 		return (
 			<div className="relative">
 				<canvas
+					role="img"
 					ref={canvasRef}
 					width={width}
 					height={height}
