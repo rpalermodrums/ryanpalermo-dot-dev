@@ -1,11 +1,9 @@
-import React, { useEffect, useRef, useState, useCallback } from "react";
-import Particle from "../utils/Particle";
-import TempoDetector from "../utils/TempoDetector";
+import React, { useRef, useCallback, useEffect } from "react";
+import { useSoundWave } from "../hooks/useSoundWave";
 
 interface SoundWaveProps {
 	width: number;
 	height: number;
-	className: string;
 	onFileUpload: (file: File) => void;
 	bpm: number;
 }
@@ -13,51 +11,14 @@ interface SoundWaveProps {
 const SoundWave: React.FC<SoundWaveProps> = React.memo(
 	({ width, height, onFileUpload, bpm }) => {
 		const canvasRef = useRef<HTMLCanvasElement>(null);
-		const [particles, setParticles] = useState<Particle[]>([]);
-		const animationRef = useRef<number>();
-		const timeRef = useRef(0);
-		const tempoDetectorRef = useRef<TempoDetector>(new TempoDetector());
-		const [detectedTempo, setDetectedTempo] = useState<number | null>(null);
-		const [tempoColor, setTempoColor] = useState("#0000FF"); // Default blue color
-
-		const getColorProgress = useCallback((tempo: number) => {
-			const minTempo = 60;
-			const maxTempo = 180;
-			return Math.min(
-				Math.max((tempo - minTempo) / (maxTempo - minTempo), 0),
-				1,
-			);
-		}, []);
-
-		const [colorProgress, setColorProgress] = useState(getColorProgress(bpm));
-
-		useEffect(() => {
-			setColorProgress(getColorProgress(bpm));
-		}, [bpm, getColorProgress]);
-
-		const initializeParticles = useCallback(() => {
-			const newParticles: Particle[] = [];
-			const numParticles = width;
-			for (let i = 0; i < numParticles; i++) {
-				newParticles.push(
-					new Particle(i, height / 2, height / 4, 0.02, i * 0.1),
-				);
-			}
-			setParticles(newParticles);
-		}, [width, height]);
-
-		useEffect(() => {
-			initializeParticles();
-		}, [initializeParticles]);
-
-		const updateParticles = useCallback(
-			(time: number) => {
-				for (const particle of particles) {
-					particle.update(time * (bpm / 120));
-				}
-			},
-			[particles, bpm],
-		);
+		const {
+			particles,
+			detectedTempo,
+			updateParticles,
+			handleRipple,
+			detectTempo,
+			getTempoColor,
+		} = useSoundWave(width, height, bpm);
 
 		const drawWave = useCallback(
 			(ctx: CanvasRenderingContext2D) => {
@@ -66,82 +27,58 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(
 				// Draw filled area
 				ctx.beginPath();
 				ctx.moveTo(0, height / 2);
-				for (const particle of particles) {
-					ctx.lineTo(particle.x, particle.y);
-				}
+				particles.forEach((particle) => ctx.lineTo(particle.x, particle.y));
 				ctx.lineTo(width, height / 2);
 				ctx.closePath();
 
 				const gradient = ctx.createLinearGradient(0, 0, width, 0);
-				// @biome-ignore lint/complexity/noForEach: needs index and particle
 				particles.forEach((particle, index) => {
 					gradient.addColorStop(index / particles.length, particle.getColor());
 				});
 				ctx.fillStyle = gradient;
 				ctx.fill();
 
-				// Draw wave line
+				// Draw wave line and particles
 				ctx.beginPath();
-				// @biome-ignore lint/complexity/noForEach: needs index and particle
 				particles.forEach((particle, index) => {
-					if (index === 0) {
-						ctx.moveTo(particle.x, particle.y);
-					} else {
-						ctx.lineTo(particle.x, particle.y);
-					}
-				});
-				ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
-				ctx.lineWidth = 2;
-				ctx.stroke();
+					if (index === 0) ctx.moveTo(particle.x, particle.y);
+					else ctx.lineTo(particle.x, particle.y);
 
-				// Draw particles
-				for (const particle of particles) {
 					ctx.beginPath();
 					ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
 					ctx.fillStyle = particle.getColor();
 					ctx.fill();
-				}
+				});
+				ctx.strokeStyle = "rgba(255, 255, 255, 0.5)";
+				ctx.lineWidth = 2;
+				ctx.stroke();
 			},
 			[particles, width, height],
 		);
 
 		const animate = useCallback(() => {
-			const canvas = canvasRef.current;
-			const ctx = canvas?.getContext("2d");
+			const ctx = canvasRef.current?.getContext("2d");
 			if (!ctx) return;
 
-			timeRef.current += 0.016; // Assuming 60fps
-			updateParticles(timeRef.current);
+			updateParticles(performance.now() * 0.001);
 			drawWave(ctx);
 
-			animationRef.current = requestAnimationFrame(animate);
+			requestAnimationFrame(animate);
 		}, [updateParticles, drawWave]);
 
 		useEffect(() => {
-			animate();
-			return () => {
-				if (animationRef.current) {
-					cancelAnimationFrame(animationRef.current);
-				}
-			};
+			const animationId = requestAnimationFrame(animate);
+			return () => cancelAnimationFrame(animationId);
 		}, [animate]);
 
 		const handleClick = useCallback(
 			(event: React.MouseEvent<HTMLCanvasElement>) => {
-				const canvas = canvasRef.current;
-				if (!canvas) return;
-
-				const rect = canvas.getBoundingClientRect();
-				const x = event.clientX - rect.left;
-
-				for (const particle of particles) {
-					particle.applyRipple(x, 20);
-				}
-				for (const particle of particles) {
-					particle.updateColorProgress(colorProgress);
+				const rect = canvasRef.current?.getBoundingClientRect();
+				if (rect) {
+					handleRipple(event.clientX - rect.left);
 				}
 			},
-			[particles, colorProgress],
+			[handleRipple],
 		);
 
 		const handleFileUpload = useCallback(
@@ -149,40 +86,13 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(
 				const file = event.target.files?.[0];
 				if (file) {
 					onFileUpload(file);
-
-					// Detect tempo
-					await tempoDetectorRef.current.loadAudio(file);
-					const tempo = await tempoDetectorRef.current.detectTempo();
-					setDetectedTempo(tempo);
+					await detectTempo(file);
 				}
 			},
-			[onFileUpload],
+			[onFileUpload, detectTempo],
 		);
 
-		const getTempoColor = useCallback((tempo: number) => {
-			const minTempo = 60;
-			const maxTempo = 180;
-			const normalizedTempo = Math.max(minTempo, Math.min(maxTempo, tempo));
-			const progress = (normalizedTempo - minTempo) / (maxTempo - minTempo);
-
-			if (progress < 0.33) {
-				return "surreal-sky";
-			}
-			if (progress < 0.66) {
-				return "melting-clock-gold";
-			}
-			return "dream-red";
-		}, []);
-
-		useEffect(() => {
-			if (detectedTempo) {
-				const color = getTempoColor(detectedTempo);
-				setTempoColor(color);
-				for (const particle of particles) {
-					particle.setBaseColor(color);
-				}
-			}
-		}, [detectedTempo, getTempoColor, particles]);
+		const tempoColor = detectedTempo ? getTempoColor(detectedTempo) : "blue";
 
 		return (
 			<div className="relative">
@@ -229,4 +139,4 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(
 	},
 );
 
-export default React.memo(SoundWave);
+export default SoundWave;
