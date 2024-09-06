@@ -1,6 +1,6 @@
-import React from "react";
-import { useParams } from "react-router-dom";
 import Markdown from "markdown-to-jsx";
+import type React from "react";
+import { useParams } from "react-router-dom";
 import musicTechContent from "../assets/posts/v1__20240905__music-tech-relationship.md?raw";
 
 const markdownFiles = {

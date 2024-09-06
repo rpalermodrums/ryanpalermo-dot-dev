@@ -1,4 +1,4 @@
-import { useEffect, RefObject } from "react";
+import { type RefObject, useEffect } from "react";
 
 interface Particle {
 	x: number;
@@ -38,7 +38,7 @@ const useParticleBackground = (canvasRef: RefObject<HTMLCanvasElement>) => {
 			requestAnimationFrame(animate);
 			ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-			particles.forEach((particle) => {
+			for (const particle of particles) {
 				particle.x += particle.vx;
 				particle.y += particle.vy;
 
@@ -49,7 +49,7 @@ const useParticleBackground = (canvasRef: RefObject<HTMLCanvasElement>) => {
 				ctx.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
 				ctx.fillStyle = particle.color;
 				ctx.fill();
-			});
+			}
 		}
 
 		animate();

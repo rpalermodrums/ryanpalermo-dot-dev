@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 
 interface LayoutProps {
@@ -20,8 +21,8 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 
 	return (
 		<div className={`min-h-screen flex flex-col ${darkMode ? "dark" : ""}`}>
-			<header className="sticky top-0 z-40 w-full border-b bg-gradient-to-r from-dreamscape-blue to-persistence-purple dark:from-dreamscape-blue dark:to-persistence-purple transition-colors duration-300">
-				<nav className="container mx-auto px-4 py-4 flex justify-between items-center">
+			<header className="sticky top-0 z-40 w-full transition-colors duration-300 border-b bg-gradient-to-r from-dreamscape-blue to-persistence-purple dark:from-dreamscape-blue dark:to-persistence-purple">
+				<nav className="container flex items-center justify-between px-4 py-4 mx-auto">
 					<Link to="/" className="text-2xl font-bold text-melting-gold">
 						Ryan Palermo
 					</Link>
@@ -40,8 +41,9 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 						))}
 						<li>
 							<button
+								type="button"
 								onClick={toggleDarkMode}
-								className="text-canvas-cream hover:text-surreal-coral transition-colors duration-200"
+								className="transition-colors duration-200 text-canvas-cream hover:text-surreal-coral"
 							>
 								{darkMode ? "☀️" : "🌙"}
 							</button>
@@ -49,10 +51,10 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 					</ul>
 				</nav>
 			</header>
-			<main className="flex-grow bg-gradient-to-br from-canvas-cream to-ethereal-teal dark:from-dreamscape-blue dark:to-persistence-purple transition-colors duration-300">
+			<main className="flex-grow transition-colors duration-300 bg-gradient-to-br from-canvas-cream to-ethereal-teal dark:from-dreamscape-blue dark:to-persistence-purple">
 				{children}
 			</main>
-			<footer className="border-t py-4 text-center bg-gradient-to-r from-dreamscape-blue to-persistence-purple dark:from-dreamscape-blue dark:to-persistence-purple text-canvas-cream transition-colors duration-300">
+			<footer className="py-4 text-center transition-colors duration-300 border-t bg-gradient-to-r from-dreamscape-blue to-persistence-purple dark:from-dreamscape-blue dark:to-persistence-purple text-canvas-cream">
 				<p>
 					&copy; {new Date().getFullYear()} Ryan Palermo. All rights reserved.
 				</p>

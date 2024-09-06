@@ -1,17 +1,17 @@
+import { useEffect } from "react";
 import {
-	BrowserRouter as Router,
 	Route,
+	BrowserRouter as Router,
 	Routes,
-	useNavigate,
 	useLocation,
+	useNavigate,
 } from "react-router-dom";
 import Layout from "./components/Layout";
+import MarkdownView from "./components/MarkdownView";
+import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import Thoughts from "./pages/Thoughts";
-import Contact from "./pages/Contact";
-import MarkdownView from "./components/MarkdownView";
-import { useEffect } from "react";
 
 function RouteMap() {
 	const navigate = useNavigate();

@@ -4,7 +4,9 @@ class TempoDetector {
 
 	constructor() {
 		this.audioContext = new (
-			window.AudioContext || (window as any).webkitAudioContext
+			window.AudioContext ||
+			(window as unknown as { webkitAudioContext: typeof AudioContext })
+				.webkitAudioContext
 		)();
 	}
 
@@ -67,7 +69,7 @@ class TempoDetector {
 		// New: Implement comb filter to enhance periodicity
 		const combFilteredAutocorrelation = this.applyCombFilter(autocorrelation);
 
-		let maxCorrelation = -Infinity;
+		let maxCorrelation = Number.NEGATIVE_INFINITY;
 		let bestLag = 0;
 
 		for (
@@ -114,7 +116,7 @@ class TempoDetector {
 			initialTempo * 1.5, // New: 3/2 adjustment
 			initialTempo * 2,
 		];
-		let bestScore = -Infinity;
+		let bestScore = Number.NEGATIVE_INFINITY;
 		let bestTempo = initialTempo;
 
 		for (const tempo of tempos) {
@@ -132,7 +134,7 @@ class TempoDetector {
 	private evaluateTempo(tempo: number, onsetEnvelope: Float32Array): number {
 		const beatPeriod = 60 / tempo;
 		const hopSize = 512;
-		const sampleRate = this.audioBuffer!.sampleRate;
+		const sampleRate = this.audioBuffer?.sampleRate;
 		const beatSamples = Math.round((beatPeriod * sampleRate) / hopSize);
 
 		let score = 0;

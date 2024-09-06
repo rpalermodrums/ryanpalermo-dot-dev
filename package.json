@@ -9,7 +9,7 @@
 		"build": "tsc -b && vite build && cp -r src/assets/posts dist/assets/posts",
 		"test": "vitest",
 		"lint": "eslint .",
-		"format": "biome format --write --line-ending=lf",
+		"format": "biome format --write --line-ending=lf --vcs-use-ignore-file=true",
 		"preview": "vite preview"
 	},
 	"dependencies": {

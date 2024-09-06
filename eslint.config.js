@@ -1,7 +1,7 @@
-import globals from "globals";
+import parser from "@typescript-eslint/parser";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
-import parser from "@typescript-eslint/parser";
+import globals from "globals";
 
 export default [
 	{

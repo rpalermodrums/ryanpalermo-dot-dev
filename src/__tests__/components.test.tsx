@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
-import { describe, expect, it, vi, beforeAll } from "vitest";
+import { beforeAll, describe, expect, it, vi } from "vitest";
+import AudioContextMock from "../__mocks__/audioContextMock";
+import { mockCanvas } from "../__mocks__/canvasMock";
 import DJDeck from "../components/DJDeck";
 import Layout from "../components/Layout";
 import Navigation from "../components/Navigation";
 import PuzzleGame from "../components/PuzzleGame";
 import SoundWave from "../components/SoundWave";
-import AudioContextMock from "../__mocks__/audioContextMock";
-import { mockCanvas } from "../__mocks__/canvasMock";
 
 // Add this at the top of the file
 declare global {
@@ -35,8 +35,9 @@ vi.mock("../hooks/useParticles", () => ({
 
 beforeAll(() => {
 	// Mock AudioContext
-	window.AudioContext = AudioContextMock as any;
-	window.webkitAudioContext = AudioContextMock as any;
+	window.AudioContext = AudioContextMock as unknown as typeof AudioContext;
+	window.webkitAudioContext =
+		AudioContextMock as unknown as typeof AudioContext;
 
 	// Mock URL.createObjectURL
 	window.URL.createObjectURL = vi.fn(() => "mock-url");

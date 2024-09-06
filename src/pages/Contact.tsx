@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import { motion } from "framer-motion";
+import type React from "react";
+import { useState } from "react";
 
 const Contact: React.FC = () => {
 	const [name, setName] = useState("");
@@ -89,7 +90,7 @@ const Contact: React.FC = () => {
 							required
 							className="w-full px-3 py-2 border rounded-md"
 							rows={4}
-						></textarea>
+						/>
 					</div>
 					<motion.button
 						whileHover={{ scale: 1.05 }}

@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 import Particle from "../utils/Particle";
 
 const useParticles = (width: number, height: number, bpm: number) => {

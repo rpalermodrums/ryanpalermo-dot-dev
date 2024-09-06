@@ -1,16 +1,17 @@
-import { renderHook, act } from "@testing-library/react";
-import { describe, expect, it, vi, beforeAll } from "vitest";
+import { act, renderHook } from "@testing-library/react";
+import { beforeAll, describe, expect, it, vi } from "vitest";
+import AudioContextMock from "../__mocks__/audioContextMock";
+import { mockCanvas, mockCanvasContext } from "../__mocks__/canvasMock";
 import useAudioDeck from "../hooks/useAudioDeck";
 import useParticleBackground from "../hooks/useParticleBackground";
 import useParticles from "../hooks/useParticles";
 import useTempoDetection from "../hooks/useTempoDetection";
-import AudioContextMock from "../__mocks__/audioContextMock";
-import { mockCanvas, mockCanvasContext } from "../__mocks__/canvasMock";
 
 beforeAll(() => {
 	// Mock AudioContext
-	window.AudioContext = AudioContextMock as any;
-	window.webkitAudioContext = AudioContextMock as any;
+	window.AudioContext = AudioContextMock as unknown as typeof AudioContext;
+	window.webkitAudioContext =
+		AudioContextMock as unknown as typeof AudioContext;
 
 	// Mock URL.createObjectURL
 	window.URL.createObjectURL = vi.fn(() => "mock-url");

@@ -20,7 +20,7 @@ jobs:
     - name: Run linter
       run: npm run lint
     - name: Run Biome format check
-      run: npx @biomejs/biome check
+      run: npx @biomejs/biome fomat --line-ending=lf --vcs-use-ignore-file=true
 
   test:
     runs-on: ubuntu-latest

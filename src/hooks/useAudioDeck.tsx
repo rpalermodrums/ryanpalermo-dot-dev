@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 import TempoDetector from "../utils/TempoDetector";
 
 const useAudioDeck = () => {
@@ -34,7 +34,7 @@ const useAudioDeck = () => {
 
 	const handleBpmChange = useCallback(
 		(index: number) => (event: React.ChangeEvent<HTMLInputElement>) => {
-			const newBpm = parseInt(event.target.value, 10);
+			const newBpm = Number.parseInt(event.target.value, 10);
 			setBpms((prev) => {
 				const newBpms = [...prev] as [number, number];
 				newBpms[index] = newBpm;

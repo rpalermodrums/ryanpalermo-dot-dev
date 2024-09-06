@@ -1,5 +1,6 @@
-import React, { useState, useCallback, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import type React from "react";
+import { useCallback, useEffect, useState } from "react";
 import DJDeck from "./DJDeck";
 
 const PUZZLE_SIZE = 3;
@@ -62,12 +63,14 @@ const PuzzleGame: React.FC = () => {
 		return { row, col };
 	};
 
+	// @biome-ignore lint/correctness/useExhaustiveDependencies: shuffleArray changes every time and should be excluded
 	const resetPuzzle = useCallback(() => {
 		const initialPuzzle = Array.from(
 			{ length: TOTAL_TILES - 1 },
 			(_, i) => i + 1,
 		);
 		initialPuzzle.push(0);
+		// @biome-ignore-next-line lint/correctness/useExhaustiveDependencies: shuffleArray changes every time and should be excluded
 		shuffleArray(initialPuzzle);
 		setPuzzleState(initialPuzzle);
 		setIsPuzzleSolved(false);
@@ -135,7 +138,10 @@ const PuzzleGame: React.FC = () => {
 									<motion.div
 										className="mb-2 text-6xl"
 										animate={{ rotate: [0, 10, -10, 0] }}
-										transition={{ repeat: Infinity, duration: 0.5 }}
+										transition={{
+											repeat: Number.POSITIVE_INFINITY,
+											duration: 0.5,
+										}}
 									>
 										✅
 									</motion.div>
@@ -147,6 +153,7 @@ const PuzzleGame: React.FC = () => {
 						</AnimatePresence>
 					</div>
 					<button
+						type="button"
 						onClick={resetPuzzle}
 						className="w-full px-4 py-2 mt-4 text-white transition-colors duration-300 rounded-lg bg-dreamscape-blue hover:bg-surreal-coral"
 					>

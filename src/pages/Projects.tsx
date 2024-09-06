@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import type React from "react";
+import { useState } from "react";
 import DJDeck from "../components/DJDeck";
 
 interface Project {
@@ -47,20 +48,20 @@ const ProjectCard: React.FC<Project> = ({
 	imageUrl,
 	projectUrl,
 }) => (
-	<div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-lg transition-transform duration-300 hover:scale-105">
-		<img className="w-full h-48 object-cover" src={imageUrl} alt={title} />
+	<div className="overflow-hidden transition-transform duration-300 bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:scale-105">
+		<img className="object-cover w-full h-48" src={imageUrl} alt={title} />
 		<div className="p-6">
-			<h2 className="font-bold text-xl mb-2 text-gray-800 dark:text-white">
+			<h2 className="mb-2 text-xl font-bold text-gray-800 dark:text-white">
 				{title}
 			</h2>
-			<p className="text-gray-700 dark:text-gray-300 text-base mb-4">
+			<p className="mb-4 text-base text-gray-700 dark:text-gray-300">
 				{description}
 			</p>
 			<div className="flex flex-wrap gap-2 mb-4">
 				{technologies.map((tech, index) => (
 					<span
-						key={index}
-						className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white text-sm rounded-full"
+						key={`${index}-${tech}`}
+						className="px-2 py-1 text-sm text-gray-800 bg-gray-200 rounded-full dark:bg-gray-700 dark:text-white"
 					>
 						{tech}
 					</span>
@@ -68,7 +69,7 @@ const ProjectCard: React.FC<Project> = ({
 			</div>
 			<a
 				href={projectUrl}
-				className="inline-block bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-200"
+				className="inline-block px-4 py-2 font-bold text-white transition-colors duration-200 bg-blue-500 rounded hover:bg-blue-600"
 			>
 				View Project
 			</a>
@@ -92,24 +93,24 @@ const Projects: React.FC = () => {
 
 	if (!isAuthenticated) {
 		return (
-			<div className="container mx-auto px-4 py-8 flex justify-center items-center h-screen">
+			<div className="container flex items-center justify-center h-screen px-4 py-8 mx-auto">
 				<form
 					onSubmit={handlePasswordSubmit}
-					className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-lg"
+					className="p-8 bg-white rounded-lg shadow-lg dark:bg-gray-800"
 				>
-					<h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">
+					<h2 className="mb-4 text-2xl font-bold text-gray-800 dark:text-white">
 						Enter Password
 					</h2>
 					<input
 						type="password"
 						value={password}
 						onChange={(e) => setPassword(e.target.value)}
-						className="w-full p-2 mb-4 border rounded text-gray-800"
+						className="w-full p-2 mb-4 text-gray-800 border rounded"
 						placeholder="Password"
 					/>
 					<button
 						type="submit"
-						className="w-full bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600 transition-colors duration-200"
+						className="w-full px-4 py-2 font-bold text-white transition-colors duration-200 bg-blue-500 rounded hover:bg-blue-600"
 					>
 						Submit
 					</button>
@@ -119,17 +120,17 @@ const Projects: React.FC = () => {
 	}
 
 	return (
-		<div className="container mx-auto px-4 py-8">
-			<h1 className="text-3xl font-bold mb-8 text-gray-800 dark:text-white">
+		<div className="container px-4 py-8 mx-auto">
+			<h1 className="mb-8 text-3xl font-bold text-gray-800 dark:text-white">
 				My Projects
 			</h1>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-8">
+			<div className="grid grid-cols-1 gap-8 mb-8 md:grid-cols-2 lg:grid-cols-3">
 				{projects.map((project) => (
 					<ProjectCard key={project.id} {...project} />
 				))}
 			</div>
 			<div className="mt-12">
-				<h2 className="text-2xl font-bold mb-4 text-gray-800 dark:text-white">
+				<h2 className="mb-4 text-2xl font-bold text-gray-800 dark:text-white">
 					DJ Deck
 				</h2>
 				<DJDeck />

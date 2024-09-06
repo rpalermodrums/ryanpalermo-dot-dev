@@ -52,9 +52,9 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(
 
 		const updateParticles = useCallback(
 			(time: number) => {
-				particles.forEach((particle) => {
+				for (const particle of particles) {
 					particle.update(time * (bpm / 120));
-				});
+				}
 			},
 			[particles, bpm],
 		);
@@ -66,13 +66,14 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(
 				// Draw filled area
 				ctx.beginPath();
 				ctx.moveTo(0, height / 2);
-				particles.forEach((particle) => {
+				for (const particle of particles) {
 					ctx.lineTo(particle.x, particle.y);
-				});
+				}
 				ctx.lineTo(width, height / 2);
 				ctx.closePath();
 
 				const gradient = ctx.createLinearGradient(0, 0, width, 0);
+				// @biome-ignore lint/complexity/noForEach: needs index and particle
 				particles.forEach((particle, index) => {
 					gradient.addColorStop(index / particles.length, particle.getColor());
 				});
@@ -81,6 +82,7 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(
 
 				// Draw wave line
 				ctx.beginPath();
+				// @biome-ignore lint/complexity/noForEach: needs index and particle
 				particles.forEach((particle, index) => {
 					if (index === 0) {
 						ctx.moveTo(particle.x, particle.y);
@@ -93,12 +95,12 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(
 				ctx.stroke();
 
 				// Draw particles
-				particles.forEach((particle) => {
+				for (const particle of particles) {
 					ctx.beginPath();
 					ctx.arc(particle.x, particle.y, 2, 0, Math.PI * 2);
 					ctx.fillStyle = particle.getColor();
 					ctx.fill();
-				});
+				}
 			},
 			[particles, width, height],
 		);
@@ -132,12 +134,12 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(
 				const rect = canvas.getBoundingClientRect();
 				const x = event.clientX - rect.left;
 
-				particles.forEach((particle) => {
+				for (const particle of particles) {
 					particle.applyRipple(x, 20);
-				});
-				particles.forEach((particle) =>
-					particle.updateColorProgress(colorProgress),
-				);
+				}
+				for (const particle of particles) {
+					particle.updateColorProgress(colorProgress);
+				}
 			},
 			[particles, colorProgress],
 		);
@@ -165,18 +167,20 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(
 
 			if (progress < 0.33) {
 				return "surreal-sky";
-			} else if (progress < 0.66) {
-				return "melting-clock-gold";
-			} else {
-				return "dream-red";
 			}
+			if (progress < 0.66) {
+				return "melting-clock-gold";
+			}
+			return "dream-red";
 		}, []);
 
 		useEffect(() => {
 			if (detectedTempo) {
 				const color = getTempoColor(detectedTempo);
 				setTempoColor(color);
-				particles.forEach((particle) => particle.setBaseColor(color));
+				for (const particle of particles) {
+					particle.setBaseColor(color);
+				}
 			}
 		}, [detectedTempo, getTempoColor, particles]);
 
@@ -186,15 +190,20 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(
 					ref={canvasRef}
 					width={width}
 					height={height}
-					className="w-full cursor-pointer rounded-lg overflow-hidden"
+					className="w-full overflow-hidden rounded-lg cursor-pointer"
 					onClick={handleClick}
+					onKeyDown={(e) => {
+						if (e.key === "Enter" || e.key === " ") {
+							handleClick(e as unknown as React.MouseEvent<HTMLCanvasElement>);
+						}
+					}}
+					tabIndex={0}
 					aria-label="Interactive sound wave visualization"
-					role="img"
 					style={{
 						background: `linear-gradient(to right, ${tempoColor}22, ${tempoColor}66)`,
 					}}
 				/>
-				<div className="mt-4 flex justify-center space-x-4 items-center">
+				<div className="flex items-center justify-center mt-4 space-x-4">
 					<input
 						type="file"
 						accept="audio/*"
@@ -209,7 +218,7 @@ const SoundWave: React.FC<SoundWaveProps> = React.memo(
 						Upload Audio
 					</label>
 					{detectedTempo && (
-						<span className="text-soft-shadow dark:text-canvas-white font-semibold">
+						<span className="font-semibold text-soft-shadow dark:text-canvas-white">
 							Detected Tempo: {Math.round(detectedTempo)} BPM
 						</span>
 					)}

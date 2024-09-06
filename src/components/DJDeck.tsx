@@ -1,6 +1,6 @@
-import React from "react";
-import SoundWave from "./SoundWave";
+import type React from "react";
 import useAudioDeck from "../hooks/useAudioDeck";
+import SoundWave from "./SoundWave";
 
 const DJDeck: React.FC = () => {
 	const { audioSources, bpms, handleFileUpload, handleBpmChange } =

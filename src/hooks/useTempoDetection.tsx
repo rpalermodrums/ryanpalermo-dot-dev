@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from "react";
+import { useCallback, useRef, useState } from "react";
 import TempoDetector from "../utils/TempoDetector";
 
 const useTempoDetection = () => {
