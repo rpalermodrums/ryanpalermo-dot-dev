@@ -7,7 +7,7 @@ import Contact from './pages/Contact'
 import MarkdownView from './components/MarkdownView'
 import { useEffect } from 'react';
 
-function App() {
+function RouteMap() {
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -18,19 +18,25 @@ function App() {
     if (nextRoute) {
       navigate(nextRoute, { replace: true });
     }
-  }, []);
+  }, [location.search, navigate]);
 
+  return (
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/projects" element={<Projects />} />
+      <Route path="/thoughts" element={<Thoughts />} />
+      <Route path="/thoughts/:slug" element={<MarkdownView />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="*" element={<Home />} />
+    </Routes>
+  )
+}
+
+function App() {
   return (
     <Router>
       <Layout>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="/thoughts" element={<Thoughts />} />
-          <Route path="/thoughts/:slug" element={<MarkdownView />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="*" element={<Home />} />
-        </Routes>
+        <RouteMap />
       </Layout>
     </Router>
   )
