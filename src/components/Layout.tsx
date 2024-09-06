@@ -20,7 +20,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
 	];
 
 	return (
-		<div className={`min-h-screen flex flex-col ${darkMode ? "dark" : ""}`}>
+		<div className={`min-h-screen min-w-screen flex flex-col ${darkMode ? "dark" : ""}`}>
 			<header className="sticky top-0 z-40 w-full transition-colors duration-300 border-b bg-gradient-to-r from-dreamscape-blue to-persistence-purple dark:from-dreamscape-blue dark:to-persistence-purple">
 				<nav className="container flex items-center justify-between px-4 py-4 mx-auto">
 					<Link to="/" className="text-2xl font-bold text-melting-gold">
