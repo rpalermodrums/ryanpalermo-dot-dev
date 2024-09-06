@@ -8,8 +8,8 @@
 		"moduleResolution": "bundler",
 		"isolatedModules": true,
 		"moduleDetection": "force",
-		"noEmit": true,
 		"allowImportingTsExtensions": true,
+		"emitDeclarationOnly": true,
 
 		"strict": true,
 		"noUnusedLocals": true,

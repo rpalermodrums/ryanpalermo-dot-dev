@@ -134,7 +134,7 @@ class TempoDetector {
 	private evaluateTempo(tempo: number, onsetEnvelope: Float32Array): number {
 		const beatPeriod = 60 / tempo;
 		const hopSize = 512;
-		const sampleRate = this.audioBuffer?.sampleRate;
+		const sampleRate = this.audioBuffer?.sampleRate as unknown as number;
 		const beatSamples = Math.round((beatPeriod * sampleRate) / hopSize);
 
 		let score = 0;
