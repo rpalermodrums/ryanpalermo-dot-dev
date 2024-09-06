@@ -132,7 +132,7 @@ The relationship between music and technology has a rich history. Let's take a q
 
 4. Collaborative Innovations:
    - The Electronic Frontier Foundation, co-founded by Grateful Dead lyricist John Perry Barlow, highlights how individuals straddling both worlds have shaped digital rights and internet culture. From writing lyrics to writing policy – talk about range!
-   - Companies like Ableton have created software that bridges traditional musical interfaces with programming concepts. It's like they've created a digital playground where musicians and coders can jam together.
+   - Companies like Ableton have created software that bridges traditional musical interfaces with programming concepts. It's like they've created a digital playground where musicians and coders can jam together (Fun fact, Ableton was the software that inspired me to first learn to code!).
 
 ## Counterarguments
 
