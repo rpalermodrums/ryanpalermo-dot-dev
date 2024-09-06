@@ -66,6 +66,7 @@ const Projects: React.FC = () => {
 
   const handlePasswordSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    // TODO: Implement real password validation here and replace dummy projects with real ones
     if (password === 'letmein') {
       setIsAuthenticated(true);
     } else {
