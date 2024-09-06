@@ -19,6 +19,8 @@ jobs:
       run: npm ci
     - name: Run linter
       run: npm run lint
+    - name: Run Biome format check
+      run: npx @biomejs/biome check
 
   test:
     runs-on: ubuntu-latest
