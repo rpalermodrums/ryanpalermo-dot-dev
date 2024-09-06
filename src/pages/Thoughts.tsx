@@ -43,7 +43,7 @@ const BlogPostCard: React.FC<BlogPost> = ({ title, excerpt, date, readTime, slug
 const Thoughts: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">My Thoughts</h1>
+      <h1 className="text-3xl font-bold mb-8 text-gray-800 dark:text-white">My Thoughts</h1>
       <div className="space-y-8">
         {blogPosts.map((post) => (
           <BlogPostCard key={post.id} {...post} />
