@@ -3,6 +3,7 @@ import sitemap from "@astrojs/sitemap";
 
 export default defineConfig({
   site: "https://ryanpalermo.dev",
+  base: "/blog",
   integrations: [sitemap()],
   output: "static",
   build: {
