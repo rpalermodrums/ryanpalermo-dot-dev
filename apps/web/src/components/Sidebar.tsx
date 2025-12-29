@@ -23,7 +23,7 @@ export function Sidebar({ activeSection, onOpenTerminal }: SidebarProps) {
       <div className="sidebar-header">
         <div className="sidebar-logo">
           <div className="sidebar-logo-icon" />
-          <span>ryanpalermo.dev</span>
+          <span>Home</span>
         </div>
       </div>
 
