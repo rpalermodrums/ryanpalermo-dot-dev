@@ -7,7 +7,8 @@ const navItems = [
   { id: "home", label: "README.md", icon: "📄", shortcut: "1" },
   { id: "projects", label: "Projects", icon: "📁", shortcut: "2" },
   { id: "about", label: "About", icon: "👤", shortcut: "3" },
-  { id: "contact", label: "Contact", icon: "📬", shortcut: "4" },
+  { id: "blog", label: "Blog", icon: "✍️", shortcut: "4" },
+  { id: "contact", label: "Contact", icon: "📬", shortcut: "5" },
 ];
 
 const BLOG_URL = "/blog";
@@ -45,7 +46,7 @@ export function Sidebar({ activeSection, onOpenTerminal }: SidebarProps) {
           className="sidebar-item"
         >
           <span className="sidebar-icon">✍️</span>
-          <span>Writing</span>
+          <span>Blog</span>
         </a>
       </div>
 

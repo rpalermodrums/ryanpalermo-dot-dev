@@ -112,7 +112,7 @@ const createCommands = (
     onClose();
     return "";
   },
-  ls: () => "README.md  projects/  about/  writing/  contact/",
+  ls: () => "README.md  projects/  about/  blog/  contact/",
   pwd: () => "/home/ryan/portfolio",
   whoami: () => "ryan",
   date: () => new Date().toString(),

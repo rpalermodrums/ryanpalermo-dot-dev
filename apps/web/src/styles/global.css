@@ -194,7 +194,7 @@ body {
 .sidebar-item[data-section="about"] .sidebar-icon {
   color: var(--c-green);
 }
-.sidebar-item[data-section="writing"] .sidebar-icon {
+.sidebar-item[data-section="blog"] .sidebar-icon {
   color: var(--c-yellow);
 }
 .sidebar-item[data-section="contact"] .sidebar-icon {
