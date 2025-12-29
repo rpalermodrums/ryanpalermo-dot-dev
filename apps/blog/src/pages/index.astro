@@ -185,12 +185,13 @@ const regularPosts = sortedPosts.filter(p => !p.data.featured);
       font-size: 14px;
       font-weight: 400;
       margin-bottom: 4px;
+      color: var(--fg-muted);
       transition: color 0.15s;
     }
 
     .post:hover .post-title,
     .featured:hover .post-title {
-      color: var(--accent);
+      color: var(--fg);
     }
 
     .post-subtitle {
