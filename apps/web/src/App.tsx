@@ -5,7 +5,8 @@ import { CommandPalette } from "./components/CommandPalette";
 import { ContextMenu } from "./components/ContextMenu";
 import { useKeyboardNav } from "./hooks/useKeyboardNav";
 import { useDiscovery } from "./components/DiscoveryProvider";
-import { projects, blogPosts, contact } from "@ryanpalermo/shared";
+import { blogPosts, contact } from "@ryanpalermo/shared";
+// import { projects, blogPosts, contact } from "@ryanpalermo/shared";
 import type { BlogPost } from "@ryanpalermo/shared";
 
 const BLOG_URL = "/blog";
@@ -59,8 +60,8 @@ export function App() {
   const featuredPost = blogPosts.find((p: BlogPost) => p.featured);
   const otherPosts = blogPosts.filter((p: BlogPost) => !p.featured);
 
-  const featuredProject = projects[0];
-  const otherProjects = projects.slice(1);
+  // const featuredProject = projects[0];
+  // const otherProjects = projects.slice(1);
 
   return (
     <div
@@ -97,10 +98,10 @@ export function App() {
           </div>
         </section>
 
-        <section id="projects" className="section">
+        {/*TODO: add projects section */}
+        {/* <section id="projects" className="section">
           <h2 className="section-title">Projects</h2>
           
-          {/* Featured Project - Process Monitor Style */}
           <div className="project-featured" data-id={featuredProject.id}>
             <div className="project-featured-header">
               <div className="project-featured-stat">
@@ -144,7 +145,6 @@ export function App() {
             </div>
           </div>
 
-          {/* Project List - File System Style */}
           <div className="projects-table">
             <div className="projects-table-header">
               <span className="col-perm">PERMISSIONS</span>
@@ -171,7 +171,7 @@ export function App() {
               </div>
             ))}
           </div>
-        </section>
+        </section> */}
 
         <section id="about" className="section">
           <h2 className="section-title">About</h2>
