@@ -80,12 +80,12 @@ export function App() {
             </div>
             <div className="readme-content">
               <h1>Ryan Palermo</h1>
-              <p className="tagline">engineer, former jazz drummer</p>
-              Currently:
+              <p className="tagline">dev, builder, drummer</p>
+              Current Status:
               <ul className="readme-list">
-                <li>Building AI tools for legal claims at Poppy</li>
-                <li>Wiring audio models together to see what breaks</li>
-                <li>Writing about the gap between how software is supposed to work and how it actually does</li>
+                <li>Tuning my opencode config</li>
+                <li>Wiring audio AI models together</li>
+                <li>Building something cool and super secret 🤫</li>
               </ul>
               <div className="readme-meta">
                 <div>New York</div>
