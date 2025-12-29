@@ -178,7 +178,7 @@ export function App() {
           <div className="about-grid">
             <div className="about-block">
               <p>
-                Drummer turned developer. Always searching for the next interesting problem to solve.
+                Drummer turned developer. Always searching for problems worth solving.
               </p>
             </div>
           </div>
