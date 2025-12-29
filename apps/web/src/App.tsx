@@ -43,7 +43,7 @@ export function App() {
   const handleContextMenu = (e: React.MouseEvent) => {
     const target = e.target as HTMLElement;
     const clickable = target.closest(
-      ".window, .post, .contact-item, .sidebar-item",
+      ".window, .post, .contact-item, .sidebar-item, .project-row, .project-featured",
     );
     if (clickable) {
       e.preventDefault();
@@ -58,6 +58,9 @@ export function App() {
 
   const featuredPost = blogPosts.find((p: BlogPost) => p.featured);
   const otherPosts = blogPosts.filter((p: BlogPost) => !p.featured);
+
+  const featuredProject = projects[0];
+  const otherProjects = projects.slice(1);
 
   return (
     <div
@@ -85,12 +88,310 @@ export function App() {
               </ul>
               <div className="readme-meta">
                 <div>New York, NY</div>
-                <div className="readme-availability">
-                  <span>•</span>
-                  <span>Available for interesting problems</span>
+                <div className="badge">
+                  <span className="badge-dot"></span>
+                  <span>Available for select projects</span>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section id="projects" className="section">
+          <h2 className="section-title">Projects</h2>
+          
+          <div className="project-featured" data-id={featuredProject.id}>
+            <div className="project-featured-header">
+              <div className="project-featured-stat">
+                <span className="stat-label">PID</span>
+                <span className="stat-value">8392</span>
+              </div>
+              <div className="project-featured-stat">
+                <span className="stat-label">USER</span>
+                <span className="stat-value">ryan</span>
+              </div>
+              <div className="project-featured-stat">
+                <span className="stat-label">%CPU</span>
+                <span className="stat-value">12.4</span>
+              </div>
+              <div className="project-featured-stat flex-grow">
+                <span className="stat-label">COMMAND</span>
+                <span className="stat-value">./{featuredProject.id} --watch</span>
+              </div>
+              <div className="project-featured-status">
+                <span className={`status-dot ${featuredProject.status.toLowerCase().replace(" ", "-")}`}></span>
+                {featuredProject.status}
+              </div>
+            </div>
+            
+            <div className="project-featured-body">
+              <div className="project-featured-main">
+                <h3 className="project-featured-title">{featuredProject.name}</h3>
+                <p className="project-featured-tagline">&gt; {featuredProject.tagline}</p>
+                <p className="project-featured-desc">{featuredProject.description}</p>
+              </div>
+              <div className="project-featured-meta">
+                <div className="meta-block">
+                  <span className="meta-header">DEPENDENCIES</span>
+                  <div className="stack-tags">
+                    {featuredProject.stack.map((tech) => (
+                      <span key={tech} className="stack-tag">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="projects-table">
+            <div className="projects-table-header">
+              <span className="col-perm">PERMISSIONS</span>
+              <span className="col-user">USER</span>
+              <span className="col-status">STATUS</span>
+              <span className="col-name">NAME</span>
+              <span className="col-desc">DESCRIPTION</span>
+            </div>
+            {otherProjects.map((project) => (
+              <div key={project.id} className="project-row" data-id={project.id}>
+                <span className="col-perm text-dim">-rwxr-xr-x</span>
+                <span className="col-user text-dim">ryan</span>
+                <span className="col-status">
+                  <span className={`status-text ${project.status.toLowerCase().replace(" ", "-")}`}>
+                    {project.status === "In Development" ? "Dev" : project.status}
+                  </span>
+                </span>
+                <span className="col-name">
+                  <span className="file-icon">./</span>{project.name}
+                </span>
+                <span className="col-desc text-muted">
+                  {project.tagline} <span className="hide-mobile stack-inline">[{project.stack.join(", ")}]</span>
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="projects" className="section">
+          <h2 className="section-title">Projects</h2>
+          
+          <div className="project-featured" data-id={featuredProject.id}>
+            <div className="project-featured-header">
+              <div className="project-featured-stat">
+                <span className="stat-label">PID</span>
+                <span className="stat-value">8392</span>
+              </div>
+              <div className="project-featured-stat">
+                <span className="stat-label">USER</span>
+                <span className="stat-value">ryan</span>
+              </div>
+              <div className="project-featured-stat">
+                <span className="stat-label">%CPU</span>
+                <span className="stat-value">12.4</span>
+              </div>
+              <div className="project-featured-stat flex-grow">
+                <span className="stat-label">COMMAND</span>
+                <span className="stat-value">./{featuredProject.id} --watch</span>
+              </div>
+              <div className="project-featured-status">
+                <span className={`status-dot ${featuredProject.status.toLowerCase().replace(" ", "-")}`}></span>
+                {featuredProject.status}
+              </div>
+            </div>
+            
+            <div className="project-featured-body">
+              <div className="project-featured-main">
+                <h3 className="project-featured-title">{featuredProject.name}</h3>
+                <p className="project-featured-tagline">// {featuredProject.tagline}</p>
+                <p className="project-featured-desc">{featuredProject.description}</p>
+              </div>
+              <div className="project-featured-meta">
+                <div className="meta-block">
+                  <span className="meta-header">DEPENDENCIES</span>
+                  <div className="stack-tags">
+                    {featuredProject.stack.map((tech) => (
+                      <span key={tech} className="stack-tag">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="projects-table">
+            <div className="projects-table-header">
+              <span className="col-perm">PERMISSIONS</span>
+              <span className="col-user">USER</span>
+              <span className="col-status">STATUS</span>
+              <span className="col-name">NAME</span>
+              <span className="col-desc">DESCRIPTION</span>
+            </div>
+            {otherProjects.map((project) => (
+              <div key={project.id} className="project-row" data-id={project.id}>
+                <span className="col-perm text-dim">-rwxr-xr-x</span>
+                <span className="col-user text-dim">ryan</span>
+                <span className="col-status">
+                  <span className={`status-text ${project.status.toLowerCase().replace(" ", "-")}`}>
+                    {project.status === "In Development" ? "Dev" : project.status}
+                  </span>
+                </span>
+                <span className="col-name">
+                  <span className="file-icon">./</span>{project.name}
+                </span>
+                <span className="col-desc text-muted">
+                  {project.tagline} <span className="hide-mobile stack-inline">[{project.stack.join(", ")}]</span>
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="projects" className="section">
+          <h2 className="section-title">Projects</h2>
+          
+          <div className="project-featured" data-id={featuredProject.id}>
+            <div className="project-featured-header">
+              <div className="project-featured-stat">
+                <span className="stat-label">PID</span>
+                <span className="stat-value">8392</span>
+              </div>
+              <div className="project-featured-stat">
+                <span className="stat-label">USER</span>
+                <span className="stat-value">ryan</span>
+              </div>
+              <div className="project-featured-stat">
+                <span className="stat-label">%CPU</span>
+                <span className="stat-value">12.4</span>
+              </div>
+              <div className="project-featured-stat flex-grow">
+                <span className="stat-label">COMMAND</span>
+                <span className="stat-value">./{featuredProject.id} --watch</span>
+              </div>
+              <div className="project-featured-status">
+                <span className={`status-dot ${featuredProject.status.toLowerCase().replace(" ", "-")}`}></span>
+                {featuredProject.status}
+              </div>
+            </div>
+            
+            <div className="project-featured-body">
+              <div className="project-featured-main">
+                <h3 className="project-featured-title">{featuredProject.name}</h3>
+                <p className="project-featured-tagline">// {featuredProject.tagline}</p>
+                <p className="project-featured-desc">{featuredProject.description}</p>
+              </div>
+              <div className="project-featured-meta">
+                <div className="meta-block">
+                  <span className="meta-header">DEPENDENCIES</span>
+                  <div className="stack-tags">
+                    {featuredProject.stack.map((tech) => (
+                      <span key={tech} className="stack-tag">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="projects-table">
+            <div className="projects-table-header">
+              <span className="col-perm">PERMISSIONS</span>
+              <span className="col-user">USER</span>
+              <span className="col-status">STATUS</span>
+              <span className="col-name">NAME</span>
+              <span className="col-desc">DESCRIPTION</span>
+            </div>
+            {otherProjects.map((project) => (
+              <div key={project.id} className="project-row" data-id={project.id}>
+                <span className="col-perm text-dim">-rwxr-xr-x</span>
+                <span className="col-user text-dim">ryan</span>
+                <span className="col-status">
+                  <span className={`status-text ${project.status.toLowerCase().replace(" ", "-")}`}>
+                    {project.status === "In Development" ? "Dev" : project.status}
+                  </span>
+                </span>
+                <span className="col-name">
+                  <span className="file-icon">./</span>{project.name}
+                </span>
+                <span className="col-desc text-muted">
+                  {project.tagline} <span className="hide-mobile stack-inline">[{project.stack.join(", ")}]</span>
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="projects" className="section">
+          <h2 className="section-title">Projects</h2>
+          
+          {/* Featured Project - Process Monitor Style */}
+          <div className="project-featured" data-id={featuredProject.id}>
+            <div className="project-featured-header">
+              <div className="project-featured-stat">
+                <span className="stat-label">PID</span>
+                <span className="stat-value">8392</span>
+              </div>
+              <div className="project-featured-stat">
+                <span className="stat-label">USER</span>
+                <span className="stat-value">ryan</span>
+              </div>
+              <div className="project-featured-stat">
+                <span className="stat-label">%CPU</span>
+                <span className="stat-value">12.4</span>
+              </div>
+              <div className="project-featured-stat flex-grow">
+                <span className="stat-label">COMMAND</span>
+                <span className="stat-value">./{featuredProject.id} --watch</span>
+              </div>
+              <div className="project-featured-status">
+                <span className={`status-dot ${featuredProject.status.toLowerCase().replace(" ", "-")}`}></span>
+                {featuredProject.status}
+              </div>
+            </div>
+            
+            <div className="project-featured-body">
+              <div className="project-featured-main">
+                <h3 className="project-featured-title">{featuredProject.name}</h3>
+                <p className="project-featured-tagline">// {featuredProject.tagline}</p>
+                <p className="project-featured-desc">{featuredProject.description}</p>
+              </div>
+              <div className="project-featured-meta">
+                <div className="meta-block">
+                  <span className="meta-header">DEPENDENCIES</span>
+                  <div className="stack-tags">
+                    {featuredProject.stack.map((tech) => (
+                      <span key={tech} className="stack-tag">{tech}</span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Project List - File System Style */}
+          <div className="projects-table">
+            <div className="projects-table-header">
+              <span className="col-perm">PERMISSIONS</span>
+              <span className="col-user">USER</span>
+              <span className="col-status">STATUS</span>
+              <span className="col-name">NAME</span>
+              <span className="col-desc">DESCRIPTION</span>
+            </div>
+            {otherProjects.map((project) => (
+              <div key={project.id} className="project-row" data-id={project.id}>
+                <span className="col-perm text-dim">-rwxr-xr-x</span>
+                <span className="col-user text-dim">ryan</span>
+                <span className="col-status">
+                  <span className={`status-text ${project.status.toLowerCase().replace(" ", "-")}`}>
+                    {project.status === "In Development" ? "Dev" : project.status}
+                  </span>
+                </span>
+                <span className="col-name">
+                  <span className="file-icon">./</span>{project.name}
+                </span>
+                <span className="col-desc text-muted">
+                  {project.tagline} <span className="hide-mobile stack-inline">[{project.stack.join(", ")}]</span>
+                </span>
+              </div>
+            ))}
           </div>
         </section>
 
