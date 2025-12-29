@@ -91,7 +91,7 @@ export function App() {
                 <div>New York</div>
                 <div className="badge">
                   <span className="badge-dot"></span>
-                  <span>Open to interesting problems</span>
+                  <span>Open to select opportunities</span>
                 </div>
               </div>
             </div>
