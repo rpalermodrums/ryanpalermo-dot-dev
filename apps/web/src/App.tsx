@@ -82,9 +82,9 @@ export function App() {
               <p className="tagline">dev - builder - musician</p>
               Currently working on:
               <ul className="readme-list">
-                <li>piecing audio models together for a bunch of micro-experiments</li>
-                <li>designing interations for when LLM-enabled software meets reality—the edge cases, error states, and micro-interactions (moments where trust is won or lost.)</li>
-                <li>figuring out how to keep my agent configs consistent while migrating to a new tool every few weeks (current favorite is `opencode`)</li>
+                <li>Piecing audio models together for a bunch of micro-experiments</li>
+                <li>Designing for LLM-enabled moments -- the edge cases, error states, and micro-interactions where trust is won or lost.</li>
+                <li>Attemping to keep my agent configs consistent while migrating to a new tool every few weeks (<code>currently using opencode</code>).</li>
               </ul>
               <div className="readme-meta">
                 <div>New York, NY</div>
@@ -174,33 +174,13 @@ export function App() {
         </section>
 
         <section id="about" className="section">
-          <h2 className="section-title">About</h2>
+          <h2 className="section-title">Who I Am</h2>
           <div className="about-grid">
             <div className="about-block">
-              <h3>Philosophy</h3>
               <p>
-                <strong>Operational Honesty:</strong> Software should tell the
-                truth about what it's doing. Loading states that reflect actual
-                progress. Error messages that explain what went wrong.
-                Interfaces that don't pretend to be simpler than they are.
+                Jazz musician turned dev. Drummer first,
+                composer/arranger second. Always searching for the next interesting problem.
               </p>
-            </div>
-            <div className="about-block">
-              <h3>Background</h3>
-              <p>
-                A decade of professional music performance before engineering. Drums,
-                composition, arrangement. The practice room taught me that taste
-                matters more than technique, and that the best work comes from
-                sitting alone with something difficult until you figure it out.
-              </p>
-            </div>
-            <div className="about-block">
-              <h3>Current Focus</h3>
-              <ul className="readme-list">
-                <li>piecing audio models together for a bunch of micro-experiments</li>
-                <li>designing interations for when LLM-enabled software meets reality—the edge cases, error states, and micro-interactions (moments where trust is won or lost.)</li>
-                <li>figuring out how to keep my agent configs consistent while migrating to a new tool every few weeks (current favorite is `opencode`)</li>
-              </ul>
             </div>
           </div>
         </section>
