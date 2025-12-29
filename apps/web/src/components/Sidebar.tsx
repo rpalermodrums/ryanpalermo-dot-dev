@@ -13,7 +13,7 @@ const navItems = [
 
 const BLOG_URL = "/blog";
 
-export function Sidebar({ activeSection, onOpenTerminal }: SidebarProps) {
+export function Sidebar({ activeSection, onOpenTerminal: _onOpenTerminal }: SidebarProps) {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
