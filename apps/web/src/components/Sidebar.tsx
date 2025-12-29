@@ -53,14 +53,13 @@ export function Sidebar({ activeSection, onOpenTerminal }: SidebarProps) {
       <div className="sidebar-status">
         <div className="status-row">
           <span className="status-dot" />
-          <span>Available for work</span>
         </div>
-        {onOpenTerminal && (
+        {/* {onOpenTerminal && (
           <button className="sidebar-item" onClick={onOpenTerminal}>
             <span className="sidebar-icon">⌨️</span>
             <span>Terminal</span>
           </button>
-        )}
+        )} */}
       </div>
     </aside>
   );
