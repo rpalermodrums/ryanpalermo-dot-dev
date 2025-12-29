@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Sidebar } from "./components/Sidebar";
+import { Footer } from "./components/Footer";
 import { Terminal } from "./components/Terminal";
 import { CommandPalette } from "./components/CommandPalette";
 import { ContextMenu } from "./components/ContextMenu";
 import { useKeyboardNav } from "./hooks/useKeyboardNav";
 import { useDiscovery } from "./components/DiscoveryProvider";
-import { blogPosts, contact } from "@ryanpalermo/shared";
+import { blogPosts } from "@ryanpalermo/shared";
 // import { projects, blogPosts, contact } from "@ryanpalermo/shared";
 import type { BlogPost } from "@ryanpalermo/shared";
 
@@ -14,6 +15,7 @@ const BLOG_URL = "/blog";
 export function App() {
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
+  const [sidebarCollapsed, setSidebarCollapsed] = useState(false);
   const [contextMenu, setContextMenu] = useState<{
     x: number;
     y: number;
@@ -69,9 +71,13 @@ export function App() {
       onContextMenu={handleContextMenu}
       onClick={() => setContextMenu(null)}
     >
-      <Sidebar onOpenTerminal={openTerminal} />
+      <Sidebar 
+        onOpenTerminal={openTerminal} 
+        collapsed={sidebarCollapsed}
+        onToggle={() => setSidebarCollapsed(!sidebarCollapsed)}
+      />
 
-      <main className="content">
+      <main className={`content${sidebarCollapsed ? " collapsed" : ""}`}>
         <section id="home" className="section">
           <div className="readme">
             <div className="readme-header">
@@ -215,39 +221,7 @@ export function App() {
           </div>
         </section>
 
-        <section id="contact" className="section">
-          <h2 className="section-title">Contact</h2>
-          <div className="contact-grid">
-            <a
-              href={`mailto:${contact.email}`}
-              className="contact-item"
-              data-id="email"
-            >
-              <span className="contact-icon">✉️</span>
-              <span>{contact.email}</span>
-            </a>
-            <a
-              href={contact.github}
-              className="contact-item"
-              data-id="github"
-              target="_blank"
-              rel="noopener"
-            >
-              <span className="contact-icon">💻</span>
-              <span>GitHub</span>
-            </a>
-            <a
-              href={contact.linkedin}
-              className="contact-item"
-              data-id="linkedin"
-              target="_blank"
-              rel="noopener"
-            >
-              <span className="contact-icon">💼</span>
-              <span>LinkedIn</span>
-            </a>
-          </div>
-        </section>
+        <Footer />
       </main>
 
       {terminalOpen && <Terminal onClose={() => setTerminalOpen(false)} />}

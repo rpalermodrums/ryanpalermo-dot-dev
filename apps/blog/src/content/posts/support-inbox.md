@@ -1,7 +1,7 @@
 ---
 title: "Peak UX Doesn't Always Look Nice"
 subtitle: "From the support inbox"
-date: 2024-02-18
+date: 2025-12-18
 excerpt: "From the support inbox: what survives reality, what gets tickets."
 featured: false
 ---

@@ -1,7 +1,7 @@
 ---
 title: "The Best Copy Is No Copy"
 subtitle: "If the interface needs explanation, the interface doesn't work"
-date: 2024-08-10
+date: 2025-08-10
 excerpt: "If the interface needs explanation, the interface doesn't work."
 featured: false
 ---

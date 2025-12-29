@@ -1,29 +1,37 @@
 interface SidebarProps {
   activeSection?: string;
   onOpenTerminal?: () => void;
+  collapsed: boolean;
+  onToggle: () => void;
 }
 
 const navItems = [
   { id: "home", label: "README.md", icon: "📄", shortcut: "1" },
   { id: "projects", label: "Projects", icon: "📁", shortcut: "2" },
   { id: "about", label: "About", icon: "👤", shortcut: "3" },
-  { id: "contact", label: "Contact", icon: "📬", shortcut: "5" },
 ];
 
 const BLOG_URL = "/blog";
 
-export function Sidebar({ activeSection, onOpenTerminal: _onOpenTerminal }: SidebarProps) {
+export function Sidebar({ activeSection, onOpenTerminal: _onOpenTerminal, collapsed, onToggle }: SidebarProps) {
   const scrollTo = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <aside className="sidebar">
+    <aside className={`sidebar${collapsed ? " collapsed" : ""}`}>
       <div className="sidebar-header">
         <div className="sidebar-logo">
           <div className="sidebar-logo-icon" />
           <span>Home</span>
         </div>
+        <button 
+          className="sidebar-toggle" 
+          onClick={onToggle}
+          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
+        >
+          {collapsed ? "»" : "«"}
+        </button>
       </div>
 
       <div className="sidebar-section">
@@ -34,6 +42,7 @@ export function Sidebar({ activeSection, onOpenTerminal: _onOpenTerminal }: Side
             className={`sidebar-item${activeSection === item.id ? " active" : ""}`}
             data-section={item.id}
             onClick={() => scrollTo(item.id)}
+            title={collapsed ? item.label : undefined}
           >
             <span className="sidebar-icon">{item.icon}</span>
             <span>{item.label}</span>
@@ -43,6 +52,7 @@ export function Sidebar({ activeSection, onOpenTerminal: _onOpenTerminal }: Side
         <a
           href={BLOG_URL}
           className="sidebar-item"
+          title={collapsed ? "Blog" : undefined}
         >
           <span className="sidebar-icon">✍️</span>
           <span>Blog</span>
