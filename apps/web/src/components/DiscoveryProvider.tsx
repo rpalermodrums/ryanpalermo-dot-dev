@@ -73,7 +73,7 @@ export function DiscoveryProvider({ children }: { children: ReactNode }) {
   }, [state]);
 
   const discover = useCallback((trigger: DiscoveryTrigger) => {
-    setState((prev) => {
+    setState((prev: DiscoveryState) => {
       if (prev.items.has(trigger)) return prev;
 
       const newItems = new Set(prev.items);

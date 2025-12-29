@@ -1,6 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import { useDiscovery } from "./DiscoveryProvider";
 import { projects, contact } from "@ryanpalermo/shared";
+import type { Project } from "@ryanpalermo/shared";
 
 interface TerminalProps {
   onClose: () => void;
@@ -42,7 +43,7 @@ const createCommands = (
   ],
   projects: () => {
     const lines = ["Projects:", ""];
-    projects.forEach((p) => {
+    projects.forEach((p: Project) => {
       lines.push(`  ${p.name} [${p.status}]`);
       lines.push(`    ${p.tagline}`);
       lines.push("");

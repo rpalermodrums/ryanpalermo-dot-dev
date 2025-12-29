@@ -4,5 +4,7 @@ node_modules
 dist
 .env
 Ableton/
+.turbo
+
 # Docker
 docker-compose.override.yml

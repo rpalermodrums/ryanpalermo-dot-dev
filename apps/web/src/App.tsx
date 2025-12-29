@@ -7,7 +7,7 @@ import { BlogPostModal } from "./components/BlogPostModal";
 import { useKeyboardNav } from "./hooks/useKeyboardNav";
 import { useDiscovery } from "./components/DiscoveryProvider";
 import { projects, blogPosts, contact } from "@ryanpalermo/shared";
-import type { BlogPost } from "@ryanpalermo/shared";
+import type { BlogPost, Project } from "@ryanpalermo/shared";
 
 export function App() {
   const [terminalOpen, setTerminalOpen] = useState(false);
@@ -61,8 +61,8 @@ export function App() {
     setSelectedPost(post);
   };
 
-  const featuredPost = blogPosts.find((p) => p.featured);
-  const otherPosts = blogPosts.filter((p) => !p.featured);
+  const featuredPost = blogPosts.find((p: BlogPost) => p.featured);
+  const otherPosts = blogPosts.filter((p: BlogPost) => !p.featured);
 
   return (
     <div
@@ -106,7 +106,7 @@ export function App() {
         <section id="projects" className="section">
           <h2 className="section-title">Projects</h2>
           <div className="windows-grid">
-            {projects.map((project) => (
+            {projects.map((project: Project) => (
               <div key={project.id} className="window" data-id={project.id}>
                 <div className="window-header">
                   <div className="window-controls">
@@ -126,7 +126,7 @@ export function App() {
                       {project.status}
                     </span>
                     <div className="stack">
-                      {project.stack.map((tech) => (
+                      {project.stack.map((tech: string) => (
                         <span key={tech} className="tech">
                           {tech}
                         </span>
@@ -187,7 +187,7 @@ export function App() {
                 <time>{featuredPost.date}</time>
               </article>
             )}
-            {otherPosts.map((post) => (
+            {otherPosts.map((post: BlogPost) => (
               <article
                 key={post.slug}
                 className="post"
