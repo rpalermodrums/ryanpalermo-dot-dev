@@ -3,16 +3,16 @@ import { Sidebar } from "./components/Sidebar";
 import { Terminal } from "./components/Terminal";
 import { CommandPalette } from "./components/CommandPalette";
 import { ContextMenu } from "./components/ContextMenu";
-import { BlogPostModal } from "./components/BlogPostModal";
 import { useKeyboardNav } from "./hooks/useKeyboardNav";
 import { useDiscovery } from "./components/DiscoveryProvider";
 import { projects, blogPosts, contact } from "@ryanpalermo/shared";
 import type { BlogPost, Project } from "@ryanpalermo/shared";
 
+const BLOG_URL = "/blog";
+
 export function App() {
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
-  const [selectedPost, setSelectedPost] = useState<BlogPost | null>(null);
   const [contextMenu, setContextMenu] = useState<{
     x: number;
     y: number;
@@ -54,11 +54,6 @@ export function App() {
         target: clickable.getAttribute("data-id") || "",
       });
     }
-  };
-
-  const openPost = (post: BlogPost) => {
-    discover("blog-post");
-    setSelectedPost(post);
   };
 
   const featuredPost = blogPosts.find((p: BlogPost) => p.featured);
@@ -175,29 +170,29 @@ export function App() {
           <h2 className="section-title">Writing</h2>
           <div className="posts-list">
             {featuredPost && (
-              <article
+              <a
+                href={`${BLOG_URL}/${featuredPost.slug}`}
                 className="post featured"
                 data-id={featuredPost.slug}
-                onClick={() => openPost(featuredPost)}
               >
                 <span className="featured-badge">Featured</span>
                 <h3>{featuredPost.title}</h3>
                 <p className="post-subtitle">{featuredPost.subtitle}</p>
                 <p className="post-excerpt">{featuredPost.excerpt}</p>
                 <time>{featuredPost.date}</time>
-              </article>
+              </a>
             )}
             {otherPosts.map((post: BlogPost) => (
-              <article
+              <a
                 key={post.slug}
+                href={`${BLOG_URL}/${post.slug}`}
                 className="post"
                 data-id={post.slug}
-                onClick={() => openPost(post)}
               >
                 <h3>{post.title}</h3>
                 <p className="post-subtitle">{post.subtitle}</p>
                 <time>{post.date}</time>
-              </article>
+              </a>
             ))}
           </div>
         </section>
@@ -246,12 +241,7 @@ export function App() {
         />
       )}
 
-      {selectedPost && (
-        <BlogPostModal
-          post={selectedPost}
-          onClose={() => setSelectedPost(null)}
-        />
-      )}
+
 
       {contextMenu && (
         <ContextMenu
