@@ -193,9 +193,9 @@ export function App() {
                 className="post featured"
                 data-id={featuredPost.slug}
               >
-                <span className="featured-badge">Featured</span>
-                <h3>{featuredPost.title}</h3>
-                <p className="post-subtitle">{featuredPost.subtitle}</p>
+                <h3 className="featured-badge">{featuredPost.title}</h3>
+                <h3>* Featured Post</h3>
+                <h4 className="post-subtitle">{featuredPost.subtitle}</h4>
                 <p className="post-excerpt">{featuredPost.excerpt}</p>
                 <time>{featuredPost.date}</time>
               </a>
