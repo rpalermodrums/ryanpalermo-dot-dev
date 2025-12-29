@@ -342,7 +342,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  color: var(--c-green);
+  color: #22c55e;
 }
 
 .readme h1 {

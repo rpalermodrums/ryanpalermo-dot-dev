@@ -77,16 +77,14 @@ export function App() {
             <div className="readme-content">
               <h1>Ryan Palermo</h1>
               <p className="tagline">dev - builder - musician</p>
-              <p>
-                . Currently working on
-                - piecing audio models together for a bunch of micro-experiments 
-                - designing interations for when LLM-enabled software meets reality—the
-                edge cases, error states, and micro-interactions (moments where trust is won or
-                lost.)
-                - figuring out how to keep my agent configs consistent while migrating to a new tool every few weeks (current favorite is `opencode`)
-              </p>
+              Currently working on:
+              <ul className="readme-list">
+                <li>piecing audio models together for a bunch of micro-experiments</li>
+                <li>designing interations for when LLM-enabled software meets reality—the edge cases, error states, and micro-interactions (moments where trust is won or lost.)</li>
+                <li>figuring out how to keep my agent configs consistent while migrating to a new tool every few weeks (current favorite is `opencode`)</li>
+              </ul>
               <div className="readme-meta">
-                <span>New York, NY</span>
+                <div>New York, NY</div>
                 <div className="readme-availability">
                   <span>•</span>
                   <span>Available for interesting problems</span>
@@ -147,7 +145,7 @@ export function App() {
             <div className="about-block">
               <h3>Background</h3>
               <p>
-                A decade of professional music before engineering. Drums,
+                A decade of professional music performance before engineering. Drums,
                 composition, arrangement. The practice room taught me that taste
                 matters more than technique, and that the best work comes from
                 sitting alone with something difficult until you figure it out.
@@ -155,11 +153,11 @@ export function App() {
             </div>
             <div className="about-block">
               <h3>Current Focus</h3>
-              <p>
-                AI-assisted legal technology. Building systems that help people
-                navigate complex processes without hiding the complexity. The
-                goal is clarity, not simplification.
-              </p>
+              <ul className="readme-list">
+                <li>piecing audio models together for a bunch of micro-experiments</li>
+                <li>designing interations for when LLM-enabled software meets reality—the edge cases, error states, and micro-interactions (moments where trust is won or lost.)</li>
+                <li>figuring out how to keep my agent configs consistent while migrating to a new tool every few weeks (current favorite is `opencode`)</li>
+              </ul>
             </div>
           </div>
         </section>
@@ -169,7 +167,7 @@ export function App() {
           <div className="posts-list">
             {featuredPost && (
               <a
-                href={`${BLOG_URL}/${featuredPost.slug}`}
+                href={`${BLOG_URL}/${featuredPost.slug}/`}
                 className="post featured"
                 data-id={featuredPost.slug}
               >
@@ -183,7 +181,7 @@ export function App() {
             {otherPosts.map((post: BlogPost) => (
               <a
                 key={post.slug}
-                href={`${BLOG_URL}/${post.slug}`}
+                href={`${BLOG_URL}/${post.slug}/`}
                 className="post"
                 data-id={post.slug}
               >
