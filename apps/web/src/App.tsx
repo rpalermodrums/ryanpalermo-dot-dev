@@ -79,18 +79,18 @@ export function App() {
             </div>
             <div className="readme-content">
               <h1>Ryan Palermo</h1>
-              <p className="tagline">dev - builder - musician</p>
-              Currently working on:
+              <p className="tagline">engineer, former jazz drummer</p>
+              Currently:
               <ul className="readme-list">
-                <li>Piecing audio models together for a bunch of micro-experiments</li>
-                <li>Designing for LLM-enabled moments -- the edge cases, error states, and micro-interactions where trust is won or lost.</li>
-                <li>Attemping to keep my agent configs consistent while migrating to a new tool every few weeks (<code>currently using opencode</code>).</li>
+                <li>Building AI tools for legal claims at Poppy</li>
+                <li>Wiring audio models together to see what breaks</li>
+                <li>Writing about the gap between how software is supposed to work and how it actually does</li>
               </ul>
               <div className="readme-meta">
-                <div>New York, NY</div>
+                <div>New York</div>
                 <div className="badge">
                   <span className="badge-dot"></span>
-                  <span>Available for select projects</span>
+                  <span>Open to interesting problems</span>
                 </div>
               </div>
             </div>
@@ -174,12 +174,12 @@ export function App() {
         </section>
 
         <section id="about" className="section">
-          <h2 className="section-title">Who I Am</h2>
+          <h2 className="section-title">About</h2>
           <div className="about-grid">
             <div className="about-block">
               <p>
-                Jazz musician turned dev. Drummer first,
-                composer/arranger second. Always searching for the next interesting problem.
+                Played drums professionally for a decade before writing code. 
+                The practice room taught me more about shipping than any standup ever will.
               </p>
             </div>
           </div>

@@ -43,21 +43,11 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "jazz-engineers",
     title: "Why Jazz Musicians Make Great Product Engineers",
-    subtitle: "The skill that transfers isn't music. It's obsession.",
+    subtitle: "How obsession and taste transfer from music to engineering",
     date: "2025-01-15",
-    excerpt:
-      "What actually carried over is simpler and impossible to teach: the disposition to sit alone with something difficult and build your own systems to get through it. That, and taste.",
     featured: true,
     content: "",
-  },
-  {
-    slug: "happy-path",
-    title: "The Happy Path Is a Lie",
-    subtitle: 'Designing for "almost done"',
-    date: "2024-12-15",
-    excerpt:
-      'Designing for "almost done" — the messy middle where trust is won or lost.',
-    content: "",
+    excerpt: "",
   },
   {
     slug: "data-model",
@@ -119,5 +109,5 @@ export const contactLinks: ContactLink[] = [
 export const contact = {
   email: "ryan@ryanpalermo.dev",
   github: "https://github.com/rpalermodrums",
-  linkedin: "https://linkedin.com/in/ryanpalermo",
+  linkedin: "https://www.linkedin.com/in/ryan-palermo-bb22bb49/",
 };

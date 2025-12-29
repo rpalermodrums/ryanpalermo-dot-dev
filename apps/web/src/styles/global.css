@@ -610,6 +610,11 @@ body {
   flex-direction: column;
 }
 
+.posts-list a {
+  color: var(--fg);
+  text-decoration: none;
+}
+
 .post {
   display: grid;
   grid-template-columns: 1fr auto;
