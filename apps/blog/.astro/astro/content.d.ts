@@ -141,13 +141,6 @@ declare module 'astro:content' {
 
 	type ContentEntryMap = {
 		"posts": {
-"animation.md": {
-	id: "animation.md";
-  slug: "animation";
-  body: string;
-  collection: "posts";
-  data: any
-} & { render(): Render[".md"] };
 "captive-users.md": {
 	id: "captive-users.md";
   slug: "captive-users";
@@ -158,13 +151,6 @@ declare module 'astro:content' {
 "data-model.md": {
 	id: "data-model.md";
   slug: "data-model";
-  body: string;
-  collection: "posts";
-  data: any
-} & { render(): Render[".md"] };
-"happy-path.md": {
-	id: "happy-path.md";
-  slug: "happy-path";
   body: string;
   collection: "posts";
   data: any
