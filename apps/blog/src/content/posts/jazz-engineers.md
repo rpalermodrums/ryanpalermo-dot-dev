@@ -1,7 +1,7 @@
 ---
 title: "Why Jazz Musicians Make Great Product Engineers"
 subtitle: "The skill that transfers isn't music. It's obsession."
-date: 2025-01-15
+date: 2025-12-29
 excerpt: "What actually carried over from music is simpler and impossible to teach: the disposition to sit alone with something difficult and build your own systems to get through it."
 featured: true
 ---
