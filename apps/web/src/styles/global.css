@@ -329,6 +329,22 @@ body {
   padding: 32px;
 }
 
+.readme-meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  color: var(--fg-dim);
+  font-size: 12px;
+}
+
+.readme-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--c-green);
+}
+
 .readme h1 {
   font-size: 28px;
   font-weight: 400;

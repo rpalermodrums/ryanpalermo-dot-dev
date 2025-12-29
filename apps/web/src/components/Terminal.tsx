@@ -35,11 +35,16 @@ const createCommands = (
   },
   about: () => [
     "Ryan Palermo",
-    "Staff Software Engineer",
+    "dev - builder - musician",
     "",
-    "Building products that tell the truth.",
+    "Building stuff i like.",
     "Background in jazz. Decade of professional music before code.",
     "Based in New York.",
+    "",
+    "Currently working on:",
+    "- piecing audio models together for a bunch of micro-experiments",
+    "- designing interations for when LLM-enabled software meets reality—the edge cases, error states, and micro-interactions (moments where trust is won or lost.)",
+    "- figuring out how to keep my agent configs consistent while migrating to a new tool every few weeks (current favorite is `opencode`)",
   ],
   projects: () => {
     const lines = ["Projects:", ""];
@@ -176,9 +181,9 @@ export function Terminal({ onClose }: TerminalProps) {
     <div className="terminal">
       <div className="terminal-header">
         <div className="window-controls">
-          <button className="control red" onClick={onClose}></button>
-          <span className="control yellow"></span>
-          <span className="control green"></span>
+          <button type="button" className="control red" onClick={onClose} title="Close"></button>
+          <span className="control yellow" title="Minimize"></span>
+          <span className="control green" title="Maximize"></span>
         </div>
         <span className="terminal-title">Terminal — ryan@portfolio</span>
       </div>
@@ -212,6 +217,8 @@ export function Terminal({ onClose }: TerminalProps) {
           <input
             ref={inputRef}
             type="text"
+            aria-label="Terminal command"
+            title="Terminal command"
             value={input}
             onChange={(e) => setInput(e.target.value)}
             className="terminal-input"

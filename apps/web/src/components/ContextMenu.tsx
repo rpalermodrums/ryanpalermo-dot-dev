@@ -11,6 +11,12 @@ export function ContextMenu({ x, y, target, onClose }: ContextMenuProps) {
   const menuRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    if (!menuRef.current) return;
+    menuRef.current.style.left = `${x}px`;
+    menuRef.current.style.top = `${y}px`;
+  }, [x, y]);
+
+  useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (menuRef.current && !menuRef.current.contains(e.target as Node)) {
         onClose();
@@ -40,7 +46,7 @@ export function ContextMenu({ x, y, target, onClose }: ContextMenuProps) {
   };
 
   return (
-    <div ref={menuRef} className="context-menu" style={{ left: x, top: y }}>
+    <div ref={menuRef} className="context-menu">
       <button className="context-menu-item" onClick={handleCopyLink}>
         Copy Link
       </button>

@@ -76,23 +76,21 @@ export function App() {
             </div>
             <div className="readme-content">
               <h1>Ryan Palermo</h1>
-              <p className="tagline">Staff Software Engineer</p>
+              <p className="tagline">dev - builder - musician</p>
               <p>
-                I build products that tell the truth. Currently focused on
-                AI-assisted legal tech, previously built infrastructure at
-                scale. I care about what happens when software meets reality—the
-                edge cases, the error states, the moments where trust is won or
-                lost.
-              </p>
-              <p>
-                Background in jazz performance. It taught me that feel matters
-                more than correctness, and that the best work comes from
-                obsession, not optimization.
+                . Currently working on
+                - piecing audio models together for a bunch of micro-experiments 
+                - designing interations for when LLM-enabled software meets reality—the
+                edge cases, error states, and micro-interactions (moments where trust is won or
+                lost.)
+                - figuring out how to keep my agent configs consistent while migrating to a new tool every few weeks (current favorite is `opencode`)
               </p>
               <div className="readme-meta">
                 <span>New York, NY</span>
-                <span>•</span>
-                <span>Available for interesting problems</span>
+                <div className="readme-availability">
+                  <span>•</span>
+                  <span>Available for interesting problems</span>
+                </div>
               </div>
             </div>
           </div>
