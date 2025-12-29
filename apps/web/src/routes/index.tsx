@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useState, useEffect } from "react";
-import { projects, blogPosts, contactLinks } from "@ryanpalermo/shared";
+import { projects, blogPosts, contactLinks, Project, BlogPost, ContactLink } from "@ryanpalermo/shared";
 import { Sidebar } from "../components/Sidebar";
 
 export const Route = createFileRoute("/")({
@@ -27,8 +27,8 @@ function HomePage() {
     return () => observer.disconnect();
   }, []);
 
-  const featuredPost = blogPosts.find((p) => p.featured);
-  const otherPosts = blogPosts.filter((p) => !p.featured);
+  const featuredPost = blogPosts.find((p: BlogPost) => p.featured);
+  const otherPosts = blogPosts.filter((p: BlogPost) => !p.featured);
 
   return (
     <div className="desktop">
@@ -83,7 +83,7 @@ function HomePage() {
         <section id="projects" className="section">
           <h2 className="section-title">Projects</h2>
           <div className="windows-grid">
-            {projects.map((project) => (
+            {projects.map((project: Project) => (
               <article
                 key={project.id}
                 className="window"
@@ -106,7 +106,7 @@ function HomePage() {
                   <p className="window-tagline">{project.tagline}</p>
                   <p className="window-description">{project.description}</p>
                   <div className="window-stack">
-                    {project.stack.map((tech) => (
+                    {project.stack.map((tech: string) => (
                       <span key={tech} className="stack-tag">
                         {tech}
                       </span>
@@ -171,7 +171,7 @@ function HomePage() {
                 </time>
               </article>
             )}
-            {otherPosts.map((post) => (
+            {otherPosts.map((post: BlogPost) => (
               <article key={post.slug} className="post" data-slug={post.slug}>
                 <h3 className="post-title">{post.title}</h3>
                 <p className="post-subtitle">{post.subtitle}</p>
@@ -184,7 +184,7 @@ function HomePage() {
         <section id="contact" className="section">
           <h2 className="section-title">Contact</h2>
           <div className="contact-grid">
-            {contactLinks.map((link) => (
+            {contactLinks.map((link: ContactLink) => (
               <a
                 key={link.label}
                 href={link.href}
