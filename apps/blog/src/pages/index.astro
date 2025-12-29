@@ -224,7 +224,7 @@ const regularPosts = sortedPosts.filter(p => !p.data.featured);
     </header>
 
     {featuredPost && (
-      <a href={`${import.meta.env.BASE_URL}${featuredPost.id.replace(/\.md$/, '')}`} class="featured">
+      <a href={`${import.meta.env.BASE_URL}/${featuredPost.id.replace(/\.md$/, '')}`} class="featured">
         <div class="featured-header">
           <div class="window-buttons">
             <span class="window-button close"></span>
@@ -247,7 +247,7 @@ const regularPosts = sortedPosts.filter(p => !p.data.featured);
     <section class="posts">
       {regularPosts.map(post => (
         <article class="post">
-          <a href={`${import.meta.env.BASE_URL}${post.id.replace(/\.md$/, '')}`} class="post-link">
+          <a href={`${import.meta.env.BASE_URL}/${post.id.replace(/\.md$/, '')}`} class="post-link">
             <div>
               <h2 class="post-title">{post.data.title}</h2>
               <p class="post-subtitle">{post.data.subtitle}</p>
