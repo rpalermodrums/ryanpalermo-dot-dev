@@ -1,0 +1,264 @@
+---
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('posts');
+const sortedPosts = posts.sort((a, b) => 
+  new Date(b.data.date).getTime() - new Date(a.data.date).getTime()
+);
+const featuredPost = sortedPosts.find(p => p.data.featured);
+const regularPosts = sortedPosts.filter(p => !p.data.featured);
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Writing — Ryan Palermo</title>
+  <meta name="description" content="Essays on product engineering, operational honesty, and building software that respects users.">
+  <link rel="alternate" type="application/rss+xml" title="Ryan Palermo's Blog" href="/rss.xml">
+  <style>
+    :root {
+      --bg: #0c0c0c;
+      --fg: #f2f2f2;
+      --fg-muted: #a3a3a3;
+      --fg-dim: #808080;
+      --border: #333333;
+      --surface: #111;
+      --surface-hover: #1f1f1f;
+      --accent: #22d3ee;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "SF Mono", Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 14px;
+      line-height: 1.6;
+      background: var(--bg);
+      color: var(--fg);
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: var(--accent);
+      color: var(--bg);
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 32px 48px;
+    }
+
+    @media (max-width: 640px) {
+      .container { padding: 24px; }
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      color: var(--fg-dim);
+      margin-bottom: 32px;
+      padding: 6px 0;
+    }
+
+    .back:hover { color: var(--fg-muted); }
+
+    .header {
+      margin-bottom: 48px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header h1 {
+      font-size: 24px;
+      font-weight: 400;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+
+    .header p {
+      color: var(--fg-muted);
+      font-size: 13px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      color: var(--fg-dim);
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      margin-bottom: 16px;
+    }
+
+    .featured {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      margin-bottom: 32px;
+      transition: border-color 0.15s;
+    }
+
+    .featured:hover {
+      border-color: #555;
+    }
+
+    .featured-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background: linear-gradient(180deg, #181818 0%, #131313 100%);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .window-buttons {
+      display: flex;
+      gap: 6px;
+    }
+
+    .window-button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #444;
+      transition: background 0.2s;
+    }
+
+    .featured:hover .window-button.close { background: #ff5f57; }
+    .featured:hover .window-button.minimize { background: #febc2e; }
+    .featured:hover .window-button.maximize { background: #28c840; }
+
+    .featured-label {
+      flex: 1;
+      text-align: center;
+      font-size: 11px;
+      color: var(--fg-dim);
+      margin-right: 30px;
+    }
+
+    .featured-content {
+      padding: 20px;
+    }
+
+    .featured .post-title {
+      font-size: 15px;
+      margin-bottom: 8px;
+    }
+
+    .posts {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .post {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 24px;
+      padding: 16px 0;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+      transition: all 0.1s;
+    }
+
+    .post:last-child { border-bottom: none; }
+
+    .post:hover {
+      background: var(--surface);
+      margin: 0 -16px;
+      padding: 16px;
+    }
+
+    .post-link {
+      display: contents;
+    }
+
+    .post-title {
+      font-size: 14px;
+      font-weight: 400;
+      margin-bottom: 4px;
+      transition: color 0.15s;
+    }
+
+    .post:hover .post-title,
+    .featured:hover .post-title {
+      color: var(--accent);
+    }
+
+    .post-subtitle {
+      font-size: 12px;
+      color: var(--fg-dim);
+      line-height: 1.5;
+    }
+
+    .post-meta {
+      font-size: 11px;
+      color: var(--fg-dim);
+      text-align: right;
+      white-space: nowrap;
+      align-self: start;
+    }
+
+    .featured .post-meta {
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <a href="https://ryanpalermo.dev" class="back">
+      <span>←</span> ryanpalermo.dev
+    </a>
+    
+    <header class="header">
+      <h1>Writing</h1>
+      <p>Essays on product engineering and building software that respects its users.</p>
+    </header>
+
+    {featuredPost && (
+      <a href={`/${featuredPost.id.replace(/\.md$/, '')}`} class="featured">
+        <div class="featured-header">
+          <div class="window-buttons">
+            <span class="window-button close"></span>
+            <span class="window-button minimize"></span>
+            <span class="window-button maximize"></span>
+          </div>
+          <span class="featured-label">Featured</span>
+        </div>
+        <div class="featured-content">
+          <h2 class="post-title">{featuredPost.data.title}</h2>
+          <p class="post-subtitle">{featuredPost.data.subtitle}</p>
+          <div class="post-meta">
+            {new Date(featuredPost.data.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+          </div>
+        </div>
+      </a>
+    )}
+
+    <div class="section-title">All Posts</div>
+    <section class="posts">
+      {regularPosts.map(post => (
+        <article class="post">
+          <a href={`/${post.id.replace(/\.md$/, '')}`} class="post-link">
+            <div>
+              <h2 class="post-title">{post.data.title}</h2>
+              <p class="post-subtitle">{post.data.subtitle}</p>
+            </div>
+            <div class="post-meta">
+              {new Date(post.data.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+            </div>
+          </a>
+        </article>
+      ))}
+    </section>
+  </div>
+</body>
+</html>

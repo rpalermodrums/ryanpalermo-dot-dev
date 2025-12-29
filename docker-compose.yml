@@ -1,12 +1,36 @@
-version: '3.8'
-
 services:
-  app:
-    build: .
-    ports:
-      - "3000:3000"
+  dev:
+    build:
+      context: .
+      target: development
     volumes:
       - .:/app
       - /app/node_modules
+      - /app/apps/web/node_modules
+      - /app/apps/blog/node_modules
+      - /app/packages/shared/node_modules
+    ports:
+      - "3000:3000"
+      - "4321:4321"
     environment:
       - NODE_ENV=development
+    stdin_open: true
+    tty: true
+
+  web:
+    build:
+      context: .
+      target: web
+    ports:
+      - "3000:80"
+    profiles:
+      - production
+
+  blog:
+    build:
+      context: .
+      target: blog
+    ports:
+      - "3001:80"
+    profiles:
+      - production

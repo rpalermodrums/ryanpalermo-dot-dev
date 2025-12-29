@@ -1,23 +1,91 @@
-# Use an official Node runtime as the base image
-FROM node:18
+# syntax=docker/dockerfile:1
 
-# Set the working directory in the container
+# ============================================================================
+# Base stage - common setup for all stages
+# ============================================================================
+FROM node:20-alpine AS base
+
+# Install pnpm
+RUN corepack enable && corepack prepare pnpm@9.15.1 --activate
+
 WORKDIR /app
 
-# Copy package.json and package-lock.json
-COPY package*.json ./
+# ============================================================================
+# Dependencies stage - install all dependencies
+# ============================================================================
+FROM base AS deps
+
+# Copy package manifests
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+COPY apps/web/package.json ./apps/web/
+COPY apps/blog/package.json ./apps/blog/
+COPY packages/shared/package.json ./packages/shared/
 
 # Install dependencies
-RUN npm install
+RUN --mount=type=cache,id=pnpm,target=/root/.local/share/pnpm/store \
+    pnpm install --frozen-lockfile
 
-# Copy the rest of the application code
+# ============================================================================
+# Build stage - build all applications
+# ============================================================================
+FROM base AS builder
+
+COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/apps/web/node_modules ./apps/web/node_modules
+COPY --from=deps /app/apps/blog/node_modules ./apps/blog/node_modules
+COPY --from=deps /app/packages/shared/node_modules ./packages/shared/node_modules
+
+# Copy source code
 COPY . .
 
-# Build the application (adjust this command if needed)
-RUN npm run build
+# Build all apps with turbo
+RUN pnpm build
 
-# Expose the port the app runs on
-EXPOSE 3000
+# ============================================================================
+# Web production stage - serve the main website
+# ============================================================================
+FROM nginx:alpine AS web
 
-# Command to run the application
-CMD ["npm", "start"]
+# Copy nginx configuration
+COPY docker/nginx/web.conf /etc/nginx/conf.d/default.conf
+
+# Copy built web app
+COPY --from=builder /app/apps/web/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+
+# ============================================================================
+# Blog production stage - serve the blog
+# ============================================================================
+FROM nginx:alpine AS blog
+
+# Copy nginx configuration  
+COPY docker/nginx/blog.conf /etc/nginx/conf.d/default.conf
+
+# Copy built blog
+COPY --from=builder /app/apps/blog/dist /usr/share/nginx/html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
+
+# ============================================================================
+# Development stage - for local development with hot reload
+# ============================================================================
+FROM base AS development
+
+# Install additional tools for development
+RUN apk add --no-cache git
+
+COPY --from=deps /app/node_modules ./node_modules
+COPY --from=deps /app/apps/web/node_modules ./apps/web/node_modules
+COPY --from=deps /app/apps/blog/node_modules ./apps/blog/node_modules
+COPY --from=deps /app/packages/shared/node_modules ./packages/shared/node_modules
+
+# Source will be mounted as volume
+WORKDIR /app
+
+# Default command runs turbo dev
+CMD ["pnpm", "dev"]
