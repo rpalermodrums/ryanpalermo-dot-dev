@@ -1,6 +1,6 @@
-# test  ryanpalermo.dev
+# What is this?
 
-Personal website and blog for Ryan Palermo, built as a pnpm monorepo with Turbo.
+My personal site and blog source code, built as a pnpm monorepo with Turbo, Tanstack, and Astro.
 
 ## Architecture
 
@@ -67,8 +67,9 @@ docker compose down
 ```
 
 Access points:
-- Web: http://localhost:5173
-- Blog: http://localhost:4321
+
+- Web: <http://localhost:5173>
+- Blog: <http://localhost:4321>
 
 ### Available Scripts
 
