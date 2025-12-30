@@ -177,7 +177,7 @@ If pagination is unstable, the UI will be unstable. Users will feel it as "the l
 
 ---
 
-## Drafts are a model decision
+## Drafts
 
 Drafts aren't a UI flourish. They're a state transition.
 
@@ -215,26 +215,9 @@ It means making the important parts of reality legible:
 
 Users don't want complexity. They want predictability. Predictability comes from a model they can understand.
 
----
+--
 
-## A quick checklist
-
-Before shipping a workflow, ask:
-
-* Can the UI always tell what exists right now?
-* Can it name the current state without hand-waving?
-* Is there a receipt that survives refresh?
-* Are "pending" states labeled as pending?
-* Are "done" states actually final?
-* Can the user recover without guessing?
-
-If the answer is no, the UI will pay the cost.
-
-Users will pay it first.
-
----
-
-## Closing
+## Wrapping Up
 
 The data model is going to be felt either way.
 
