@@ -10,7 +10,7 @@ There's a special category of software that never gets a redesign, never gets us
 
 The logic is always the same: they're internal users. They'll figure it out. They can't churn. We'll fix it later.
 
-This is not pragmatism. It is abuse justified by captivity.
+This is, simply put, abuse justified by captivity.
 
 ---
 
