@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
     title: "Internal Users Can't Leave",
     subtitle: "The cruelest interfaces are the ones with captive audiences",
     date: "2025-12-29",
-    featured: false,
+    featured: true,
     excerpt:
       "The cruelest interfaces are the ones with captive audiences. Internal tools deserve real UX.",
     content: "",
@@ -53,11 +53,12 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "jazz-engineers",
     title: "Why Jazz Musicians Make Great Product Engineers",
-    subtitle: "How obsession and taste transfer from music to engineering",
+    subtitle: "The skill that transfers isn't music. It's obsession.",
     date: "2025-12-29",
     featured: true,
     content: "",
-    excerpt: "",
+    excerpt:
+      "What actually carried over from music is simpler and impossible to teach: the disposition to sit alone with something difficult and build your own systems to get through it.",
   },
   {
     slug: "support-inbox",

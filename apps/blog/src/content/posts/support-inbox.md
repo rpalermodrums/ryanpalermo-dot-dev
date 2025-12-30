@@ -6,15 +6,9 @@ excerpt: "From the support inbox: what survives reality, what gets tickets."
 featured: false
 ---
 
-*A slightly neurotic essay from the "I read the angry tickets" side of the house*
+I like pretty interfaces. But "pretty" often has hidden tradeoffs under pressure.
 
-I used to think I liked pretty interfaces.
-
-Then I got a front-row seat to what "pretty" does under pressure.
-
-Not in a design review. In the real world.
-
-In the world where:
+Not in a design review. In the real world. To name a few confounding scenarios:
 
 * someone's password manager autofills the wrong field
 * the Wi-Fi is bad
