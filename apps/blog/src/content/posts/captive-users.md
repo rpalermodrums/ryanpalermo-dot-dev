@@ -72,24 +72,6 @@ Assuming internal means "doesn't matter" is assuming the tool will never escape.
 
 ---
 
-## The admin panel is your real product
-
-Here's the uncomfortable truth: for a lot of businesses, the customer-facing product is a facade. The real work happens in the admin tool.
-
-* The billing adjustments
-* The account overrides
-* The feature flags
-* The data corrections
-* The manual interventions that keep the system running
-
-When something goes wrong, the customer-facing product can only say "contact support." The admin tool is where the actual resolution happens.
-
-If your admin tool is broken, your ability to recover from errors is broken. If your ops team can't move fast, your customers wait. If the interface is confusing, mistakes propagate.
-
-The admin panel is the product. It's just the product that only your most expensive employees use.
-
----
-
 ## Ops workarounds become permanent architecture
 
 When an internal tool is bad, people don't file tickets and wait. They build workarounds. And workarounds become architecture.
