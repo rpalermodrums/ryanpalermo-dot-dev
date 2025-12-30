@@ -46,7 +46,7 @@ When people can't predict outcomes, they slow down. They retry. They duplicate. 
 
 ---
 
-## Show state like you mean it
+## Disclosing Current State
 
 Most products collapse the world into three labels: loading, success, error.
 
