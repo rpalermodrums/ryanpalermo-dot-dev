@@ -159,11 +159,7 @@ It can also remove the very signals that reduce anxiety.
 
 ## Anxiety is a UX bug and information is the patch
 
-The support inbox has one recurring emotion.
-
-It is not confusion. It is not even frustration.
-
-It is **fear**.
+**Fear**:
 
 "I think I might have lost something."
 "I think I might get charged again."

@@ -32,26 +32,6 @@ The distinction isn't internal vs external. It's *users who can leave* vs *users
 
 ---
 
-## Every bad internal tool is a recurring payroll expense
-
-This is the math people refuse to do:
-
-An ops person spends 30 minutes per day fighting a bad tool. That's 2.5 hours a week. 130 hours a year. At $50/hour fully loaded, that's $6,500 per person per year—just on friction.
-
-Scale that to a team of 10 and you've burned $65,000 on a tool nobody prioritized.
-
-Now add the second-order costs:
-
-* The senior person who "knows the tricks" becomes a bottleneck
-* The onboarding time doubles because the tool is unexplainable
-* The error rate is high because the UI misleads
-* The workarounds create data quality issues downstream
-* The good people leave because they're tired of fighting software
-
-A bad internal tool doesn't just cost time. It costs your ability to hire, retain, and operate.
-
----
-
 ## "They're power users" is not an excuse
 
 The most common defense of bad internal tools: "These aren't normal users. They're experts. They can handle complexity."
