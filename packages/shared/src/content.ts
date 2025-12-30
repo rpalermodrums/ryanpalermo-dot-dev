@@ -45,7 +45,7 @@ export const blogPosts: BlogPost[] = [
     title: "Internal Users Can't Leave",
     subtitle: "The cruelest interfaces are the ones with captive audiences",
     date: "2025-12-29",
-    featured: true,
+    featured: false,
     excerpt:
       "The cruelest interfaces are the ones with captive audiences. Internal tools deserve real UX.",
     content: "",
@@ -55,7 +55,7 @@ export const blogPosts: BlogPost[] = [
     title: "Why Jazz Musicians Make Great Product Engineers",
     subtitle: "How obsession and taste transfer from music to engineering",
     date: "2025-12-29",
-    featured: false,
+    featured: true,
     content: "",
     excerpt: "",
   },
