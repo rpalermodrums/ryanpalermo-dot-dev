@@ -28,7 +28,7 @@ Good interfaces make three things obvious:
 * What you can do next
 * What will happen if you do it
 
-Those basics show up in usability guidance because they keep being true. ([Nielsen Norman Group][1])
+Those basics show up in usability guidance because they keep being true. ([NN Group][1])
 
 When the interface does that work, most instructional copy becomes redundant.
 
@@ -73,7 +73,7 @@ A better form makes the rules visible:
 * Validation happens at the right moment, not after a failed submit
 * The user can explore without being punished
 
-These patterns are not trends. They are established guidelines because they reduce error rates and speed completion. ([Nielsen Norman Group][2])
+These patterns are established guidelines because they reduce error rates and speed completion. ([NN Group][2])
 
 Instructional copy often disappears when the structure is honest.
 
@@ -87,7 +87,7 @@ If the work can continue safely, make it continue safely.
 
 If it cannot, the UI should enforce that constraint and communicate progress clearly. A warning is the weakest possible contract. A guarantee is a real one.
 
-This is part of "visibility of system status," and it is a core heuristic for a reason. Users should not have to guess. ([Nielsen Norman Group][1])
+This is part of "visibility of system status," and it is a core heuristic for a reason. Users should not have to guess. ([NN Group][1])
 
 ## Replace explanations with feedback
 
@@ -102,13 +102,13 @@ Better interfaces offload that bookkeeping:
 * Accept paste and password managers
 * Prefer long passphrases over fragile composition rules
 
-This is not "delight." It is cognitive load reduction. The interface does the remembering so the user can focus on the goal. ([Wiley Online Library][4])
+This is not "delight." It is cognitive load reduction. The interface does the remembering so the user can focus on the goal. ([Wiley][4])
 
 ## Tooltips are a smell
 
 Tooltips are often used to keep a screen looking clean.
 
-They hide information behind a gesture that is inconsistent across devices. More importantly, they push users from recognition to recall, which slows people down and lowers confidence. ([Nielsen Norman Group][1])
+They hide information behind a gesture that is inconsistent across devices. More importantly, they push users from recognition to recall, which slows people down and lowers confidence. ([NN Group][1])
 
 If a tooltip explains a core concept, it is not optional help.
 
@@ -135,7 +135,7 @@ Some words are essential because they do real work:
 * They reflect the current state
 * They help recovery
 
-This is especially true in error states. Strong error messages are visible, precise, and focused on what the user can do next. ([Nielsen Norman Group][5])
+This is especially true in error states. Strong error messages are visible, precise, and focused on what the user can do next. ([NN Group][5])
 
 It is also true for accessibility. Errors cannot be communicated only through styling or color. They must be identified in text. ([W3C][6])
 
@@ -149,7 +149,7 @@ That line increases retries, support tickets, and abandonment. It trades clarity
 
 Even "Loading…" sets an expectation.
 
-Spinners, progress bars, and skeleton screens communicate different things. They work in different contexts. They can backfire when they imply readiness that is not real. ([Nielsen Norman Group][7])
+Spinners, progress bars, and skeleton screens communicate different things. They work in different contexts. They can backfire when they imply readiness that is not real. ([NN Group][7])
 
 If you cannot make a reliable promise about timing or stability, do not fake confidence. Show what you know, and constrain what you cannot guarantee.
 
