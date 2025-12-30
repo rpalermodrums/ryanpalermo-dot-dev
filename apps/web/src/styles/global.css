@@ -752,6 +752,7 @@ body {
 .post-featured-badge {
   font-size: 9px;
   padding: 2px 6px;
+  text-align: right;
   background: rgba(34, 211, 238, 0.1);
   border: 1px solid var(--c-cyan);
   color: var(--c-cyan);
