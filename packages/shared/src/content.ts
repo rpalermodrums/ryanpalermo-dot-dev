@@ -60,21 +60,21 @@ export const blogPosts: BlogPost[] = [
     excerpt: "",
   },
   {
-    slug: "data-model",
-    title: "Don't Hide the Data Model",
-    subtitle: "Why backend shape is a UX choice",
-    date: "2025-11-20",
-    excerpt:
-      "Why backend shape is a UX choice. Hidden models leak as magic and confusion.",
-    content: "",
-  },
-  {
     slug: "support-inbox",
     title: "Peak UX Doesn't Always Look Nice",
     subtitle: "From the support inbox",
     date: "2025-12-18",
     excerpt:
       "From the support inbox: what survives reality, what gets tickets.",
+    content: "",
+  },
+  {
+    slug: "data-model",
+    title: "Don't Hide the Data Model",
+    subtitle: "Why backend shape is a UX choice",
+    date: "2025-11-20",
+    excerpt:
+      "Why backend shape is a UX choice. Hidden models leak as magic and confusion.",
     content: "",
   },
   {

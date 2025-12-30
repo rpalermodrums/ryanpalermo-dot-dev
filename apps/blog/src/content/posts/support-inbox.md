@@ -243,7 +243,7 @@ They learn which controls need to be reachable when everything is on fire.
 
 ---
 
-## Lists are not boring. They are merciful.
+## Lists are not boring. They are merciful
 
 The support inbox will also teach you to respect the humble list.
 
