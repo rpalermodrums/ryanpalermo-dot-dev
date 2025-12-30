@@ -22,7 +22,7 @@ No one is checking your work, no one gives you a curriculum. You listen to recor
 
 And then you figure it out. Or you push through anyway. Or you build a new system for yourself, a different way of practicing or hearing or approaching the problem, and suddenly you're moving again (eventually).
 
-Most people don't have this. They learn what they're taught, plateau at "good enough," and stop. They need external structure, external feedback, external motivation to keep going.
+Most people aren't graced with this kind of persistent, sysiphian challenge. They learn what they're taught, plateau at "good enough," and stop. They need external structure, external feedback, external motivation to keep going.
 
 Musicians learn to generate all of that internally. They have to. No one's coming to save you in the practice room. You either figure it out or you quit.
 
