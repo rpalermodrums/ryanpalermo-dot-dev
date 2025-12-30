@@ -125,39 +125,17 @@ And the meta-bar:
 * **Internal tools get research.** Shadow the ops team. Watch them use the tool. Count the clicks.
 * **Internal tools get prioritization.** Not "we'll get to it" for two years.
 
----
+--
 
-## Shipping rules
+## Invest In Your Team
 
-1. **Count the hours.** Measure how long internal tasks take. Multiply by headcount and salary. That's the cost of not fixing it.
+We underinvest on internal tooling because internal users can't leave. They're captive. But we lose a ton of signal and add a ton of noise when we treat this software as categorically different from that which we build for our "real" end-users.
 
-2. **Shadow before you build.** Sit with ops. Watch them work. The requirements are in the workarounds.
+Because our team knows the product well enough, they'll cope with second-class software.
 
-3. **Treat ops friction like a bug.** If the internal tool is slow or confusing, it's production-impacting. Treat it that way.
-
-4. **Build for speed, not training.** If the tool requires a wiki page to explain, the tool is wrong.
-
-5. **Assume it will become external.** Build the data model, the API, and the states like someone else will use them. They will.
-
-6. **Give internal tools an owner.** Orphaned tools rot. Someone needs to be on the hook for internal UX.
-
-7. **Audit the workarounds.** Ask ops what they do outside the tool. Every spreadsheet is a missing feature.
-
-8. **Design for one-hand use.** The person using this is on a call, reading an email, and context-switching. The tool must survive partial attention.
-
----
-
-## Closing
-
-Internal tools are where the real work happens. They're where the billing gets fixed, the incidents get resolved, the edge cases get handled.
-
-We underinvest in them because internal users can't leave. They're captive. They'll cope.
-
-But coping is expensive. It's expensive in hours, in errors, in workarounds, in culture, and in the slow bleed of your best people who get tired of fighting software that nobody will fix.
+But coping in this sense is expensive. It's expensive in hours, in errors, in workarounds, in culture, and in the slow bleed of your best people who get tired of fighting software that nobody will fix.
 
 The internal/external distinction is a lie we tell ourselves to justify neglect. The truth is simpler: every user deserves an interface that respects their time.
-
-Internal users just have no way to make you pay if you disagree.
 
 ---
 
