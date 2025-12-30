@@ -75,7 +75,7 @@ Naming reality beats pretending.
 
 ---
 
-## Receipts beat vibes
+## Receipts
 
 A spinner is not proof. A toast is not proof. An animation is not proof.
 
