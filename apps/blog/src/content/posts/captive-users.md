@@ -32,7 +32,7 @@ The distinction isn't internal vs external. It's *users who can leave* vs *users
 
 ---
 
-## "They're power users" is not an excuse
+## "Power Users"
 
 The most common defense of bad internal tools: "These aren't normal users. They're experts. They can handle complexity."
 
@@ -50,7 +50,7 @@ Power users are the *most* sensitive to friction because they hit it the most of
 
 ---
 
-## Internal tools become external tools. Always.
+## Internal tools become external tools, always
 
 Here's a pattern that repeats everywhere:
 
