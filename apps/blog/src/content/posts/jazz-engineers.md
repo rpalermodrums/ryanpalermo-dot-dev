@@ -8,9 +8,9 @@ featured: true
 
 I played music professionally for about a decade before I wrote a single line of code. Drums, plus years of composing and arranging. Gigs, sessions, practice rooms, teaching students, late nights with notation software.
 
-People ask what transferred to engineering and why musicians often make great devs. They expect me to say something about creativity, or pattern recognition, or collaboration. And sure, those things are true. But they're not really the point.
+People ask what transferred to engineering and why musicians often make great devs. They expect me to say something about creativity, or pattern recognition, or collaboration. And sure, those concepts are useful. But, as I reflect, those concepts don't meaninfully move the needle across domains.
 
-What actually carried over is simpler and impossible to teach: the disposition to sit alone with something difficult and build your own systems to get through it.
+What has actually carried over is much simpler and nearly impossible to teach: the disposition to sit alone with something difficult and build your own systems to get through it.
 
 That, and taste.
 
