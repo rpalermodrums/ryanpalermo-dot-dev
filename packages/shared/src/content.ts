@@ -41,11 +41,21 @@ export const projects: Project[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "captive-users",
+    title: "Internal Users Can't Leave",
+    subtitle: "The cruelest interfaces are the ones with captive audiences",
+    date: "2025-12-29",
+    featured: true,
+    excerpt:
+      "The cruelest interfaces are the ones with captive audiences. Internal tools deserve real UX.",
+    content: "",
+  },
+  {
     slug: "jazz-engineers",
     title: "Why Jazz Musicians Make Great Product Engineers",
     subtitle: "How obsession and taste transfer from music to engineering",
     date: "2025-12-29",
-    featured: true,
+    featured: false,
     content: "",
     excerpt: "",
   },

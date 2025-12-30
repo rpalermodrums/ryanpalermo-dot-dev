@@ -1,9 +1,9 @@
 ---
 title: "Internal Users Can't Leave"
 subtitle: "The cruelest interfaces are the ones with captive audiences"
-date: 2024-04-22
+date: 2025-12-29
 excerpt: "The cruelest interfaces are the ones with captive audiences. Internal tools deserve real UX."
-featured: false
+featured: true
 ---
 
 There's a special category of software that never gets a redesign, never gets user research, never gets prioritized in planning. It's the admin panel. The ops dashboard. The internal tool.
