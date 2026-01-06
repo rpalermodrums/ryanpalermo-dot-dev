@@ -114,7 +114,7 @@ Or:
 3. You document the internal API and call it "public"
 4. Now your internal data model is your public contract
 
-The internal/external boundary is permeable. What's internal today is external tomorrow. The shortcuts you took because "it's just for us" become the constraints you can't change because "partners depend on it."
+The internal/external boundary is permeable. What's internal today is external tomorrow. The shortcuts you took because "it's just for us" become the constraints you can't change later on.
 
 Assuming internal means "doesn't matter" is assuming the tool will never escape. It will escape.
 
