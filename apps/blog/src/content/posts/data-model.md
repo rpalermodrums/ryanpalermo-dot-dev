@@ -1,8 +1,8 @@
 ---
 title: "Don't Hide the Data Model"
-subtitle: "Why backend shape is a UX choice"
+subtitle: "Why database design is a UX choice"
 date: 2025-11-20
-excerpt: "Why backend shape is a UX choice. Hidden models leak as magic and confusion."
+excerpt: "Why database design is a UX choice. Hidden models leak as magic and confusion."
 featured: false
 ---
 
