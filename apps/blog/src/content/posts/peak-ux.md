@@ -189,6 +189,8 @@ Their research showed users understood what went wrong, knew how to fix it, and 
 
 Gartner analyst Ray Valdes captured the tradeoff: "Pretty but slow is worse than ugly but fast."
 
+Jakob Nielsen's 1993 response-time limits remain valid: 0.1 seconds feels instantaneous, 1 second keeps flow seamless, 10 seconds is the limit for attention. NN/g notes that "instead of big images, today's big response-time sinners are typically overly complex data processing on the server or overly fancy widgets on the page."
+
 <div class="blog-grid-3col">
   <div class="blog-diagram-card" style="text-align: center;">
     <div style="font-size: 28px; color: #fbbf24; font-weight: 600;">53%</div>
@@ -206,8 +208,6 @@ Gartner analyst Ray Valdes captured the tradeoff: "Pretty but slow is worse than
     <div style="font-size: 11px; color: #525252; margin-top: 2px;">Akamai, 2017</div>
   </div>
 </div>
-
-Jakob Nielsen's 1993 response-time limits remain valid: 0.1 seconds feels instantaneous, 1 second keeps flow seamless, 10 seconds is the limit for attention. NN/g notes that "instead of big images, today's big response-time sinners are typically overly complex data processing on the server or overly fancy widgets on the page."
 
 A List Apart cited UK GDS research finding 1.1% of users (1 in 93) did not receive JavaScript-based enhancements. For Amazon-scale traffic, that's 1.75 million people per month. Causes include JS errors, browser add-ons, firewalls, CDN outages, and insufficient RAM.
 
