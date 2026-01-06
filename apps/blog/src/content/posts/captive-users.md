@@ -137,13 +137,6 @@ When an internal tool is bad, people don't file tickets and wait. They build wor
     </div>
   </div>
   <div style="padding: 16px 20px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; display: flex; align-items: center; gap: 16px;">
-    <span style="font-size: 24px;">🧩</span>
-    <div>
-      <div style="color: #e5e5e5; font-size: 14px;">The Chrome extension someone wrote to auto-fill the forms</div>
-      <div style="color: #525252; font-size: 12px; margin-top: 2px;">Last updated: 2 years ago · "Works on my machine"</div>
-    </div>
-  </div>
-  <div style="padding: 16px 20px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; display: flex; align-items: center; gap: 16px;">
     <span style="font-size: 24px;">⏰</span>
     <div>
       <div style="color: #e5e5e5; font-size: 14px;">The cron job that syncs the thing the UI can't sync</div>
