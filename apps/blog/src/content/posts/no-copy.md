@@ -66,8 +66,6 @@ When the interface does that work, most instructional copy becomes redundant.
 
 Every sentence is a promise that has to stay true.
 
-Across edge cases. Across feature flags. Across configuration differences. Across policy changes that land months later.
-
 <div style="margin: 32px 0; padding: 20px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px;">
   <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 16px;">Copy decay over time</div>
   <div style="display: flex; flex-direction: column; gap: 12px;">
