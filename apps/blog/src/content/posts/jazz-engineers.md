@@ -53,13 +53,11 @@ Musicians understand this intuitively. You can’t A/B test a solo in real time.
 
 Product engineering requires the same thing: vision, judgment, and the willingness to make calls that can’t be fully justified by data. The practice room teaches you to be comfortable with that uncertainty. You develop your ear, you make the call, you see what happens—over and over, for years, until you trust yourself.
 
-Anyone who treats building software as purely operational—who positions themselves as a gatekeeper for “best practices” and “process”—needs to be kept far away from the code.
-
 ---
 
 ## Taste
 
-Here’s what separates product engineers from software engineers: taste.
+Here’s what I believe separates product engineers from software engineers: taste.
 
 Software engineering is about making things work. Product engineering is about making things right. And “right” is not a technical specification or something your product lead can articulate in a Notion doc. It’s a judgment call, based mostly on aesthetics.
 
