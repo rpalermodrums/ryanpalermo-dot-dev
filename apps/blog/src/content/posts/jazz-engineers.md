@@ -71,7 +71,7 @@ What changed? Not the content. The experience of **receiving** it. The timing. T
 
 This is the same gap that matters in product work. Users don’t experience your feature as a collection of technical decisions. They experience it as a feeling. Does this feel fast? Does this feel trustworthy? Does this feel like someone actually gave a shit, or does it feel like it was shipped to hit a quarterly goal?
 
-These aren’t rational questions. The answers live beneath conscious evaluation. You can build something correct by every measurable standard and still have it feel completely wrong. You can break half the rules and ship something that just works—something people immediately understand, that feels right in a way nobody can articulate.
+These aren’t rational questions. The answers live beneath conscious evaluation. You can build something correct by every measurable standard and still have it feel completely wrong. You can break half the rules and ship something that just works—something people immediately understand, that feels right in a way nobody can quite articulate.
 
 Taste is the ability to tell the difference. It’s not teachable in the traditional sense. You develop it through exposure: thousands of hours of listening, playing, writing—or planning, building, hearing feedback, and iterating—internalizing what lands until the judgment becomes automatic.
 
