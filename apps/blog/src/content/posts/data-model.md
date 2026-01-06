@@ -195,72 +195,9 @@ This lets the UI be calm because it has something real to hold on to.
 
 ---
 
-## Don't compress meaningful distinctions
+## Error states are part of the data model
 
-Hiding the model often shows up as collapsing real differences into one word:
-
-* "Saved" (draft vs published)
-* "Sent" (queued vs delivered)
-* "Paid" (authorized vs settled)
-* "Synced" (last synced vs currently syncing)
-
-Those distinctions change what the user should do next. If you compress them, the UI gets simpler in the way a lie is simpler than the truth.
-
-<div style="margin: 24px 0;">
-  <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">Payment Status Progression</div>
-  <div style="display: flex; align-items: center; gap: 4px; padding: 20px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; overflow-x: auto;">
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 80px;">
-      <div style="width: 32px; height: 32px; border-radius: 50%; background: #262626; display: flex; align-items: center; justify-content: center;">
-        <span style="width: 8px; height: 8px; background: #737373; border-radius: 50%;"></span>
-      </div>
-      <span style="font-size: 11px; color: #737373;">created</span>
-    </div>
-    <div style="flex: 1; height: 2px; background: linear-gradient(90deg, #404040, #1e40af); min-width: 20px;"></div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 80px;">
-      <div style="width: 32px; height: 32px; border-radius: 50%; background: #1e3a5f; display: flex; align-items: center; justify-content: center;">
-        <span style="width: 8px; height: 8px; background: #60a5fa; border-radius: 50%;"></span>
-      </div>
-      <span style="font-size: 11px; color: #60a5fa;">authorized</span>
-    </div>
-    <div style="flex: 1; height: 2px; background: linear-gradient(90deg, #1e40af, #5b21b6); min-width: 20px;"></div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 80px;">
-      <div style="width: 32px; height: 32px; border-radius: 50%; background: #2e1a47; display: flex; align-items: center; justify-content: center;">
-        <span style="width: 8px; height: 8px; background: #a78bfa; border-radius: 50%;"></span>
-      </div>
-      <span style="font-size: 11px; color: #a78bfa;">captured</span>
-    </div>
-    <div style="flex: 1; height: 2px; background: linear-gradient(90deg, #5b21b6, #166534); min-width: 20px;"></div>
-    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 80px;">
-      <div style="width: 32px; height: 32px; border-radius: 50%; background: #14291a; display: flex; align-items: center; justify-content: center;">
-        <span style="font-size: 12px; color: #4ade80;">✓</span>
-      </div>
-      <span style="font-size: 11px; color: #4ade80;">settled</span>
-    </div>
-  </div>
-  <div style="margin-top: 12px; padding: 12px 16px; background: #1a1a1a; border-radius: 6px; border-left: 3px solid #525252;">
-    <span style="font-size: 13px; color: #a3a3a3;">Compressed as "Paid" — but <strong style="color: #fbbf24;">authorized</strong> means funds are held, <strong style="color: #4ade80;">settled</strong> means funds transferred. The user's next action depends on which.</span>
-  </div>
-</div>
-
-Make the distinctions explicit:
-
-```ts
-export type PaymentStatus =
-  | "created"
-  | "authorized"
-  | "captured"
-  | "settled"
-  | "reversed"
-  | "failed";
-```
-
-If you can't represent these states, the UI will invent them. It will invent them badly.
-
----
-
-## Errors are part of the model, not an embarrassment
-
-"Something went wrong" is not an error message. It's an absence of a model.
+"Something went wrong" is a lazy error message.
 
 <div class="blog-grid-2col">
   <div>
