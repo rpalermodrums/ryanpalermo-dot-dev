@@ -187,24 +187,6 @@ Because our team knows the product well enough, they'll cope with second-class s
 
 But coping in this sense is expensive. It's expensive in hours, in errors, in workarounds, in culture, and in the slow bleed of your best people who get tired of fighting software that nobody will fix.
 
-<div style="margin: 24px 0; display: flex; flex-direction: column; gap: 8px;">
-  <div style="padding: 12px 16px; background: #0d0d0d; border-left: 3px solid #ef4444; font-size: 14px; color: #a3a3a3;">
-    <strong style="color: #e5e5e5;">Expensive in hours</strong> — 2 minutes per ticket × 60 tickets × 250 days = 500 hours/year
-  </div>
-  <div style="padding: 12px 16px; background: #0d0d0d; border-left: 3px solid #ef4444; font-size: 14px; color: #a3a3a3;">
-    <strong style="color: #e5e5e5;">Expensive in errors</strong> — wrong clicks become customer-facing incidents
-  </div>
-  <div style="padding: 12px 16px; background: #0d0d0d; border-left: 3px solid #ef4444; font-size: 14px; color: #a3a3a3;">
-    <strong style="color: #e5e5e5;">Expensive in workarounds</strong> — shadow systems you don't control
-  </div>
-  <div style="padding: 12px 16px; background: #0d0d0d; border-left: 3px solid #ef4444; font-size: 14px; color: #a3a3a3;">
-    <strong style="color: #e5e5e5;">Expensive in culture</strong> — "eng doesn't care about us"
-  </div>
-  <div style="padding: 12px 16px; background: #0d0d0d; border-left: 3px solid #ef4444; font-size: 14px; color: #a3a3a3;">
-    <strong style="color: #e5e5e5;">Expensive in attrition</strong> — best people leave first
-  </div>
-</div>
-
 The internal/external distinction is a lie we tell ourselves to justify neglect.
 
 Every user deserves an interface that respects their time.
