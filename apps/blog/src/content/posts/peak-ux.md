@@ -230,15 +230,11 @@ The UX hierarchy of needs applies: "Delightful design can certainly make good pr
 
 The UK Government Digital Service built one of the most-cited design systems by explicitly prioritizing function over form.
 
-<div style="margin: 32px 0; padding: 24px; background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%); border: 1px solid #262626; border-radius: 8px;">
-  <div style="font-size: 18px; color: #e5e5e5; margin-bottom: 16px; line-height: 1.4;">
-    "Accessible design is good design. Everything we build should be as inclusive, legible and readable as possible."
-  </div>
-  <div style="font-size: 20px; color: #4ade80; font-weight: 500;">
-    "If we have to sacrifice elegance—so be it."
-  </div>
-  <div style="font-size: 13px; color: #525252; margin-top: 12px;">— GOV.UK Design Principle #6</div>
-</div>
+> "Accessible design is good design. Everything we build should be as inclusive, legible and readable as possible."
+>
+> **"If we have to sacrifice elegance—so be it."**
+>
+> — GOV.UK Design Principle #6
 
 ([Government Design Principles](https://www.gov.uk/guidance/government-design-principles))
 
