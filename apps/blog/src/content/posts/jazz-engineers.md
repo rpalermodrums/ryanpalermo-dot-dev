@@ -85,7 +85,7 @@ It’s not talent alone. Talent gets you in the door. But any musician worth the
 
 This is obsession. It’s not healthy in the conventional sense. It’s not balanced. It’s what the work requires.
 
-Alongside obsession lives high standards: the refusal to accept “good enough” when you know you could do something better. The willingness to throw away months of work that don't meet the bar. The uncomfortable honesty required to hear your own playing clearly and honestly self-critique.
+Alongside obsession lives high standards: the refusal to accept “good enough” when you know you could do something better. The willingness to throw away months of work when it doesn't meet the bar. The uncomfortable honesty required to hear your own playing clearly and honestly self-critique.
 
 I see these qualities and tendencies in all of the best engineers I’ve worked with. They’re obsessed. They care about details nobody asked them to care about. They refactor code that already works because it bothers them. They stay up late because something feels off and they can’t let it go. Obsession means that shipping something you're not proud of feels like a small death.
 
