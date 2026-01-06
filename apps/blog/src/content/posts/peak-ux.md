@@ -258,7 +258,7 @@ Jonas Downey asked the uncomfortable question: "Why do cluttered, complex produc
 
 Pretty is nice-to-have. Usable is must-have.
 
-**The best UX sometimes looks like it works at a regional bank.**
+**The best UX sometimes looks like it belongs at a regional bank.**
 
 *Obvious. Labeled. Legible. Honest.*
 
