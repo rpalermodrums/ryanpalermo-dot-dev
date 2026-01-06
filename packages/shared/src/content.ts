@@ -62,19 +62,19 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "peak-ux",
     title: "Peak UX Doesn't Always Look Nice",
-    subtitle: "From the support inbox",
+    subtitle: "Why the best interfaces sometimes look like they belong in a regional bank",
     date: "2025-12-18",
     excerpt:
-      "From the support inbox: what survives reality, what gets tickets.",
+      "Pretty interfaces can lie to you. Sometimes great UX looks boring on purpose.",
     content: "",
   },
   {
     slug: "data-model",
     title: "Don't Hide the Data Model",
-    subtitle: "Why backend shape is a UX choice",
+    subtitle: "Why database design is a UX choice",
     date: "2025-11-20",
     excerpt:
-      "Why backend shape is a UX choice. Hidden models leak as magic and confusion.",
+      "Why database design is a UX choice. Hidden models leak as magic and confusion.",
     content: "",
   },
   {
