@@ -26,7 +26,7 @@ Most screens in a complex sotware product answer the same questions:
 
 Those aren't "frontend" questions.
 
-If a system can't represent state and rules, the UI starts guessing, and the user follows. Guessing creates the worst UX: uncertainty with consequences.
+If a system cannot represent state and rules of engagement, the UI starts guessing, and the user follows. Guessing creates the worst UX: uncertainty with consequences.
 
 ## "Magical" UIs feel great until the first edge case.
 
