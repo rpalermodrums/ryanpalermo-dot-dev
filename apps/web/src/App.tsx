@@ -6,7 +6,8 @@ import { useKeyboardNav } from "./hooks/useKeyboardNav";
 import { blogPosts } from "@ryanpalermo/shared";
 import type { BlogPost } from "@ryanpalermo/shared";
 
-const BLOG_URL = "/blog";
+declare const __DEV_BLOG_URL__: string;
+const BLOG_URL = typeof __DEV_BLOG_URL__ !== "undefined" ? __DEV_BLOG_URL__ : "/blog";
 
 function ThemeToggle() {
   const [theme, setTheme] = useState<"light" | "dark">(() => {
@@ -60,6 +61,7 @@ export function App() {
           <nav className="header-nav">
             <a href="#projects">Projects</a>
             <a href={BLOG_URL}>Thoughts</a>
+            <ThemeToggle />
           </nav>
         </header>
 
@@ -74,7 +76,7 @@ export function App() {
             <div className="about-status-title">What I'm probably up to</div>
             <ul className="about-list">
               <li>Tuning my opencode config</li>
-              <li>Wiring audio AI models together</li>
+              <li>Wiring AI-powered audio models together for micro-experiments</li>
               <li>Building something cool and super secret 🤫</li>
             </ul>
           </div>

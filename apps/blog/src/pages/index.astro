@@ -59,9 +59,22 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
     }
 
     .container {
-      max-width: 680px;
+      max-width: 800px;
       margin: 0 auto;
       padding: 32px 24px 64px;
+      width: 90%;
+    }
+
+    @media (min-width: 1200px) {
+      .container {
+        max-width: 900px;
+      }
+    }
+
+    @media (min-width: 1600px) {
+      .container {
+        max-width: 1000px;
+      }
     }
 
     a {
