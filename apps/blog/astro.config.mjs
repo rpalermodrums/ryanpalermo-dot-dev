@@ -6,10 +6,19 @@ export default defineConfig({
   base: "/blog",
   integrations: [sitemap()],
   output: "static",
+  markdown: {
+    shikiConfig: {
+      theme: 'github-dark',
+      wrap: true,
+    },
+  },
   build: {
     format: "directory",
   },
   server: {
     host: true,
+  },
+  devToolbar: {
+    enabled: false,
   },
 });

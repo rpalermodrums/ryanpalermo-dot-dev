@@ -6,35 +6,29 @@ excerpt: "Why backend shape is a UX choice. Hidden models leak as magic and conf
 featured: false
 ---
 
-A lot of advice says "hide complexity."
+I've seen a lot of software design that aims to "hide complexity."
 
-Fine. Hide *implementation* complexity.
+Hiding *implementation* complexity is completely reasonable.
 
-But hiding the **data model** is different. When the model is invisible, it doesn't disappear. It leaks out as confusion, surprise, and brittle UI.
+But hiding the **data model** is different. Obfuscating the inormation architecture leaks itself out as confusion, surprise, and brittle UI.
 
-Users don't need to see your tables. They do need to see what's real.
-
----
+Users don't need to see your tables, but they do appreciate being shown an interface that's somewhat close to the truth.
 
 ## Every screen is a projection
 
-Most screens are answering the same questions:
+Most screens in a complex sotware product answer the same questions:
 
 * What exists?
-* What state is it in?
-* What changed?
+* What state is the application in?
+* What changed since last time?
 * What can I do next?
 * What happens if I do it?
 
-Those aren't "frontend" questions. They're model questions.
+Those aren't "frontend" questions.
 
-If the system can't represent the real states and rules, the UI starts guessing. Guessing creates the worst UX: uncertainty with consequences.
+If a system can't represent state and rules, the UI starts guessing, and the user follows. Guessing creates the worst UX: uncertainty with consequences.
 
----
-
-## Hidden models create "magic," and magic fails badly
-
-"Magical" UIs feel great until the first edge case.
+## "Magical" UIs feel great until the first edge case.
 
 Auto-save that doesn't clearly save. Drafts that aren't really drafts. "Smart" defaults that silently change. Buttons that do different things based on state you can't see.
 
@@ -270,9 +264,9 @@ If you can't represent these states, the UI will invent them. It will invent the
 
 "Something went wrong" is not an error message. It's an absence of a model.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0;">
+<div class="blog-grid-2col">
   <div>
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">❌ Unmodeled error</div>
+    <div class="blog-diagram-label">❌ Unmodeled error</div>
     <div style="padding: 16px; background: #2a1717; border: 1px solid #7f1d1d; border-radius: 8px;">
       <div style="display: flex; align-items: center; gap: 10px; color: #fca5a5;">
         <span style="font-size: 18px;">⚠</span>
@@ -281,7 +275,7 @@ If you can't represent these states, the UI will invent them. It will invent the
     </div>
   </div>
   <div>
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">✓ Modeled error</div>
+    <div class="blog-diagram-label">✓ Modeled error</div>
     <div style="padding: 16px; background: #2a1717; border: 1px solid #7f1d1d; border-radius: 8px;">
       <div style="display: flex; align-items: start; gap: 10px; color: #fca5a5;">
         <span style="font-size: 18px; margin-top: 2px;">⚠</span>
@@ -348,9 +342,9 @@ Pagination isn't a backend detail. It determines whether lists feel stable.
 
 Offset pagination is simple until data changes under you. Items shift. Duplicates appear. People lose their place.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 24px 0;">
+<div class="blog-grid-2col">
   <div>
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">Offset pagination problem</div>
+    <div class="blog-diagram-label">Offset pagination problem</div>
     <div style="padding: 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; font-size: 13px;">
       <div style="color: #525252; margin-bottom: 8px;">Page 1: items 1-10</div>
       <div style="color: #fbbf24; margin-bottom: 8px; padding: 8px; background: #1c1917; border-radius: 4px;">↑ New item inserted at position 3</div>
@@ -358,7 +352,7 @@ Offset pagination is simple until data changes under you. Items shift. Duplicate
     </div>
   </div>
   <div>
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">Cursor pagination</div>
+    <div class="blog-diagram-label">Cursor pagination</div>
     <div style="padding: 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; font-size: 13px;">
       <div style="color: #525252; margin-bottom: 8px;">Page 1: items before cursor_abc</div>
       <div style="color: #4ade80; margin-bottom: 8px; padding: 8px; background: #14291a; border-radius: 4px;">↑ New item inserted (doesn't affect cursor)</div>
@@ -435,33 +429,33 @@ Without a real draft concept, the UI fakes it with local state and hope. That's 
 
 It means making the important parts of reality legible:
 
-<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 24px 0;">
-  <div style="padding: 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; text-align: center;">
+<div class="blog-grid-3col">
+  <div class="blog-diagram-card" style="text-align: center;">
     <div style="font-size: 24px; margin-bottom: 8px;">◉</div>
     <div style="font-size: 14px; color: #e5e5e5; margin-bottom: 4px;">State</div>
     <div style="font-size: 12px; color: #525252;">What phase is this in?</div>
   </div>
-  <div style="padding: 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; text-align: center;">
+  <div class="blog-diagram-card" style="text-align: center;">
     <div style="font-size: 24px; margin-bottom: 8px;">⌘</div>
     <div style="font-size: 14px; color: #e5e5e5; margin-bottom: 4px;">Identity</div>
     <div style="font-size: 12px; color: #525252;">What is this thing?</div>
   </div>
-  <div style="padding: 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; text-align: center;">
+  <div class="blog-diagram-card" style="text-align: center;">
     <div style="font-size: 24px; margin-bottom: 8px;">◷</div>
     <div style="font-size: 14px; color: #e5e5e5; margin-bottom: 4px;">Timing</div>
     <div style="font-size: 12px; color: #525252;">When did this happen?</div>
   </div>
-  <div style="padding: 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; text-align: center;">
+  <div class="blog-diagram-card" style="text-align: center;">
     <div style="font-size: 24px; margin-bottom: 8px;">◈</div>
     <div style="font-size: 14px; color: #e5e5e5; margin-bottom: 4px;">Ownership</div>
     <div style="font-size: 12px; color: #525252;">Who controls this?</div>
   </div>
-  <div style="padding: 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; text-align: center;">
+  <div class="blog-diagram-card" style="text-align: center;">
     <div style="font-size: 24px; margin-bottom: 8px;">↺</div>
     <div style="font-size: 14px; color: #e5e5e5; margin-bottom: 4px;">Reversibility</div>
     <div style="font-size: 12px; color: #525252;">Can I undo this?</div>
   </div>
-  <div style="padding: 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; text-align: center;">
+  <div class="blog-diagram-card" style="text-align: center;">
     <div style="font-size: 24px; margin-bottom: 8px;">↻</div>
     <div style="font-size: 14px; color: #e5e5e5; margin-bottom: 4px;">Durability</div>
     <div style="font-size: 12px; color: #525252;">Survives refresh?</div>
@@ -470,15 +464,10 @@ It means making the important parts of reality legible:
 
 Users don't want complexity. They want predictability. Predictability comes from a model they can understand.
 
----
-
-## Wrapping Up
+## Intentionality
 
 The data model is going to be felt either way.
 
 You can surface it intentionally through clear states, receipts, and real distinctions. Or you can hide it and let it leak out as surprises, retries, and support tickets.
 
-<div style="margin: 32px 0; padding: 24px; background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%); border: 1px solid #262626; border-radius: 8px; text-align: center;">
-  <div style="font-size: 18px; color: #e5e5e5; margin-bottom: 8px;">Don't hide the model.</div>
-  <div style="font-size: 16px; color: #4ade80;">Make it legible.</div>
-</div>
+<div style="font-size: 18px; color: #e5e5e5; margin-bottom: 8px;">Don't hide the model.</div>

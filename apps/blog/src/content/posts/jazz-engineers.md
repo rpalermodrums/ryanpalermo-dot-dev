@@ -8,7 +8,7 @@ featured: true
 
 I played music professionally for about a decade before I wrote a single line of code. Drums, plus years of composing and arranging. Gigs, sessions, practice, getting “vibed”, teaching difficult students, spending late nights with notation software while arguing with Sibelius about its refusal to beam eighth notes correctly and slamming the laptop shut.
 
-People often ask about the magic that transfers from music to software engineering, as if there's some mystical synergy between music and code (to be fair, musicians tend to make great product engineers). They expect me to say something about creativity, pattern recognition, collaboration; something ethereal that makes them feel like musicians have access to secrets they don't.
+People often ask about the magic that transfers from music to software engineering, expecting me to describe some mystical synergy. They expect me to say something about creativity, pattern recognition, collaboration; something ethereal that makes them feel like musicians have access to secrets they don't.
 
 Sure, those qualities exist. But they're not meaningful in my experience.
 
@@ -28,7 +28,7 @@ And then one day something clicks. Or it doesn't, and you push through anyway. Y
 
 Most don't have this in them.
 
-Many learn what they're taught, plateau at "good enough," and stop there until given further instruction. External structure, external feedback, external motivation are required to keep moving forward. Someone needs to say “good job” or explain what comes next.
+Many learn what they're taught, plateau at "good enough," and stop there until given further instruction. External structure, external feedback, external motivation is required to keep moving forward. Someone needs to say “good job” or explain what comes next.
 
 Musicians learn to generate all of this internally. They have to. Nobody is coming to save you in the practice room. You figure it out or you quit. Those are the options. There is no third door.
 
@@ -120,7 +120,7 @@ The practice room embodies years of training for exactly this kind of difficult 
 
 Personally, the plateau was familiar. I knew it didn’t mean I was failing. I knew how to get through it. I loved it.
 
-I had done it before. ( at this point, I crave it  🙂)
+I had done it before.
 
 ---
 

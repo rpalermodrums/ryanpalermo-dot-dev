@@ -12,31 +12,35 @@ The logic is always the same: they're internal users. They'll figure it out. The
 
 This is, simply put, abuse justified by captivity.
 
----
-
-## The internal/external distinction is fake
+## Internal/external Distinction is Dumb Most of the Time
 
 We act like there are two kinds of users: customers (who matter) and employees (who cope). But this framing is wrong on every axis.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;">
-  <div style="padding: 20px; border-radius: 8px; background: #14291a; border: 1px solid #166534;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #4ade80; margin-bottom: 12px;">External users</div>
-    <div style="font-size: 14px; color: #a3a3a3; line-height: 1.6;">
-      <div style="margin-bottom: 8px;">✓ Usability testing</div>
-      <div style="margin-bottom: 8px;">✓ Design reviews</div>
-      <div style="margin-bottom: 8px;">✓ A/B experiments</div>
-      <div style="margin-bottom: 8px;">✓ Support escalation paths</div>
-      <div>✓ Quarterly roadmap items</div>
+<div class="blog-grid-2col" style="gap: 16px; row-gap: 24px;">
+  <div class="blog-diagram-card" style="background: linear-gradient(135deg, #14291a 0%, #0f1f14 100%); border: 1px solid #166534; border-radius: 8px; padding: 20px; margin-bottom: 8px;">
+    <div class="blog-diagram-label" style="color: #4ade80; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+      <span style="display: inline-block; width: 8px; height: 8px; background: #4ade80; border-radius: 50%;"></span>
+      External users
+    </div>
+    <div style="font-size: 14px; color: #d1d5db; line-height: 1.8;">
+      <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;"><span style="color: #4ade80;">✓</span> Usability testing</div>
+      <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;"><span style="color: #4ade80;">✓</span> Design reviews</div>
+      <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;"><span style="color: #4ade80;">✓</span> A/B experiments</div>
+      <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;"><span style="color: #4ade80;">✓</span> Support escalation paths</div>
+      <div style="display: flex; align-items: center; gap: 10px;"><span style="color: #4ade80;">✓</span> Quarterly roadmap items</div>
     </div>
   </div>
-  <div style="padding: 20px; border-radius: 8px; background: #2a1717; border: 1px solid #7f1d1d;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #fca5a5; margin-bottom: 12px;">Internal users</div>
-    <div style="font-size: 14px; color: #a3a3a3; line-height: 1.6;">
-      <div style="margin-bottom: 8px;">❌ "They'll figure it out"</div>
-      <div style="margin-bottom: 8px;">❌ "It's just for ops"</div>
-      <div style="margin-bottom: 8px;">❌ "We'll fix it later"</div>
-      <div style="margin-bottom: 8px;">❌ "File a ticket"</div>
-      <div>❌ "They can't churn"</div>
+  <div class="blog-diagram-card" style="background: linear-gradient(135deg, #2a1717 0%, #1f1010 100%); border: 1px solid #7f1d1d; border-radius: 8px; padding: 20px; margin-bottom: 8px;">
+    <div class="blog-diagram-label" style="color: #fca5a5; font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+      <span style="display: inline-block; width: 8px; height: 8px; background: #ef4444; border-radius: 50%;"></span>
+      Internal users
+    </div>
+    <div style="font-size: 14px; color: #d1d5db; line-height: 1.8;">
+      <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;"><span style="color: #ef4444;">✗</span> "They'll figure it out"</div>
+      <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;"><span style="color: #ef4444;">✗</span> "It's just for ops"</div>
+      <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;"><span style="color: #ef4444;">✗</span> "We'll fix it later"</div>
+      <div style="margin-bottom: 10px; display: flex; align-items: center; gap: 10px;"><span style="color: #ef4444;">✗</span> "File a ticket"</div>
+      <div style="display: flex; align-items: center; gap: 10px;"><span style="color: #ef4444;">✗</span> "They can't churn"</div>
     </div>
   </div>
 </div>
@@ -53,20 +57,18 @@ An external user who has a bad experience might churn. An internal user who has 
 
 The distinction isn't internal vs external. It's *users who can leave* vs *users who can't.* And we consistently treat the captive ones worse.
 
----
-
 ## "Power Users"
 
-The most common defense of bad internal tools: "These aren't normal users. They're experts. They can handle complexity."
+When challenged on this, teams usually retreat to a familiar defense: "These aren't normal users. They're experts. They can handle complexity."
 
 This is backwards.
 
 Power users don't need complexity. They need speed. They need reliability. They need the tool to get out of the way so they can do their actual job.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;">
-  <div style="padding: 20px; border-radius: 8px; background: #1a1a1a; border: 1px solid #333;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">❌ "Flexible" internal tool</div>
-    <div style="background: #0d0d0d; border-radius: 6px; padding: 16px; font-size: 13px;">
+<div class="blog-grid-2col">
+  <div class="blog-diagram-card">
+    <div class="blog-diagram-label">❌ "Flexible" internal tool</div>
+    <div class="blog-diagram-content" style="font-size: 13px;">
       <div style="color: #a3a3a3; margin-bottom: 8px;">1. Open admin panel</div>
       <div style="color: #a3a3a3; margin-bottom: 8px;">2. Search by customer ID (email doesn't work)</div>
       <div style="color: #a3a3a3; margin-bottom: 8px;">3. Click "Advanced" → "Billing" → "History"</div>
@@ -77,9 +79,9 @@ Power users don't need complexity. They need speed. They need reliability. They 
       </div>
     </div>
   </div>
-  <div style="padding: 20px; border-radius: 8px; background: #1a1a1a; border: 1px solid #333;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">✓ Tool that respects time</div>
-    <div style="background: #0d0d0d; border-radius: 6px; padding: 16px; font-size: 13px;">
+  <div class="blog-diagram-card">
+    <div class="blog-diagram-label">✓ Tool that respects time</div>
+    <div class="blog-diagram-content" style="font-size: 13px;">
       <div style="color: #a3a3a3; margin-bottom: 8px;">1. ⌘K → type email or name</div>
       <div style="color: #a3a3a3; margin-bottom: 8px;">2. See account state, recent charges inline</div>
       <div style="color: #a3a3a3; margin-bottom: 8px;">3. Click "Refund" → done</div>
@@ -97,8 +99,6 @@ The ops engineer responding to an incident doesn't want a "flexible interface." 
 Power users are the *most* sensitive to friction because they hit it the most often. They're the ones who notice the 200ms delay, the unnecessary confirmation modal, the three clicks that should be one.
 
 "They're power users" isn't a reason to skip UX. It's a reason to take it more seriously.
-
----
 
 ## Internal tools become external tools, always
 
@@ -132,8 +132,6 @@ Or:
 The internal/external boundary is permeable. What's internal today is external tomorrow. The shortcuts you took because "it's just for us" become the constraints you can't change because "partners depend on it."
 
 Assuming internal means "doesn't matter" is assuming the tool will never escape. It will escape.
-
----
 
 ## Ops workarounds become permanent architecture
 
@@ -177,19 +175,13 @@ When an internal tool is bad, people don't file tickets and wait. They build wor
   </div>
 </div>
 
-These workarounds are invisible to eng. They're not in the codebase. They're not in the docs. They exist in people's heads and in tools you don't control.
+These workarounds are invisible to eng because they don't live in the codebase or docs. They exist in people's heads and in tools you don't control, passed along unsystematically most of the time.
 
-Then someone leaves, the spreadsheet breaks, the Slack channel goes quiet, and suddenly nobody knows how to do the thing that used to be "easy."
+These workarounds work until someone leaves without passing their system along, then a spreadsheet that was used to track something critical breaks as a result, and suddenly nobody knows how to do the thing that used to be "easy."
 
-<div style="margin: 24px 0; padding: 16px 20px; background: #2a1717; border: 1px solid #7f1d1d; border-radius: 8px; border-left: 4px solid #ef4444;">
-  <div style="font-size: 14px; color: #fca5a5;">
-    Bad tools don't just create friction. They create <strong>shadow infrastructure</strong> that is unversioned, undocumented, and one departure away from collapse.
-  </div>
-</div>
+Bad internal tooling creates <strong>shadow infrastructure</strong> that is unversioned, undocumented, and one departure away from collapse.
 
----
-
-## The internal tool is your leverage on quality
+## Alternatively
 
 There's a positive version of this argument too.
 
@@ -214,19 +206,7 @@ A great internal tool lets your team move fast:
   </div>
 </div>
 
-The companies that win at ops don't have more people. They have better tools. They invested in the unsexy interfaces that only employees see.
-
-<div style="margin: 24px 0; padding: 20px; background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%); border: 1px solid #262626; border-radius: 8px;">
-  <div style="font-size: 14px; color: #a3a3a3; margin-bottom: 8px;">The math</div>
-  <div style="font-size: 16px; color: #e5e5e5;">
-    A good internal tool is not a cost center.<br/>
-    <strong style="color: #4ade80;">It's a multiplier on every salary you pay.</strong>
-  </div>
-</div>
-
----
-
-## What "good" looks like for internal tools
+## What "good" looks like
 
 The bar is not "pretty." The bar is the same as any interface:
 
@@ -295,11 +275,9 @@ And the meta-bar:
   </div>
 </div>
 
----
-
 ## Invest in your team
 
-We underinvest on internal tooling because internal users can't leave. They're captive. But we lose a ton of signal and add a ton of noise when we treat this software as categorically different from that which we build for our "real" end-users.
+We underinvest on internal tooling because internal users can't leave. They're captive. But we lose a ton of signal and add a ton of noise when we treat this software as categorically different from what we build for our "real" end-users.
 
 Because our team knows the product well enough, they'll cope with second-class software.
 
@@ -323,18 +301,6 @@ But coping in this sense is expensive. It's expensive in hours, in errors, in wo
   </div>
 </div>
 
-The internal/external distinction is a lie we tell ourselves to justify neglect. The truth is simpler:
+The internal/external distinction is a lie we tell ourselves to justify neglect.
 
-<div style="margin: 32px 0; padding: 24px; background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%); border: 1px solid #262626; border-radius: 8px; text-align: center;">
-  <div style="font-size: 18px; color: #e5e5e5; margin-bottom: 8px;">Every user deserves an interface that respects their time.</div>
-  <div style="font-size: 16px; color: #4ade80;">Especially the ones who can't leave.</div>
-</div>
-
----
-
-**References**
-
-* [NN/g: Intranet Usability](https://www.nngroup.com/articles/intranet-usability-the-trillion-dollar-question/) — The productivity cost of bad internal tools
-* [Will Larson: Tools for Leverage](https://lethain.com/building-tools-around-workflows/) — Internal tools as force multipliers
-* [Retool: State of Internal Tools](https://retool.com/reports/state-of-internal-tools-2023) — Survey on internal tool development
-* [Increment: Internal Tools](https://increment.com/software-architecture/case-for-internal-tools/) — Stripe's perspective on internal tooling
+Every user deserves an interface that respects their time.

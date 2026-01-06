@@ -22,4 +22,7 @@ export default defineConfig({
   define: {
     __DEV_BLOG_URL__: JSON.stringify("/blog"),
   },
+  optimizeDeps: {
+    exclude: ["astro"],
+  },
 });

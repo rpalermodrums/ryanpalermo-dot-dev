@@ -26,7 +26,7 @@ Because it will fail. Not always. But eventually. And UX is what happens then.
 
 ## The aesthetic-usability effect has limits
 
-There's a cognitive bias called the aesthetic-usability effect. In 1995, researchers at Hitachi's Design Center found that users perceive beautiful interfaces as more usable—even when they aren't. The correlation between aesthetic appeal and *perceived* ease of use was stronger than the correlation with *actual* ease of use.
+There's a cognitive bias called the aesthetic-usability effect. In 1995, Hitachi researchers found users perceive beautiful interfaces as more usable—even when they aren't. The correlation between aesthetic appeal and *perceived* ease of use was stronger than the correlation with *actual* ease of use.
 
 NN/g's Kate Moran updated this research in 2024 with a critical qualifier: "A pretty design can make users forgiving of minor usability problems, but not of large ones."
 
@@ -40,27 +40,27 @@ Pretty can hide broken—but only until it can't.
 
 ## False simplicity: when "clean" actually confuses
 
-Baymard Institute has a name for the pattern I keep seeing: **false simplicity**. Their research across 200,000+ hours of e-commerce UX testing found that visually simple designs often increase cognitive load.
+Baymard Institute has a name for the pattern: **false simplicity**. Their research across 200,000+ hours of e-commerce UX testing found that visually simple designs often increase cognitive load.
 
 The clearest example is placeholder-as-label—the input field where the hint disappears when you start typing.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;">
-  <div style="padding: 20px; border-radius: 8px; background: #1a1a1a; border: 1px solid #333;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">❌ "Clean" version</div>
-    <div style="background: #0d0d0d; border-radius: 6px; padding: 16px;">
+<div class="blog-grid-2col">
+  <div class="blog-diagram-card">
+    <div class="blog-diagram-label">❌ "Clean" version</div>
+    <div class="blog-diagram-content">
       <input type="text" placeholder="Email address" style="width: 100%; background: transparent; border: none; border-bottom: 1px solid #404040; padding: 8px 0; font-size: 15px; color: #e5e5e5; outline: none;" />
     </div>
-    <div style="margin-top: 12px; font-size: 13px; color: #888; font-style: italic;">
+    <div class="blog-diagram-caption">
       User types, hint vanishes, gets distracted, forgets the format, deletes everything to see hint again.
     </div>
   </div>
-  <div style="padding: 20px; border-radius: 8px; background: #1a1a1a; border: 1px solid #333;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">✓ "Boring" version</div>
-    <div style="background: #0d0d0d; border-radius: 6px; padding: 16px;">
+  <div class="blog-diagram-card">
+    <div class="blog-diagram-label">✓ "Boring" version</div>
+    <div class="blog-diagram-content">
       <label style="display: block; font-size: 14px; color: #a3a3a3; margin-bottom: 6px;">Email address</label>
       <input type="text" placeholder="you@example.com" style="width: 100%; background: #1a1a1a; border: 1px solid #404040; border-radius: 4px; padding: 10px 12px; font-size: 15px; color: #e5e5e5; outline: none;" />
     </div>
-    <div style="margin-top: 12px; font-size: 13px; color: #888; font-style: italic;">
+    <div class="blog-diagram-caption">
       Label stays. Placeholder shows format. Both survive distraction.
     </div>
   </div>
@@ -78,24 +78,28 @@ Baymard's core insight: "Visually simple can actually end up being more complica
 
 NN/g's eyetracking research quantified what minimalist trends actually cost. Users spent **22% more time** on pages with weak signifiers—flat buttons, ambiguous clickable elements. They made **25% more fixations**, scanning more elements because they couldn't identify what was interactive.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;">
-  <div style="padding: 20px; border-radius: 8px; background: #1a1a1a; border: 1px solid #333;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">Flat / minimal</div>
-    <div style="display: flex; gap: 12px;">
-      <span style="padding: 10px 20px; color: #e5e5e5; font-size: 14px;">Cancel</span>
-      <span style="padding: 10px 20px; color: #60a5fa; font-size: 14px;">Save</span>
+<div class="blog-grid-2col">
+  <div class="blog-diagram-card">
+    <div class="blog-diagram-label">Flat / minimal</div>
+    <div class="blog-diagram-content">
+      <div style="display: flex; gap: 12px;">
+        <span style="padding: 10px 20px; color: #e5e5e5; font-size: 14px;">Cancel</span>
+        <span style="padding: 10px 20px; color: #60a5fa; font-size: 14px;">Save</span>
+      </div>
     </div>
-    <div style="margin-top: 12px; font-size: 13px; color: #888; font-style: italic;">
+    <div class="blog-diagram-caption">
       Is "Save" a button or a label? Users scan longer to find out.
     </div>
   </div>
-  <div style="padding: 20px; border-radius: 8px; background: #1a1a1a; border: 1px solid #333;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">Clear signifiers</div>
-    <div style="display: flex; gap: 12px;">
-      <span style="padding: 10px 20px; background: #262626; border: 1px solid #404040; border-radius: 6px; color: #a3a3a3; font-size: 14px;">Cancel</span>
-      <span style="padding: 10px 20px; background: #2563eb; border-radius: 6px; color: white; font-size: 14px;">Save</span>
+  <div class="blog-diagram-card">
+    <div class="blog-diagram-label">Clear signifiers</div>
+    <div class="blog-diagram-content">
+      <div style="display: flex; gap: 12px;">
+        <span style="padding: 10px 20px; background: #262626; border: 1px solid #404040; border-radius: 6px; color: #a3a3a3; font-size: 14px;">Cancel</span>
+        <span style="padding: 10px 20px; background: #2563eb; border-radius: 6px; color: white; font-size: 14px;">Save</span>
+      </div>
     </div>
-    <div style="margin-top: 12px; font-size: 13px; color: #888; font-style: italic;">
+    <div class="blog-diagram-caption">
       Obvious affordances. No guessing.
     </div>
   </div>
@@ -111,22 +115,22 @@ By 2017, NN/g was more direct: "Since flat design's emergence in 2011, Nielsen N
 
 NN/g's research on contrast is blunt: "A low-contrast design aesthetic is haunting the web, taking legibility and discoverability with it. It's straining our eyes, making us all feel older, and a little less capable."
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;">
-  <div style="padding: 20px; border-radius: 8px; background: #fafafa; border: 1px solid #e5e5e5;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #999; margin-bottom: 12px;">❌ "Sophisticated"</div>
+<div class="blog-grid-2col">
+  <div class="blog-diagram-card" style="background: #fafafa; border-color: #e5e5e5;">
+    <div class="blog-diagram-label" style="color: #999;">❌ "Sophisticated"</div>
     <p style="color: #bbb; font-weight: 300; font-size: 15px; line-height: 1.5; margin: 0;">
       Your order has been confirmed. You'll receive a confirmation email shortly. If you have questions, please contact support.
     </p>
-    <div style="margin-top: 12px; font-size: 13px; color: #999; font-style: italic;">
+    <div class="blog-diagram-caption" style="color: #999;">
       Contrast ratio ~2:1. WCAG requires 4.5:1.
     </div>
   </div>
-  <div style="padding: 20px; border-radius: 8px; background: #fafafa; border: 1px solid #e5e5e5;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #666; margin-bottom: 12px;">✓ Readable</div>
+  <div class="blog-diagram-card" style="background: #fafafa; border-color: #e5e5e5;">
+    <div class="blog-diagram-label" style="color: #666;">✓ Readable</div>
     <p style="color: #333; font-weight: 400; font-size: 15px; line-height: 1.5; margin: 0;">
       Your order has been confirmed. You'll receive a confirmation email shortly. If you have questions, please contact support.
     </p>
-    <div style="margin-top: 12px; font-size: 13px; color: #666; font-style: italic;">
+    <div class="blog-diagram-caption" style="color: #666;">
       Contrast ratio ~12:1. Readable on a phone in sunlight.
     </div>
   </div>
@@ -146,32 +150,34 @@ NN/g's Tim Neusesser and Evan Sunwall wrote what I consider the most damning ind
 
 Kate Kaplan's research on hostile error patterns shows how "smart" validation backfires: "Premature error messages, aggressively styled fields, and unnecessarily disruptive system-status messages feel bad-mannered and increase cognitive load."
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;">
-  <div style="padding: 20px; border-radius: 8px; background: #1a1a1a; border: 1px solid #333;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">❌ Pretty toast</div>
-    <div style="display: flex; justify-content: center; padding: 20px;">
+<div class="blog-grid-2col">
+  <div class="blog-diagram-card">
+    <div class="blog-diagram-label">❌ Pretty toast</div>
+    <div class="blog-diagram-content" style="display: flex; justify-content: center; padding: 20px;">
       <div style="background: #ff6b6b; color: white; padding: 12px 24px; border-radius: 24px; font-size: 14px; opacity: 0.8;">
         Something went wrong
       </div>
     </div>
-    <div style="margin-top: 12px; font-size: 13px; color: #888; font-style: italic;">
+    <div class="blog-diagram-caption">
       Fades in, fades out, says nothing useful. User spent 5 minutes not knowing what happened.
     </div>
   </div>
-  <div style="padding: 20px; border-radius: 8px; background: #1a1a1a; border: 1px solid #333;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">✓ Ugly but honest</div>
-    <div style="display: flex; gap: 12px; padding: 16px; background: #2a1717; border: 1px solid #991b1b; border-radius: 8px;">
-      <span style="font-size: 20px; color: #fca5a5;">⚠</span>
-      <div>
-        <div style="color: #fca5a5; font-weight: 600; font-size: 14px; margin-bottom: 4px;">Payment failed: Card declined</div>
-        <div style="color: #d4a5a5; font-size: 13px; margin-bottom: 12px;">Card ending in 4242 was declined by issuer.</div>
-        <div style="display: flex; gap: 8px;">
-          <span style="padding: 6px 12px; background: #dc2626; color: white; border-radius: 4px; font-size: 13px;">Try different card</span>
-          <span style="padding: 6px 12px; background: transparent; border: 1px solid #dc2626; color: #fca5a5; border-radius: 4px; font-size: 13px;">Contact support</span>
+  <div class="blog-diagram-card">
+    <div class="blog-diagram-label">✓ Ugly but honest</div>
+    <div class="blog-diagram-content" style="background: #2a1717; border-color: #991b1b;">
+      <div style="display: flex; gap: 12px; color: #fca5a5;">
+        <span style="font-size: 20px;">⚠</span>
+        <div>
+          <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">Payment failed: Card declined</div>
+          <div style="color: #d4a5a5; font-size: 13px; margin-bottom: 12px;">Card ending in 4242 was declined by issuer.</div>
+          <div style="display: flex; gap: 8px;">
+            <span style="padding: 6px 12px; background: #dc2626; color: white; border-radius: 4px; font-size: 13px;">Try different card</span>
+            <span style="padding: 6px 12px; background: transparent; border: 1px solid #dc2626; color: #fca5a5; border-radius: 4px; font-size: 13px;">Contact support</span>
+          </div>
         </div>
       </div>
     </div>
-    <div style="margin-top: 12px; font-size: 13px; color: #888; font-style: italic;">
+    <div class="blog-diagram-caption">
       Persists. States what happened. Offers next actions.
     </div>
   </div>
@@ -193,24 +199,21 @@ Their research showed users understood what went wrong, knew how to fix it, and 
 
 Gartner analyst Ray Valdes captured the tradeoff: "Pretty but slow is worse than ugly but fast."
 
-<div style="margin: 32px 0; padding: 24px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px;">
-  <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 16px;">Performance impact on users</div>
-  <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;">
-    <div style="text-align: center; padding: 16px; background: #1a1a1a; border-radius: 6px;">
-      <div style="font-size: 28px; color: #fbbf24; font-weight: 600;">53%</div>
-      <div style="font-size: 13px; color: #737373; margin-top: 4px;">leave if page takes >3s</div>
-      <div style="font-size: 11px; color: #525252; margin-top: 2px;">Google, 2016</div>
-    </div>
-    <div style="text-align: center; padding: 16px; background: #1a1a1a; border-radius: 6px;">
-      <div style="font-size: 28px; color: #ef4444; font-weight: 600;">10%</div>
-      <div style="font-size: 13px; color: #737373; margin-top: 4px;">leave per extra second</div>
-      <div style="font-size: 11px; color: #525252; margin-top: 2px;">BBC, 2018</div>
-    </div>
-    <div style="text-align: center; padding: 16px; background: #1a1a1a; border-radius: 6px;">
-      <div style="font-size: 28px; color: #ef4444; font-weight: 600;">50%</div>
-      <div style="font-size: 13px; color: #737373; margin-top: 4px;">conversion drop at 4s+</div>
-      <div style="font-size: 11px; color: #525252; margin-top: 2px;">Akamai, 2017</div>
-    </div>
+<div class="blog-grid-3col">
+  <div class="blog-diagram-card" style="text-align: center;">
+    <div style="font-size: 28px; color: #fbbf24; font-weight: 600;">53%</div>
+    <div style="font-size: 13px; color: #737373; margin-top: 4px;">leave if page takes >3s</div>
+    <div style="font-size: 11px; color: #525252; margin-top: 2px;">Google, 2016</div>
+  </div>
+  <div class="blog-diagram-card" style="text-align: center;">
+    <div style="font-size: 28px; color: #ef4444; font-weight: 600;">10%</div>
+    <div style="font-size: 13px; color: #737373; margin-top: 4px;">leave per extra second</div>
+    <div style="font-size: 11px; color: #525252; margin-top: 2px;">BBC, 2018</div>
+  </div>
+  <div class="blog-diagram-card" style="text-align: center;">
+    <div style="font-size: 28px; color: #ef4444; font-weight: 600;">50%</div>
+    <div style="font-size: 13px; color: #737373; margin-top: 4px;">conversion drop at 4s+</div>
+    <div style="font-size: 11px; color: #525252; margin-top: 2px;">Akamai, 2017</div>
   </div>
 </div>
 
@@ -303,10 +306,10 @@ IDEO analyzed GOV.UK's approach: "What is remarkable to me is the absolute simpl
 
 Norman's Law reminds us that simplifying an interface doesn't remove complexity—it just moves it elsewhere.
 
-<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin: 32px 0;">
-  <div style="padding: 20px; border-radius: 8px; background: #1a1a1a; border: 1px solid #333;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">Visible complexity</div>
-    <div style="background: #0d0d0d; border-radius: 6px; padding: 16px;">
+<div class="blog-grid-2col">
+  <div class="blog-diagram-card">
+    <div class="blog-diagram-label">Visible complexity</div>
+    <div class="blog-diagram-content">
       <div style="display: flex; gap: 8px; flex-wrap: wrap;">
         <span style="padding: 6px 10px; background: #262626; border-radius: 4px; font-size: 12px; color: #a3a3a3;">File</span>
         <span style="padding: 6px 10px; background: #262626; border-radius: 4px; font-size: 12px; color: #a3a3a3;">Edit</span>
@@ -316,16 +319,16 @@ Norman's Law reminds us that simplifying an interface doesn't remove complexity�
         <span style="padding: 6px 10px; background: #262626; border-radius: 4px; font-size: 12px; color: #a3a3a3;">Tools</span>
       </div>
     </div>
-    <div style="margin-top: 12px; font-size: 13px; color: #888; font-style: italic;">
+    <div class="blog-diagram-caption">
       Learnable. Discoverable. Complexity is in the interface.
     </div>
   </div>
-  <div style="padding: 20px; border-radius: 8px; background: #1a1a1a; border: 1px solid #333;">
-    <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 12px;">Hidden complexity</div>
-    <div style="background: #0d0d0d; border-radius: 6px; padding: 16px; display: flex; justify-content: center;">
+  <div class="blog-diagram-card">
+    <div class="blog-diagram-label">Hidden complexity</div>
+    <div class="blog-diagram-content" style="display: flex; justify-content: center;">
       <span style="padding: 10px 14px; background: #262626; border-radius: 4px; font-size: 18px; color: #a3a3a3;">☰</span>
     </div>
-    <div style="margin-top: 12px; font-size: 13px; color: #888; font-style: italic;">
+    <div class="blog-diagram-caption">
       Complexity is now in the user's head. "Where's the thing I need?"
     </div>
   </div>
@@ -388,4 +391,4 @@ The tension between beautiful UI and peak UX isn't going away. But framing it as
 
 The truly beautiful interface is the one that stays honest, legible, fast, and kind—especially at the moment it fails. The research says: when in doubt, choose clarity. Choose labels, speed, and the design that works when everything else doesn't.
 
-Pretty fades. Usablility compounds.
+Pretty fades. Usability compounds.
