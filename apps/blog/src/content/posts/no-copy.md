@@ -16,7 +16,7 @@ Copy can support a good interaction. It cannot replace it.
 
 ## What "no copy" means
 
-This is not anti-words. It is anti-instructions.
+This screed is not anti-words. It is anti-instructions.
 
 If a screen needs paragraphs to teach people what to do, the design is asking users to study before they act. That is friction with nicer typography.
 
