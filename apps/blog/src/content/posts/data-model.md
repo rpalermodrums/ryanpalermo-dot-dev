@@ -64,11 +64,11 @@ Auto-save that doesn't clearly save. Drafts that aren't really drafts. "Smart" d
   </div>
 </div>
 
-The problem isn't sophistication. It's that users can't build a reliable mental model.
+In the worst cases, we've built a system where users can't build a reliable mental model.
 
-When people can't predict outcomes, they slow down. They retry. They duplicate. They ask the only question that matters:
+When people can't predict outcomes, they slow down, retry, duplicate, or quit. Often, they ask the only question that matters:
 
-**Did it actually go through?**
+**Did my action actually go through?**
 
 ---
 
