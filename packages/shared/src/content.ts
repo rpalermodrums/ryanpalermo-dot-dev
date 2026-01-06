@@ -57,7 +57,7 @@ export const blogPosts: BlogPost[] = [
     featured: true,
     content: "",
     excerpt:
-      "Why musicians make great product engineers.",
+      "Why musicians make great product engineers",
   },
   {
     slug: "peak-ux",

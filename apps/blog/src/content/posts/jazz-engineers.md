@@ -1,6 +1,6 @@
 ---
 title: "Nobody is Coming to Save You in the Practice Room"
-subtitle: "Why Musicians Make Great Product Engineers."
+subtitle: "Why Musicians Make Great Product Engineers"
 date: 2026-01-05
 excerpt: "The skills that transfer have nothing to do with music and everything to do with obsession."
 featured: true
