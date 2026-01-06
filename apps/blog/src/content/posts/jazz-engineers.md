@@ -6,128 +6,127 @@ excerpt: "The skills that transfer have nothing to do with music and everything 
 featured: true
 ---
 
-I played music professionally for about a decade before I wrote a single line of code. Drums, plus years of composing and arranging. Gigs, sessions, practice, getting “vibed”, teaching difficult students, spending late nights with notation software while arguing with Sibelius about its refusal to beam eighth notes correctly and slamming the laptop shut.
 
-People often ask about the magic that transfers from music to software engineering, expecting me to describe some mystical synergy. They expect me to say something about creativity, pattern recognition, collaboration; something ethereal that makes them feel like musicians have access to secrets they don't.
+I played music professionally for about a decade before I wrote a single line of code. Mostly playing drums, along with years of composing and arranging. Gigs, sessions, getting “vibed,” teaching difficult students, spending late nights with Sibelius, begging it to beam eighth notes correctly.
 
-Sure, those qualities exist. But they're not meaningful in my experience.
+People often ask me what transfers from music to software engineering, expecting me to describe some mystical synergy. They expect me to say something about innate creativity, pattern recognition, or somethingeven more ethereal that makes them feel like musicians have access to secrets they don’t.
 
-What carries over is simple and nearly impossible to teach: the disposition to sit alone with something difficult and relentlessly work through it.
+Those qualities exist, but in my experience they’re not the reasons why musicians tend to be great devs. What actualy carries over is much simpler and nearly impossible to teach: **the disposition to sit alone with something difficult and relentlessly work through it**.
 
-That, and taste.
+That, and **taste**.
 
 ---
 
-## **Practice**
+## Practice
 
-Here's what being a musician actually looks like:
+Here’s what being a musician actually looks like:
 
-You sit in a room. Alone. For thousands of hours. No teacher checks your work. No curriculum exists. You listen to the records. You transcribe the solos. You play the patterns over and over at varying tempos until they're subconscious. You hit plateaus that feel like dead ends; sometimes for weeks, sometimes for months. Nothing improves and you can't figure out why.
+You sit in a room. Alone. For thousands of hours. No teacher checks your work. No curriculum exists. You listen to the records, transcribe the solos, play the patterns over and over at varying tempos until they’re subconscious. You hit plateaus that feel like dead ends—sometimes for weeks, sometimes for months. Nothing improves, and you can’t figure out why.
 
-And then one day something clicks. Or it doesn't, and you push through anyway. You build a new system for yourself, a different way of practicing or hearing or approaching the problem, and suddenly you're moving again.
+And then one day something clicks. Or it doesn’t, and you push through anyway. You build a new system for yourself, a different way of practicing or hearing or approaching the problem, and suddenly you’re moving again.
 
-Most don't have this in them.
+Many simply learn what they’re taught, plateau at “good enough,” and await further instruction -- external structure, feedback, and motivation are required to move forward. Someone needs to say “good job” and explain what exactly comes next.
 
-Many learn what they're taught, plateau at "good enough," and stop there until given further instruction. External structure, external feedback, external motivation is required to keep moving forward. Someone needs to say “good job” or explain what comes next.
+Musicians learn to generate this momentum internally. They have to. **Nobody is coming to save you in the practice room**. You figure it out or you quit. Those are the options. There is no third door.
 
-Musicians learn to generate all of this internally. They have to. Nobody is coming to save you in the practice room. You figure it out or you quit. Those are the options. There is no third door.
+Software engineering is similar, at least when you’re working on problems worth solving. There’s no tutorial for the hard stuff. Stack Overflow doesn’t have your answer, the documentation for that critical tool hasn’t been updated since 2019. The plateaus are real, and the path forward is rarely obvious.
 
-Software engineering is the same, at least when you're working on problems worth solving. There's no tutorial for the hard stuff. Stack Overflow doesn't have your answer. The documentation hasn't been updated since 2019\. The plateaus are real and the path forward is rarely obvious.
-
-What carries over from music isn't any specific skill. It's the tolerance for being stuck and the stubborn belief that persistence will eventually pay off.
+What carries over from music isn’t any specific skill. It’s the tolerance for being stuck and the stubborn belief that persistence will eventually pay off.
 
 It does. It just takes longer than anyone wants.
 
 ---
 
-## **Taste**
+## Art (Not Science)
 
-Here's what separates product engineers from software engineers: taste.
+There’s a persistent fantasy in tech that building software is a science—that if you follow the right process, run the right experiments, collect the right data, the correct answer will emerge like you’re solving an equation.
 
-Software engineering is about making things work. Product engineering is about making things *right*. And "right" is not a technical specification. It's not a ticket. It's not something your product lead can articulate in a Notion doc. It's a judgment call, based mostly on aesthetics.
+I think this belief is genuinely destructive. I think it’s a root cause of a lot of the damage we experience from tech platforms today. Every soulless feed, every dark pattern, every product that technically “works” but makes you feel like garbage—that’s what happens when you let the spreadsheet make the decisions.
+
+Data tells you what happened. It doesn’t tell you what to do next. A/B tests tell you which of two options performed better. They don’t tell you if both options were wrong. They don’t tell you if there’s a third option you never considered. They definitely don’t tell you *why* one option won, which means they can’t tell you whether that reason will hold up in a different context.
+
+We measure what’s easy to measure and pretend that’s what matters. Click-through rates. Conversion percentages. Time on page. These capture something. They miss almost everything about the texture of how people actually experience a product. They miss meaning.
+
+Sometimes the “irrational” choice is the right one. Sometimes making something slightly harder to use makes it feel more valuable. Sometimes removing features adds clarity. Sometimes the thing that tests worse in isolation works better in context because of what it signals.
+
+Musicians understand this intuitively. You can’t A/B test a solo in real time. You make the call. You see what happens. You develop judgment through repetition, not optimization.
+
+Product engineering requires the same thing: vision, judgment, and the willingness to make calls that can’t be fully justified by data. The practice room teaches you to be comfortable with that uncertainty. You develop your ear, you make the call, you see what happens—over and over, for years, until you trust yourself.
+
+Anyone who treats building software as purely operational—who positions themselves as a gatekeeper for “best practices” and “process”—needs to be kept far away from the code.
+
+---
+
+## Taste
+
+Here’s what separates product engineers from software engineers: taste.
+
+Software engineering is about making things work. Product engineering is about making things right. And “right” is not a technical specification or something your product lead can articulate in a Notion doc. It’s a judgment call, based mostly on aesthetics.
 
 Music teaches this directly and violently.
 
-You can play a solo that's technically perfect: correctly outlining the changes, clean execution, sophisticated note choices, rhythm that frames the form beautifully. And the room is dead. The feel is off. You can see it in the audience’s faces. You did everything right and none of it landed.
+You can play a solo that’s technically perfect—correctly outlining the changes, clean execution, sophisticated note choices, rhythm that frames the form beautifully. And the room is dead. The feel is off. You can see it in the audience’s faces. You did everything right, and none of it landed.
 
-Then someone plays three long notes with conviction and the crowd leans in.
+Then someone plays three long notes with conviction, and the crowd leans in.
 
-What changed? Not the content\! The experience of **receiving** it. The timing. The confidence. The way those three notes made people feel something, even if they couldn't explain what.
+What changed? Not the content. The experience of receiving it. The timing. The confidence. The way those three notes made people feel something, even if they couldn’t explain what.
 
-This is the same gap that matters in product work. Users don't experience your feature as a collection of technical decisions. They experience it as a feeling. Does this feel fast? Does this feel trustworthy? Does this feel like someone actually gave a damn, or does it feel like it was shipped to hit a quarterly goal?
+This is the same gap that matters in product work. Users don’t experience your feature as a collection of technical decisions. They experience it as a feeling. Does this feel fast? Does this feel trustworthy? Does this feel like someone actually gave a damn, or does it feel like it was shipped to hit a quarterly goal?
 
-These aren't rational questions. The answers live beneath conscious evaluation. You can build something correct by every measurable standard and still have it feel completely wrong. You can break half the rules and ship something that just *works*… something that people immediately understand, that feels right in a way nobody can articulate.
+These aren’t rational questions. The answers live beneath conscious evaluation. You can build something correct by every measurable standard and still have it feel completely wrong. You can break half the rules and ship something that just works—something people immediately understand, that feels right in a way nobody can articulate.
 
-Taste is the ability to tell the difference. It's not teachable in the traditional sense. You develop it through exposure, thousands of hours of listening, playing, writing, or planning, building, hearing feedback, and iterating: internalizing what lands until the judgment can be somewhat automatic.
-
----
-
-## **Art (Not Science)**
-
-There's a persistent fantasy in tech that building software is a science. That if you follow the right process, run the right experiments, collect the right data, the correct answer will emerge like you're solving an equation.
-
-I think this belief is genuinely destructive. I think it's a root cause of a lot of the damage we experience from tech platforms today. Every soulless feed, every dark pattern, every product that technically "works" but makes you feel like garbage. That's what happens when you let the spreadsheet make the decisions.
-
-Data tells you what happened. It doesn't tell you what to do next. A/B tests tell you which of two options performed better. They don't tell you if both options were wrong. They don't tell you if there's a third option you never considered. They definitely don't tell you *why* one option won, which means they can't tell you whether that reason will hold up in a different context.
-
-We measure what's easy to measure and pretend that's what matters. Click rates. Conversion percentages. Time on page. These capture something. They miss everything about the texture of how people actually experience a product. They miss meaning.
-
-Sometimes the "irrational" choice is the right one. Sometimes making something slightly harder to use makes it feel more valuable. Sometimes removing features adds clarity. Sometimes the thing that tests worse in isolation works better in context because of what it signals.
-
-Musicians understand this intuitively. You can't A/B test a solo in real-time. You make the call. You see what happens. You develop judgment through repetition, not optimization.
-
-Product engineering requires the same thing: vision, judgment, and the willingness to make calls that can't be fully justified by data. The practice room teaches you to be comfortable with that uncertainty. You develop your ear, you make the call, you see what happens. Over and over, for years, until you trust yourself.
-
-Anyone who treats building software as purely operational, who positions themselves as a gatekeeper for "best practices" and "process," needs to be kept far away from the code.
+Taste is the ability to tell the difference. It’s not teachable in the traditional sense. You develop it through exposure: thousands of hours of listening, playing, writing—or planning, building, hearing feedback, and iterating—internalizing what lands until the judgment becomes automatic.
 
 ---
 
-## **Obsession**
+## Obsession
 
-Let's be honest about what it takes to be a musician.
+Let’s be honest about what it takes to be a musician.
 
-It's not talent alone. Talent gets you in the door. After that, it's hours. Thousands upon thousands of hours of focused, deliberate practice. Listening to the same solo hundreds of times to catch a detail you missed, then slowing it down and realizing you've been hearing that one note incorrectly the whole time. Rewriting the same eight bars of an arrangement until they finally breathe. Playing a rudiment until your hands hurt as much as your brain, giving up, then doing the exact same thing the next day like a lunatic.
+It’s not talent alone. Talent gets you in the door. After that, it’s hours—thousands upon thousands of hours of focused, deliberate practice. Listening to the same solo hundreds of times to catch a detail you missed, then slowing it down and realizing you’ve been hearing one note incorrectly the whole time. Rewriting the same eight bars of an arrangement until they finally breathe. Playing a rudiment until your hands hurt as much as your brain, giving up, then doing the exact same thing the next day like a lunatic.
 
-This is obsession. It's not healthy in the conventional sense. It's not balanced. It's what the work requires.
+This is obsession. It’s not healthy in the conventional sense. It’s not balanced. It’s what the work requires.
 
-And alongside obsession lives standards: the refusal to accept "good enough" when you know it could be better. The willingness to throw away work that doesn't meet the bar, even when you've spent months on it. The uncomfortable honesty required to hear your own playing clearly and admit it's not there yet.
+Alongside obsession live standards: the refusal to accept “good enough” when you know it could be better. The willingness to throw away work that doesn’t meet the bar, even when you’ve spent months on it. The uncomfortable honesty required to hear your own playing clearly and admit it’s not there yet.
 
-I see this in the best engineers I've worked with. They're obsessed. They care about details nobody asked them to care about. They refactor code that already works because it *bothers* them. They stay up late because something feels off and they can't let it go. They're not doing it for the performance review. They're doing it because shipping something they're not proud of feels like a small death.
+I see this in the best engineers I’ve worked with. They’re obsessed. They care about details nobody asked them to care about. They refactor code that already works because it bothers them. They stay up late because something feels off and they can’t let it go. They’re not doing it for the performance review. They’re doing it because shipping something they’re not proud of feels like a small death.
 
-This combination is rare. It's uncomfortable to be around sometimes. It produces great work.
+This combination is rare. It’s uncomfortable to be around sometimes. It produces great work.
 
-Music selects for it. If you don't have it, you won't survive the practice room. If you do, you've already proven you can apply it to anything.
+Music selects for it. If you don’t have it, you won’t survive the practice room. If you do, you’ve already proven you can apply it to anything.
 
 ---
 
-## **Plateaus**
+## The Plateau
 
-Every musician hits plateaus. Long stretches where nothing improves, where the work feels pointless, where quitting seems like the rational move.
+Every musician hits plateaus—long stretches where nothing improves, where the work feels pointless, where quitting seems like the rational move.
 
-The plateau is the test. Not of talent, of character.
+The plateau is the test. Not of talent, but of character.
 
-Can you keep showing up when there's no visible progress? Can you trust that the work is accumulating even when you can't feel it?
+Can you keep showing up when there’s no visible progress? Can you trust that the work is accumulating even when you can’t feel it?
 
-Most people can't. They need constant feedback, constant proof that the effort is worth it. When the plateau hits, they bail.
+Most people can’t. They need constant feedback, constant proof that the effort is worth it. When the plateau hits, they bail.
 
-Musicians who make it through learn something important: persistence isn't about willpower (mostly). It's about building systems that sustain you when willpower runs out.
+Musicians who make it through learn something important: persistence isn’t about willpower (mostly). It’s about building systems that sustain you when willpower runs out.
 
-You find new ways to practice, set smaller goals, and change your relationship to the work so the process itself becomes satisfying, not just the results. You learn to trust accumulation even when it's invisible. You learn to love that specific, familiar pain which is completely foreign to people who always had a clear path and were at an arms’ length to external validation.
+You find new ways to practice, set smaller goals, and change your relationship to the work so the process itself becomes satisfying—not just the results. You learn to trust accumulation even when it’s invisible. You learn to love that specific, familiar pain, which is completely foreign to people who always had a clear path and lived at arm’s length from external validation.
 
-This mixture of individualism and proactivity is exactly what long-term product work requires. Shipping takes forever. Feedback is always delayed and noisy. The plateau is persistent. If you need immediate gratification, you won't last.
+This mixture of individualism and proactivity is exactly what long-term product work requires. Shipping takes forever. Feedback is always delayed and noisy. The plateau is persistent. If you need immediate gratification, you won’t last.
 
 The practice room embodies years of training for exactly this kind of difficult patience.
 
-Personally, the plateau was familiar. I knew it didn’t mean I was failing. I knew how to get through it. I loved it.
+Personally, the plateau was familiar. I knew it didn’t mean I was failing. I knew how to get through it.
+
+I loved it.
 
 I had done it before.
 
 ---
 
-## **Passion**
+## Passion
 
-The skill that transfers from music to product engineering isn't music theory, rhythm, creativity, collaboration, or any specific technique, aptitude, quality, or mysticism.
+The skill that transfers from music to product engineering isn’t music theory, rhythm, creativity, collaboration, or any specific technique, aptitude, quality, or mysticism.
 
-It's the willingness to sit alone with something hard and figure it out, combined with taste developed through obsessive exposure to great software. The understanding that how something *feels* matters more than how it measures. Plus the time spent in whatever “practice room” you call home.
+It’s the willingness to sit alone with something hard and figure it out, combined with taste developed through obsessive exposure to great software. It’s the understanding that how something feels matters more than how it measures—plus the time spent in whatever “practice room” you call home.
 
-If you’ve already survived it, you're more prepared than you realize.
+If you’ve already survived it, you’re more prepared than you realize.
