@@ -115,9 +115,9 @@ export function App() {
           <div className="about-status">
             <div className="about-status-title">What I'm probably up to</div>
             <ul className="about-list">
-              <li>Searching for problems worth solving</li>
               <li>Wiring AI audio models together for micro-experiments</li>
               <li>Figuring out how to keep my agent configs consistent while migrating to a new tool every week 😭 (current favorite is `opencode`)</li>
+              <li>Searching for problems worth solving</li>
             </ul>
           </div>
 
