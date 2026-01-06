@@ -36,6 +36,7 @@ function ThemeToggle() {
 export function App() {
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
+  const [isProjectsClicked, setIsProjectsClicked] = useState(false);
 
   const openTerminal = () => setTerminalOpen(true);
   const openPalette = () => setPaletteOpen(true);
@@ -51,6 +52,13 @@ export function App() {
   const featuredPost = blogPosts.find((p: BlogPost) => p.featured);
   const otherPosts = blogPosts.filter((p: BlogPost) => !p.featured);
 
+  const handleProjectsClick = () => {
+    setIsProjectsClicked(true);
+    setTimeout(() => {
+      setIsProjectsClicked(false);
+    }, 1300);
+  };
+
   return (
     <div className="desktop">
       <main className="content">
@@ -59,7 +67,7 @@ export function App() {
             <span className="header-title">Ryan Palermo</span>
           </div>
           <nav className="header-nav">
-            <a href="#projects">Projects</a>
+            <a href="#projects" onClick={handleProjectsClick}>{isProjectsClicked ? "(soon 🚧)" : "Projects"}</a>
             <a href={BLOG_URL}>Thoughts</a>
             <ThemeToggle />
           </nav>

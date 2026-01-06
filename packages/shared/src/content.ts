@@ -57,7 +57,7 @@ export const blogPosts: BlogPost[] = [
     featured: true,
     content: "",
     excerpt:
-      "What actually carried over from music is simpler and impossible to teach: the disposition to sit alone with something difficult and build your own systems to get through it.",
+      "Why jazz musicians make great product engineers.",
   },
   {
     slug: "peak-ux",

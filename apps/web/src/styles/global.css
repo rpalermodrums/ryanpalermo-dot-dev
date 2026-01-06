@@ -490,6 +490,7 @@ button {
   margin: 0 -16px;
   padding: 16px;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .post.featured {
@@ -498,6 +499,7 @@ button {
   padding: 16px;
   margin-bottom: 16px;
   display: block;
+  cursor: pointer;
 }
 
 .post.featured:hover {
@@ -576,13 +578,6 @@ button {
 
 .contact-item-value {
   font-size: 13px;
-}
-
-/* Footer */
-.footer {
-  margin-top: 64px;
-  padding-top: 32px;
-  border-top: 1px solid var(--border);
 }
 
 .footer-icons {
