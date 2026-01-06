@@ -94,8 +94,6 @@ Power users don't need complexity. They need speed and reliability. The tool sho
 
 The CS rep resolving a billing issue doesn't want to "handle complexity." They want to find the account, see the state, take an action, and move on. Every extra click is delay for a customer who's already frustrated.
 
-The ops engineer responding to an incident doesn't want a "flexible interface." They want to see what's broken, do the thing that fixes it, and go back to sleep.
-
 Power users are the *most* sensitive to friction because they hit it the most often. They're the ones who notice the 200ms delay, the unnecessary confirmation modal, the three clicks that should be one.
 
 "They're power users" isn't a reason to skip UX. It's a reason to take it more seriously.
