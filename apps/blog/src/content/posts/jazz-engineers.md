@@ -63,7 +63,7 @@ Software engineering is about making things work. Product engineering is about m
 
 Music teaches this directly and violently.
 
-You can play a solo that’s technically perfect—correctly outlining the changes, clean execution, sophisticated note choices, rhythm that frames the form beautifully. And the room is dead. The feel is off. You can see it in the audience’s faces. You did everything right, and none of it landed.
+You can play a solo that’s technically perfect—correctly outlining the changes with clean execution, sophisticated note choices, rhythm that frames the form beautifully. And the packed room you're playing to feels dead silent. The vibe is off. You can see it in the audience’s faces. You thought you did everything right. None of it landed.
 
 Then someone plays three long notes with conviction, and the crowd leans in.
 
