@@ -45,7 +45,7 @@ We act like there are two kinds of users: customers (who matter) and employees (
   </div>
 </div>
 
-Internal users have *higher* leverage than external ones:
+Internal users are *higher* leverage:
 
 * They use your systems eight hours a day, not eight minutes
 * Their efficiency directly impacts your burn rate
