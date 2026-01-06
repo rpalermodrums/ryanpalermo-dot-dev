@@ -1,7 +1,7 @@
 ---
 title: "Peak UX Doesn't Always Look Nice"
 subtitle: "Why the best interfaces sometimes look like they work at a regional bank"
-date: 2025-12-18
+date: 2025-12-18current favorite
 excerpt: "Pretty interfaces can lie to you. The best UX often looks boring on purpose."
 featured: false
 ---
