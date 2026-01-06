@@ -21,7 +21,7 @@ That, and **taste**.
 
 Here’s what being a musician actually looks like:
 
-You sit in a room. Alone. For thousands of hours. No teacher checks your work. No curriculum exists. You listen to the records, transcribe the solos, play the patterns over and over at varying tempos until they’re subconscious. You hit plateaus that feel like dead ends—sometimes for weeks, sometimes for months. Nothing improves, and you can’t figure out why.
+You sit in a room. Alone with your instrument. For thousands of hours over the course of years. No teacher checks your work. No curriculum exists. You listen to the records, transcribe the solos, play the patterns over and over at varying tempos until they’re subconscious. You hit plateaus that feel like dead ends—sometimes for weeks, sometimes for months. Nothing improves, and you can’t figure out why.
 
 And then one day something clicks. Or it doesn’t, and you push through anyway. You build a new system for yourself, a different way of practicing or hearing or approaching the problem, and suddenly you’re moving again.
 
