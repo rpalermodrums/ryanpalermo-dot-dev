@@ -10,13 +10,15 @@ Good copy matters.
 
 Clear button labels reduce hesitation. Honest error messages prevent thrash. A single sentence can calm a user down at the exact moment a system feels shaky.
 
-Here's a heuristic I use: **If the interface needs explanation, the interface probably doesn't work.**
+That said, I see most copy as unreliable, filmsy, and burdonsom.
 
-Copy can support a good interaction. It cannot replace it.
+Here's a heuristic I like to use: **If the interface needs explanation, the interface probably doesn't work.**
+
+Copy can support a good interaction. It cannot replace one.
 
 ## What "no copy" means
 
-This screed is not anti-words. It is anti-instructions.
+This screed is not anti-words, but it is certainly anti-instructions.
 
 If a screen needs paragraphs to teach people what to do, the design is asking users to study before they act. That is friction with nicer typography.
 
