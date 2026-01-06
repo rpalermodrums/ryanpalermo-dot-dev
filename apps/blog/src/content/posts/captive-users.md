@@ -96,7 +96,7 @@ The CS rep resolving a billing issue doesn't want to "handle complexity." They w
 
 Power users are the *most* sensitive to friction because they hit it the most often. They're the ones who notice the 200ms delay, the unnecessary confirmation modal, the three clicks that should be one.
 
-"They're power users" isn't a reason to skip UX. It's a reason to take it more seriously.
+"They're power users" is not a reasonable excuse to cut corners. Spending the time and effort building delightul experiences for internal users pays dividends down the line.
 
 ## Internal tools become external tools, always
 
