@@ -204,13 +204,11 @@ Jakob Nielsen's 1993 response-time limits remain valid: 0.1 seconds feels instan
   </div>
 </div>
 
-53%: [Think with Google (2016)](https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/mobile-site-load-time-statistics/)
-10%: [web.dev — Why speed matters (BBC, 2018)](https://web.dev/why-speed-matters/)
-50%: [Akamai 2017 Online Retail Performance report (PDF)](https://www.akamai.com/site/en/documents/report/akamai-state-of-online-retail-performance-spring-2017.pdf)
+* 53%: [Think with Google (2016)](https://www.thinkwithgoogle.com/consumer-insights/consumer-trends/mobile-site-load-time-statistics/)
+* 10%: [web.dev — Why speed matters (BBC, 2018)](https://web.dev/why-speed-matters/)
+* 50%: [Akamai 2017 Online Retail Performance report (PDF)](https://www.akamai.com/site/en/documents/report/akamai-state-of-online-retail-performance-spring-2017.pdf)
 
-A List Apart cited UK GDS research finding 1.1% of users (1 in 93) did not receive JavaScript-based enhancements. For Amazon-scale traffic, that's 1.75 million people per month. Causes include JS errors, browser add-ons, firewalls, CDN outages, and insufficient RAM ([A List Apart: Interaction Is an Enhancement](https://alistapart.com/article/interaction-is-an-enhancement/)).
-
-Aaron Gustafson's principle: "You do not control the environment executing your JavaScript code." ([A List Apart: Interaction Is an Enhancement](https://alistapart.com/article/interaction-is-an-enhancement/))
+An evergreen concept: "You do not control the environment executing your JavaScript code." ([A List Apart: Interaction Is an Enhancement](https://alistapart.com/article/interaction-is-an-enhancement/))
 
 ## Stress demands simplicity
 
