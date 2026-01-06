@@ -8,7 +8,7 @@ featured: false
 
 I like pretty interfaces. But "pretty" often has hidden costs under pressure.
 
-When a UI gets "too pretty," my brain starts asking a different question:
+When a UI gets "too pretty," my brain starts asking one question:
 
 **What will this look like when it fails?**
 
