@@ -310,59 +310,11 @@ If pagination is unstable, the UI will be unstable. Users will feel it as "the l
 
 ---
 
-## Drafts
-
-Drafts aren't a UI flourish. They're a state transition.
-
-<div style="margin: 24px 0;">
-  <div style="display: flex; gap: 16px; padding: 20px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px;">
-    <div style="flex: 1; padding: 16px; background: #1a1a1a; border-radius: 6px; border: 2px solid #404040;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-        <span style="color: #e5e5e5; font-size: 14px;">Q4 Report</span>
-        <span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 4px; font-size: 12px; background: #262626; color: #a3a3a3;">
-          draft
-        </span>
-      </div>
-      <div style="font-size: 12px; color: #525252;">Updated Dec 12 · Only you</div>
-    </div>
-    <div style="display: flex; align-items: center; color: #525252;">→</div>
-    <div style="flex: 1; padding: 16px; background: #14291a; border-radius: 6px; border: 2px solid #166534;">
-      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
-        <span style="color: #e5e5e5; font-size: 14px;">Q4 Report</span>
-        <span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border-radius: 4px; font-size: 12px; background: #14291a; color: #4ade80; border: 1px solid #166534;">
-          <span style="font-size: 10px;">✓</span>
-          published
-        </span>
-      </div>
-      <div style="font-size: 12px; color: #525252;">Published Dec 14 · Visible to team</div>
-    </div>
-  </div>
-</div>
-
-If users expect to start something and come back later, model it:
-
-```ts
-export type Document = {
-  id: string;
-  status: "draft" | "published";
-  updatedAt: string;
-};
-
-export type PublishRequest = {
-  id: string;
-  expectedVersion: string; // enables conflict handling
-};
-```
-
-Without a real draft concept, the UI fakes it with local state and hope. That's how you get "I thought it saved."
-
----
-
 ## This does not mean "show everything"
 
-"Don't hide the model" doesn't mean dumping raw JSON into the UI.
+"Don't hide the data model" doesn't mean "dump raw JSON into the UI".
 
-It means making the important parts of reality legible:
+Just make the important parts of reality legible:
 
 <div class="blog-grid-3col">
   <div class="blog-diagram-card" style="text-align: center;">
@@ -397,7 +349,7 @@ It means making the important parts of reality legible:
   </div>
 </div>
 
-Users don't want complexity. They want predictability. Predictability comes from a model they can understand.
+Users don't need complexity. They want predictability. Predictability comes from a mental model they can grok.
 
 ## Intentionality
 
