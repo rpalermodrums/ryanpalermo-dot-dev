@@ -129,7 +129,7 @@ export function App() {
         </section>
 
         <section id="blog" className="section">
-          <h2 className="section-title">Writing</h2>
+          <h2 className="section-title">Thoughts</h2>
           <div className="posts-list">
             {featuredPost && (
               <a
