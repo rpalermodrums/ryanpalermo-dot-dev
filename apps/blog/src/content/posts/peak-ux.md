@@ -1,4 +1,4 @@
-and I assume---
+---
 title: "Peak UX Doesn't Always Look Nice"
 subtitle: "Why the best interfaces sometimes look like they work at a regional bank"
 date: 2025-12-18
