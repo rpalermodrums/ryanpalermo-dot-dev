@@ -73,7 +73,7 @@ This is the same gap that matters in product work. Users don’t experience your
 
 These aren’t rational questions. The answers live beneath conscious evaluation. You can build something correct by every measurable standard and still have it feel completely wrong. You can break half the rules and ship something that just works—something people immediately understand, that feels right in a way nobody can quite articulate.
 
-Taste is the ability to tell the difference. It’s not teachable in the traditional sense. You develop it through exposure: thousands of hours of listening, playing, writing—or planning, building, hearing feedback, and iterating—internalizing what lands until the judgment becomes automatic.
+Taste is the ability to tell the difference. It’s not teachable in the traditional sense. You develop it through exposure: thousands of hours of listening, playing, writing - or planning, building, listening to user feedback, and iterating. Internalizing what lands through deep exposure until good judgment is automatic.
 
 ---
 
@@ -81,48 +81,44 @@ Taste is the ability to tell the difference. It’s not teachable in the traditi
 
 Let’s be honest about what it takes to be a musician.
 
-It’s not talent alone. Talent gets you in the door. After that, it’s hours—thousands upon thousands of hours of focused, deliberate practice. Listening to the same solo hundreds of times to catch a detail you missed, then slowing it down and realizing you’ve been hearing one note incorrectly the whole time. Rewriting the same eight bars of an arrangement until they finally breathe. Playing a rudiment until your hands hurt as much as your brain, giving up, then doing the exact same thing the next day like a lunatic.
+It’s not talent alone. Talent gets you in the door. But any musician worth their salt has undergone thousands upon thousands of hours of focused, deliberate practice. Listening to the same solo hundreds of times to catch a detail you missed, then slowing the track down and realizing you’ve been hearing one note wrong this whole time. Rewriting the same eight bars of an arrangement until they finally breathe. Playing a rudiment until your hands hurt as much as your brain, giving up, then doing the exact same thing the next day like a lunatic.
 
 This is obsession. It’s not healthy in the conventional sense. It’s not balanced. It’s what the work requires.
 
-Alongside obsession live standards: the refusal to accept “good enough” when you know it could be better. The willingness to throw away work that doesn’t meet the bar, even when you’ve spent months on it. The uncomfortable honesty required to hear your own playing clearly and admit it’s not there yet.
+Alongside obsession live high standards: the refusal to accept “good enough” when you know you could do something better. The willingness to throw away months of work that don't meet the bar. The uncomfortable honesty required to hear your own playing clearly and honestly self-critique.
 
-I see this in the best engineers I’ve worked with. They’re obsessed. They care about details nobody asked them to care about. They refactor code that already works because it bothers them. They stay up late because something feels off and they can’t let it go. They’re not doing it for the performance review. They’re doing it because shipping something they’re not proud of feels like a small death.
+I see these qualities and tendencies in all of the best engineers I’ve worked with. They’re obsessed. They care about details nobody asked them to care about. They refactor code that already works because it bothers them. They stay up late because something feels off and they can’t let it go. Obsession means that shipping something you're not proud of feels like a small death.
 
-This combination is rare. It’s uncomfortable to be around sometimes. It produces great work.
-
-Music selects for it. If you don’t have it, you won’t survive the practice room. If you do, you’ve already proven you can apply it to anything.
+Music selects for these qualities, and I think software engineering does as well. If you don’t have this mindset, you probably won’t survive the practice room. If you do, you can apply it to anything.
 
 ---
 
 ## The Plateau
 
-Every musician hits plateaus—long stretches where nothing improves, where the work feels pointless, where quitting seems like the rational move.
+Every artist hits plateaus... long stretches where nothing improves, the work feels sysiphian, and quitting feels like the rational move.
 
-The plateau is the test. Not of talent, but of character.
+The plateau is a test. Not of talent, but of character.
 
-Can you keep showing up when there’s no visible progress? Can you trust that the work is accumulating even when you can’t feel it?
+Can you keep showing up when there’s no tangible progress? Can you trust that skill is accumulating with zero external reward?
 
-Most people can’t. They need constant feedback, constant proof that the effort is worth it. When the plateau hits, they bail.
+Most people can’t. They need feedback, constant proof that the effort is worth it. When the plateau hits, most people bail.
 
-Musicians who make it through learn something important: persistence isn’t about willpower (mostly). It’s about building systems that sustain you when willpower runs out.
+Musicians learn something important: persistence isn’t about willpower (mostly). You can build internal systems for when the willpower is depleted.
 
-You find new ways to practice, set smaller goals, and change your relationship to the work so the process itself becomes satisfying—not just the results. You learn to trust accumulation even when it’s invisible. You learn to love that specific, familiar pain, which is completely foreign to people who always had a clear path and lived at arm’s length from external validation.
+You find new ways to practice, set smaller goals, and change your relationship to practice. The process itself becomes satisfying, not just the results. You learn to trust that there's progress happening even when it’s invisible. You learn to love that specific, familiar pain of hitting the wall.
 
-This mixture of individualism and proactivity is exactly what long-term product work requires. Shipping takes forever. Feedback is always delayed and noisy. The plateau is persistent. If you need immediate gratification, you won’t last.
+I believe this same mixture of individualism and proactivity is exactly what long-term product work requires. Shipping takes forever. Feedback is always delayed and noisy. The plateau is persistent. If you need immediate gratification, you won’t last.
 
 The practice room embodies years of training for exactly this kind of difficult patience.
 
 When I first began building software, the plateau was a familiar feeling. I knew it didn’t mean I was failing. I knew how to get through it.
 
-The plateau doesn't go away. A beautiful and challenging element of working within a medium which is constantly evolving is the progress which it entails. The next plateau is around the corner.
+The plateau doesn't go away. A beautiful and challenging part of working within a medium which constantly evolves: the next plateau is always around the corner.
 
 ---
 
 ## Passion
 
-The skill that transfers from music to product engineering isn’t music theory, rhythm, creativity, collaboration, or any specific technique, aptitude, quality, or mysticism.
+The skill that transfers from music to product engineering isn’t music theory, rhythm, creativity, collaboration, or any specific technique, aptitude, quality, or mystic truth.
 
-It’s the willingness to sit alone with something hard and figure it out, combined with taste developed through obsessive exposure to great software. It’s the understanding that how something feels matters more than how it measures—plus the time spent in whatever “practice room” you call home.
-
-If you’ve already survived it, you’re more prepared than you realize.
+What really transfers is the willingness to sit alone with something difficult and figure it out, and by proxy develop a sense of taste via obsessive exposure. And developing the wisdowm to know that how something feels matters more than how it measures.
