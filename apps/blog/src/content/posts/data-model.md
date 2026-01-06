@@ -142,9 +142,7 @@ The feedback shown to the user should be derived from reality.
 
 ## Receipts
 
-A spinner is not proof. A toast is not proof. An animation is not proof.
-
-Proof is durable. It survives refresh:
+A spinner is not proof. A toast is not proof. An animation is not proof. Proof is durable.
 
 ```ts
 export type Receipt = {
