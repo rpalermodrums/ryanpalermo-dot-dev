@@ -115,7 +115,7 @@ Or:
 
 The internal/external boundary is permeable. What's internal today is external tomorrow. The shortcuts you took because "it's just for us" become the constraints you can't change later on.
 
-Assuming internal means "doesn't matter" is assuming the tool will never escape. It will escape.
+Assuming internal means "doesn't matter" is assuming the tool will never escape. **It will escape**.
 
 ## Ops workarounds become permanent architecture
 
