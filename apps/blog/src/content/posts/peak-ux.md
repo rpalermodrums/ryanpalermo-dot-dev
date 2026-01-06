@@ -38,7 +38,7 @@ Pretty can hide broken—but only until it can't.
 
 Baymard Institute has a name for the pattern: **false simplicity**. Their research across 200,000+ hours of e-commerce UX testing found that visually simple designs often increase cognitive load.
 
-The clearest example is placeholder-as-label—the input field where the hint disappears when you start typing.
+The clearest example is placeholder-as-label: the input field where the hint disappears when you start typing.
 
 <div class="blog-grid-2col">
   <div class="blog-diagram-card">
