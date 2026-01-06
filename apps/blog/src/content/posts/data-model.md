@@ -269,45 +269,6 @@ Now the UI can say what happened *and* what to do next without guessing.
 
 ---
 
-## Pagination is a UX decision derived from your data model
-
-Pagination isn't a backend detail. It determines whether lists feel stable.
-
-Offset pagination is simple until data changes under you. Items shift. Duplicates appear. People lose their place.
-
-<div class="blog-grid-2col">
-  <div>
-    <div class="blog-diagram-label">Offset pagination problem</div>
-    <div style="padding: 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; font-size: 13px;">
-      <div style="color: #525252; margin-bottom: 8px;">Page 1: items 1-10</div>
-      <div style="color: #fbbf24; margin-bottom: 8px; padding: 8px; background: #1c1917; border-radius: 4px;">↑ New item inserted at position 3</div>
-      <div style="color: #ef4444;">Page 2: item 10 appears again</div>
-    </div>
-  </div>
-  <div>
-    <div class="blog-diagram-label">Cursor pagination</div>
-    <div style="padding: 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; font-size: 13px;">
-      <div style="color: #525252; margin-bottom: 8px;">Page 1: items before cursor_abc</div>
-      <div style="color: #4ade80; margin-bottom: 8px; padding: 8px; background: #14291a; border-radius: 4px;">↑ New item inserted (doesn't affect cursor)</div>
-      <div style="color: #4ade80;">Page 2: items after cursor_abc ✓</div>
-    </div>
-  </div>
-</div>
-
-Cursor pagination is usually better when you treat it like a contract:
-
-```ts
-export type Page<T> = {
-  items: T[];
-  nextCursor?: string;     // undefined means "end"
-  totalApprox?: number;    // optional, honest if it's approximate
-};
-```
-
-If pagination is unstable, the UI will be unstable. Users will feel it as "the list is haunted."
-
----
-
 ## This does not mean "show everything"
 
 "Don't hide the data model" doesn't mean "dump raw JSON into the UI".
