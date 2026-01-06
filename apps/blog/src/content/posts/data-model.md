@@ -28,7 +28,7 @@ Those aren't "frontend" questions.
 
 If a system cannot represent state and rules of engagement, the UI starts guessing, and the user follows. Guessing creates the worst UX: uncertainty with consequences.
 
-## "Magical" UIs feel great until the first edge case.
+## "Magical" UIs feel great until the first edge case
 
 Auto-save that doesn't clearly save. Drafts that aren't really drafts. "Smart" defaults that silently change. Buttons that do different things based on state you can't see.
 
