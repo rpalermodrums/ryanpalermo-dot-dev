@@ -12,7 +12,7 @@ Clear button labels reduce hesitation. Honest error messages prevent thrash. A s
 
 Here's a heuristic I use: **If the interface needs explanation, the interface probably doesn't work.**
 
-Copy can support a good interaction. It cannot replace one.
+Copy can support a good interaction. It cannot replace it.
 
 ## What "no copy" means
 
