@@ -67,7 +67,7 @@ You can play a solo that’s technically perfect—correctly outlining the chang
 
 Then someone plays three long notes with conviction, and the crowd leans in.
 
-What changed? Not the content. The experience of receiving it. The timing. The confidence. The way those three notes made people feel something, even if they couldn’t explain what.
+What changed? Not the content. The experience of **receiving** it. The timing. The confidence. The way those three notes made people **feel** something, even if they couldn’t explain **what**.
 
 This is the same gap that matters in product work. Users don’t experience your feature as a collection of technical decisions. They experience it as a feeling. Does this feel fast? Does this feel trustworthy? Does this feel like someone actually gave a damn, or does it feel like it was shipped to hit a quarterly goal?
 
