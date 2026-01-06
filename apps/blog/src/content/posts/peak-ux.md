@@ -16,7 +16,7 @@ Because it will fail (maybe not often, but eventually)
 
 ## The aesthetic-usability effect has limits
 
-There's a cognitive bias called the aesthetic-usability effect. In 1995, Hitachi researchers found users perceive beautiful interfaces as more usable—even when they aren't. The correlation between aesthetic appeal and *perceived* ease of use was stronger than the correlation with *actual* ease of use ([Kurosu & Kashimura, 1995](https://www.researchgate.net/profile/Masaaki-Kurosu-2/publication/221517663_Apparent_usability_vs_inherent_usability/links/592e0c58aca272fc55b56ecd/Apparent-usability-vs-inherent-usability.pdf)).
+There's a cognitive bias called the aesthetic-usability effect. In 1995, Hitachi researchers found users perceive beautiful interfaces as more usable even when they are objectively not. The correlation between aesthetic appeal and *perceived* ease of use was stronger than the correlation with *actual* ease of use ([Kurosu & Kashimura, 1995](https://www.researchgate.net/profile/Masaaki-Kurosu-2/publication/221517663_Apparent_usability_vs_inherent_usability/links/592e0c58aca272fc55b56ecd/Apparent-usability-vs-inherent-usability.pdf)).
 
 NN/g's Kate Moran updated this research in 2024 with a critical qualifier: "A pretty design can make users forgiving of minor usability problems, but not of large ones." ([NN/g: The Aesthetic-Usability Effect](https://www.nngroup.com/articles/aesthetic-usability-effect/))
 
