@@ -98,22 +98,9 @@ Power users are the *most* sensitive to friction because they hit it the most of
 
 "They're power users" is not a reasonable excuse to cut corners. Spending the time and effort building delightul experiences for internal users pays dividends down the line.
 
-## Internal tools become external tools, always
+## Internal tools become external tools
 
-Here's a pattern that repeats everywhere:
-
-<div style="margin: 32px 0; padding: 20px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px;">
-  <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-    <div style="padding: 8px 16px; background: #1e3a5f; border: 1px solid #1e40af; border-radius: 6px; color: #93c5fd; font-size: 13px;">Internal tool</div>
-    <div style="color: #525252;">→</div>
-    <div style="padding: 8px 16px; background: #1c1917; border: 1px solid #a16207; border-radius: 6px; color: #fcd34d; font-size: 13px;">Customer portal</div>
-    <div style="color: #525252;">→</div>
-    <div style="padding: 8px 16px; background: #14291a; border: 1px solid #166534; border-radius: 6px; color: #86efac; font-size: 13px;">Partner API</div>
-  </div>
-  <div style="font-size: 13px; color: #525252; padding-left: 4px;">
-    "Just for ops" → "Self-serve access" → "Partners depend on it"
-  </div>
-</div>
+Here's a pattern that repeats time and time again:
 
 1. You build an internal tool for ops
 2. Customers start asking for self-serve access to the same data
