@@ -47,11 +47,11 @@ Data tells you what happened. It doesn’t tell you what to do next. A/B tests t
 
 We measure what’s easy to measure and pretend that’s what matters. Click-through rates. Conversion percentages. Time on page. These capture something. They miss almost everything about the texture of how people actually experience a product. They miss meaning.
 
-Sometimes the “irrational” choice is the right one. Sometimes making something slightly harder to use makes it feel more valuable. Sometimes removing features adds clarity. Sometimes the thing that tests worse in isolation works better in context because of what it signals.
+Sometimes the “irrational” choice is the right one. Sometimes making something slightly harder to use makes it feel more valuable. Sometimes removing features adds clarity. Sometimes the thing that tests worse in isolation works better in context.
 
-Musicians understand this intuitively. You can’t A/B test a solo in real time. You make the call. You see what happens. You develop judgment through repetition, not optimization.
+Musicians understand this intuitively. You can’t A/B test a solo in real time. You develop judgment through repetition, not optimization.
 
-Product engineering requires the same thing: vision, judgment, and the willingness to make calls that can’t be fully justified by data. The practice room teaches you to be comfortable with that uncertainty. You develop your ear, you make the call, you see what happens—over and over, for years, until you trust yourself.
+Product engineering requires the same thing: vision, judgment, and the willingness to make calls that can’t be fully justified by data. The practice room teaches you to be comfortable with similar uncertainty. You develop your ear, you make the call, you see what happens—over and over, for years, until you trust yourself.
 
 ---
 
