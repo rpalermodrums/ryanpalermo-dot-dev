@@ -8,19 +8,11 @@ featured: false
 
 I like pretty interfaces. But "pretty" often has hidden costs under pressure.
 
-Not in a design review. In the real world:
-
-* someone's password manager autofills the wrong field
-* the Wi-Fi is bad
-* the user is on a cracked iPhone SE
-* the CFO is trying to reimburse something five minutes before a flight
-* the support team is triaging 60 tickets that all sound like "it won't let me"
-
 When a UI gets "too pretty," my brain starts asking a different question:
 
 **What will this look like when it fails?**
 
-Because it will fail. Not always. But eventually.
+Because it will fail (maybe not often, but eventually)
 
 ## The aesthetic-usability effect has limits
 
