@@ -51,7 +51,6 @@ Internal users have *higher* leverage than external ones:
 * Their efficiency directly impacts your burn rate
 * Their workarounds become institutionalized process
 * Their frustration becomes your culture
-* Their errors become customer-facing incidents
 
 An external user who has a bad experience might churn. An internal user who has a bad experience stays, builds resentment, and creates shadow systems you don't control.
 
