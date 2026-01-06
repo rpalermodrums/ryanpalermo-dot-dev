@@ -156,7 +156,7 @@ These workarounds are invisible to eng because they don't live in the codebase o
 
 These workarounds work until someone leaves without passing their system along, then a spreadsheet that was used to track something critical breaks as a result, and suddenly nobody knows how to do the thing that used to be "easy."
 
-Bad internal tooling creates <strong>shadow infrastructure</strong> that is unversioned, undocumented, and one departure away from collapse.
+Bad internal tooling creates <strong>shadow infrastructure</strong> that is unversioned, undocumented, an is one unexpected departure away from collapse.
 
 ## Invest in your team
 
