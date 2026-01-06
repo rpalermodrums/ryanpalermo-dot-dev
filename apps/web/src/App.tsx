@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Footer } from "./components/Footer";
 import { Terminal } from "./components/Terminal";
 import { CommandPalette } from "./components/CommandPalette";
@@ -37,9 +37,21 @@ export function App() {
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [isProjectsClicked, setIsProjectsClicked] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const mobileMenuRef = useRef<HTMLElement>(null);
 
   const openTerminal = () => setTerminalOpen(true);
   const openPalette = () => setPaletteOpen(true);
+
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
+        setMobileMenuOpen(false);
+      }
+    }
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   useKeyboardNav({
     onOpenTerminal: openTerminal,
@@ -52,25 +64,45 @@ export function App() {
   const featuredPost = blogPosts.find((p: BlogPost) => p.featured);
   const otherPosts = blogPosts.filter((p: BlogPost) => !p.featured);
 
-  const handleProjectsClick = () => {
+  const handleProjectsClick = (e?: React.MouseEvent) => {
+    if (e) e.preventDefault();
     setIsProjectsClicked(true);
     setTimeout(() => {
       setIsProjectsClicked(false);
+      setMobileMenuOpen(false);
     }, 1300);
   };
 
   return (
     <div className="desktop">
       <main className="content">
-        <header className="header">
-          <div className="header-left">
-            <span className="header-title">Ryan Palermo</span>
+        <header className="header" ref={mobileMenuRef}>
+          <div className="header-inner">
+            <div className="header-left">
+              <button 
+                className={`header-title-btn ${mobileMenuOpen ? 'active' : ''}`}
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                aria-expanded={mobileMenuOpen}
+                aria-label="Toggle navigation menu"
+              >
+                <span className="header-title">Ryan Palermo</span>
+                <span className="header-chevron">▼</span>
+              </button>
+            </div>
+            
+            <div className="header-right">
+              <ThemeToggle />
+            </div>
           </div>
-          <nav className="header-nav">
-            <a href="#projects" onClick={handleProjectsClick}>{isProjectsClicked ? "(soon 🚧)" : "Projects"}</a>
-            <a href={BLOG_URL}>Thoughts</a>
-            <ThemeToggle />
-          </nav>
+
+          <div className={`nav-dropdown ${mobileMenuOpen ? 'open' : ''}`}>
+            <nav className="nav-links">
+              <a href="#projects" onClick={handleProjectsClick} className="nav-item">
+                {isProjectsClicked ? "(soon 🚧)" : "Projects"}
+              </a>
+              <a href={BLOG_URL} className="nav-item">Thoughts</a>
+            </nav>
+          </div>
         </header>
 
         <section id="about" className="section">
