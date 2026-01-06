@@ -269,7 +269,7 @@ Now the UI can say what happened *and* what to do next without guessing.
 
 ---
 
-## This does not mean "show everything"
+## Intentionality
 
 "Don't hide the data model" doesn't mean "dump raw JSON into the UI".
 
@@ -309,8 +309,6 @@ Just make the important parts of reality legible:
 </div>
 
 Users want predictability. Predictability comes from a mental model they can quickly grok.
-
-## Intentionality
 
 The data model is going to be felt either way.
 
