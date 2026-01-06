@@ -12,7 +12,7 @@ The logic is always the same: they're internal users. They'll figure it out. The
 
 This is, simply put, abuse justified by captivity.
 
-## Internal/external Distinction is Dumb Most of the Time
+## The internal/external distinction is dumb most of the time
 
 We act like there are two kinds of users: customers (who matter) and employees (who cope). But this framing is wrong on every axis.
 
