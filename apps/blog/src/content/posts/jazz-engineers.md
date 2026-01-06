@@ -9,9 +9,9 @@ featured: true
 
 I played music professionally for about a decade before I wrote a single line of code. Mostly playing drums, along with years of composing and arranging. Gigs, sessions, getting “vibed,” teaching difficult students, spending late nights with Sibelius, begging it to beam eighth notes correctly.
 
-People often ask me what transfers from music to software engineering, expecting me to describe some mystical synergy. They expect me to say something about innate creativity, pattern recognition, or somethingeven more ethereal that makes them feel like musicians have access to secrets they don’t.
+People often ask me what transfers from musicianship to software engineering. and I assume they expect me to describe some mystical synergy. Maybe they expect me to say something about innate creativity, pattern recognition, or something else more ethereal which makes them feel like musicians have access to secrets they don’t.
 
-Those qualities exist, but in my experience they’re not the reasons why musicians tend to be great devs. What actualy carries over is much simpler and nearly impossible to teach: **the disposition to sit alone with something difficult and relentlessly work through it**.
+Those weird, creative qualities exist for sure, but in my experience the reasons why musicians tend to be great devs are much simpler. What actualy carries over is nearly impossible to teach: **the disposition to sit alone with something difficult and relentlessly work through it, charting your own path**.
 
 That, and **taste**.
 
