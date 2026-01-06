@@ -64,8 +64,6 @@ Auto-save that doesn't clearly save. Drafts that aren't really drafts. "Smart" d
   </div>
 </div>
 
-In the worst cases, we've built a system where users can't build a reliable mental model.
-
 When people can't predict outcomes, they slow down, retry, duplicate, or quit. Often, they ask the only question that matters:
 
 **Did my action actually go through?**
