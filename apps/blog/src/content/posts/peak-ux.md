@@ -266,4 +266,4 @@ The tension between beautiful UI and peak UX isn't going away. But framing it as
 
 The truly beautiful interface is the one that stays honest, legible, fast, and kind—especially at the moment it fails. The research says: when in doubt, choose clarity. Choose labels, speed, and the design that works when everything else doesn't.
 
-Because "pretty" fades, usability doesn't.
+Because beauty fades, usability does not.
