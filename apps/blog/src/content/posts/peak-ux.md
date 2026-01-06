@@ -254,11 +254,9 @@ Lea Verou's 2023 analysis of GitHub's UI redesign: "Designers start identifying 
 
 Jonas Downey asked the uncomfortable question: "Why do cluttered, complex products like Facebook, Craigslist, or Photoshop become wildly successful?... Their complex interfaces are a key reason for their success."
 
-## Simplicity
+## Elegance
 
-GOV.UK captures it best: "Making something look simple is easy. Making something simple to use is much harder." ([Government Design Principles](https://www.gov.uk/guidance/government-design-principles))
-
-Pretty is a nice-to-have. Usable is a must-have.
+Pretty is nice-to-have. Usable is must-have.
 
 **The best UX sometimes looks like it works at a regional bank.**
 
