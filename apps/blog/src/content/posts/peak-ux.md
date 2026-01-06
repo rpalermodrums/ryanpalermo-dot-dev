@@ -22,8 +22,6 @@ When a UI gets "too pretty," my brain starts asking a different question:
 
 Because it will fail. Not always. But eventually. And UX is what happens then.
 
----
-
 ## The aesthetic-usability effect has limits
 
 There's a cognitive bias called the aesthetic-usability effect. In 1995, Hitachi researchers found users perceive beautiful interfaces as more usable—even when they aren't. The correlation between aesthetic appeal and *perceived* ease of use was stronger than the correlation with *actual* ease of use.
@@ -35,8 +33,6 @@ She documented a user who struggled through "serious flaws in the navigation" on
 That's the effect working as designed. But here's the problem for product teams: when attractive interfaces help hide problems in real life, those problems don't get fixed. "The aesthetic-usability effect can get in the way" of identifying issues during testing.
 
 Pretty can hide broken—but only until it can't.
-
----
 
 ## False simplicity: when "clean" actually confuses
 
@@ -71,8 +67,6 @@ Baymard calls inline labels "a prime example of false simplicity. They look simp
 The W3C is direct: "Placeholder text is not a replacement for labels."
 
 Baymard's core insight: "Visually simple can actually end up being more complicated to use."
-
----
 
 ## Flat design costs measurable time
 
@@ -109,8 +103,6 @@ Kate Moran's 2015 research on minimalism: "Some designers misinterpret minimalis
 
 By 2017, NN/g was more direct: "Since flat design's emergence in 2011, Nielsen Norman Group has been a vocal critic of its inherent usability issues. Our primary objection to flat design is that it tends to sacrifice users' needs for the sake of trendy aesthetics."
 
----
-
 ## Low contrast: the "sophisticated" readability killer
 
 NN/g's research on contrast is blunt: "A low-contrast design aesthetic is haunting the web, taking legibility and discoverability with it. It's straining our eyes, making us all feel older, and a little less capable."
@@ -140,8 +132,6 @@ WCAG requires a contrast ratio of at least 4.5:1 for normal text. Many "sophisti
 
 Now imagine reading the left version on a phone in direct sunlight. While walking. With aging eyes. While anxious about whether your payment went through.
 
----
-
 ## Error states: the neglected majority
 
 NN/g's Tim Neusesser and Evan Sunwall wrote what I consider the most damning indictment of aesthetic-first design:
@@ -152,27 +142,29 @@ Kate Kaplan's research on hostile error patterns shows how "smart" validation ba
 
 <div class="blog-grid-2col">
   <div class="blog-diagram-card">
-    <div class="blog-diagram-label">❌ Pretty toast</div>
-    <div class="blog-diagram-content" style="display: flex; justify-content: center; padding: 20px;">
-      <div style="background: #ff6b6b; color: white; padding: 12px 24px; border-radius: 24px; font-size: 14px; opacity: 0.8;">
+    <div class="blog-diagram-label" style="padding-bottom: 16px">❌ Pretty toast</div>
+    <div style="background: #0d0d0d; border-radius: 6px; padding: 24px; display: flex; justify-content: center; align-items: center; min-height: 100px; padding-bottom: 16px";">
+      <div style="background: #ff6b6b; color: white; padding: 12px; border-radius: 24px; font-size: 14px; opacity: 0.8;">
         Something went wrong
       </div>
     </div>
-    <div class="blog-diagram-caption">
+    <div class="blog-diagram-caption" style="padding-bottom: 16px">
       Fades in, fades out, says nothing useful. User spent 5 minutes not knowing what happened.
     </div>
   </div>
   <div class="blog-diagram-card">
-    <div class="blog-diagram-label">✓ Ugly but honest</div>
-    <div class="blog-diagram-content" style="background: #2a1717; border-color: #991b1b;">
-      <div style="display: flex; gap: 12px; color: #fca5a5;">
-        <span style="font-size: 20px;">⚠</span>
-        <div>
-          <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">Payment failed: Card declined</div>
-          <div style="color: #d4a5a5; font-size: 13px; margin-bottom: 12px;">Card ending in 4242 was declined by issuer.</div>
-          <div style="display: flex; gap: 8px;">
-            <span style="padding: 6px 12px; background: #dc2626; color: white; border-radius: 4px; font-size: 13px;">Try different card</span>
-            <span style="padding: 6px 12px; background: transparent; border: 1px solid #dc2626; color: #fca5a5; border-radius: 4px; font-size: 13px;">Contact support</span>
+    <div class="blog-diagram-label" style="padding-bottom: 16px">✅ Ugly but honest</div>
+    <div style="background: #0d0d0d; border-radius: 6px; padding: 16px;">
+      <div style="background: #2a1717; border: 1px solid #991b1b; border-radius: 6px; padding: 16px;">
+        <div style="display: flex; gap: 12px; color: #fca5a5;">
+          <span style="font-size: 20px;">⚠</span>
+          <div>
+            <div style="font-weight: 600; font-size: 14px; margin-bottom: 4px;">Payment failed: Card declined</div>
+            <div style="color: #d4a5a5; font-size: 13px; margin-bottom: 12px;">Card ending in 4242 was declined by issuer.</div>
+            <div style="display: flex; gap: 8px;">
+              <span style="padding: 6px 12px; background: #dc2626; color: white; border-radius: 4px; font-size: 13px;">Try different card</span>
+              <span style="padding: 6px 12px; background: transparent; border: 1px solid #dc2626; color: #fca5a5; border-radius: 4px; font-size: 13px;">Contact support</span>
+            </div>
           </div>
         </div>
       </div>
@@ -192,8 +184,6 @@ GOV.UK's Design System takes an uncompromising stance. Their guidance explicitly
 * Humorous language like "oops"
 
 Their research showed users understood what went wrong, knew how to fix it, and successfully recovered—when error messages followed function-first principles.
-
----
 
 ## Pretty but slow is worse than ugly but fast
 
@@ -223,50 +213,13 @@ A List Apart cited UK GDS research finding 1.1% of users (1 in 93) did not recei
 
 Aaron Gustafson's principle: "You do not control the environment executing your JavaScript code."
 
----
-
-## Design under stress demands simplicity
+## Stress demands simplicity
 
 Smashing Magazine's Vitaly Friedman documented real-world usability testing findings: users describe websites as "hostile," "unfriendly," "busy," "annoying," and "confusing." What they want is a "calm experience"—meaning predictable, reliable design.
 
 Smart Interface Design Patterns research is explicit: "Stress disrupts attention, memory, cognition, decision-making." Under stress, users "rely on fast, intuitive judgments—not reasoning."
 
-<div style="margin: 32px 0; padding: 24px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px;">
-  <div style="font-size: 12px; text-transform: uppercase; letter-spacing: 0.05em; color: #888; margin-bottom: 16px;">Stress cases aren't edge cases</div>
-  <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 4px; font-size: 13px; background: #1c1917; color: #fcd34d; border: 1px solid #a16207;">
-      Bad Wi-Fi
-    </span>
-    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 4px; font-size: 13px; background: #1c1917; color: #fcd34d; border: 1px solid #a16207;">
-      Time pressure
-    </span>
-    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 4px; font-size: 13px; background: #1c1917; color: #fcd34d; border: 1px solid #a16207;">
-      Multitasking
-    </span>
-    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 4px; font-size: 13px; background: #1c1917; color: #fcd34d; border: 1px solid #a16207;">
-      Aging eyes
-    </span>
-    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 4px; font-size: 13px; background: #1c1917; color: #fcd34d; border: 1px solid #a16207;">
-      Anxiety
-    </span>
-    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 4px; font-size: 13px; background: #1c1917; color: #fcd34d; border: 1px solid #a16207;">
-      Bright sunlight
-    </span>
-    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 4px; font-size: 13px; background: #1c1917; color: #fcd34d; border: 1px solid #a16207;">
-      Cracked screen
-    </span>
-    <span style="display: inline-flex; align-items: center; gap: 6px; padding: 8px 14px; border-radius: 4px; font-size: 13px; background: #1c1917; color: #fcd34d; border: 1px solid #a16207;">
-      Old device
-    </span>
-  </div>
-  <div style="margin-top: 16px; padding: 12px 16px; background: #1a1a1a; border-radius: 6px; border-left: 3px solid #525252;">
-    <span style="font-size: 13px; color: #a3a3a3;">"We can't predict the emotional state in which a user comes to our site."</span>
-  </div>
-</div>
-
 NN/g's mobile research found 64% success rates on mobile-optimized sites versus 53% on "full" sites. Baymard puts mobile constraints starkly: "Pick up a standard business card... What you're seeing is roughly the same size as the frame your mobile users have available."
-
----
 
 ## "Ugly" interfaces that win
 
@@ -278,9 +231,7 @@ Several well-documented cases show utilitarian design outperforming polished alt
 
 The UX hierarchy of needs applies: "Delightful design can certainly make good products great, but that only matters if the product is actually useful, usable, and reliable in the first place."
 
----
-
-## GOV.UK's radical principle
+## Function Over Form
 
 The UK Government Digital Service built one of the most-cited design systems by explicitly prioritizing function over form.
 
@@ -300,39 +251,10 @@ A 2012 GDS blog post: "If a bad digital service looks great, it's still a bad di
 
 IDEO analyzed GOV.UK's approach: "What is remarkable to me is the absolute simplicity with which information is presented. No gratuitous imagery or complex navigation... Some designers might view the visual design as looking more like a wireframe, but I find the clarity very refreshing."
 
----
-
 ## The cost of hidden complexity
 
 Norman's Law reminds us that simplifying an interface doesn't remove complexity—it just moves it elsewhere.
 
-<div class="blog-grid-2col">
-  <div class="blog-diagram-card">
-    <div class="blog-diagram-label">Visible complexity</div>
-    <div class="blog-diagram-content">
-      <div style="display: flex; gap: 8px; flex-wrap: wrap;">
-        <span style="padding: 6px 10px; background: #262626; border-radius: 4px; font-size: 12px; color: #a3a3a3;">File</span>
-        <span style="padding: 6px 10px; background: #262626; border-radius: 4px; font-size: 12px; color: #a3a3a3;">Edit</span>
-        <span style="padding: 6px 10px; background: #262626; border-radius: 4px; font-size: 12px; color: #a3a3a3;">View</span>
-        <span style="padding: 6px 10px; background: #262626; border-radius: 4px; font-size: 12px; color: #a3a3a3;">Insert</span>
-        <span style="padding: 6px 10px; background: #262626; border-radius: 4px; font-size: 12px; color: #a3a3a3;">Format</span>
-        <span style="padding: 6px 10px; background: #262626; border-radius: 4px; font-size: 12px; color: #a3a3a3;">Tools</span>
-      </div>
-    </div>
-    <div class="blog-diagram-caption">
-      Learnable. Discoverable. Complexity is in the interface.
-    </div>
-  </div>
-  <div class="blog-diagram-card">
-    <div class="blog-diagram-label">Hidden complexity</div>
-    <div class="blog-diagram-content" style="display: flex; justify-content: center;">
-      <span style="padding: 10px 14px; background: #262626; border-radius: 4px; font-size: 18px; color: #a3a3a3;">☰</span>
-    </div>
-    <div class="blog-diagram-caption">
-      Complexity is now in the user's head. "Where's the thing I need?"
-    </div>
-  </div>
-</div>
 
 UX Bulletin: "Minimalist apps often hide essential functions behind swipes, gestures, or multi-step interactions... Websites with hidden navigation feel sleek. But users waste time hunting for basic actions. In each case, designers removed visible complexity, but shifted the cognitive load onto the user."
 
@@ -342,11 +264,9 @@ Lea Verou's 2023 analysis of GitHub's UI redesign: "Designers start identifying 
 
 Jonas Downey asked the uncomfortable question: "Why do cluttered, complex products like Facebook, Craigslist, or Photoshop become wildly successful?... Their complex interfaces are a key reason for their success."
 
----
+## Heuristics
 
-## Wrapping up
-
-The research is consistent:
+The research is suprisingly consistent:
 
 <div style="margin: 32px 0; display: grid; gap: 12px;">
   <div style="padding: 14px 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
@@ -379,16 +299,18 @@ The research is consistent:
   </div>
 </div>
 
+## Simplicity
+
 GOV.UK captures it best: "Making something look simple is easy. Making something simple to use is much harder."
 
-<div style="margin: 32px 0; padding: 24px; background: linear-gradient(135deg, #0d0d0d 0%, #1a1a1a 100%); border: 1px solid #262626; border-radius: 8px; text-align: center;">
-  <div style="font-size: 16px; color: #a3a3a3; margin-bottom: 8px;">Pretty is a nice-to-have. Usable is a must-have.</div>
-  <div style="font-size: 18px; color: #e5e5e5; margin-bottom: 8px;">The best UX sometimes looks like it works at a regional bank.</div>
-  <div style="font-size: 16px; color: #4ade80;">Obvious. Labeled. Legible. Honest.</div>
-</div>
+Pretty is a nice-to-have. Usable is a must-have.
+
+**The best UX sometimes looks like it works at a regional bank.**
+
+*Obvious. Labeled. Legible. Honest.*
 
 The tension between beautiful UI and peak UX isn't going away. But framing it as beauty versus functionality misses the point.
 
 The truly beautiful interface is the one that stays honest, legible, fast, and kind—especially at the moment it fails. The research says: when in doubt, choose clarity. Choose labels, speed, and the design that works when everything else doesn't.
 
-Pretty fades. Usability compounds.
+Because "pretty" fades, usability doesn't.

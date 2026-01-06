@@ -434,6 +434,111 @@ const { Content } = await render(post);
       text-decoration-color: var(--link);
     }
 
+    /* ===========================================
+       BLOG DIAGRAM UTILITIES (class-based)
+       Used by inline HTML inside markdown posts.
+       =========================================== */
+
+    .content .blog-grid-2col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin: 32px 0;
+    }
+
+    .content .blog-grid-3col {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin: 32px 0;
+    }
+
+    .content .blog-grid-2col-auto {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 16px;
+      align-items: center;
+      margin: 32px 0;
+    }
+
+    .content .blog-diagram-card {
+      padding: 24px;
+      border-radius: 8px;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .content .blog-diagram-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+    }
+
+    .content .blog-diagram-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 600;
+      color: var(--fg-dim);
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .content .blog-diagram-content {
+      background: #0d0d0d;
+      border-radius: 6px;
+      padding: 16px;
+      border: 1px solid #262626;
+    }
+
+    .content .blog-diagram-caption {
+      margin-top: 12px;
+      font-size: 13px;
+      color: #888;
+      font-style: italic;
+    }
+
+    /* Light mode overrides for blog diagrams */
+    [data-theme="light"] .content .blog-diagram-card {
+      background: #f5f5f5;
+      border-color: #d4d4d4;
+      box-shadow: none;
+    }
+
+    [data-theme="light"] .content .blog-diagram-card:hover {
+      box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="light"] .content .blog-diagram-content {
+      background: #ffffff;
+      border: 1px solid #e5e5e5;
+    }
+
+    /* Responsive adjustments for blog diagrams */
+    @media (max-width: 768px) {
+      .content .blog-grid-2col,
+      .content .blog-grid-2col-auto {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .content .blog-grid-3col {
+        grid-template-columns: 1fr;
+      }
+
+      .content .blog-grid-2col-auto > div:nth-child(2) {
+        /* The arrow in "The deletion test" */
+        transform: rotate(90deg);
+        text-align: center;
+        margin: 8px 0;
+      }
+    }
+
     @media (max-width: 640px) {
       h1 { font-size: 24px; }
       .content { font-size: 14px; }
