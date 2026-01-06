@@ -470,4 +470,4 @@ The data model is going to be felt either way.
 
 You can surface it intentionally through clear states, receipts, and real distinctions. Or you can hide it and let it leak out as surprises, retries, and support tickets.
 
-<div style="font-size: 18px; color: #e5e5e5; margin-bottom: 8px;">Don't hide the model.</div>
+<div style="font-size: 18px; color: #e5e5e5; margin-bottom: 8px;">Don't hide the data model.</div>
