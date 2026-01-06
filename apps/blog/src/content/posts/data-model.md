@@ -271,7 +271,7 @@ Now the UI can say what happened *and* what to do next without guessing.
 
 ---
 
-## Pagination is a UX decision
+## Pagination is a UX decision derived from your data model
 
 Pagination isn't a backend detail. It determines whether lists feel stable.
 
