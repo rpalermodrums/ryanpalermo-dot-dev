@@ -52,12 +52,12 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "jazz-engineers",
     title: "Nobody is Coming to Save You in the Practice Room",
-    subtitle: "Why jazz musicians make great product engineers",
+    subtitle: "Why musicians make great product engineers",
     date: "2026-01-05",
     featured: true,
     content: "",
     excerpt:
-      "Why jazz musicians make great product engineers.",
+      "Why musicians make great product engineers.",
   },
   {
     slug: "peak-ux",
