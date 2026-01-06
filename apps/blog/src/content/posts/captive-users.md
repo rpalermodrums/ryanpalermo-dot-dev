@@ -54,7 +54,7 @@ Internal users have *higher* leverage than external ones:
 
 An external user who has a bad experience might churn. An internal user who has a bad experience stays, builds resentment, and creates shadow systems you don't control.
 
-The distinction isn't internal vs external. It's *users who can leave* vs *users who can't.* And we consistently treat the captive ones worse.
+The distinction isn't internal vs external, rather *users who can leave* vs *users who can't.* And we consistently treat the captive ones worse.
 
 ## "Power Users"
 
