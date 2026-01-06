@@ -133,7 +133,7 @@ Assuming internal means "doesn't matter" is assuming the tool will never escape.
 
 ## Ops workarounds become permanent architecture
 
-When an internal tool is bad, people don't file tickets and wait. They build workarounds. And workarounds become architecture.
+When an internal tool is bad, people don't file tickets and wait. They build workarounds. And workarounds become architecture and culture.
 
 <div style="margin: 32px 0; display: flex; flex-direction: column; gap: 12px;">
   <div style="padding: 16px 20px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; display: flex; align-items: center; gap: 16px;">
