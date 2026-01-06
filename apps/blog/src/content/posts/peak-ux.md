@@ -248,48 +248,11 @@ IDEO analyzed GOV.UK's approach: "What is remarkable to me is the absolute simpl
 
 Norman's Law reminds us that simplifying an interface doesn't remove complexity—it just moves it elsewhere. ([Don Norman — *The Design of Everyday Things*](https://en.wikipedia.org/wiki/The_Design_of_Everyday_Things))
 
-UX Bulletin: "Minimalist apps often hide essential functions behind swipes, gestures, or multi-step interactions... Websites with hidden navigation feel sleek. But users waste time hunting for basic actions. In each case, designers removed visible complexity, but shifted the cognitive load onto the user."
-
 Facebook's Julie Zhuo identified "one of the most common design mistakes: overvaluing simplicity and style at the cost of clarity."
 
 Lea Verou's 2023 analysis of GitHub's UI redesign: "Designers start identifying signifiers and affordances as noise to be eliminated, sacrificing a great deal of learnability for an—often marginal—improvement in aesthetics." ([Lea Verou (2023) on GitHub's redesign](https://lea.verou.me/blog/2023/02/githubs-new-design/))
 
 Jonas Downey asked the uncomfortable question: "Why do cluttered, complex products like Facebook, Craigslist, or Photoshop become wildly successful?... Their complex interfaces are a key reason for their success."
-
-## Some heuristics
-
-This research is suprisingly consistent:
-
-<div style="margin: 32px 0; display: grid; gap: 12px;">
-  <div style="padding: 14px 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-    <span style="color: #737373; font-size: 14px; font-weight: 500;">1</span>
-    <span style="color: #e5e5e5; font-size: 14px;"><strong>Aesthetic appeal masks problems</strong> — but only minor ones, and only until it doesn't</span>
-  </div>
-  <div style="padding: 14px 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-    <span style="color: #737373; font-size: 14px; font-weight: 500;">2</span>
-    <span style="color: #e5e5e5; font-size: 14px;"><strong>Error states are afterthoughts</strong> — teams focus on the happy path while users struggle in failure modes</span>
-  </div>
-  <div style="padding: 14px 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-    <span style="color: #737373; font-size: 14px; font-weight: 500;">3</span>
-    <span style="color: #e5e5e5; font-size: 14px;"><strong>False simplicity backfires</strong> — hiding labels and collapsing fields increases cognitive load</span>
-  </div>
-  <div style="padding: 14px 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-    <span style="color: #737373; font-size: 14px; font-weight: 500;">4</span>
-    <span style="color: #e5e5e5; font-size: 14px;"><strong>Performance is UX</strong> — every extra second costs 10% of users</span>
-  </div>
-  <div style="padding: 14px 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-    <span style="color: #737373; font-size: 14px; font-weight: 500;">5</span>
-    <span style="color: #e5e5e5; font-size: 14px;"><strong>Stress demands clarity</strong> — under real-world constraints, simple functional design wins</span>
-  </div>
-  <div style="padding: 14px 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-    <span style="color: #737373; font-size: 14px; font-weight: 500;">6</span>
-    <span style="color: #e5e5e5; font-size: 14px;"><strong>Trust requires authenticity</strong> — overly polished interfaces can trigger suspicion</span>
-  </div>
-  <div style="padding: 14px 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
-    <span style="color: #737373; font-size: 14px; font-weight: 500;">7</span>
-    <span style="color: #e5e5e5; font-size: 14px;"><strong>Complexity serves purpose</strong> — forcing minimalism can hurt power users</span>
-  </div>
-</div>
 
 ## Simplicity
 
