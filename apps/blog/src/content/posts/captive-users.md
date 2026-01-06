@@ -99,7 +99,7 @@ Power users are the *most* sensitive to friction because they encounter it most 
 
 ## Internal tools become external tools
 
-Here's a pattern that repeats time and time again:
+Here's a pattern I've seen time and time again:
 
 1. You build an internal tool for ops
 2. Customers start asking for self-serve access to the same data
