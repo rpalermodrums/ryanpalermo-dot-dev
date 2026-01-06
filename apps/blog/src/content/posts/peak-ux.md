@@ -212,8 +212,6 @@ An evergreen concept: "You do not control the environment executing your JavaScr
 
 ## Stress demands simplicity
 
-Smashing Magazine's Vitaly Friedman documented real-world usability testing findings: users describe websites as "hostile," "unfriendly," "busy," "annoying," and "confusing." What they want is a "calm experience"—meaning predictable, reliable design ([Smashing Magazine — Vitaly Friedman on "calm" UX under stress](https://www.smashingmagazine.com/)).
-
 Smart Interface Design Patterns research is explicit: "Stress disrupts attention, memory, cognition, decision-making." Under stress, users "rely on fast, intuitive judgments—not reasoning." ([Smart Interface Design Patterns](https://smart-interface-design-patterns.com/))
 
 NN/g's mobile research found 64% success rates on mobile-optimized sites versus 53% on "full" sites ([NN/g: Mobile Usability](https://www.nngroup.com/topic/mobile-usability/)). Baymard puts mobile constraints starkly: "Pick up a standard business card... What you're seeing is roughly the same size as the frame your mobile users have available." ([Baymard: Content on Mobile vs. Desktop](https://baymard.com/blog/content-on-mobile-vs-desktop))
