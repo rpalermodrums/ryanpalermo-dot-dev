@@ -272,7 +272,7 @@ button {
   border: 1px solid var(--border);
   margin-bottom: 32px;
   overflow: hidden;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
   cursor: pointer;
 }
 
@@ -413,6 +413,7 @@ button {
 .project-row:hover {
   background: var(--surface-hover);
   color: var(--fg);
+  cursor: pointer;
 }
 
 .file-icon {

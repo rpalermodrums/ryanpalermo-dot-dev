@@ -245,6 +245,212 @@ const { Content } = await render(post);
       h1 { font-size: 24px; }
       .content { font-size: 14px; }
     }
+
+    /* ===========================================
+       RESPONSIVE INLINE HTML OVERRIDES
+       These target inline styles in blog post content
+       to make them mobile-friendly
+       =========================================== */
+
+    /* 2-column grids → stack on mobile/tablet */
+    @media (max-width: 768px) {
+      .content div[style*="grid-template-columns: 1fr 1fr"],
+      .content div[style*="grid-template-columns:1fr 1fr"] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+      }
+
+      .content div[style*="repeat(2, 1fr)"] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+    }
+
+    /* 3-column grids → stack on mobile/tablet */
+    @media (max-width: 768px) {
+      .content div[style*="repeat(3, 1fr)"] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+
+      /* 3-column deletion test grid with arrow */
+      .content div[style*="grid-template-columns: 1fr auto 1fr"] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 16px !important;
+      }
+
+      /* Hide arrows in stacked layout */
+      .content div[style*="grid-template-columns: 1fr auto 1fr"] > div[style*="color: #525252"][style*="font-size: 24px"] {
+        display: none !important;
+      }
+    }
+
+    /* Horizontal flex containers → wrap or stack */
+    @media (max-width: 768px) {
+      /* Pipeline/flow diagrams with arrows */
+      .content div[style*="display: flex"][style*="align-items: center"][style*="gap: 12px"] {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+      }
+
+      /* The explanation spiral - horizontal steps */
+      .content div[style*="display: flex"][style*="align-items: stretch"] {
+        flex-direction: column !important;
+        gap: 8px !important;
+      }
+
+      /* Hide arrow separators in horizontal flows on mobile */
+      .content div[style*="display: flex"][style*="align-items: center"] > div[style*="color: #525252"]:not([style*="background"]),
+      .content div[style*="display: flex"][style*="align-items: center"] > div[style*="color: #404040"] {
+        display: none !important;
+      }
+
+      /* Loading states horizontal flex */
+      .content div[style*="display: flex"][style*="gap: 16px"][style*="overflow-x: auto"] {
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        overflow-x: visible !important;
+      }
+
+      /* Elements with min-width that cause horizontal scroll */
+      .content div[style*="min-width: 140px"] {
+        min-width: 100% !important;
+        flex: 1 1 100% !important;
+      }
+
+      .content div[style*="flex: 1"][style*="min-width"] {
+        min-width: unset !important;
+        flex: 1 1 100% !important;
+      }
+    }
+
+    /* Workarounds list - vertical flex with icons */
+    @media (max-width: 640px) {
+      .content div[style*="display: flex"][style*="flex-direction: column"][style*="gap: 12px"] > div[style*="display: flex"][style*="align-items: center"][style*="gap: 16px"] {
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+      }
+
+      /* Icon + text pairs in workaround items */
+      .content div[style*="font-size: 24px"] + div {
+        flex: 1 !important;
+        min-width: 200px !important;
+      }
+    }
+
+    /* Stress tags flex wrap */
+    @media (max-width: 640px) {
+      .content div[style*="display: flex"][style*="flex-wrap: wrap"][style*="gap: 10px"] {
+        gap: 8px !important;
+      }
+
+      .content div[style*="display: flex"][style*="flex-wrap: wrap"] > span {
+        flex: 0 1 auto !important;
+      }
+    }
+
+    /* Two-question boxes side by side */
+    @media (max-width: 640px) {
+      .content div[style*="display: grid"][style*="gap: 16px"] {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+    }
+
+    /* Fix padding and margins for mobile */
+    @media (max-width: 640px) {
+      .content div[style*="padding: 20px"] {
+        padding: 16px !important;
+      }
+
+      .content div[style*="padding: 24px"] {
+        padding: 16px !important;
+      }
+
+      .content div[style*="margin: 32px 0"] {
+        margin: 24px 0 !important;
+      }
+
+      .content div[style*="gap: 24px"] {
+        gap: 16px !important;
+      }
+    }
+
+    /* Ensure all content boxes don't overflow */
+    @media (max-width: 768px) {
+      .content div[style*="border-radius"] {
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+      }
+
+      .content div[style*="background:"] {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+      }
+    }
+
+    /* Form inputs in examples - ensure they don't overflow */
+    @media (max-width: 640px) {
+      .content input[style*="width: 100%"] {
+        max-width: 100% !important;
+      }
+
+      .content select[style*="width: 100%"] {
+        max-width: 100% !important;
+      }
+    }
+
+    /* Stats/metrics grids */
+    @media (max-width: 640px) {
+      .content div[style*="display: grid"][style*="repeat(3, 1fr)"] > div {
+        text-align: left !important;
+      }
+    }
+
+    /* Button groups in examples */
+    @media (max-width: 480px) {
+      .content div[style*="display: flex"][style*="gap: 8px"] {
+        flex-wrap: wrap !important;
+      }
+
+      .content div[style*="display: flex"][style*="gap: 12px"]:not([style*="flex-direction: column"]) {
+        flex-wrap: wrap !important;
+      }
+    }
+
+    /* Large quote/callout boxes */
+    @media (max-width: 640px) {
+      .content div[style*="font-size: 18px"] {
+        font-size: 16px !important;
+      }
+
+      .content div[style*="font-size: 20px"] {
+        font-size: 17px !important;
+      }
+
+      .content div[style*="font-size: 28px"] {
+        font-size: 22px !important;
+      }
+
+      .content div[style*="font-size: 48px"] {
+        font-size: 32px !important;
+      }
+    }
+
+    /* Tooltip example - ensure positioning doesn't break */
+    @media (max-width: 640px) {
+      .content span[style*="position: absolute"] {
+        position: static !important;
+        display: block !important;
+        transform: none !important;
+        margin-top: 8px !important;
+      }
+    }
   </style>
   <script is:inline>
     const theme = localStorage.getItem('theme') || 'dark';
