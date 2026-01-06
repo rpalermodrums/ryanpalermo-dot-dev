@@ -78,7 +78,7 @@ Most products collapse the world into three labels: loading, success, error.
 
 Real systems have more states. Users already know this because they've used email, banking, and other complex software systems which involve waiting.
 
-Treat state as a first-class part of the interface:
+This is why we treat state as a first-class part of the interface:
 
 ```ts
 export type Status =
