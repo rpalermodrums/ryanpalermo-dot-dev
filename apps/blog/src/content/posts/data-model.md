@@ -10,7 +10,7 @@ I've seen a lot of software design that aims to "hide complexity."
 
 Hiding *implementation* complexity is completely reasonable.
 
-But hiding the **data model** is different. Obfuscating the inormation architecture leaks itself out as confusion, surprise, and brittle UI.
+But hiding the **data model** is different. Obfuscating the information architecture leaks itself out as confusion, surprise, and brittle UI.
 
 Users don't need to see your database tables and indexes, but they do appreciate being shown an interface that's somewhat close to the truth.
 
