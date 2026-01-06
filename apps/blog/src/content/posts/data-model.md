@@ -308,7 +308,7 @@ Just make the important parts of reality legible:
   </div>
 </div>
 
-Users don't need complexity. They want predictability. Predictability comes from a mental model they can grok.
+Users want predictability. Predictability comes from a mental model they can quickly grok.
 
 ## Intentionality
 
