@@ -179,31 +179,6 @@ These workarounds work until someone leaves without passing their system along, 
 
 Bad internal tooling creates <strong>shadow infrastructure</strong> that is unversioned, undocumented, and one departure away from collapse.
 
-## Alternatively
-
-There's a positive version of this argument too.
-
-A great internal tool lets your team move fast:
-
-<div style="margin: 32px 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;">
-  <div style="padding: 16px; background: #14291a; border: 1px solid #166534; border-radius: 8px;">
-    <div style="font-size: 14px; color: #86efac; margin-bottom: 4px;">Customer issues</div>
-    <div style="font-size: 13px; color: #a3a3a3;">Resolved in minutes, not hours</div>
-  </div>
-  <div style="padding: 16px; background: #14291a; border: 1px solid #166534; border-radius: 8px;">
-    <div style="font-size: 14px; color: #86efac; margin-bottom: 4px;">Incidents</div>
-    <div style="font-size: 13px; color: #a3a3a3;">Diagnosed before they escalate</div>
-  </div>
-  <div style="padding: 16px; background: #14291a; border: 1px solid #166534; border-radius: 8px;">
-    <div style="font-size: 14px; color: #86efac; margin-bottom: 4px;">Edge cases</div>
-    <div style="font-size: 13px; color: #a3a3a3;">Handled without escalation</div>
-  </div>
-  <div style="padding: 16px; background: #14291a; border: 1px solid #166534; border-radius: 8px;">
-    <div style="font-size: 14px; color: #86efac; margin-bottom: 4px;">New hires</div>
-    <div style="font-size: 13px; color: #a3a3a3;">Productive in days, not months</div>
-  </div>
-</div>
-
 ## What "good" looks like
 
 The bar is not "pretty." The bar is the same as any interface:
