@@ -34,7 +34,7 @@ That's the effect working as designed. But here's the problem for product teams:
 
 Pretty can hide broken—but only until it can't.
 
-## False simplicity: when "clean" actually confuses
+## False simplicity
 
 Baymard Institute has a name for the pattern: **false simplicity** ([Baymard: 3 Types of False Simplicity](https://baymard.com/blog/false-simplicity)). Their research across 200,000+ hours of e-commerce UX testing found that visually simple designs often increase cognitive load ([Baymard UX Benchmark / research summary](https://baymard.com/ux-benchmark)).
 
@@ -68,7 +68,7 @@ The W3C is direct: "Placeholder text is not a replacement for labels." ([W3C WAI
 
 Baymard's core insight: "Visually simple can actually end up being more complicated to use." ([Baymard: 3 Types of False Simplicity](https://baymard.com/blog/false-simplicity))
 
-## Flat design costs measurable time
+## Flat design and its costs
 
 NN/g's eyetracking research quantified what minimalist trends actually cost. Users spent **22% more time** on pages with weak signifiers—flat buttons, ambiguous clickable elements. They made **25% more fixations**, scanning more elements because they couldn't identify what was interactive ([NN/g: Flat UI Elements Attract Less Attention and Cause Uncertainty](https://www.nngroup.com/articles/flat-ui-less-attention-cause-uncertainty/)).
 
@@ -103,7 +103,7 @@ Kate Moran's 2015 research on minimalism: "Some designers misinterpret minimalis
 
 By 2017, NN/g was more direct: "Since flat design's emergence in 2011, Nielsen Norman Group has been a vocal critic of its inherent usability issues. Our primary objection to flat design is that it tends to sacrifice users' needs for the sake of trendy aesthetics." ([NN/g: Flat UI Elements Attract Less Attention and Cause Uncertainty](https://www.nngroup.com/articles/flat-ui-less-attention-cause-uncertainty/))
 
-## Low contrast: the "sophisticated" readability killer
+## Contrast
 
 NN/g's research on contrast is blunt: "A low-contrast design aesthetic is haunting the web, taking legibility and discoverability with it. It's straining our eyes, making us all feel older, and a little less capable." ([NN/g: Low-Contrast Text Is Not the Answer](https://www.nngroup.com/articles/low-contrast/))
 
@@ -132,7 +132,7 @@ WCAG requires a contrast ratio of at least 4.5:1 for normal text ([WCAG 2.1 — 
 
 Now imagine reading the left version on a phone in direct sunlight. While walking. With aging eyes. While anxious about whether your payment went through.
 
-## Error states: the neglected majority
+## Error states
 
 NN/g's Tim Neusesser and Evan Sunwall wrote what I consider the most damning indictment of aesthetic-first design:
 
@@ -272,9 +272,9 @@ Lea Verou's 2023 analysis of GitHub's UI redesign: "Designers start identifying 
 
 Jonas Downey asked the uncomfortable question: "Why do cluttered, complex products like Facebook, Craigslist, or Photoshop become wildly successful?... Their complex interfaces are a key reason for their success."
 
-## Heuristics
+## Some heuristics
 
-The research is suprisingly consistent:
+This research is suprisingly consistent:
 
 <div style="margin: 32px 0; display: grid; gap: 12px;">
   <div style="padding: 14px 16px; background: #0d0d0d; border: 1px solid #262626; border-radius: 8px; display: flex; align-items: center; gap: 12px;">
