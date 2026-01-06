@@ -1,8 +1,8 @@
 ---
 title: "Internal Users Can't Leave"
-subtitle: "The cruelest interfaces are the ones with captive audiences"
+subtitle: "The cruelest interfaces are those with captive audiences"
 date: 2025-12-29
-excerpt: "The cruelest interfaces are the ones with captive audiences. Internal tools deserve real UX."
+excerpt: "The cruelest interfaces those with captive audiences. Internal tools deserve real UX."
 featured: true
 ---
 

@@ -24,8 +24,21 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
       --fg-dim: #808080;
       --border: #333333;
       --surface: #111;
-      --surface-hover: #1f1f1f;
-      --accent: #22d3ee;
+      --link: #60a5fa;
+      --link-hover: #93c5fd;
+      color-scheme: dark;
+    }
+
+    [data-theme="light"] {
+      --bg: #fafafa;
+      --fg: #171717;
+      --fg-muted: #525252;
+      --fg-dim: #737373;
+      --border: #e5e5e5;
+      --surface: #ffffff;
+      --link: #2563eb;
+      --link-hover: #1d4ed8;
+      color-scheme: light;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -41,18 +54,14 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
     }
 
     ::selection {
-      background: var(--accent);
+      background: var(--link);
       color: var(--bg);
     }
 
     .container {
-      max-width: 700px;
+      max-width: 680px;
       margin: 0 auto;
-      padding: 32px 48px;
-    }
-
-    @media (max-width: 640px) {
-      .container { padding: 24px; }
+      padding: 32px 24px 64px;
     }
 
     a {
@@ -61,26 +70,47 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
       transition: color 0.15s;
     }
 
-    .back {
-      display: inline-flex;
+    .nav {
+      display: flex;
+      justify-content: space-between;
       align-items: center;
-      gap: 8px;
-      font-size: 12px;
-      color: var(--fg-dim);
-      margin-bottom: 32px;
-      padding: 6px 0;
-    }
-
-    .back:hover { color: var(--fg-muted); }
-
-    .header {
       margin-bottom: 48px;
       padding-bottom: 24px;
       border-bottom: 1px solid var(--border);
     }
 
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--fg-dim);
+    }
+
+    .back:hover { color: var(--fg-muted); }
+
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 10px;
+      cursor: pointer;
+      color: var(--fg-muted);
+      font-size: 14px;
+      transition: all 0.15s;
+    }
+
+    .theme-toggle:hover {
+      background: var(--surface);
+      color: var(--fg);
+    }
+
+    .header {
+      margin-bottom: 48px;
+    }
+
     .header h1 {
-      font-size: 24px;
+      font-size: 28px;
       font-weight: 400;
       letter-spacing: -0.5px;
       margin-bottom: 8px;
@@ -88,7 +118,46 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
 
     .header p {
       color: var(--fg-muted);
-      font-size: 13px;
+      font-size: 14px;
+    }
+
+    .featured {
+      display: block;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      padding: 24px;
+      margin-bottom: 48px;
+      transition: border-color 0.15s;
+    }
+
+    .featured:hover {
+      border-color: var(--fg-dim);
+    }
+
+    .featured-label {
+      font-size: 11px;
+      color: var(--fg-dim);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .featured .post-title {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: var(--fg);
+    }
+
+    .featured .post-subtitle {
+      font-size: 14px;
+      color: var(--fg-muted);
+      margin-bottom: 16px;
+      line-height: 1.5;
+    }
+
+    .featured .post-meta {
+      font-size: 12px;
+      color: var(--fg-dim);
     }
 
     .section-title {
@@ -96,61 +165,7 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
       color: var(--fg-dim);
       text-transform: uppercase;
       letter-spacing: 1.5px;
-      margin-bottom: 16px;
-    }
-
-    .featured {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      margin-bottom: 32px;
-      transition: border-color 0.15s;
-    }
-
-    .featured:hover {
-      border-color: #555;
-    }
-
-    .featured-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 12px;
-      background: linear-gradient(180deg, #181818 0%, #131313 100%);
-      border-bottom: 1px solid var(--border);
-    }
-
-    .window-buttons {
-      display: flex;
-      gap: 6px;
-    }
-
-    .window-button {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background: #444;
-      transition: background 0.2s;
-    }
-
-    .featured:hover .window-button.close { background: #ff5f57; }
-    .featured:hover .window-button.minimize { background: #febc2e; }
-    .featured:hover .window-button.maximize { background: #28c840; }
-
-    .featured-label {
-      flex: 1;
-      text-align: center;
-      font-size: 11px;
-      color: var(--fg-dim);
-      margin-right: 30px;
-    }
-
-    .featured-content {
-      padding: 20px;
-    }
-
-    .featured .post-title {
-      font-size: 15px;
-      margin-bottom: 8px;
+      margin-bottom: 24px;
     }
 
     .posts {
@@ -159,85 +174,80 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
     }
 
     .post {
-      display: grid;
-      grid-template-columns: 1fr auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
       gap: 24px;
-      padding: 16px 0;
+      padding: 20px 0;
       border-bottom: 1px solid var(--border);
-      cursor: pointer;
-      transition: all 0.1s;
+      transition: all 0.15s;
     }
 
     .post:last-child { border-bottom: none; }
 
-    .post:hover {
-      background: var(--surface);
-      margin: 0 -16px;
-      padding: 16px;
-    }
-
-    .post-link {
-      display: contents;
+    .post:hover .post-title {
+      color: var(--fg);
     }
 
     .post-title {
-      font-size: 14px;
+      font-size: 15px;
       font-weight: 400;
       margin-bottom: 4px;
       color: var(--fg-muted);
       transition: color 0.15s;
     }
 
-    .post:hover .post-title,
-    .featured:hover .post-title {
-      color: var(--fg);
-    }
-
     .post-subtitle {
-      font-size: 12px;
+      font-size: 13px;
       color: var(--fg-dim);
       line-height: 1.5;
     }
 
     .post-meta {
-      font-size: 11px;
+      font-size: 12px;
       color: var(--fg-dim);
-      text-align: right;
       white-space: nowrap;
-      align-self: start;
+      flex-shrink: 0;
     }
 
-    .featured .post-meta {
-      margin-top: 12px;
+    @media (max-width: 640px) {
+      .post {
+        flex-direction: column;
+        gap: 8px;
+      }
+      .post-meta {
+        order: -1;
+      }
     }
   </style>
+  <script is:inline>
+    const theme = localStorage.getItem('theme') || 'dark';
+    document.documentElement.setAttribute('data-theme', theme);
+  </script>
 </head>
 <body>
   <div class="container">
-    <a href="/" class="back">
-      <span>←</span> Home
-    </a>
+    <nav class="nav">
+      <a href="/" class="back">
+        <span>←</span> Home
+      </a>
+      <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
+        <span id="theme-icon">☀️</span>
+      </button>
+    </nav>
     
     <header class="header">
       <h1>Blog</h1>
+      <p>Thoughts on engineering, product, and building things.</p>
     </header>
 
     {featuredPost && (
       <a href={`${import.meta.env.BASE_URL}/${featuredPost.slug}/`} class="featured">
-        <div class="featured-header">
-          <div class="window-buttons">
-            <span class="window-button close"></span>
-            <span class="window-button minimize"></span>
-            <span class="window-button maximize"></span>
-          </div>
-          <span class="featured-label">Featured</span>
-        </div>
-        <div class="featured-content">
-          <h2 class="post-title">{featuredPost.title}</h2>
-          <p class="post-subtitle">{featuredPost.subtitle}</p>
-          <div class="post-meta">
-            {new Date(featuredPost.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
-          </div>
+        <div class="featured-label">Featured</div>
+        <h2 class="post-title">{featuredPost.title}</h2>
+        <p class="post-subtitle">{featuredPost.subtitle}</p>
+        <div class="post-meta">
+          {new Date(featuredPost.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
         </div>
       </a>
     )}
@@ -245,19 +255,29 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
     <div class="section-title">All Posts</div>
     <section class="posts">
       {regularPosts.map(post => (
-        <article class="post">
-          <a href={`${import.meta.env.BASE_URL}/${post.slug}/`} class="post-link">
-            <div>
-              <h2 class="post-title">{post.title}</h2>
-              <p class="post-subtitle">{post.subtitle}</p>
-            </div>
-            <div class="post-meta">
-              {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-            </div>
-          </a>
-        </article>
+        <a href={`${import.meta.env.BASE_URL}/${post.slug}/`} class="post">
+          <div>
+            <h2 class="post-title">{post.title}</h2>
+            <p class="post-subtitle">{post.subtitle}</p>
+          </div>
+          <div class="post-meta">
+            {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+          </div>
+        </a>
       ))}
     </section>
   </div>
+
+  <script is:inline>
+    function toggleTheme() {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next);
+      document.getElementById('theme-icon').textContent = next === 'dark' ? '☀️' : '🌙';
+    }
+    document.getElementById('theme-icon').textContent = 
+      document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
+  </script>
 </body>
 </html>

@@ -123,6 +123,8 @@ export function Terminal({ onClose }: TerminalProps) {
     Array<{ input: string; output: string[] }>
   >([]);
   const [input, setInput] = useState("");
+  const [isMinimized, setIsMinimized] = useState(false);
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
   const outputRef = useRef<HTMLDivElement>(null);
   const { discover, reset } = useDiscovery();
@@ -130,14 +132,16 @@ export function Terminal({ onClose }: TerminalProps) {
   const commands = createCommands(discover, reset, onClose);
 
   useEffect(() => {
-    inputRef.current?.focus();
-  }, []);
+    if (!isMinimized) {
+      inputRef.current?.focus();
+    }
+  }, [isMinimized]);
 
   useEffect(() => {
     if (outputRef.current) {
       outputRef.current.scrollTop = outputRef.current.scrollHeight;
     }
-  }, [history]);
+  }, [history, isMinimized, isFullscreen]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -177,56 +181,61 @@ export function Terminal({ onClose }: TerminalProps) {
     setInput("");
   };
 
+  const toggleMinimize = () => setIsMinimized(!isMinimized);
+  const toggleFullscreen = () => setIsFullscreen(!isFullscreen);
+
   return (
-    <div className="terminal">
-      <div className="terminal-header">
+    <div className={`terminal${isMinimized ? " minimized" : ""}${isFullscreen ? " fullscreen" : ""}`}>
+      <div className="terminal-header" onDoubleClick={toggleFullscreen}>
         <div className="window-controls">
           <button type="button" className="control red" onClick={onClose} title="Close"></button>
-          <span className="control yellow" title="Minimize"></span>
-          <span className="control green" title="Maximize"></span>
+          <button type="button" className="control yellow" onClick={toggleMinimize} title={isMinimized ? "Expand" : "Minimize"}></button>
+          <button type="button" className="control green" onClick={toggleFullscreen} title={isFullscreen ? "Exit Fullscreen" : "Fullscreen"}></button>
         </div>
         <span className="terminal-title">Terminal — ryan@portfolio</span>
       </div>
-      <div className="terminal-body" ref={outputRef}>
-        <div className="terminal-welcome">
-          Welcome to ryan's portfolio terminal.
-          <br />
-          Type 'help' for available commands.
-        </div>
-        {history.map((entry, i) => (
-          <div key={i} className="terminal-entry">
-            <div className="terminal-prompt">
-              <span className="prompt-user">ryan@portfolio</span>
-              <span className="prompt-separator">:</span>
-              <span className="prompt-path">~</span>
-              <span className="prompt-symbol">$</span>
-              <span className="prompt-input">{entry.input}</span>
-            </div>
-            <div className="terminal-output">
-              {entry.output.map((line, j) => (
-                <div key={j}>{line || "\u00A0"}</div>
-              ))}
-            </div>
+      {!isMinimized && (
+        <div className="terminal-body" ref={outputRef}>
+          <div className="terminal-welcome">
+            Welcome to ryan's portfolio terminal.
+            <br />
+            Type 'help' for available commands.
           </div>
-        ))}
-        <form onSubmit={handleSubmit} className="terminal-input-line">
-          <span className="prompt-user">ryan@portfolio</span>
-          <span className="prompt-separator">:</span>
-          <span className="prompt-path">~</span>
-          <span className="prompt-symbol">$</span>
-          <input
-            ref={inputRef}
-            type="text"
-            aria-label="Terminal command"
-            title="Terminal command"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            className="terminal-input"
-            autoComplete="off"
-            spellCheck={false}
-          />
-        </form>
-      </div>
+          {history.map((entry, i) => (
+            <div key={i} className="terminal-entry">
+              <div className="terminal-prompt">
+                <span className="prompt-user">ryan@portfolio</span>
+                <span className="prompt-separator">:</span>
+                <span className="prompt-path">~</span>
+                <span className="prompt-symbol">$</span>
+                <span className="prompt-input">{entry.input}</span>
+              </div>
+              <div className="terminal-output">
+                {entry.output.map((line, j) => (
+                  <div key={j}>{line || "\u00A0"}</div>
+                ))}
+              </div>
+            </div>
+          ))}
+          <form onSubmit={handleSubmit} className="terminal-input-line">
+            <span className="prompt-user">ryan@portfolio</span>
+            <span className="prompt-separator">:</span>
+            <span className="prompt-path">~</span>
+            <span className="prompt-symbol">$</span>
+            <input
+              ref={inputRef}
+              type="text"
+              aria-label="Terminal command"
+              title="Terminal command"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              className="terminal-input"
+              autoComplete="off"
+              spellCheck={false}
+            />
+          </form>
+        </div>
+      )}
     </div>
   );
 }

@@ -43,11 +43,11 @@ export const blogPosts: BlogPost[] = [
   {
     slug: "captive-users",
     title: "Internal Users Can't Leave",
-    subtitle: "The cruelest interfaces are the ones with captive audiences",
+    subtitle: "The cruelest interfaces are those with captive audiences",
     date: "2025-12-29",
     featured: true,
     excerpt:
-      "The cruelest interfaces are the ones with captive audiences. Internal tools deserve real UX.",
+      "The cruelest interfaces are those with captive audiences. Internal tools deserve real UX.",
     content: "",
   },
   {
@@ -61,7 +61,7 @@ export const blogPosts: BlogPost[] = [
       "What actually carried over from music is simpler and impossible to teach: the disposition to sit alone with something difficult and build your own systems to get through it.",
   },
   {
-    slug: "support-inbox",
+    slug: "peak-ux",
     title: "Peak UX Doesn't Always Look Nice",
     subtitle: "From the support inbox",
     date: "2025-12-18",

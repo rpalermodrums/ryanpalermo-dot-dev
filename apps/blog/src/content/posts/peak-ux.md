@@ -1,8 +1,8 @@
 ---
 title: "Peak UX Doesn't Always Look Nice"
-subtitle: "From the support inbox"
+subtitle: "Sometimes the best UX looks like it wears khakis and tube socks"
 date: 2025-12-18
-excerpt: "From the support inbox: what survives reality, what gets tickets."
+excerpt: "Sometimes the best UX looks like it wears khakis and tube socks."
 featured: false
 ---
 
