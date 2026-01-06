@@ -113,11 +113,9 @@ This mixture of individualism and proactivity is exactly what long-term product 
 
 The practice room embodies years of training for exactly this kind of difficult patience.
 
-Personally, the plateau was familiar. I knew it didn’t mean I was failing. I knew how to get through it.
+When I first began building software, the plateau was a familiar feeling. I knew it didn’t mean I was failing. I knew how to get through it.
 
-I loved it.
-
-I had done it before.
+The plateau doesn't go away. A beautiful and challenging element of working within a medium which is constantly evolving is the progress which it entails. The next plateau is around the corner.
 
 ---
 
