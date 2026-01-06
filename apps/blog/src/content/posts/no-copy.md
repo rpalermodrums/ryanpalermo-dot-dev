@@ -10,9 +10,7 @@ Good copy matters.
 
 Clear button labels reduce hesitation. Honest error messages prevent thrash. A single sentence can calm a user down at the exact moment a system feels shaky.
 
-But here's the rule that keeps holding up:
-
-**If the interface needs explanation, the interface doesn't work.**
+Here's a heuristic I use: **If the interface needs explanation, the interface probably doesn't work.**
 
 Copy can support a good interaction. It cannot replace one.
 
