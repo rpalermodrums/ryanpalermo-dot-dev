@@ -10,7 +10,7 @@ const NAV_KEYS: Record<string, string> = {
   h: "home",
   p: "projects",
   a: "about",
-  b: "blog",
+  b: "thoughts",
   c: "contact",
 };
 

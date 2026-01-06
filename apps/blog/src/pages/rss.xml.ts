@@ -9,7 +9,7 @@ export async function GET(context: APIContext) {
   );
 
   return rss({
-    title: "Ryan Palermo's Blog",
+    title: "Thoughts - Palermo",
     description:
       "Essays on product engineering, operational honesty, and building software that respects users.",
     site: context.site ?? "https://ryanpalermo.dev",

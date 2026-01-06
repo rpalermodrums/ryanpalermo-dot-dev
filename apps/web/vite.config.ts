@@ -12,10 +12,14 @@ export default defineConfig({
   server: {
     port: 3000,
     host: true,
+    proxy: {
+      "/blog": {
+        target: "http://localhost:4321",
+        changeOrigin: true,
+      },
+    },
   },
   define: {
-    __DEV_BLOG_URL__: JSON.stringify(
-      process.env.NODE_ENV === "production" ? "/blog" : "http://localhost:4321/blog"
-    ),
+    __DEV_BLOG_URL__: JSON.stringify("/blog"),
   },
 });

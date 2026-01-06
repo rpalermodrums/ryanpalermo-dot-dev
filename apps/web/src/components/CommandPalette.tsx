@@ -17,10 +17,10 @@ const actions = [
   },
   { id: "about", label: "Go to About", shortcut: "G A", section: "about" },
   {
-    id: "blog",
-    label: "Go to Blog",
+    id: "thoughts",
+    label: "Go to Thoughts",
     shortcut: "G B",
-    section: "blog",
+    section: "thoughts",
   },
   {
     id: "contact",

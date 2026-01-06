@@ -52,10 +52,10 @@ export function Sidebar({ activeSection, onOpenTerminal: _onOpenTerminal, collap
         <a
           href={BLOG_URL}
           className="sidebar-item"
-          title={collapsed ? "Blog" : undefined}
+          title={collapsed ? "Thoughts" : undefined}
         >
           <span className="sidebar-icon">✍️</span>
-          <span>Blog</span>
+          <span>Thoughts</span>
         </a>
       </div>
 

@@ -57,7 +57,7 @@ export interface ContactLink {
 
 // ============ Navigation ============
 
-export type SectionId = "home" | "projects" | "about" | "blog" | "contact";
+export type SectionId = "home" | "projects" | "about" | "thoughts" | "contact";
 
 export interface NavItem {
   id: SectionId;
@@ -70,7 +70,7 @@ export const NAV_ITEMS: NavItem[] = [
   { id: "home", label: "Home", icon: "⌂", shortcut: "G H" },
   { id: "projects", label: "Projects", icon: "◈", shortcut: "G P" },
   { id: "about", label: "About", icon: "○", shortcut: "G A" },
-  { id: "blog", label: "Blog", icon: "▤", shortcut: "G B" },
+  { id: "thoughts", label: "Thoughts", icon: "▤", shortcut: "G B" },
   { id: "contact", label: "Contact", icon: "◇", shortcut: "G C" },
 ];
 
