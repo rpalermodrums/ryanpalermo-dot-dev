@@ -1,11 +1,10 @@
 ---
-
 title: "Peak UX Doesn't Always Look Nice"
 subtitle: "Why the best interfaces sometimes look like they work at a regional bank"
 date: 2025-01-05
 excerpt: "Pretty interfaces can lie to you. The best UX often looks boring on purpose."
 featured: false
----------------
+---
 
 I like pretty interfaces. But "pretty" often has hidden costs under pressure.
 
@@ -118,7 +117,6 @@ NN/g's research on contrast is blunt: "A low-contrast design aesthetic is haunti
       Contrast ratio ~2:1. WCAG requires 4.5:1.
     </div>
   </div>
-  <div class="blog-grid-2col">
   <div class="blog-diagram-card" style="background: #fafafa; border-color: #e5e5e5;">
     <div class="blog-diagram-label" style="color: #666;">✓ Readable</div>
     <p style="color: #333; font-weight: 400; font-size: 15px; line-height: 1.5; margin: 0;">
@@ -130,7 +128,7 @@ NN/g's research on contrast is blunt: "A low-contrast design aesthetic is haunti
   </div>
 </div>
 
-WCAG requires a contrast ratio of at least 4.5:1 for normal text ([WCAG 2.1 — 1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum)). Many "sophisticated" designs don't hit 3:1 ([WCAG 2.1 — 1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum)).
+WCAG requires a contrast ratio of at least 4.5:1 for normal text ([WCAG 2.1 — 1.4.3 Contrast (Minimum)](https://www.w3.org/TR/WCAG21/#contrast-minimum)). Many "sophisticated" designs don't hit 3:1.
 
 Now imagine reading the left version on a phone in direct sunlight. While walking. With aging eyes. While anxious about whether your payment went through.
 
@@ -141,7 +139,7 @@ NN/g's Tim Neusesser and Evan Sunwall wrote what I consider the most damning ind
 > "Quality and error messages rarely go together. Product teams can be so focused on designing or engineering the idealistic user path that deviations from that path become a frustrating afterthought."
 > ([NN/g: Error Message Guidelines](https://www.nngroup.com/articles/error-message-guidelines/))
 
-Kate Kaplan's research on hostile error patterns shows how "smart" validation backfires: "Premature error messages, aggressively styled fields, and unnecessarily disruptive system-status messages feel bad-mannered and increase cognitive load." ([NN/g: Preventing “Hostile” Error Messages](https://www.nngroup.com/articles/hostile-error-messages/))
+Kate Kaplan's research on hostile error patterns shows how "smart" validation backfires: "Premature error messages, aggressively styled fields, and unnecessarily disruptive system-status messages feel bad-mannered and increase cognitive load." ([NN/g: Preventing "Hostile" Error Messages](https://www.nngroup.com/articles/hostile-error-messages/))
 
 <div class="blog-grid-2col">
   <div class="blog-diagram-card">
@@ -185,7 +183,8 @@ GOV.UK's Design System takes an uncompromising stance. Their guidance explicitly
 * "please" (implies a choice)
 * "sorry" (doesn't help fix the problem)
 * Humorous language like "oops"
-  ([GOV.UK: Writing for GOV.UK — Errors and validation](https://www.gov.uk/guidance/content-design/writing-for-gov-uk#errors-and-validation))
+
+([GOV.UK: Writing for GOV.UK — Errors and validation](https://www.gov.uk/guidance/content-design/writing-for-gov-uk#errors-and-validation))
 
 Their research showed users understood what went wrong, knew how to fix it, and successfully recovered when error messages followed function-first principles ([GOV.UK: Writing for GOV.UK — Errors and validation](https://www.gov.uk/guidance/content-design/writing-for-gov-uk#errors-and-validation)).
 
@@ -193,7 +192,7 @@ Their research showed users understood what went wrong, knew how to fix it, and 
 
 Gartner analyst Ray Valdes captured the tradeoff: "Pretty but slow is worse than ugly but fast." ([Response Time: Is Speed the Ultimate Usability Metric?](https://ixd.prattsi.org/2015/04/response-time-is-speed-the-ultimate-usability-metric/))
 
-Jakob Nielsen's 1993 response-time limits remain valid: 0.1 seconds feels instantaneous, 1 second keeps flow seamless, 10 seconds is the limit for attention ([NN/g: Response Times — The 3 Important Limits](https://www.nngroup.com/articles/response-times-3-important-limits/)). NN/g notes that "instead of big images, today's big response-time sinners are typically overly complex data processing on the server or overly fancy widgets on the page."k ([NN/g: Response Times — The 3 Important Limits](https://www.nngroup.com/articles/response-times-3-important-limits/))
+Jakob Nielsen's 1993 response-time limits remain valid: 0.1 seconds feels instantaneous, 1 second keeps flow seamless, 10 seconds is the limit for attention ([NN/g: Response Times — The 3 Important Limits](https://www.nngroup.com/articles/response-times-3-important-limits/)). NN/g notes that "instead of big images, today's big response-time sinners are typically overly complex data processing on the server or overly fancy widgets on the page." ([NN/g: Response Times — The 3 Important Limits](https://www.nngroup.com/articles/response-times-3-important-limits/))
 
 <div class="blog-grid-3col">
   <div class="blog-diagram-card" style="text-align: center;">
@@ -223,7 +222,7 @@ Aaron Gustafson's principle: "You do not control the environment executing your 
 
 ## Stress demands simplicity
 
-Smashing Magazine's Vitaly Friedman documented real-world usability testing findings: users describe websites as "hostile," "unfriendly," "busy," "annoying," and "confusing." What they want is a "calm experience"—meaning predictable, reliable design ([Smashing Magazine — Vitaly Friedman on “calm” UX under stress](https://www.smashingmagazine.com/) — see “Smart Interface Design Patterns” / usability-testing writeups).
+Smashing Magazine's Vitaly Friedman documented real-world usability testing findings: users describe websites as "hostile," "unfriendly," "busy," "annoying," and "confusing." What they want is a "calm experience"—meaning predictable, reliable design ([Smashing Magazine — Vitaly Friedman on "calm" UX under stress](https://www.smashingmagazine.com/)).
 
 Smart Interface Design Patterns research is explicit: "Stress disrupts attention, memory, cognition, decision-making." Under stress, users "rely on fast, intuitive judgments—not reasoning." ([Smart Interface Design Patterns](https://smart-interface-design-patterns.com/))
 
@@ -233,9 +232,9 @@ NN/g's mobile research found 64% success rates on mobile-optimized sites versus 
 
 Several well-documented cases show utilitarian design outperforming polished alternatives:
 
-* **Craigslist** — [UXmatters](https://www.uxmatters.com/): "Bleeds functionality, oozing its pure purpose with little cosmetic distraction." Overly polished designs can "lack relatable qualities" and trigger users to question authenticity. ([UXmatters](https://www.uxmatters.com/))
-* **Bloomberg Terminal** — [UX Magazine](https://uxmag.com/): ~$24,000/year to 350,000+ subscribers for what UX Magazine called a "hideous" interface. "Even something as simple as a font change or the relocation of a button can be disruptive." ([UX Magazine](https://uxmag.com/))
-* **Reddit, HN, Wikipedia** — [UXPin](https://www.uxpin.com/): "All of the above sites are massively popular despite their ugliness because of one key factor—they do exactly what people need." ([UXPin](https://www.uxpin.com/))
+* **Craigslist** — "Bleeds functionality, oozing its pure purpose with little cosmetic distraction." Overly polished designs can "lack relatable qualities" and trigger users to question authenticity. ([UXmatters](https://www.uxmatters.com/))
+* **Bloomberg Terminal** — ~$24,000/year to 350,000+ subscribers for what UX Magazine called a "hideous" interface. "Even something as simple as a font change or the relocation of a button can be disruptive." ([UX Magazine](https://uxmag.com/))
+* **Reddit, HN, Wikipedia** — "All of the above sites are massively popular despite their ugliness because of one key factor—they do exactly what people need." ([UXPin](https://www.uxpin.com/))
 
 The UX hierarchy of needs applies: "Delightful design can certainly make good products great, but that only matters if the product is actually useful, usable, and reliable in the first place." ([NN/g: UX Pyramid / hierarchy framing](https://www.nngroup.com/articles/ux-pyramid/))
 
@@ -267,7 +266,9 @@ Norman's Law reminds us that simplifying an interface doesn't remove complexity�
 
 UX Bulletin: "Minimalist apps often hide essential functions behind swipes, gestures, or multi-step interactions... Websites with hidden navigation feel sleek. But users waste time hunting for basic actions. In each case, designers removed visible complexity, but shifted the cognitive load onto the user."
 
-Lea Verou's 2023 analysis of GitHub's UI redesign: "Designers start identifying signifiers and affordances as noise to be eliminated, sacrificing a great deal of learnability for an—often marginal—improvement in aesthetics." ([Lea Verou (2023) on GitHub’s redesign](https://lea.verou.me/blog/2023/02/githubs-new-design/))
+Facebook's Julie Zhuo identified "one of the most common design mistakes: overvaluing simplicity and style at the cost of clarity."
+
+Lea Verou's 2023 analysis of GitHub's UI redesign: "Designers start identifying signifiers and affordances as noise to be eliminated, sacrificing a great deal of learnability for an—often marginal—improvement in aesthetics." ([Lea Verou (2023) on GitHub's redesign](https://lea.verou.me/blog/2023/02/githubs-new-design/))
 
 Jonas Downey asked the uncomfortable question: "Why do cluttered, complex products like Facebook, Craigslist, or Photoshop become wildly successful?... Their complex interfaces are a key reason for their success."
 
