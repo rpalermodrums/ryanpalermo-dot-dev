@@ -63,7 +63,7 @@ When challenged on this, teams usually retreat to a familiar defense: "These are
 
 This is backwards.
 
-Power users don't need complexity. They need speed. They need reliability. They need the tool to get out of the way so they can do their actual job.
+Power users don't need complexity. They need speed and reliability. The tool should get out of their way so they can do their actual job.
 
 <div class="blog-grid-2col">
   <div class="blog-diagram-card">
