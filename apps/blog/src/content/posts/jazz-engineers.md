@@ -69,7 +69,7 @@ Then someone plays three long notes with conviction, and the crowd leans in.
 
 What changed? Not the content. The experience of **receiving** it. The timing. The confidence. The way those three notes made people **feel** something, even if they couldn’t explain **what**.
 
-This is the same gap that matters in product work. Users don’t experience your feature as a collection of technical decisions. They experience it as a feeling. Does this feel fast? Does this feel trustworthy? Does this feel like someone actually gave a damn, or does it feel like it was shipped to hit a quarterly goal?
+This is the same gap that matters in product work. Users don’t experience your feature as a collection of technical decisions. They experience it as a feeling. Does this feel fast? Does this feel trustworthy? Does this feel like someone actually gave a shit, or does it feel like it was shipped to hit a quarterly goal?
 
 These aren’t rational questions. The answers live beneath conscious evaluation. You can build something correct by every measurable standard and still have it feel completely wrong. You can break half the rules and ship something that just works—something people immediately understand, that feels right in a way nobody can articulate.
 
