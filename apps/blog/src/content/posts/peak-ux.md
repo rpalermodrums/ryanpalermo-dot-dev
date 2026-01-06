@@ -20,7 +20,7 @@ When a UI gets "too pretty," my brain starts asking a different question:
 
 **What will this look like when it fails?**
 
-Because it will fail. Not always. But eventually. And UX is what happens then.
+Because it will fail. Not always. But eventually.
 
 ## The aesthetic-usability effect has limits
 
