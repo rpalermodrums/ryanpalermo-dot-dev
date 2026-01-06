@@ -183,7 +183,7 @@ GOV.UK's Design System takes an uncompromising stance. Their guidance explicitly
 * "sorry" (doesn't help fix the problem)
 * Humorous language like "oops"
 
-Their research showed users understood what went wrong, knew how to fix it, and successfully recovered—when error messages followed function-first principles.
+Their research showed users understood what went wrong, knew how to fix it, and successfully recovered when error messages followed function-first principles.
 
 ## Pretty but slow is worse than ugly but fast
 
