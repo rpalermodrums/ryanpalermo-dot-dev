@@ -50,7 +50,7 @@ Internal users are *higher* leverage:
 * They use your systems eight hours a day, not eight minutes
 * Their efficiency directly impacts your burn rate
 * Their workarounds become institutionalized process
-* Their frustration becomes your culture
+* Their frustrations become your culture smells
 
 An external user who has a bad experience might churn. An internal user who has a bad experience stays, builds resentment, and creates shadow systems you don't control.
 
