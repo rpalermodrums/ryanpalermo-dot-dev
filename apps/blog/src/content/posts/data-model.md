@@ -76,7 +76,7 @@ When people can't predict outcomes, they slow down, retry, duplicate, or quit. O
 
 Most products collapse the world into three labels: loading, success, error.
 
-Real systems have more states. Users already know this because they've used email, banking, and anything involving waiting.
+Real systems have more states. Users already know this because they've used email, banking, and other complex software systems which involve waiting.
 
 Treat state as a first-class part of the interface:
 
