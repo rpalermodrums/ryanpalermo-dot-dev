@@ -136,7 +136,7 @@ If your system has eventual consistency, show "pending."
 If the work is queued, show "processing."
 If you can't confirm the outcome, say "unknown."
 
-Naming reality beats pretending.
+The feedback shown to the user should be derived from reality.
 
 ---
 
