@@ -258,12 +258,6 @@ Jonas Downey asked the uncomfortable question: "Why do cluttered, complex produc
 
 Pretty is nice-to-have. Usable is must-have.
 
-**The best UX sometimes looks like it belongs at a regional bank.**
-
-*Obvious. Labeled. Legible. Honest.*
-
-The tension between beautiful UI and peak UX isn't going away. But framing it as beauty versus functionality misses the point.
-
-The truly beautiful interface is the one that stays honest, legible, fast, and kind—especially at the moment it fails. The research says: when in doubt, choose clarity. Choose labels, speed, and the design that works when everything else doesn't.
+A truly beautiful interface is one that stays honest, legible, fast, and kind—especially at the moment it fails. The research says: when in doubt, choose clarity. Choose labels, speed, and the design that works when everything else doesn't.
 
 Because beauty fades, usability does not.
