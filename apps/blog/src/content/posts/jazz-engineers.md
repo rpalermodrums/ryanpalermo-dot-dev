@@ -33,7 +33,7 @@ Software engineering is similar, at least when you’re working on problems wort
 
 What carries over from music isn’t any specific skill. It’s the tolerance for being stuck and the stubborn belief that persistence will eventually pay off.
 
-It does. It just takes longer than anyone wants.
+It does. It just takes a while.
 
 ---
 
