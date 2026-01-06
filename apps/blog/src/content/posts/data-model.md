@@ -21,8 +21,8 @@ Most screens in a complex sotware product answer the same questions:
 * What exists?
 * What state is the application in?
 * What changed since last time?
-* What can I do next?
-* What happens if I do it?
+* What can I do from here?
+* What will happen if I do?
 
 Those aren't "frontend" questions.
 
