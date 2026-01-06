@@ -251,7 +251,11 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: var(--chrome-yellow);
+  color: var(--c-yellow);
+}
+
+[data-theme="light"] .status-indicator {
+  color: #b1830f; /* darker yellow for light mode */
 }
 
 .status-indicator::before {
