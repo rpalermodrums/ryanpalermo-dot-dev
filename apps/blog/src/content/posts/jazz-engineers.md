@@ -20,9 +20,9 @@ That, and **taste**.
 
 Here’s what being a musician actually looks like:
 
-You sit in a room. Alone with your instrument. For thousands of hours over the course of years. No teacher checks your work. No curriculum exists. You listen to the records, transcribe the solos, play the patterns over and over at varying tempos until they’re subconscious. You hit plateaus that feel like dead ends—sometimes for weeks, sometimes for months. Nothing improves, and you can’t figure out why.
+You sit in a room. Alone with your instrument. For thousands of hours over the course of years. No teacher checks your work. No curriculum exists. You listen to the records, transcribe the solos, play the patterns over and over at varying tempos until they’re subconscious. You hit plateaus that feel like dead ends... sometimes for weeks, sometimes for months. Nothing improves, and you can’t figure out why.
 
-And then one day something clicks. Or it doesn’t, and you push through anyway. You build a new system for yourself—a different way of practicing, hearing, or approaching the problem—and suddenly you’re moving again.
+And then one day something clicks. Or it doesn’t, and you push through anyway. You build a new system for yourself -- a different approach to practicing, listening, or engaging with music -- suddenly you’re moving again.
 
 Many learning environments reward following instructions well: learn what you’re taught, reach “good enough,” and wait for the next set of directions. External structure, feedback, and motivation do most of the work. Someone needs to say "great job” and explain what exactly comes next.
 
@@ -38,9 +38,9 @@ It does. It just takes a while.
 
 ## Art (Not Science)
 
-There’s a persistent fantasy in tech that building software is a science—that if you follow the right process, run the right experiments, collect the right data, the correct answer will emerge like you’re solving an equation.
+There’s a persistent fantasy in tech that building software is a science. That if you follow the right process, run the right experiments, collect the right data, the correct answer will emerge like you’re solving an equation.
 
-I think this belief is genuinely destructive. It’s a root cause of much of the damage we experience from modern tech platforms. Every soulless feed, every dark pattern, every product that technically “works” but makes you feel like garbage—that’s what happens when you let the spreadsheet make the decisions.
+I think this belief is genuinely destructive. It’s a root cause of much of the damage we experience from modern tech platforms. Every soulless feed, every dark pattern, every product that technically “works” but makes you feel like garbage. That’s what happens when you let the spreadsheet make product decisions.
 
 Data tells you what happened. It doesn’t tell you what to do next. A/B tests tell you which of two options performed better. They don’t tell you if both options were wrong. They don’t tell you if there’s a third option you never considered. They definitely don’t tell you *why* one option won, which means they can’t tell you whether that reason will hold up in a different context.
 
@@ -50,7 +50,7 @@ Sometimes the “irrational” choice is the right one. Sometimes making somethi
 
 Musicians understand this intuitively. You can’t A/B test a solo in real time. You develop judgment through repetition, not optimization.
 
-Product engineering requires the same thing: vision, judgment, and the willingness to make calls that can’t be fully justified by data. The practice room teaches you to be comfortable with similar uncertainty. You develop your ear, you make the call, you see what happens—over and over, for years—until you trust yourself.
+Product engineering requires the same thing: vision, judgment, and the willingness to make calls that can’t be fully justified by data. The practice room teaches you to be comfortable with similar uncertainty. You develop your ear, you make judgement calls, you observe what works and comes up short—over and over, for years—until you learn to trust yourself.
 
 ---
 
@@ -62,7 +62,7 @@ Software engineering is about making things work. Product engineering is about m
 
 Music teaches this directly and violently.
 
-You can play a solo that’s technically perfect—correctly outlining the changes with clean execution, sophisticated note choices, rhythm that frames the form beautifully. And the packed room you’re playing to feels dead silent. The vibe is off. You can see it in the audience’s faces. You thought you did everything right. None of it landed.
+You can play a solo that’s technically perfect: correctly outlining the changes with clean execution, sophisticated note choices, rhythm that frames the form beautifully. And the packed room you’re playing to feels dead silent. The vibe is off. You can see it in the audience’s faces. You thought you did everything right. None of it landed.
 
 Then someone plays three long notes with conviction, and the crowd leans in.
 
@@ -70,7 +70,7 @@ What changed? Not the content. The experience of **receiving** it. The timing. T
 
 This is the same gap that matters in product work. Users don’t experience your feature as a collection of technical decisions. They experience it as a feeling. Does this feel fast? Does this feel trustworthy? Does this feel like someone actually cared, or does it feel like it was shipped to hit a quarterly goal?
 
-These aren’t rational questions. The answers live beneath conscious evaluation. You can build something correct by every measurable standard and still have it feel completely wrong. You can break half the rules and ship something that just works—something people immediately understand, that feels right in a way nobody can quite articulate.
+These aren’t rational questions. The answers live beneath conscious evaluation. You can build something correct by every measurable standard and still have it feel completely wrong. You can break half the rules and ship something that just works; something people immediately understand, that feels right in a way nobody can quite articulate.
 
 Taste is the ability to tell the difference. It’s not teachable in the traditional sense. You develop it through exposure: thousands of hours of listening, playing, writing—or planning, building, listening to user feedback, and iterating. Internalizing what lands through deep exposure until good judgment becomes automatic.
 
@@ -100,7 +100,7 @@ The plateau is a test. Not of talent, but of character.
 
 Can you keep showing up when there’s no tangible progress? Can you trust that skill is accumulating with zero external reward?
 
-Most people struggle here. They need feedback—constant proof that the effort is worth it. When the plateau hits, many bail.
+Most people struggle here. They need feedback; constant proof that the effort is worth it. When the plateau hits, many bail.
 
 Musicians learn something important: persistence isn’t about willpower (mostly). You can build internal systems for when willpower is depleted.
 
@@ -120,6 +120,6 @@ The plateau doesn’t go away. A beautiful and challenging truth of working in a
 
 The skill that transfers from music to product engineering isn’t music theory, rhythm, creativity, collaboration, or any specific technique, aptitude, or mystic truth.
 
-What really transfers is the willingness to sit alone with something difficult and figure it out—and, through obsessive exposure, to develop taste. And the wisdom to know that how something *feels* often matters more than how it measures.
+What really transfers is the willingness to sit alone with something difficult and figure it out. And, through obsessive exposure, to develop taste. And the wisdom to know that how something *feels* often matters more than how it measures.
 
 Nobody is coming to save you in the practice room. And that turns out to be the point.
