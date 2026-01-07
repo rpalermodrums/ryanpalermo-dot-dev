@@ -30,6 +30,7 @@ export function Footer() {
           💼
         </a>
       </div>
+      <div className="footer-copyright">©2026 Ryan Palermo</div>
     </footer>
   );
 }

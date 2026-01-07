@@ -16,6 +16,7 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
   <title>Thoughts — Ryan Palermo</title>
   <meta name="description" content="Essays on product engineering, operational honesty, and building software that respects users.">
   <link rel="alternate" type="application/rss+xml" title="Thoughts - Palermo" href="/rss.xml">
+  <link rel="icon" type="image/png" href="/favicon.png">
   <style>
     :root {
       --bg: #0c0c0c;
@@ -101,6 +102,19 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
     }
 
     .back:hover { color: var(--fg-muted); }
+
+    .initials {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--fg);
+      text-decoration: none;
+      letter-spacing: -1px;
+      transition: opacity 0.15s;
+      border: 1px solid var(--fg);
+      padding: 4px 8px;
+    }
+
+    .initials:hover { opacity: 0.7; color: var(--fg); }
 
     .theme-toggle {
       background: none;
@@ -232,6 +246,18 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
         order: -1;
       }
     }
+
+    .footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 12px;
+      color: var(--fg-dim);
+    }
   </style>
   <script is:inline>
     const theme = localStorage.getItem('theme') || 'dark';
@@ -241,9 +267,7 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
 <body>
   <div class="container">
     <nav class="nav">
-      <a href="/" class="back">
-        <span>←</span> Home
-      </a>
+      <a href="/" class="initials" aria-label="Home">RP</a>
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
         <span id="theme-icon">☀️</span>
       </button>
@@ -279,6 +303,10 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
         </a>
       ))}
     </section>
+
+    <footer class="footer">
+      <div class="copyright">©2026 Ryan Palermo</div>
+    </footer>
   </div>
 
   <script is:inline>

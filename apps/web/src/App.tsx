@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { Footer } from "./components/Footer";
 import { Terminal } from "./components/Terminal";
 import { CommandPalette } from "./components/CommandPalette";
@@ -37,21 +37,9 @@ export function App() {
   const [terminalOpen, setTerminalOpen] = useState(false);
   const [paletteOpen, setPaletteOpen] = useState(false);
   const [isProjectsClicked, setIsProjectsClicked] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const mobileMenuRef = useRef<HTMLElement>(null);
 
   const openTerminal = () => setTerminalOpen(true);
   const openPalette = () => setPaletteOpen(true);
-
-  useEffect(() => {
-    function handleClickOutside(event: MouseEvent) {
-      if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as Node)) {
-        setMobileMenuOpen(false);
-      }
-    }
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
-  }, []);
 
   useKeyboardNav({
     onOpenTerminal: openTerminal,
@@ -69,39 +57,26 @@ export function App() {
     setIsProjectsClicked(true);
     setTimeout(() => {
       setIsProjectsClicked(false);
-      setMobileMenuOpen(false);
     }, 1300);
   };
 
   return (
     <div className="desktop">
       <main className="content">
-        <header className="header" ref={mobileMenuRef}>
+        <header className="header">
           <div className="header-inner">
-            <div className="header-left">
-              <button 
-                className={`header-title-btn ${mobileMenuOpen ? 'active' : ''}`}
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                aria-expanded={mobileMenuOpen}
-                aria-label="Toggle navigation menu"
-              >
-                <span className="header-title">Ryan Palermo</span>
-                <span className="header-chevron">▼</span>
-              </button>
-            </div>
+            <a href="/" className="header-initials" aria-label="Home">RP</a>
+            
+            <nav className="header-nav">
+              <a href="#projects" onClick={handleProjectsClick} className="header-nav-item">
+                {isProjectsClicked ? "(soon 🚧)" : "Projects"}
+              </a>
+              <a href={BLOG_URL} className="header-nav-item">Thoughts</a>
+            </nav>
             
             <div className="header-right">
               <ThemeToggle />
             </div>
-          </div>
-
-          <div className={`nav-dropdown ${mobileMenuOpen ? 'open' : ''}`}>
-            <nav className="nav-links">
-              <a href="#projects" onClick={handleProjectsClick} className="nav-item">
-                {isProjectsClicked ? "(soon 🚧)" : "Projects"}
-              </a>
-              <a href={BLOG_URL} className="nav-item">Thoughts</a>
-            </nav>
           </div>
         </header>
 
@@ -116,7 +91,7 @@ export function App() {
             <div className="about-status-title">What I'm probably up to</div>
             <ul className="about-list">
               <li>Wiring AI audio models together for micro-experiments</li>
-              <li>Figuring out how to keep my agent configs consistent while migrating to a new tool every week 😭 (currently on opencode)</li>
+              <li>Figuring out how to keep my agent configs consistent while migrating to a new tool every week 😭 (currently opencode)</li>
               <li>Searching for problems worth solving</li>
             </ul>
           </div>

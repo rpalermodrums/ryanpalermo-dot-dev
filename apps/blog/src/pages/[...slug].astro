@@ -24,6 +24,7 @@ const { Content } = await render(post);
   <meta property="og:description" content={post.data.excerpt}>
   <meta property="og:type" content="article">
   <link rel="alternate" type="application/rss+xml" title="Ryan Palermo's Blog" href="/rss.xml">
+  <link rel="icon" type="image/png" href="/favicon.png">
   <style is:global>
     :root {
       --bg: #0c0c0c;
@@ -304,6 +305,19 @@ const { Content } = await render(post);
     }
 
     .back:hover { color: var(--fg-muted); }
+
+    .initials {
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--fg);
+      text-decoration: none;
+      letter-spacing: -1px;
+      transition: opacity 0.15s;
+      border: 1px solid var(--fg);
+      padding: 4px 8px;
+    }
+
+    .initials:hover { opacity: 0.7; color: var(--fg); }
 
     .theme-toggle {
       background: none;
@@ -875,6 +889,18 @@ const { Content } = await render(post);
         font-size: 13px !important;
       }
     }
+
+    .footer {
+      margin-top: 64px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+    }
+
+    .copyright {
+      text-align: center;
+      font-size: 12px;
+      color: var(--fg-dim);
+    }
   </style>
   <script is:inline>
     const theme = localStorage.getItem('theme') || 'dark';
@@ -884,9 +910,7 @@ const { Content } = await render(post);
 <body>
   <div class="container">
     <nav class="nav">
-      <a href={import.meta.env.BASE_URL} class="back">
-        <span>←</span> All posts
-      </a>
+      <a href="/" class="initials" aria-label="Home">RP</a>
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
         <span id="theme-icon">☀️</span>
       </button>
@@ -907,6 +931,10 @@ const { Content } = await render(post);
         <Content />
       </div>
     </article>
+
+    <footer class="footer">
+      <div class="copyright">©2026 Ryan Palermo</div>
+    </footer>
   </div>
 
   <script is:inline>
