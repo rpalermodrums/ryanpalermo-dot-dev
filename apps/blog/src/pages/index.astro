@@ -89,8 +89,29 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
       justify-content: space-between;
       align-items: center;
       margin-bottom: 48px;
-      padding-bottom: 24px;
+      padding: 24px 0;
       border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .nav-link {
+      font-size: 14px;
+      color: var(--fg-muted);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--fg);
     }
 
     .back {
@@ -268,6 +289,11 @@ const regularPosts = sortedPosts.filter(p => !p.featured);
   <div class="container">
     <nav class="nav">
       <a href="/" class="initials" aria-label="Home">RP</a>
+      <div class="nav-links">
+        <!-- TODO: Make this better  -->
+        <a href="/#projects" class="nav-link">Projects</a>
+        <a href="/blog/" class="nav-link active">Thoughts</a>
+      </div>
       <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle theme">
         <span id="theme-icon">☀️</span>
       </button>
