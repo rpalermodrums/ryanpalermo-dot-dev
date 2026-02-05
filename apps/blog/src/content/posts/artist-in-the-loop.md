@@ -126,8 +126,6 @@ That's the bar.
 
 ---
 
-I'm building more tools along these lines. CanonKeeper is the first one I've felt like shipping publicly.
+I'm building more tools with this "artist-in-the-loop" paradigm as the theme. CanonKeeper is just the first one I've felt compelled to ship publicly.
 
-If any of this resonates, or if you think I'm wrong, I'd love to hear from you.
-
-**TODO: Add contact page and link to it**
+If you want to collaborate, contribute, argue, or just send me examples of tools you think already get this right, please reach out.
