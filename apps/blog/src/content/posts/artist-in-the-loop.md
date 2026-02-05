@@ -36,7 +36,7 @@ The momentum in AI tooling for the arts has shifted in a different direction. So
 
 The phrase I keep coming back to is **artist-in-the-loop**.
 
-In software, we mostly build for ourselves this way already. We take it for granted. Compilers don't write your program. Linters don't ship features. Full-text search doesn't make decisions. Version control doesn't tell you what to build. They just give you a thin, legible view of a complicated thing so you can work without drowning.
+In software, we mostly build for ourselves this way already. We take it for granted. Compilers catch mistakes before they ship. Linters enforce consistency without asking. Advanced search tools make a massive codebase navigable. Version control tracks what changed and when. None of these tools try to do your job. Their job is to keep the project legible enough that you can build and stay in flow.
 
 A lot of creative AI tooling goes the other direction. It takes messy, personal, creative processes and flattens them into something simpler. Prompt goes in, output comes out. The popular tools nudge artists toward being curators of generated artifacts instead of authors of a process.
 
