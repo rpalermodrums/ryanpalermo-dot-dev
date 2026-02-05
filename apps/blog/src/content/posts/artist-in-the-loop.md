@@ -70,21 +70,19 @@ My mom keeps a book bible for every novel. Character details, locations, timelin
 
 CanonKeeper builds the "book bible" directly from the manuscript text as it evolves. Every entry points back to a specific quote. If the draft changes, the bible updates. No separate doc to maintain. No drift.
 
-It also keeps a scene index. I've watched my mom flip through her own manuscript for twenty minutes trying to find where a character first shows up. POV, setting, which characters appear in which scenes. It's a table of contents for a book that doesn't have one yet. Boring, useful, the kind of thing you'd never bother maintaining by hand because the effort isn't worth it until the one time you desperately need it.
+It also keeps a scene index. I imagine my mother flipping through her own manuscript for twenty minutes trying to find where a character first shows up. POV, setting, which characters appear in which scenes. CanonKeeper introduces a sort of table of contents for a book that doesn't have one yet. Boring, useful, the kind of thing you'd never bother maintaining by hand because the effort isn't worth it until the one time you *desperately* need it.
 
 And it tracks patterns in voice and style. If a character says "listen" as the first word of every third line of dialogue, it'll tell you. If you use the same unusual metaphor in chapter 2 and chapter 19, it'll show you both. No opinions on whether these are problems. Maybe they're problems. Maybe they're your style. That's your call, not the tool's.
 
-That's the whole thing. No "chat with your novel." No prose generation. Nothing that edits your manuscript without asking. If that sounds like a weird list of things to clarify, look at what passes for "AI writing tools" right now and you'll see why I feel the need to say it.
+That's the whole thing. No "chat with your novel." No prose generation. Nothing that edits your manuscript. If that sounds like a weird list of things to clarify, look at what passes for "AI writing tools" right now and you'll see why I feel the need to say it.
 
 ## The Hard Rule
 
-The problem with using LLMs near fiction is the same problem they have everywhere else: they hallucinate. But in most contexts you catch it quickly. In a novel, a hallucinated detail can sit unnoticed for chapters while you build on top of it.
-
-I've had this bite me with code already. Model generates a call to a helper function with a plausible name, I don't look twice, and I write three more things that depend on it before I realize the function was never real. At least a compiler will catch that eventually. A novel won't.
+The problem with using LLMs near fiction is the same problem they have everywhere else: they hallucinate. In most contexts you catch it quickly. In a novel, a hallucinated detail can sit unnoticed for chapters while you build on top of it. The nature of fiction writing presents challenges to LLM context that don't exist in more fact-checkable domains.
 
 So CanonKeeper has one rule: **if it can't quote the manuscript, it doesn't get to assert the fact.**
 
-Say the tool thinks Elena's eyes are hazel. Fine. Show me the line. And when a second passage says her eyes are green, don't pick one. Show me both and let me sort it out.
+Imagine I'm an author. Say the tool thinks my main character Elena's eyes are hazel. Now a second passage says her eyes are green. I want the tool to show me both and let me sort out what's canonical.
 
 Elena → eye_color = hazel
 *"...Elena blinked, her hazel eyes catching the light..."* (Ch. 3, line 142)
@@ -92,25 +90,25 @@ Elena → eye_color = hazel
 but also:
 *"...he recognized her immediately by those sharp green eyes."* (Ch. 9, line 87)
 
-I decide which is canon. My call sticks. New contradictions become new questions, not silent fixes.
+I decide which is canon. My call sticks. New contradictions become new questions instead of silent fixes or continuity errors.
 
-You don't notice how much this matters until the project is long enough that you can't hold it all in your head anymore. By then it's too late to start being organized. Ask anyone who's ever tried to retrofit a changelog onto a codebase with two years of undocumented decisions.
+You don't notice how much this matters until the project is large enough that you can't hold it all in your head anymore. By then it's too late to start being organized. Ask anyone who's ever tried to retrofit a changelog onto a codebase with two years of undocumented decisions.
 
 ## Beyond Fiction
 
 CanonKeeper is for my mom.
 
-I keep coming back to it because the shape of the problem is so familiar. When I was playing music full time I'd come back to a session after three weeks and blow the first hour reading my own notes, trying to figure out why I'd made a specific arrangement choice that I hadn't documented at all. Not playing. Not writing. Just archaeology. I've watched the same thing happen in software. A team I was on shipped a feature that directly contradicted a design decision from six weeks earlier. Nobody remembered making it. It wasn't in any doc. It was in someone's head, and then it wasn't.
+When I was playing music full time I'd come back to a sibelius chart after three weeks and blow an hour reading my own notes, trying to figure out why I'd made a specific arrangement choice that I hadn't documented at all. Not playing or making progress. Not writing. Just **archaeology**. I've observed and experienced the same pattern in software. A team I was on shipped a feature that directly contradicted a design decision from six weeks earlier. Nobody remembered making it. It wasn't in any doc. It was in someone's head, and then it wasn't.
 
-Tools let us create faster than we can keep track of what we've done. That gap is the problem.
+Tools let us create faster than we can keep track of what we've done. That gap is a problem.
 
-If you've made serious art, you probably have strong opinions about where the line is between "helpful" and "get the fuck out of my way." If you've built or used developer tooling, you know how quickly help turns into noise.
+If you've made serious art, you probably have strong opinions about where the line is between "helpful" and "get the fuck out of my way" when it comes to tools in this domain. And if you've built or used a lot of dev tooling, you know how quickly "help" turns into noise.
 
 I want to get this right, and I know I'm missing things. What eats your creative energy that shouldn't? Where have you seen a tool actually get this balance right? If you build systems for a living, how would you design something that tracks authorial decisions through heavy revision without it all falling apart?
 
-I'm building this for my mom because I've watched the process up close for years. And because I'm tired of "AI for creative work" meaning "AI that does the creative work."
+I'm building this for my mom because I've had a front-row seat to this specific problem for years. And because I'm tired of "AI for creative work" meaning "AI that does the creative work."
 
-The best tools I've ever used don't try to replace me. They just make the work easier to do. That's the bar.
+The best tools I've ever used don't try to replace my role in the process. They give me leverage and keep me the loop.
 
 ---
 
