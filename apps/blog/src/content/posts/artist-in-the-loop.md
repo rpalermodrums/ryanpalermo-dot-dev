@@ -54,7 +54,7 @@ The phrase I keep coming back to is **artist-in-the-loop**. Artists want tools t
 
 In software, we mostly build for ourselves this way already. We take this posture for granted, but compilers don't write your program, linters don't ship features, full-text search doesn't make decisions, version control doesn't tell you what to build... These tools help us to compose a thin, legible view of a complicated thing so you can work on a project without drowning.
 
-A lot of creative AI tooling takes messy, personal, creative processes and flattens them into something simpler and lower-fidelity. Prompt goes in, output comes out. The popular tools in of today nudge artists toward being curators of generated artifacts instead of authors of a process. Curation might be a real and valid skill one day, but it's not what most artists are trying to do when they sit down to create something they actually care about.
+A lot of creative AI tooling aims to take messy, personal, creative processes and flatten them into something simpler and lower-fidelity. Prompt goes in, output comes out. The popular tools in of today nudge artists toward being curators of generated artifacts instead of authors of a process. Curation might be a real and valid skill one day, but it's not what most artists are trying to do when they sit down to create something they actually care about.
 
 ---
 
