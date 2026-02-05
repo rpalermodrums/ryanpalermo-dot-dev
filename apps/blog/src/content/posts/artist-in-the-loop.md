@@ -14,6 +14,10 @@ I'm building **CanonKeeper** (canon as in story canon, not artillery): a local c
 **Hard rule:** *If it can't quote your manuscript, it doesn't get to assert the fact.*
 </details>
 
+###
+
+I've been thinking about what it would look like to build AI tools for creative work that aren't trying to do the creative work for you. This post is about that idea, and about CanonKeeper, a tool I'm building for manuscript organization that tries to get the balance right. It watches what you've written, keeps track of the details so you don't have to, and never generates a single word of prose.
+
 ## The Map Is Not the Territory
 
 I have a weakness for tidy representations of messy things. Maps. Outlines. Checklists. "One doc to rule them all." Anything that turns a complicated reality into something I can glance at and feel like I understand.
@@ -31,8 +35,6 @@ These are navigation problems, not creation problems.
 ## The Loop
 
 The phrase I keep coming back to is **artist-in-the-loop**.
-
-Artists want tools that assume they are staying in control. The tools we build should respect that assumption.
 
 In software, we mostly build for ourselves this way already. We take it for granted. Compilers don't write your program. Linters don't ship features. Full-text search doesn't make decisions. Version control doesn't tell you what to build. They just give you a thin, legible view of a complicated thing so you can work without drowning.
 
@@ -80,7 +82,7 @@ That's the whole thing. No "chat with your novel." No prose generation. Nothing 
 
 The problem with using LLMs near fiction is the same problem they have everywhere else: they hallucinate. But in most contexts you catch it quickly. In a novel, a hallucinated detail can sit unnoticed for chapters while you build on top of it.
 
-I've had this bite me with code already. Model generates a call to a helper function with a plausible name, I don't look twice, and I write three more things that depend on it before I realize the function was never real. In a codebase you catch that fast. In a novel, you might not catch it for chapters.
+I've had this bite me with code already. Model generates a call to a helper function with a plausible name, I don't look twice, and I write three more things that depend on it before I realize the function was never real. At least a compiler will catch that eventually. A novel won't.
 
 So CanonKeeper has one rule: **if it can't quote the manuscript, it doesn't get to assert the fact.**
 
@@ -104,8 +106,6 @@ I keep coming back to it because the shape of the problem is so familiar. When I
 
 Tools let us create faster than we can keep track of what we've done. That gap is the problem.
 
-## An Open Invitation
-
 If you've made serious art, you probably have strong opinions about where the line is between "helpful" and "get the fuck out of my way." If you've built or used developer tooling, you know how quickly help turns into noise.
 
 I want to get this right, and I know I'm missing things. What eats your creative energy that shouldn't? Where have you seen a tool actually get this balance right? If you build systems for a living, how would you design something that tracks authorial decisions through heavy revision without it all falling apart?
@@ -118,6 +118,6 @@ The best tools I've ever used don't try to replace me. They just make the work e
 
 I'm building more tools with this "artist-in-the-loop" paradigm as the theme. CanonKeeper is just the first one I've felt compelled to ship publicly.
 
-If you want to collaborate, contribute, argue, or just send me examples of tools you think already get this right, please reach out.
+If any of this resonates, or if you think I'm wrong about something, I'd love to hear from you.
 
 **TODO: Add contact page and link to it**
