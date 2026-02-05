@@ -24,11 +24,11 @@ The problem is the tidy version is generally a lie. Not a malicious one, just ov
 
 The best AI tools I use as a software engineer feel like they understand this deal. Give me a thinner view of a problem so I can move forward, but don't pretend to understand the system better than I do. LLMs help me stay in flow: summarizing what I'm looking at, sketching a first pass, generating boilerplate I'd rather not type, catching footguns I missed. For chore work, I'm fine being a reviewer instead of an author. If the model writes a migration script or a test scaffold for me to sanity-check, great. Doesn't feel like it's stepping on anything sacred.
 
-But the parts of software engineering that *are* creative (system design, product engineering, anything requiring a judgment call) don't benefit from tools aimed at replacing those functions. They benefit from leverage. Tools that keep you moving while you stay responsible for the work.
+But the parts of software engineering that *are* creative (system design, product engineering, anything requiring a judgment call) don't benefit from tools aimed at replacing those functions. They benefit from leverage. Tools that keep you moving while you, as the author of the software, remain responsible for the work.
 
-And for serious long-form work, the bottleneck is rarely generating output. It's the overhead that shows up once a project gets big enough. A decision you made three weeks ago fades, and something you implement today quietly contradicts it. A piece stops fitting the larger puzzle and you can't remember why, or how this module ended up with fifty dependencies when it started as ten lines.
+And for serious long-form work, the realistic bottleneck is rarely generating the code itself. It's generally the overhead that shows up once a project gets large and complicated. A decision you made three weeks ago fades beneath a thread on slack, and something you implement today quietly contradicts it. A piece stops fitting the larger puzzle and you can't remember why, or how the module you're looking at ended up with fifty dependencies when it started as ten lines last week.
 
-These are navigation problems, not creation problems.
+These are structure and navigation problems, not creation problems.
 
 ## The Loop
 
