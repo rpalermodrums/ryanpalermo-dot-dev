@@ -14,9 +14,11 @@ I'm building **CanonKeeper** (canon as in story canon, not artillery): a local c
 **Hard rule:** *If it can't quote your manuscript, it doesn't get to assert the fact.*
 </details>
 
+## The Map is Not the Territory
+
 I have a weakness for tidy representations of messy things. Maps. Outlines. Checklists. "One doc to rule them all." Anything that turns a complicated reality into something I can glance at and feel like I understand.
 
-The problem is the tidy version is always a lie. Not a malicious one. Just a simplification. Useful precisely because it leaves stuff out. Which is fine, until it isn't.
+The problem is the tidy version is generally a lie. Not a malicious one. Just a simplification. Useful precisely because it leaves stuff out. Which is fine, until it isn't.
 
 That distinction -- useful, but incomplete -- is also the lens I keep applying to the current wave of AI tooling in the arts. The best AI tools I use as a developer feel like they understand the deal: the map is not the territory. Give me a thinner view of a problem so I can move forward, but don't pretend to understand the system better than I do. Help without feigning omniscience.
 
