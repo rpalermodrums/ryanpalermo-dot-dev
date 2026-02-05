@@ -18,9 +18,9 @@ I'm building **CanonKeeper** (canon as in story canon, not artillery): a local c
 
 I have a weakness for tidy representations of messy things. Maps. Outlines. Checklists. "One doc to rule them all." Anything that turns a complicated reality into something I can glance at and feel like I understand.
 
-The problem is the tidy version is generally a lie. Not a malicious one, just a simplification. Useful precisely because it leaves stuff out.
+The problem is the tidy version is generally a lie. Not a malicious one, just oversimplification. Useful precisely because it leaves stuff out.
 
-That distinction, useful but incomplete, is also the lens I apply to the current wave of AI tooling for the arts. 
+That distinction, useful but incomplete, is also the lens I apply to the current wave of AI tooling for the arts.
 
 The best AI tools I use as a developer feel like they understand the deal: the map is not the territory. Give me a thinner view of a problem so I can move forward, but don't pretend to understand the system better than I do. Help me without feigning omniscience.
 
