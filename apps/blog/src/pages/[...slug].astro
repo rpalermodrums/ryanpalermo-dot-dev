@@ -11,7 +11,7 @@ export async function getStaticPaths() {
       props: { post },
     })),
     ...draftPosts.map(post => ({
-      params: { slug: ['drafts', post.id.replace(/\.md$/, '')] },
+      params: { slug: `drafts/${post.id.replace(/\.md$/, '')}` },
       props: { post },
     })),
   ];
