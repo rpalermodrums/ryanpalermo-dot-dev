@@ -32,8 +32,7 @@ These are structure and navigation problems, not creation problems.
 
 ## The Loop
 
-The momentum in AI tooling for the arts has shifted in a different direction. Software tools (built by software people) give you control, while emerging artistic tools (also... built by software people) have mostly been transactional. I want the level of tooling we have on the software side of the wall to find its way into my DAW, my mom's Scrivener files, and my neighbor's Illustrator workflows.
-
+Dev AI tools (built by software people) largely keep you in control, while emerging artistic AI tools (also... built by software people) have mostly been transactional. I want the level of tooling we have on the software side of the wall to find its way into my DAW, my mom's Scrivener files, and my neighbor's Illustrator workflows.
 The phrase I keep coming back to is **artist-in-the-loop**.
 
 In software, we mostly build for ourselves this way already. We take it for granted. Compilers catch mistakes before they ship. Linters enforce consistency without asking. Advanced search tools make a massive codebase navigable. Version control tracks what changed and when. None of these tools try to do your job. Their job is to keep the project legible enough that you can build and stay in flow.
