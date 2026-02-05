@@ -18,9 +18,9 @@ I'm building **CanonKeeper** (canon as in story canon, not artillery): a local c
 
 I have a weakness for tidy representations of messy things. Maps. Outlines. Checklists. "One doc to rule them all." Anything that turns a complicated reality into something I can glance at and feel like I understand.
 
-The problem is the tidy version is generally a lie. Not a malicious one. Just a simplification. Useful precisely because it leaves stuff out. Which is fine, until it isn't.
+The problem is the tidy version is generally a lie. Not a malicious one. Just a simplification. Useful precisely because it leaves stuff out.
 
-That distinction -- useful, but incomplete -- is also the lens I keep applying to the current wave of AI tooling in the arts. The best AI tools I use as a developer feel like they understand the deal: the map is not the territory. Give me a thinner view of a problem so I can move forward, but don't pretend to understand the system better than I do. Help without feigning omniscience.
+That distinction, useful but incomplete, is also the lens I keep applying to the current wave of AI tooling in the arts. The best AI tools I use as a developer feel like they understand the deal: the map is not the territory. Give me a thinner view of a problem so I can move forward, but don't pretend to understand the system better than I do. Help without feigning omniscience.
 
 A lot of "AI for the arts" feels like the opposite.
 
@@ -28,7 +28,7 @@ A lot of "AI for the arts" feels like the opposite.
 
 ## Leverage vs replacement
 
-LLM advances have turned into real daily advantages for me in software engineering. Not the sci-fi memeified version where I open Claude Code, YOLO prompt it to *build a billion-dollar company, make no mistakes* `--dangerously-skip-permissions` and go make coffee. The real value shows itself when I'm stuck in a codebase, am about to waste hours digging through legacy code and documentation, and an LLM helps me stay in flow: summarizing what I'm looking at, sketching a first pass at a problem, generating boilerplate I'd rather not type myself, catching obvious footguns I missed, doing a preliminary code review.
+LLM advances have turned into real daily advantages for me in software engineering. Not the sci-fi memeified version where I open Claude Code, YOLO prompt it with `--dangerously-skip-permissions` to *build a billion-dollar company, make no mistakes*, and go make coffee. The real value shows itself when I'm stuck in a codebase, am about to waste hours digging through legacy code and documentation, and an LLM helps me stay in flow: summarizing what I'm looking at, sketching a first pass at a problem, generating boilerplate I'd rather not type myself, catching obvious footguns I missed, doing a preliminary code review.
 
 I'm not pretending all programming is "creative." A lot of it is chores and rote work. For the chore bucket, I'm fine being a reviewer instead of the author. If the model writes a migration script or a test scaffold and I sanity-check it, great. That doesn't feel like it's stepping on anything sacred.
 
@@ -137,9 +137,13 @@ CanonKeeper has a hard boundary:
 
 **If it can't quote the manuscript, it doesn't get to assert the fact.**
 
-A bible entry is stored as a **claim with evidence**. If it thinks "Elena's eyes are hazel," it has to point to the exact line that says so. If the draft later says "green," it doesn't "fix" anything -- it flags a contradiction and shows both quotes. Writer decides what's canon.
+A bible entry is stored as a **claim with evidence**. If it thinks "Elena's eyes are hazel," it has to point to the exact line that says so. If the draft later says "green," it doesn't "fix" anything. Insteaed, it flags a contradiction and shows both quotes. The author decides what's canon.
 
-Once the writer confirms canon, that becomes the locked truth. The tool can disagree later -- and it might -- but it can't overwrite the author. Disagreements become issues, never silent edits.
+Once the writer confirms canon, that becomes the locked truth. The tool can disagree later, and it might, but it can't overwrite the author. Disagreements become issues, never silent edits.
+
+That's the direction I'm betting on:
+
+Tools that assume the artist is staying in the loop, and build around that assumption.
 
 **Author owns canon. Tool owns indexing.**
 
@@ -175,10 +179,6 @@ The goal is simple: **less mental bookkeeping, more time spent on taste**
 CanonKeeper is a writing tool because that's what my mother needs. The idea isn't specific to writing, though.
 
 Most serious creative pursuits hit the same wall: the project gets big, the number of decisions compounds, and overhead starts eating the part of your brain you actually want to spend on taste.
-
-That's the direction I'm betting on:
-
-Tools that assume the artist is staying in the loop, and build around that assumption.
 
 ---
 
