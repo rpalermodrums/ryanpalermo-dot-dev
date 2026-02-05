@@ -48,7 +48,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       "AI made me faster at shipping code. The arts deserve leverage tools that keep creators in the loop.",
     content: "",
-    draft: true,
+    draft: false,
   },
   {
     slug: "captive-users",
