@@ -6,7 +6,7 @@ excerpt: "AI for creative work should help you think, not think for you."
 draft: true
 ---
 
-I've been thinking about what it would look like to build AI tools for creative work that aren't trying to do the creative work for you. This post is about that idea, and about CanonKeeper, a tool I'm building for manuscript organization that tries to get the balance right. It watches what you've written, keeps track of the details so you don't have to, and never generates a single word of prose.
+I've been thinking about what it would look like to build AI tools for creative work that don't try to do the creative work for you. This post is about that idea, and about CanonKeeper, a tool I'm building for fiction writers that aims to get that balance right. It watches what you've written, keeps track of the details so you don't have to, and never generates a single word of prose.
 
 <details style="cursor: pointer;">
 <summary>TL;DR</summary>
