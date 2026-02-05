@@ -43,7 +43,7 @@ Curation might become a real skill. But it's not what most artists are trying to
 
 ## Blame My Mother
 
-I was raised by an author who wrote corporate PR releases by day and moonlighted as a novelist . I never noticed as a kid, but it turns out that long-form fiction includes a lot of unglamorous administration. Keeping track of names, ages, timelines, geography, relationships, rule systems, what happened in which scene, who knows what when...
+I was raised by an author who wrote corporate PR releases by day and moonlighted as a novelist. I never noticed as a kid, but it turns out that long-form fiction includes a lot of unglamorous administration. Keeping track of names, ages, timelines, geography, relationships, rule systems, what happened in which scene, who knows what when...
 
 I was on a long phone call with her recently while I was thinking through an upcoming post about AI and the arts. The same theme kept surfacing in my mind as we spoke: when does an artistic AI tool enhance the artist, and when does it cross over the invisible line where it feels like it's trying to take your hands off the wheel?
 
@@ -59,11 +59,11 @@ And alas, the human brain is not a database.
 
 ## CanonKeeper
 
-I couldn't find a tool solved this problem for my mom, so I'm building one.
+I couldn't find a tool that solved this problem for my mom, so I'm building one.
 
 CanonKeeper watches a draft over time, maintains a local index, and updates itself in the background as the draft evolves. Intentionally boring, the way good tools are boring.
 
-My mom keeps a "book bible" for every novel she has in progress. Character details, locations, timeline, rules of the world. She maintains it in a separate document while she writes. The problem is she's also, you know, writing a novel, so that bible could start drifting from the manuscript unless she's perfectly dilligent. Two months in she could forget a detail, realize the bible says one thing and the draft says another, and now she doesn't trust either. Which version is true?
+My mom keeps a "book bible" for every novel she has in progress. Character details, locations, timeline, rules of the world. She maintains it in a separate document while she writes. The problem is she's also, you know, writing a novel, so that bible could start drifting from the manuscript unless she's perfectly diligent. Two months in she could forget a detail, realize the bible says one thing and the draft says another, and now she doesn't trust either. Which version is true?
 
 CanonKeeper builds the "book bible" directly from the manuscript text as it evolves, and it tracks revision history with context. Each bible entry points back to specific lines in the manuscript. If the draft changes, the bible updates itself. No separate doc to maintain, which means no drift.
 
@@ -99,7 +99,7 @@ If you've made real art in some capacity, you probably have strong opinions abou
 
 I want to get this right, and I know I'm missing things. What eats your creative energy that shouldn't? Where have you seen a tool actually get this balance right? If you build systems for a living, how would you design something that tracks authorial decisions through heavy revision without it all falling apart?
 
-The best tools I've ever used don't try to replace my role in the process. They give me leverage and keep me the loop.
+The best tools I've ever used don't try to replace my role in the process. They give me leverage and keep me in the loop.
 
 ---
 
