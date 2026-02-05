@@ -68,7 +68,7 @@ CanonKeeper watches a draft file over time, maintains a private local index, and
 
 My mom keeps a book bible for every novel. Character details, locations, timeline, rules of the world. She maintains it by hand in a separate document while she writes. The problem is she's also, you know, writing a novel, so the bible could start drifting from the manuscript unless she's perfectly dilligent. Two months in she could a detail, realize the bible says one thing and the draft says another, and now she doesn't trust either. She has to go find the actual passage and reread it to figure out which version is true.
 
-CanonKeeper just builds the bible directly from the manuscript text. Every entry points back to a specific quote. If the draft changes, the bible updates. No separate doc to maintain. No drift.
+CanonKeeper builds the "book bible" directly from the manuscript text as it evolves. Every entry points back to a specific quote. If the draft changes, the bible updates. No separate doc to maintain. No drift.
 
 It also keeps a scene index. I've watched my mom flip through her own manuscript for twenty minutes trying to find where a character first shows up. POV, setting, which characters appear in which scenes. It's a table of contents for a book that doesn't have one yet. Boring, useful, the kind of thing you'd never bother maintaining by hand because the effort isn't worth it until the one time you desperately need it.
 
