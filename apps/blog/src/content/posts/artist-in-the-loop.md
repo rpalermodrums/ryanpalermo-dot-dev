@@ -20,19 +20,11 @@ I have a weakness for tidy representations of messy things. Maps. Outlines. Chec
 
 The problem is the tidy version is generally a lie. Not a malicious one, just oversimplification. Useful precisely because it leaves stuff out.
 
-That distinction, sometimes useful but always incomplete, is the lens through which I view the current wave of AI tooling for the arts.
-
-The best AI tools I use as a software engineer feel like they understand the deal: the map is not the territory. Give me a thinner view of a problem so I can move forward, but don't pretend to understand the system better than I do.
-
-## Leverage
-
-LLMs have turned into a real daily advantage in my work building software. Not the sci-fi version. The real value shows when I'm stuck on a problem, about to waste hours digging through legacy code, and the LLM unblocks me. It summarizes what I'm looking at, sketches a first pass, generates boilerplate I'd rather not type, catches footguns I missed. It helps me stay in flow.
-
-Not all programming is creative. A lot of it is chores. For chore work, I'm fine being a reviewer instead of an author. If the model writes a migration script or a test scaffold for me to sanity-check, great. Doesn't feel like it's stepping on anything sacred.
+The best AI tools I use as a software engineer feel like they understand this deal. Give me a thinner view of a problem so I can move forward, but don't pretend to understand the system better than I do. LLMs help me stay in flow: summarizing what I'm looking at, sketching a first pass, generating boilerplate I'd rather not type, catching footguns I missed. For chore work, I'm fine being a reviewer instead of an author. If the model writes a migration script or a test scaffold for me to sanity-check, great. Doesn't feel like it's stepping on anything sacred.
 
 But the parts of software engineering that *are* creative (system design, product engineering, anything requiring a judgment call) don't benefit from tools aimed at replacing those functions. They benefit from leverage. Tools that keep you moving while you stay responsible for the work.
 
-For serious long-form work, the bottleneck is rarely generating output. It's the overhead that shows up once a project gets big enough. A decision you made three weeks ago fades, and something you implement today quietly contradicts it. A piece stops fitting the larger puzzle and you can't remember why, or how this module ended up with fifty dependencies when it started as ten lines.
+And for serious long-form work, the bottleneck is rarely generating output. It's the overhead that shows up once a project gets big enough. A decision you made three weeks ago fades, and something you implement today quietly contradicts it. A piece stops fitting the larger puzzle and you can't remember why, or how this module ended up with fifty dependencies when it started as ten lines.
 
 These are navigation problems, not creation problems.
 
@@ -88,11 +80,11 @@ That's the whole thing. No "chat with your novel." No prose generation. Nothing 
 
 The problem with using LLMs near fiction is the same problem they have everywhere else: they hallucinate. But in most contexts you catch it quickly. In a novel, a hallucinated detail can sit unnoticed for chapters while you build on top of it.
 
-I've seen this happen with code. The model confidently references a function that doesn't exist, you don't catch it because the name sounds right, and you build three more things on top of it before you realize the foundation is wrong. Now imagine that with a novel. The tool tells you a character's sister died in chapter 4. You half-remember that being true. You write two chapters that depend on it. Turns out the sister was injured, not killed, and now you have a continuity mess that's entirely the tool's fault.
+I've had this bite me with code already. Model generates a call to a helper function with a plausible name, I don't look twice, and I write three more things that depend on it before I realize the function was never real. In a codebase you catch that fast. In a novel, you might not catch it for chapters.
 
-So I built CanonKeeper around one rule: **if it can't quote the manuscript, it doesn't get to assert the fact.**
+So CanonKeeper has one rule: **if it can't quote the manuscript, it doesn't get to assert the fact.**
 
-Every claim maps to a specific line of text. If the tool thinks Elena's eyes are hazel, I can see exactly where the draft says so. And when it inevitably finds a second passage that says her eyes are green, it doesn't quietly pick one. It just shows me both and asks.
+Say the tool thinks Elena's eyes are hazel. Fine. Show me the line. And when a second passage says her eyes are green, don't pick one. Show me both and let me sort it out.
 
 Elena → eye_color = hazel
 *"...Elena blinked, her hazel eyes catching the light..."* (Ch. 3, line 142)
@@ -100,32 +92,32 @@ Elena → eye_color = hazel
 but also:
 *"...he recognized her immediately by those sharp green eyes."* (Ch. 9, line 87)
 
-Those two can't both be right. CanonKeeper flags it, I decide which one is canon, and my answer sticks. If I say hazel, the tool can't overrule me later. If new text contradicts my call, that's a new question for me, not a silent fix.
+I decide which is canon. My call sticks. New contradictions become new questions, not silent fixes.
 
-None of this is flashy. It's the kind of thing you only appreciate when you're eighty pages deep and past-you left a mess that present-you has to clean up. Which, if you've ever worked on anything long enough, you know is basically always.
+You don't notice how much this matters until the project is long enough that you can't hold it all in your head anymore. By then it's too late to start being organized. Ask anyone who's ever tried to retrofit a changelog onto a codebase with two years of undocumented decisions.
 
 ## Beyond Fiction
 
-CanonKeeper is for my mom. But the reason I can't stop thinking about it is that I've been on the other side of the same problem in every medium I've worked in.
+CanonKeeper is for my mom.
 
-When I was still playing music full time, I'd open a session I hadn't touched in three weeks and spend the first hour just figuring out what state I'd left things in. Not writing. Not arranging. Just reading my own notes and trying to reconstruct decisions I'd already made. In software, I've watched a team ship a feature that directly contradicted a design decision from six weeks earlier. Nobody remembered making it. It wasn't in any doc. It was in someone's head, and then it wasn't.
+I keep coming back to it because the shape of the problem is so familiar. When I was playing music full time I'd come back to a session after three weeks and blow the first hour reading my own notes, trying to figure out why I'd made a specific arrangement choice that I hadn't documented at all. Not playing. Not writing. Just archaeology. I've watched the same thing happen in software. A team I was on shipped a feature that directly contradicted a design decision from six weeks earlier. Nobody remembered making it. It wasn't in any doc. It was in someone's head, and then it wasn't.
 
-The longer I work, the more I think the bottleneck in any serious creative project isn't talent or even time. It's that our tools let us create faster than we can keep track of what we've done.
+Tools let us create faster than we can keep track of what we've done. That gap is the problem.
 
 ## An Open Invitation
 
 If you've made serious art, you probably have strong opinions about where the line is between "helpful" and "get the fuck out of my way." If you've built or used developer tooling, you know how quickly help turns into noise.
 
-I don't have this figured out. I have a thesis and a tool and a lot of opinions, but I know I'm not seeing the whole picture. What eats your creative energy that shouldn't? Where have you seen a tool get the balance right? And if you build systems for a living, I'm genuinely curious: how would you design something that tracks authorial decisions through heavy revision without it all falling apart?
+I want to get this right, and I know I'm missing things. What eats your creative energy that shouldn't? Where have you seen a tool actually get this balance right? If you build systems for a living, how would you design something that tracks authorial decisions through heavy revision without it all falling apart?
 
 I'm building this for my mom because I've watched the process up close for years. And because I'm tired of "AI for creative work" meaning "AI that does the creative work."
 
-The best tools I've ever used, in code or music or whatever, don't try to replace me. They just make it easier to do the thing I was already going to do.
-
-That's the bar.
+The best tools I've ever used don't try to replace me. They just make the work easier to do. That's the bar.
 
 ---
 
 I'm building more tools with this "artist-in-the-loop" paradigm as the theme. CanonKeeper is just the first one I've felt compelled to ship publicly.
 
 If you want to collaborate, contribute, argue, or just send me examples of tools you think already get this right, please reach out.
+
+**TODO: Add contact page and link to it**
