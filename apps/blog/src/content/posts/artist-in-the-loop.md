@@ -62,11 +62,11 @@ The human brain is not a database. We need systems for this, and the ones that e
 
 ## CanonKeeper
 
-So I'm building her one.
+I couldn't find a tool that did this, so I'm building one.
 
-CanonKeeper watches a draft file (md/txt/docx), keeps a local index of everything it finds, and updates as the draft changes. Intentionally boring, the way good tools are boring.
+CanonKeeper watches a draft file over time, maintains a private local index, and updates itself in the background as the draft changes. Intentionally boring, the way good tools are boring.
 
-My mom keeps a book bible for every novel. Character details, locations, timeline, rules of the world. She maintains it by hand in a separate document while she writes. The problem is she's also, you know, writing a novel, so the bible starts drifting from the manuscript almost immediately. Two months in she'll check a detail, realize the bible says one thing and the draft says another, and now she doesn't trust either. She has to go find the actual passage and reread it to figure out which version is true.
+My mom keeps a book bible for every novel. Character details, locations, timeline, rules of the world. She maintains it by hand in a separate document while she writes. The problem is she's also, you know, writing a novel, so the bible could start drifting from the manuscript unless she's perfectly dilligent. Two months in she could a detail, realize the bible says one thing and the draft says another, and now she doesn't trust either. She has to go find the actual passage and reread it to figure out which version is true.
 
 CanonKeeper just builds the bible directly from the manuscript text. Every entry points back to a specific quote. If the draft changes, the bible updates. No separate doc to maintain. No drift.
 
