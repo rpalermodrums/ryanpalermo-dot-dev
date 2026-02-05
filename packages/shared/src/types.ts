@@ -44,6 +44,7 @@ export interface BlogPost {
   excerpt: string;
   content: string;
   featured?: boolean;
+  draft?: boolean;
 }
 
 // ============ Contact ============

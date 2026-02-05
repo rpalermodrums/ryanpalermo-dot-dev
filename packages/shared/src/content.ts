@@ -41,6 +41,16 @@ export const projects: Project[] = [
 
 export const blogPosts: BlogPost[] = [
   {
+    slug: "artist-in-the-loop",
+    title: "AI Made Me Faster at Shipping Code",
+    subtitle: "Why Can't We Build Artist-in-the-Loop Tools for the Arts?",
+    date: "2026-02-05",
+    excerpt:
+      "AI made me faster at shipping code. The arts deserve leverage tools that keep creators in the loop.",
+    content: "",
+    draft: true,
+  },
+  {
     slug: "captive-users",
     title: "Internal Users Can't Leave",
     subtitle: "The cruelest interfaces are those with captive audiences",

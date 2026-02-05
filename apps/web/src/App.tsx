@@ -49,8 +49,9 @@ export function App() {
     },
   });
 
-  const featuredPost = blogPosts.find((p: BlogPost) => p.featured);
-  const otherPosts = blogPosts.filter((p: BlogPost) => !p.featured);
+  const visiblePosts = blogPosts.filter((p: BlogPost) => !p.draft);
+  const featuredPost = visiblePosts.find((p: BlogPost) => p.featured);
+  const otherPosts = visiblePosts.filter((p: BlogPost) => !p.featured);
 
   const handleProjectsClick = (e?: React.MouseEvent) => {
     if (e) e.preventDefault();

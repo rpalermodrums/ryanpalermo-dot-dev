@@ -1,7 +1,8 @@
 ---
 import { blogPosts } from '@ryanpalermo/shared';
 
-const sortedPosts = [...blogPosts].sort((a, b) => 
+const visiblePosts = blogPosts.filter((post) => !post.draft);
+const sortedPosts = [...visiblePosts].sort((a, b) => 
   new Date(b.date).getTime() - new Date(a.date).getTime()
 );
 const featuredPost = sortedPosts.find(p => p.featured);
