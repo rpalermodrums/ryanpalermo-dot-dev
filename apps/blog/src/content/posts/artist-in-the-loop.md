@@ -20,7 +20,7 @@ I have a weakness for tidy representations of messy things. Maps. Outlines. Chec
 
 The problem is the tidy version is generally a lie. Not a malicious one, just oversimplification. Useful precisely because it leaves stuff out.
 
-That distinction, sometimes useful but incomplete, is also the lens I apply to the current wave of AI tooling for the arts.
+That distinction, sometimes useful but incomplete, is also the lense through which I view the current wave of AI tooling for the arts.
 
 The best AI tools I use as a software engineer feel like they understand the deal: the map is not the territory. Give me a thinner view of a problem so I can move forward, but don't pretend to understand the system better than I do. Help me without feigning omniscience.
 
