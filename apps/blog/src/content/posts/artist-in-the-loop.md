@@ -49,6 +49,7 @@ The more persistent bottleneck is the overhead that shows up once the project's 
 The phrase I keep coming back to is **artist-in-the-loop**. Artists want tools that assume they are staying in control, and, from my perspective, the tools we build in these domains should respect and build on that assumption.
 
 **Broke**: "let me do it for you."
+
 **Woke**: "let me keep the project legible and navigable enough that you can keep making judgment calls without losing your mind or breaking flow."
 
 In software, we mostly build for ourselves this way already. We take this posture for granted, but compilers don't write your program, linters don't ship features, full-text search doesn't make decisions, version control doesn't tell you what to build... These tools create a thin, legible view of a complicated thing so you can work on a project without drowning.
