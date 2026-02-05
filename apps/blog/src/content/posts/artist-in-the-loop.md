@@ -146,12 +146,6 @@ Once the writer confirms canon, that becomes the locked truth. The tool can disa
 
 **Continuity question:** *Elena's eye color appears as hazel in one place and green in another. Which is canon?*
 
-The tool doesn't pick. You do.
-
----
-
-## A quick "day in the life"
-
 This is the workflow I'm aiming for:
 
 * You keep writing wherever you already write
@@ -159,8 +153,6 @@ This is the workflow I'm aiming for:
 * You reopen the project after a week and ask: "What did I name the river town?" It returns the exact quote(s) and where they appear
 * You start revising chapter 12 and pull up the scene index. You see POV/setting at a glance, and where key entities enter or exit the story
 * You change a backstory detail. It flags contradictions as questions with citations so you can resolve them deliberately, instead of discovering them 80 pages later
-
-The goal is simple: **less mental bookkeeping, more time spent on taste**
 
 ---
 
@@ -202,3 +194,5 @@ That's the bar.
 I'm building more tools with this "artist-in-the-loop" paradigm as the theme. CanonKeeper is just the first one I've felt compelled to ship publicly.
 
 If you want to collaborate, contribute, argue, or just send me examples of tools you think already get this right, I'd love to chat.
+
+**TODO: Add contact page and link to it**
