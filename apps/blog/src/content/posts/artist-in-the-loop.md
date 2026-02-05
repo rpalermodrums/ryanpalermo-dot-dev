@@ -46,7 +46,7 @@ The more persistent bottleneck is the overhead that shows up once the project's 
 
 ## The Loop
 
-The phrase I keep coming back to is **artist-in-the-loop**. Artists want tools that assume they are staying in control, and the tools we build in these domains should focus on that assumption. 
+The phrase I keep coming back to is **artist-in-the-loop**. Artists want tools that assume they are staying in control, and, from my perspective, the tools we build in these domains should respect and build on that assumption.
 
 **Broke**: "let me do it for you."
 **Woke**: "let me keep the project legible and navigable enough that you can keep making judgment calls without losing your mind or breaking flow."
