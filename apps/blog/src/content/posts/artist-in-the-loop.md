@@ -1,6 +1,6 @@
 ---
 title: "Artist-in-the-loop"
-subtitle: "LLMs help me ship without assuming creative control. I want something similar for the arts."
+subtitle: "LLMs help you ship code without assuming creative control. it should be similar for the arts."
 date: 2026-02-05
 excerpt: "LLMs made me faster at shipping code. The arts deserve leverage tools that keep creators in the loop."
 draft: true
