@@ -109,12 +109,7 @@ Scene boundaries, POV per scene, setting per scene, where entities appear. Goal 
 3. **A style/voice report (diagnostic only).**
 Repeated phrases, tone outliers, dialogue tics per character. No "here's a better sentence." Just shows patterns: "this pattern is showing up a lot; here are examples." Writer decides whether that's a problem or a signature.
 
-### Two Practical Features That Save Time
-
-* **Continuity contradictions flagged as questions** not fixes or applied changes
-* **"What did I name that thing?"** answered with citations to the text
-
-### What CanonKeeper It's *Not*
+### What CanonKeeper Is *Not*
 
 * a co-author
 * a prose generator
