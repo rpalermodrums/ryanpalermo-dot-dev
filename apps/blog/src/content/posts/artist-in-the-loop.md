@@ -1,8 +1,8 @@
 ---
 title: "Artist-in-the-loop"
-subtitle: "LLMs help us ship code without taking creative control. That should also be the case in the arts."
+subtitle: "LLMs should help us ship code while maintaing taking creative control, in software and in the arts."
 date: 2026-02-05
-excerpt: "LLMs help us ship code without taking creative control. That should also be the case in the arts."
+excerpt: "LLMs should help us ship code while maintaing taking creative control, in software and in the arts."
 draft: true
 ---
 
