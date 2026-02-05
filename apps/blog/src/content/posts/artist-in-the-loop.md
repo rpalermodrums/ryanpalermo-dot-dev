@@ -28,13 +28,13 @@ The best AI tools I use as a software engineer feel like they understand the dea
 
 ## Leverage vs replacement
 
-Recent LLM advances have tangibly turned into real, daily advantages for me in my work building software. Not the sci-fi, memeified version where I'd open Claude Code, prompt it with `--dangerously-skip-permissions build a billion-dollar company, make no mistakes`, then go make coffee as the agent creates generational wealth for me. The real value shows when I'm stuck on a problem, am about to waste hours digging through legacy code and documentation, and an LLM unblocks me. The real value add is that it helps me stay in flow: summarizing what I'm looking at, sketching out a first pass at a problem, generating boilerplate code I'd rather not type myself, catching any obvious footguns I missed, doing a preliminary code review.
+Recent LLM advances have tangibly turned into real, daily advantages for me in my work building software. Not the sci-fi, memeified version where I'd open Claude Code, prompt it with `--dangerously-skip-permissions build a billion-dollar company, make no mistakes`, then go make coffee as the agent creates generational wealth for me. The real value shows when I'm stuck on a problem, am about to waste hours digging through legacy code and documentation, and the LLM unblocks me. The  value add is that it helps me stay in flow: summarizing what I'm looking at, sketching out a first pass at a problem, generating boilerplate code I'd rather not type myself, catching any obvious footguns I missed, doing a preliminary code review.
 
-I'm not pretending all programming is "creative." A lot of it is chores and rote work. For the chore bucket, I'm fine being a reviewer instead of the author. If the model writes a migration script or a test scaffold and I sanity-check it, great. That doesn't feel like it's stepping on anything sacred. But the parts of software that **are** creative -- architecture design, product engineering, taste-based judgment calls -- don't benefit from a product aimed at replacement. They benefit from leverage. Tools that keep you moving while you stay responsible for the work.
+I'm not pretending all programming is "creative." A lot of this work is composed of chores and rote work. For work in the chore bucket, I'm fine being a reviewer instead of an author. If the model writes a migration script or a test scaffold for me to sanity-check, that's great. It doesn't feel like it's stepping on anything sacred. But the parts of software engineering that **are** creative (system design, product engineering, and anything requireing a judgment call) don't benefit from a product aimed at replacing those human functions. They add value by providing the human operator with leverage. Tools that keep you moving while you stay responsible for the work may have the greatest ROI.
 
-And sure: prompt-in / artifact-out systems can be fun, and sometimes genuinely useful for ideation or play. But for serious long-form work, the bottleneck usually isn't "I can't generate output."
+Sure: "prompt-in -> artifact-out" systems can be fun, and sometimes genuinely useful for ideation, research, or play. But for serious long-form work, the bottleneck normally is not generating output.
 
-The bottleneck is the overhead that shows up once the project's surface expands:
+The more persistent bottleneck is the overhead that shows up once the project's surface expands:
 
 * recall (wait, what did I decide about X again?)
 * continuity (is this consistently implemented everywhere?)
