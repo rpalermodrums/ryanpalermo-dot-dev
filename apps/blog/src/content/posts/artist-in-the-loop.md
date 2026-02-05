@@ -1,8 +1,8 @@
 ---
 title: "Artist-in-the-loop"
-subtitle: "LLMs should help us ship code while maintaing taking creative control, in software and in the arts."
+subtitle: "Agents should help us ship while we maintain creative control, in both software the arts."
 date: 2026-02-05
-excerpt: "LLMs should help us ship code while maintaing taking creative control, in software and in the arts."
+excerpt: "Agents should help us ship while we maintain creative control, in both software the arts."
 draft: true
 ---
 
