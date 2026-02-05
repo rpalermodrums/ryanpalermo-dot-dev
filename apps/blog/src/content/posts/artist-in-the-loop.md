@@ -1,8 +1,8 @@
 ---
 title: "Artist-in-the-loop"
-subtitle: "Agentsk should help us ship while we maintain creative control, in software and the arts."
+subtitle: "Agents should help us ship while we maintain creative control, in software and the arts."
 date: 2026-02-05
-excerpt: "Agentsk should help us ship while we maintain creative control, in software and the arts."
+excerpt: "Agents should help us ship while we maintain creative control, in software and the arts."
 draft: true
 ---
 
