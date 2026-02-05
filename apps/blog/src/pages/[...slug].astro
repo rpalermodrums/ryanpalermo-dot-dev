@@ -4,10 +4,17 @@ import { getCollection, render } from 'astro:content';
 export async function getStaticPaths() {
   const posts = await getCollection('posts');
   const publishedPosts = posts.filter((post) => !post.data.draft);
-  return publishedPosts.map(post => ({
-    params: { slug: post.id.replace(/\.md$/, '') },
-    props: { post },
-  }));
+  const draftPosts = posts.filter((post) => post.data.draft);
+  return [
+    ...publishedPosts.map(post => ({
+      params: { slug: post.id.replace(/\.md$/, '') },
+      props: { post },
+    })),
+    ...draftPosts.map(post => ({
+      params: { slug: ['drafts', post.id.replace(/\.md$/, '')] },
+      props: { post },
+    })),
+  ];
 }
 
 const { post } = Astro.props;
@@ -24,6 +31,7 @@ const { Content } = await render(post);
   <meta property="og:title" content={post.data.title}>
   <meta property="og:description" content={post.data.excerpt}>
   <meta property="og:type" content="article">
+  {post.data.draft && <meta name="robots" content="noindex,nofollow">}
   <link rel="alternate" type="application/rss+xml" title="Ryan Palermo's Blog" href="/rss.xml">
   <link rel="icon" type="image/png" href="/favicon.png">
   <style is:global>
@@ -359,6 +367,25 @@ const { Content } = await render(post);
 
     header {
       margin-bottom: 48px;
+    }
+
+    .draft-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #f59e0b;
+      border: 1px solid #f59e0b;
+      border-radius: 999px;
+      padding: 4px 10px;
+      margin-bottom: 16px;
+    }
+
+    [data-theme="light"] .draft-badge {
+      color: #b45309;
+      border-color: #b45309;
     }
 
     h1 {
@@ -944,6 +971,9 @@ const { Content } = await render(post);
     
     <article>
       <header>
+        {post.data.draft && (
+          <div class="draft-badge">Draft — not public</div>
+        )}
         <h1>{post.data.title}</h1>
         {post.data.subtitle && <p class="subtitle">{post.data.subtitle}</p>}
         {post.data.date && (
