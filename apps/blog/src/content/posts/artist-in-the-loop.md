@@ -8,7 +8,7 @@ draft: true
 
 I've been thinking about what it would look like to build AI tools for creative work that aren't trying to do the creative work for you. This post is about that idea, and about CanonKeeper, a tool I'm building for manuscript organization that tries to get the balance right. It watches what you've written, keeps track of the details so you don't have to, and never generates a single word of prose.
 
-<details>
+<details style="cursor: pointer;">
 <summary>TL;DR</summary>
 
 I'm building **CanonKeeper** (canon as in story canon, not artillery): a local companion app for manuscripts that keeps long projects legible. It watches a draft file (md/txt/docx), maintains a **book bible** and **scene index** grounded in direct quotes from the manuscript, and flags **continuity contradictions as questions** without generating prose.
