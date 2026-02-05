@@ -6,10 +6,6 @@ excerpt: "LLMs made me faster at shipping code. The arts deserve leverage tools 
 draft: true
 ---
 
-# Artist-in-the-loop
-
-Updated: February 5, 2026
-
 **TL;DR:** I'm building **CanonKeeper** (canon as in story canon, not artillery): a local companion app for manuscripts that keeps long projects legible. It watches a draft file (md/txt/docx), maintains an evidence-backed **book bible** and **scene index**, and flags **continuity contradictions as questions** -- **without generating prose**. That last part is important.
 
 **Hard rule:** *If it can't quote your manuscript, it doesn't get to assert the fact.* No exceptions.
