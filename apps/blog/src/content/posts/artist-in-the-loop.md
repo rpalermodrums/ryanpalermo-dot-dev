@@ -14,7 +14,7 @@ I'm building **CanonKeeper** (canon as in story canon, not artillery): a local c
 **Hard rule:** *If it can't quote your manuscript, it doesn't get to assert the fact.*
 </details>
 
-## The Map is Not the Territory
+## The Map Is Not the Territory
 
 I have a weakness for tidy representations of messy things. Maps. Outlines. Checklists. "One doc to rule them all." Anything that turns a complicated reality into something I can glance at and feel like I understand.
 
@@ -26,7 +26,7 @@ The best AI tools I use as a software engineer feel like they understand the dea
 
 ---
 
-## Leverage vs replacement
+## Leverage vs Replacement
 
 Recent LLM advances have tangibly turned into real, daily advantages for me in my work building software. Not the sci-fi, memeified version where I'd open Claude Code, prompt it with `--dangerously-skip-permissions "build a billion-dollar company, make no mistakes"`, then go make coffee as the agent creates generational wealth for me. The real value shows when I'm stuck on a problem, am about to waste hours digging through legacy code and documentation, and the LLM unblocks me. The  value add is that it helps me stay in flow: summarizing what I'm looking at, sketching out a first pass at a problem, generating boilerplate code I'd rather not type myself, catching any obvious footguns I missed, doing a preliminary code review.
 
@@ -58,7 +58,7 @@ A lot of creative AI tooling aims to take messy, personal, creative processes an
 
 ---
 
-## The conversation that made this click
+## The Conversation That Made This Click
 
 I grew up watching my mother write novels. In the practical way where you notice that writing long-form fiction includes a lot of unglamorous administration.
 
@@ -92,7 +92,7 @@ The reason we need systems for this is obvious when you think about it: **the hu
 
 ---
 
-## What I'm building for mom: **CanonKeeper**
+## What I'm Building for Mom: **CanonKeeper**
 
 CanonKeeper is a background agent for manuscript organization. It watches a draft file (md/txt/docx), keeps derived metadata **locally**, and updates as the draft changes.
 
@@ -109,12 +109,12 @@ Scene boundaries, POV per scene, setting per scene, where entities appear. Goal 
 3. **A style/voice report (diagnostic only).**
 Repeated phrases, tone outliers, dialogue tics per character. No "here's a better sentence." Just shows patterns: "this pattern is showing up a lot; here are examples." Writer decides whether that's a problem or a signature.
 
-### Two practical features that save time
+### Two Practical Features That Save Time
 
 * **Continuity contradictions flagged as questions** not fixes or applied changes
 * **"What did I name that thing?"** answered with citations to the text
 
-### What CanonKeeper it's *not*
+### What CanonKeeper It's *Not*
 
 * a co-author
 * a prose generator
@@ -123,7 +123,7 @@ Repeated phrases, tone outliers, dialogue tics per character. No "here's a bette
 
 ---
 
-## Why is CanonKeeper different?
+## Why Is CanonKeeper Different?
 
 LLMs have a "personality" trait that makes them dangerous in creative work: they'll sound right while being wrong. You might not realize they're wrong until later. By then it might be too late, and you've already built on top of the wrong thing.
 
@@ -137,7 +137,7 @@ Once the writer confirms canon, that becomes the locked truth. The tool can disa
 
 **Author owns canon. Tool owns indexing.**
 
-### A concrete example
+### A Concrete Example
 
 **Claim:** Elena -> eye_color = hazel
 **Evidence:** "...Elena blinked, her hazel eyes catching the light..." (quote + location in draft)
@@ -156,7 +156,7 @@ This is the workflow I'm aiming for:
 
 ---
 
-## Why this matters beyond fiction
+## Why This Matters Beyond Fiction
 
 CanonKeeper is a writing tool because that's what my mother needs. The idea isn't specific to writing, though.
 
@@ -166,7 +166,7 @@ That's the direction I'm betting on: **Build tools that assume the artist is sta
 
 ---
 
-## An open invitation
+## An Open Invitation
 
 I don't want to over-claim what any of this means. I'm building it because the problem feels real, and because I'm not satisfied with "press button, receive artifact" being the default definition of AI in the arts.
 
