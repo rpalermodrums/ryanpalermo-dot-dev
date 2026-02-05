@@ -50,11 +50,9 @@ Names, ages, timelines, geography, relationships, rule systems, what happened in
 
 I was on a long phone call with her recently while I was drafting a longer post about AI and the arts. The same theme kept surfacing: when does an artistic tool feel like it adds leverage, and when does it feel like it's trying to take your hands off the wheel?
 
-She wasn't asking for a machine to write any part of her new book.
+> "I'm spending a ton of creative energy just maintaining and recalling what I've already written. Bookkeeping. Navigating my own records. It takes me out of the moment."
 
-> "I'm doing a lot of work to maintain and recall what I've already written. Spending a ton of creative energy on bookkeeping and navigating those records. It's taxing on my creative energy and takes me out of the moment."
-
-I recognized the shape of the problem immediately. It's the same pain in music composition and production as projects grow. Open an old session and suddenly you're doing archaeology. What changed between revisions? Where did the arrangement drift? Which patch chain was the sound you had in mind three weeks ago? Why does the sidechain compression no longer keep the bass punchy? You came back to *write*, and instead you're playing detective.
+I recognized the shape of this problem immediately. It's so similar to certain pains in music composition and production as projects grow in size and complexity. Open an old session and suddenly you're doing archaeology. What changed between revisions? Where did the arrangement drift? Which patch chain was the sound you had in mind three weeks ago? Why does the sidechain compression no longer keep the bass punchy? You came back to *write*, and instead you're playing detective.
 
 My first instinct was "version control problem." Which it kind of is, but also kind of isn't. Version control mostly answers *what* changed. It doesn't answer *how* a change impacted the rest of the project. What you need is something that flags which earlier decision you just contradicted, frames it, and helps you maintain continuity.
 
