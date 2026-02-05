@@ -43,41 +43,39 @@ Curation might become a real skill. But it's not what most artists are trying to
 
 ## Blame My Mother
 
-I grew up watching my mother write novels. Not the romantic version. The version where you notice that long-form fiction includes a lot of unglamorous administration.
+I was raised by an author who wrote corporate PR releases by day and moonlighted as a novelist . I never noticed as a kid, but it turns out that long-form fiction includes a lot of unglamorous administration. Keeping track of names, ages, timelines, geography, relationships, rule systems, what happened in which scene, who knows what when...
 
-Names, ages, timelines, geography, relationships, rule systems, what happened in which scene, who knows what when. If you don't track it, you pay later. If you do track it, you still pay, just upfront.
+I was on a long phone call with her recently while I was thinking through an upcoming post about AI and the arts. The same theme kept surfacing in my mind as we spoke: when does an artistic AI tool enhance the artist, and when does it cross over the invisible line where it feels like it's trying to take your hands off the wheel?
 
-I was on a long phone call with her recently while I was drafting a longer post about AI and the arts. The same theme kept surfacing: when does an artistic tool feel like it adds leverage, and when does it feel like it's trying to take your hands off the wheel?
+Somewhere in the midst of this conversation, mom said something like:
 
-> "I'm spending a ton of creative energy just maintaining and recalling what I've already written. Bookkeeping. Navigating my own records. It takes me out of the moment."
+> "I spend a lot of creative energy maintaining and recalling what I've already written. Bookkeeping. Every author maintains their own manually updated system."
 
 I recognized the shape of this problem immediately. It's so similar to certain pains in music composition and production as projects grow in size and complexity. Open an old session and suddenly you're doing archaeology. What changed between revisions? Where did the arrangement drift? Which patch chain was the sound you had in mind three weeks ago? Why does the sidechain compression no longer keep the bass punchy? You came back to *write*, and instead you're playing detective.
 
-My first instinct was "version control problem." Which it kind of is, but also kind of isn't. Version control mostly answers *what* changed. It doesn't answer *how* a change impacted the rest of the project. What you need is something that flags which earlier decision you just contradicted, frames it, and helps you maintain continuity.
+My first instinct was "ah! it's a version control problem." Which it kind of is, but also kind of isn't. Version control mostly answers *what* changed. It doesn't answer *how* a change impacted the rest of the project. What you need is something that flags any earlier decisions you've just contradicted, makes it easy to resolve any conflicts, and helps you maintain continuity.
 
-Version control, plus indexing, plus continuity management.
-
-The human brain is not a database. We need systems for this, and the ones that exist today mostly want to generate prose for you instead.
+And alas, the human brain is not a database.
 
 ## CanonKeeper
 
-I couldn't find a tool that did this, so I'm building one.
+I couldn't find a tool solved this problem for my mom, so I'm building one.
 
-CanonKeeper watches a draft file over time, maintains a private local index, and updates itself in the background as the draft changes. Intentionally boring, the way good tools are boring.
+CanonKeeper watches a draft over time, maintains a local index, and updates itself in the background as the draft evolves. Intentionally boring, the way good tools are boring.
 
-My mom keeps a book bible for every novel. Character details, locations, timeline, rules of the world. She maintains it by hand in a separate document while she writes. The problem is she's also, you know, writing a novel, so the bible could start drifting from the manuscript unless she's perfectly dilligent. Two months in she could a detail, realize the bible says one thing and the draft says another, and now she doesn't trust either. She has to go find the actual passage and reread it to figure out which version is true.
+My mom keeps a "book bible" for every novel she has in progress. Character details, locations, timeline, rules of the world. She maintains it in a separate document while she writes. The problem is she's also, you know, writing a novel, so that bible could start drifting from the manuscript unless she's perfectly dilligent. Two months in she could forget a detail, realize the bible says one thing and the draft says another, and now she doesn't trust either. Which version is true?
 
-CanonKeeper builds the "book bible" directly from the manuscript text as it evolves. Every entry points back to a specific quote. If the draft changes, the bible updates. No separate doc to maintain. No drift.
+CanonKeeper builds the "book bible" directly from the manuscript text as it evolves, and it tracks revision history with context. Each bible entry points back to specific lines in the manuscript. If the draft changes, the bible updates itself. No separate doc to maintain, which means no drift.
 
-It also keeps a scene index. I imagine my mother flipping through her own manuscript for twenty minutes trying to find where a character first shows up. POV, setting, which characters appear in which scenes. CanonKeeper introduces a sort of table of contents for a book that doesn't have one yet. Boring, useful, the kind of thing you'd never bother maintaining by hand because the effort isn't worth it until the one time you *desperately* need it.
+It also keeps a scene index. I like to imagine my mother scrolling through her draft for twenty minutes trying to remember whether it was just foggy or lightly drizzling when a minor character first appeared 8 chapters ago. CanonKeeper introduces a sort of table of contents for a book that doesn't have one yet. Boring, useful, the kind of thing you'd never bother maintaining by hand because the effort isn't worth it until the one time you *desperately* need it.
 
 And it tracks patterns in voice and style. If a character says "listen" as the first word of every third line of dialogue, it'll tell you. If you use the same unusual metaphor in chapter 2 and chapter 19, it'll show you both. No opinions on whether these are problems. Maybe they're problems. Maybe they're your style. That's your call, not the tool's.
 
-That's the whole thing. No "chat with your novel." No prose generation. Nothing that edits your manuscript. If that sounds like a weird list of things to clarify, look at what passes for "AI writing tools" right now and you'll see why I feel the need to say it.
+That's the whole thing. No "chat with your novel." No prose generation. Nothing that edits your manuscript. If that sounds like a weird list of things to clarify, look at what passes for an "AI writing tool" right now and you'll immediately understand why I feel the need to say it.
 
-## The Hard Rule
+## Boundaries
 
-The problem with using LLMs near fiction is the same problem they have everywhere else: they hallucinate. In most contexts you catch it quickly. In a novel, a hallucinated detail can sit unnoticed for chapters while you build on top of it. The nature of fiction writing presents challenges to LLM context that don't exist in more fact-checkable domains.
+The problem with using LLMs anywhere near fiction is the same problem they have everywhere else: they hallucinate. In most contexts you catch it quickly. But in a novel, a hallucinated detail can sit unnoticed for chapters while you build on top of it. The nature of fiction writing presents challenges to LLM context that don't exist in more fact-checkable, deterministic domains.
 
 So CanonKeeper has one rule: **if it can't quote the manuscript, it doesn't get to assert the fact.**
 
@@ -95,17 +93,11 @@ You don't notice how much this matters until the project is large enough that yo
 
 ## Beyond Fiction
 
-CanonKeeper is for my mom.
+CanonKeeper is for my mom, but I've had a front-row seat to this specific problem for years. And because I'm tired of "AI for creative work" meaning "AI that does the creative work."
 
-When I was playing music full time I'd come back to a sibelius chart after three weeks and blow an hour reading my own notes, trying to figure out why I'd made a specific arrangement choice that I hadn't documented at all. Not playing or making progress. Not writing. Just **archaeology**. I've observed and experienced the same pattern in software. A team I was on shipped a feature that directly contradicted a design decision from six weeks earlier. Nobody remembered making it. It wasn't in any doc. It was in someone's head, and then it wasn't.
-
-Tools let us create faster than we can keep track of what we've done. That gap is a problem.
-
-If you've made serious art, you probably have strong opinions about where the line is between "helpful" and "get the fuck out of my way" when it comes to tools in this domain. And if you've built or used a lot of dev tooling, you know how quickly "help" turns into noise.
+If you've made real art in some capacity, you probably have strong opinions about where the line is between "helpful" and "get the fuck out of my way" when it comes to tools in this domain. And if you've built or used a lot of dev tooling, you know how quickly "help" turns into noise.
 
 I want to get this right, and I know I'm missing things. What eats your creative energy that shouldn't? Where have you seen a tool actually get this balance right? If you build systems for a living, how would you design something that tracks authorial decisions through heavy revision without it all falling apart?
-
-I'm building this for my mom because I've had a front-row seat to this specific problem for years. And because I'm tired of "AI for creative work" meaning "AI that does the creative work."
 
 The best tools I've ever used don't try to replace my role in the process. They give me leverage and keep me the loop.
 
