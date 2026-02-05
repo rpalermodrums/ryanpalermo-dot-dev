@@ -92,7 +92,7 @@ The reason we need systems for this is obvious when you think about it: **the hu
 
 ---
 
-## What I'm Building for Mom: **CanonKeeper**
+## What I'm building for mom: **CanonKeeper**
 
 CanonKeeper is a background agent for manuscript organization. It watches a draft file (md/txt/docx), keeps derived metadata **locally**, and updates as the draft changes.
 
