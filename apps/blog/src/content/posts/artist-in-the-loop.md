@@ -64,7 +64,7 @@ I grew up watching my mother write novels. Not in a sentimental way -- in the pr
 
 Names, ages, timelines, geography, relationships, rule systems, what happened in which scene, who knows what when. If you don't track it, you pay later. If you do track it, you still pay, just upfront in time and mental energy.
 
-I was on a long phone call with my mom recently while I was drafting a longer post about AI and the arts. The same theme kept coming up "When does an artistic tool feel like it adds leverage, and when does it feel like it's trying to take your hands off the wheel?"
+I was on a long phone call with my mom recently while I was drafting a longer post about AI and the arts. The same theme kept coming up: "When does an artistic tool feel like it adds leverage, and when does it feel like it's trying to take your hands off the wheel?"
 
 She wasn't asking for a machine to write any part of her new book:
 
