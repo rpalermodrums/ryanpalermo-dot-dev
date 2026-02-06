@@ -93,9 +93,9 @@ You don't notice how much this matters until the project is large enough that yo
 
 ## Beyond Fiction
 
-CanonKeeper is for my mom, but I've had a front-row seat to this specific problem for years. And because I'm tired of "AI for creative work" meaning "AI that does the creative work."
+**CanonKeeper** is for my mom, but it represents a class of tooling that I think I'll be working on for the next few years. I'm tired of tools that posture as "AI for creative work" which are lazy, uninspired iterations of "AI that tries to do the creative work itself."
 
-If you've made real art in some capacity, you probably have strong opinions about where the line is between "helpful" and "get the fuck out of my way" when it comes to tools in this domain. And if you've built or used a lot of dev tooling, you know how quickly "help" turns into noise.
+If you've made real art in some capacity, you probably have strong opinions about where the line is between "thanks, helpful assitant" and "get the fuck out of my way" when it comes to tools in this domain. If you've built or used a lot of dev tooling, you know how quickly "help" turns into noise.
 
 I want to get this right, and I know I'm missing things. What eats your creative energy that shouldn't? Where have you seen a tool actually get this balance right? If you build systems for a living, how would you design something that tracks authorial decisions through heavy revision without it all falling apart?
 
