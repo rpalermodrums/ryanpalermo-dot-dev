@@ -51,11 +51,11 @@ Somewhere in the midst of this conversation, mom said something like:
 
 > "I spend a lot of creative energy maintaining and recalling what I've already written. Bookkeeping. Every author maintains their own manually updated system."
 
-I recognized the shape of this problem immediately. It's so similar to certain pains in music composition and production as projects grow in size and complexity. Open an old session and suddenly you're doing archaeology. What changed between revisions? Where did the arrangement drift? Which patch chain was the sound you had in mind three weeks ago? Why does the sidechain compression no longer keep the bass punchy? You came back to *write*, and instead you're playing detective.
+I recognized the shape of this problem immediately. It's so similar to certain pains in music composition and production as projects grow in size and complexity. Open a months-old session in your DAW and suddenly you're doing archaeology. What changed between revisions? Where did the arrangement drift? Did I mean to mute the percussion for the first 8 measures, or did I mute it to mix the rest of the tracks without the perc in my headphones? Which patch chain created the sound I had in mind three weeks ago? Why does kick's sidechain compression no longer keep the bass punchy? You came back to *create* and wind up playing detective to a self-made, boring mystery.
 
-My first instinct was "ah! it's a version control problem." Which it kind of is, but also kind of isn't. Version control mostly answers *what* changed. It doesn't answer *how* a change impacted the rest of the project. What you need is something that flags any earlier decisions you've just contradicted, makes it easy to resolve any conflicts, and helps you maintain continuity.
+Thinking about how I might approach the problem on the writing front, my first instinct was "ah! it's a version control problem." Which it kind of is, but also kind of isn't. Version control answers *what* changed. It doesn't answer *how* a change impacted the rest of the project and cascade of small but meaningful dependencies within a story. Whats actually needed is something that flags earlier decisions that were contradicted, makes it easy for the author to resolve conflicts, and helps them maintain continuity.
 
-And alas, the human brain is not a database.
+A system is needed to manage this complexity. The human brain is not a database.
 
 ## CanonKeeper
 
