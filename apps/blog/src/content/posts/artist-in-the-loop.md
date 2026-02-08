@@ -111,7 +111,8 @@ If any of this resonates, or if you think I'm wrong about something, I'd love to
 
 - Embed design system or examples somehere in here where appropriate
   - [Theme Preview](https://ryanpalermo.dev/blog/drafts/theme-preview.html)
-- Add demo video and
+- Add demo video
+- Consider explaining technical approach (electron desktop application, sqlite local-first architecture, real-time workers, RPC)
 - Add links to source code:
   - [CanonKeeper](https://github.com/rpalermodrums/canon-keeper)
   - [Airlock Electron MCP](https://github.com/rpalermodrums/airlock-electron-mcp)
