@@ -107,4 +107,10 @@ I'm building more tools with this "artist-in-the-loop" paradigm as the theme. Ca
 
 If any of this resonates, or if you think I'm wrong about something, I'd love to hear from you.
 
-**TODO: Add contact page and link to it**
+**TODO**:
+- add links to source code:
+  - [CanonKeeper](https://github.com/rpalermodrums/canon-keeper)
+  - [Airlock Electron MCP](https://github.com/rpalermodrums/airlock-electron-mcp)
+- Add contact page and link to it
+- Final pass revision
+- Open Beta once initial CanonKeper small-group testing revisions are complete
