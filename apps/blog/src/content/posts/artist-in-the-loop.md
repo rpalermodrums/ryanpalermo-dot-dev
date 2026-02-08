@@ -108,9 +108,16 @@ I'm building more tools with this "artist-in-the-loop" paradigm as the theme. Ca
 If any of this resonates, or if you think I'm wrong about something, I'd love to hear from you.
 
 **TODO**:
-- add links to source code:
+
+- Embed design system or examples somehere in here where appropriate
+  - [Theme Preview](https://ryanpalermo.dev/blog/drafts/theme-preview.html)
+- Add demo video and
+- Add links to source code:
   - [CanonKeeper](https://github.com/rpalermodrums/canon-keeper)
   - [Airlock Electron MCP](https://github.com/rpalermodrums/airlock-electron-mcp)
 - Add contact page and link to it
 - Final pass revision
-- Open Beta once initial CanonKeeper small-group testing revisions are complete
+- Open Beta (100 user limit) once initial CanonKeeper small-group testing revisions are complete.
+  - 14 month limited trial
+  - Beta pricing 5 monthly/50 yearly/100 lifetime
+  - Longer term pricing 10 monthly/100 yearly
