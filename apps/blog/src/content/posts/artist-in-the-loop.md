@@ -51,13 +51,13 @@ Somewhere in the midst of this conversation, mom said something like:
 
 > "I spend a lot of creative energy maintaining and recalling what I've already written. Bookkeeping. Every author maintains their own manually updated system."
 
-I recognized the shape of this problem immediately. It's so similar to certain pains in music composition and production as projects grow in size and complexity. Open a months-old session in your DAW and suddenly you're doing archaeology. What changed between revisions? Where did the arrangement drift? Did I mean to mute the percussion for the first 8 measures, or did I mute it to mix the rest of the tracks without the perc in my headphones? Which patch chain created the sound I had in mind three weeks ago? Why does the kick's sidechain compression no longer keep the bass punchy? You came back to *create* and wind up playing detective to a self-made, boring mystery.
+I recognized the shape of this problem immediately. It's so similar to certain pains in music composition and production as projects grow in size and complexity. Open a months-old session in your DAW and suddenly you're doing archaeology. What changed between revisions? Where did the arrangement drift? Did I mean to mute the percussion for the first 8 measures, or did I mute it to mix the rest of the tracks without the perc in my headphones? Which patch chain created the sound I had in mind three weeks ago? Why does the kick's sidechain compression no longer keep the bass punchy? You come back to *create* and wind up playing detective to a self-made, boring mystery.
 
-Thinking about how I might approach the problem on the writing front, my first instinct was "ah! it's a version control problem." Which it kind of is, but also kind of isn't. Version control answers *what* changed. It doesn't answer *how* a change impacted the rest of the project and cascade of small but meaningful dependencies within a story. Whats actually needed is something that flags earlier decisions that were contradicted, makes it easy for the author to resolve conflicts, and helps them maintain continuity.
+Thinking about how I might approach the problem on the writing front, my first instinct was "ah! it's a version control problem." Which it kind of is, but also kind of isn't. Version control answers *what* changed. It doesn't answer *how* a change impacted the rest of the project and the cascade of small but meaningful dependencies within a story. What's actually needed is something that flags earlier decisions that were contradicted, makes it easy for the author to resolve conflicts, and helps them maintain continuity.
 
 A system is needed to manage this complexity. The human brain is not a database.
 
-## CanonKeeper
+## Introducing CanonKeeper
 
 I couldn't find a tool that solved this problem for my mom, so I'm building one.
 
@@ -95,7 +95,7 @@ You don't notice how much this matters until the project is large enough that yo
 
 **CanonKeeper** is for my mom, but it represents a class of tooling that I think I'll be working on for the next few years. I'm tired of tools that posture as "AI for creative work" which are lazy, uninspired iterations of "AI that tries to do the creative work itself."
 
-If you've made real art in some capacity, you probably have strong opinions about where the line is between "thanks, helpful assitant" and "get the fuck out of my way" when it comes to tools in this domain. If you've built or used a lot of dev tooling, you know how quickly "help" turns into noise.
+If you've made real art in some capacity, you probably have strong opinions about where the line is between "thanks, helpful assistant" and "get the fuck out of my way" when it comes to tools in this domain. If you've built or used a lot of dev tooling, you know how quickly "help" turns into noise.
 
 I want to get this right, and I know I'm missing things. What eats your creative energy that shouldn't? Where have you seen a tool actually get this balance right? If you build systems for a living, how would you design something that tracks authorial decisions through heavy revision without it all falling apart?
 
@@ -113,4 +113,4 @@ If any of this resonates, or if you think I'm wrong about something, I'd love to
   - [Airlock Electron MCP](https://github.com/rpalermodrums/airlock-electron-mcp)
 - Add contact page and link to it
 - Final pass revision
-- Open Beta once initial CanonKeper small-group testing revisions are complete
+- Open Beta once initial CanonKeeper small-group testing revisions are complete
